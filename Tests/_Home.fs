@@ -114,14 +114,29 @@ let ``navigate to tips`` () =
     // Setup
     let mutable tipsRequested = false;
     let dispatcher = Dispatcher()
-    dispatcher.FAQRequested.Add(fun _ -> tipsRequested <- true)
+    dispatcher.TipsRequested.Add(fun _ -> tipsRequested <- true)
+    let viewModel = HomeViewModel(dispatcher)
+    
+    // Test
+    viewModel.ViewTips.Execute()
+
+    // Verify
+    tipsRequested |> should equal true
+
+[<Test>]
+let ``navigate to FAQ`` () =
+
+    // Setup
+    let mutable faqRequested = false;
+    let dispatcher = Dispatcher()
+    dispatcher.FAQRequested.Add(fun _ -> faqRequested <- true)
     let viewModel = HomeViewModel(dispatcher)
     
     // Test
     viewModel.ViewFAQ.Execute()
 
     // Verify
-    tipsRequested |> should equal true
+    faqRequested |> should equal true
 
 [<Test>]
 let ``navigate to privacy`` () =

@@ -16,6 +16,7 @@ type Dispatcher() =
     let idRequested =           new Event<EventHandler<_>,_>()
     let contactRequested =      new Event<EventHandler<_>,_>()
     let providersRequested =    new Event<EventHandler<_>,_>()
+    let tipsRequested =         new Event<EventHandler<_>,_>()
     let infoRequested =         new Event<EventHandler<_>,_>()
     let privacyRequested =      new Event<EventHandler<_>,_>()
     let faqRequested =          new Event<EventHandler<_>,_>()
@@ -63,7 +64,8 @@ type Dispatcher() =
     member this.PrivacyRequested =      privacyRequested.Publish
     [<CLIEvent>]
     member this.FAQRequested =          faqRequested.Publish
-
+    [<CLIEvent>]
+    member this.TipsRequested =         tipsRequested.Publish
     [<CLIEvent>]
     member this.PlanRequested =         planRequested.Publish
     [<CLIEvent>]
@@ -120,6 +122,7 @@ type Dispatcher() =
     member this.TryViewIdCard memberId =  idRequested.Trigger(this , EventArgs.Empty)
     member this.ViewContact() =           contactRequested.Trigger(this , EventArgs.Empty)
     member this.ViewProviders() =         providersRequested.Trigger(this , EventArgs.Empty)
+    member this.ViewTips() =              tipsRequested.Trigger(this , EventArgs.Empty)
     member this.ViewInfo() =              infoRequested.Trigger(this , EventArgs.Empty)
     member this.ViewPrivacy() =           privacyRequested.Trigger(this , EventArgs.Empty)
     member this.ViewFAQ() =               faqRequested.Trigger(this , EventArgs.Empty)
