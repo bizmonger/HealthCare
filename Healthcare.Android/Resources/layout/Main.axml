@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+    <Button
+        android:id="@+id/SignIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_weight=".5"
+        android:text="SignIn" />
+
+    <TextView
+      android:id="@+id/Register"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:layout_centerHorizontal="true"
+      android:layout_weight=".5"
+      android:text="or Register" />
+  
+    <!--<Button
+        android:id="@+id/IdCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ID Card" />
+        
+    <Button
+        android:id="@+id/Register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register" />
+        
+    <Button
+        android:id="@+id/Providers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Find Provider" />
+    <Button
+        android:id="@+id/Contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contact" />
+    <Button
+        android:id="@+id/Privacy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Privacy" />
+    <Button
+        android:id="@+id/FAQ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FAQ" />-->
+</android.support.percent.PercentRelativeLayout>
