@@ -8,7 +8,7 @@ type HomeViewModel (dispatcher:Dispatcher) as this =
     
     let mutable signedIn = false
 
-    do dispatcher.SignedInOccured.Add(fun _ -> signedIn <- true)
+    do dispatcher.SignInSuccessful.Add(fun _ -> signedIn <- true)
     do dispatcher.SettingsChanged.Add(fun s -> this.Settings <- s)
 
     member val Settings = { ViewIdCardFromHome=false } with get,set

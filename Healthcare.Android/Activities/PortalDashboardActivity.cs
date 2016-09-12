@@ -3,14 +3,14 @@ using Android.OS;
 
 namespace Healthcare.Android
 {
-    [Activity(Label = nameof(RegisterActivity))]
-    class RegisterActivity : Activity
+    [Activity(Label = nameof(PortalDashboardActivity))]
+    public class PortalDashboardActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            SetContentView(Resource.Layout.Register);
+            // Create your application here
         }
     }
 }

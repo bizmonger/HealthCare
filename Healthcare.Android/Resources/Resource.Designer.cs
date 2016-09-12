@@ -96,6 +96,30 @@ namespace Healthcare.Android
 			// aapt resource value: 0x7f050001
 			public const int Tips = 2131034113;
 			
+			// aapt resource value: 0x7f050010
+			public const int dateOfBirth = 2131034128;
+			
+			// aapt resource value: 0x7f05000d
+			public const int firstName = 2131034125;
+			
+			// aapt resource value: 0x7f05000c
+			public const int instructions = 2131034124;
+			
+			// aapt resource value: 0x7f05000e
+			public const int lastName = 2131034126;
+			
+			// aapt resource value: 0x7f05000b
+			public const int linearLayout = 2131034123;
+			
+			// aapt resource value: 0x7f05000f
+			public const int memberId = 2131034127;
+			
+			// aapt resource value: 0x7f050012
+			public const int next = 2131034130;
+			
+			// aapt resource value: 0x7f050011
+			public const int zipCode = 2131034129;
+			
 			static Id()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -111,6 +135,9 @@ namespace Healthcare.Android
 			
 			// aapt resource value: 0x7f030000
 			public const int Main = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int Register = 2130903041;
 			
 			static Layout()
 			{

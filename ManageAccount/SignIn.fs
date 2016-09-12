@@ -37,5 +37,5 @@ let trySignIn (credentials:Credentials) =
 
 let onFormUpdated form (dispatcher:Dispatcher) (confirmation:IConfirmation) =
     match form with
-    | Success form   -> dispatcher.SignedIn()
+    | Success form   -> dispatcher.ViewPortalDashboard()
     | Failure reason -> confirmation.Display()

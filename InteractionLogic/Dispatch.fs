@@ -9,8 +9,9 @@ type Dispatcher() =
 
     let signInRequested =       new Event<EventHandler<_>,_>()
     let registrationRequested = new Event<EventHandler<_>,_>()
+
+    let signInSuccessful =      new Event<EventHandler<_>,_>()
     
-    let signedIn =              new Event<EventHandler<_>,_>()
     let settingsChanged =       new Event<Features>()
 
     let idRequested =           new Event<EventHandler<_>,_>()
@@ -47,8 +48,6 @@ type Dispatcher() =
     let emailProvidersRequested = new Event<EventHandler<_>,_>()
     let textMessageProvidersRequested = new Event<EventHandler<_>,_>()
 
-    [<CLIEvent>]
-    member this.SignedInOccured =       signedIn.Publish
     [<CLIEvent>]
     member this.SettingsChanged =       settingsChanged.Publish
 
@@ -113,10 +112,12 @@ type Dispatcher() =
     [<CLIEvent>]
     member this.SignInRequested =         signInRequested.Publish
     [<CLIEvent>]
+    member this.SignInSuccessful =         signInSuccessful.Publish
+    [<CLIEvent>]
     member this.RegistrationRequested =    registrationRequested.Publish
 
     (* Triggers *)
-    member this.SignedIn() =              signedIn.Trigger(this , EventArgs.Empty)
+    member this.ViewPortalDashboard() =   signInSuccessful.Trigger(this , EventArgs.Empty)
     member this.ChangeSettings settings = settingsChanged.Trigger settings
 
     member this.TryViewIdCard memberId =  idRequested.Trigger(this , EventArgs.Empty)

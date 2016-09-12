@@ -7,7 +7,10 @@ namespace Healthcare.Android
         void MapNavigations()
         {
             _dispatcher.SignInRequested += (s, e) => StartActivity(typeof(SignInActivity));
+            _dispatcher.SignInSuccessful += (s, e) => StartActivity(typeof(SignInActivity));
+
             _dispatcher.RegistrationRequested += (s, e) => StartActivity(typeof(RegisterActivity));
+
             _dispatcher.IdRequested += (s, e) => StartActivity(typeof(IdCardActivity));
             _dispatcher.ProvidersRequested += (s, e) => StartActivity(typeof(FindProvidersActivity));
             _dispatcher.ContactRequested += (s, e) => StartActivity(typeof(ContactActivity));
