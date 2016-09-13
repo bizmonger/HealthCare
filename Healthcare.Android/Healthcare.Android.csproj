@@ -59,6 +59,14 @@
     <Compile Include="Activities\FAQActivity.cs" />
     <Compile Include="Activities\FindProvidersActivity.cs" />
     <Compile Include="Activities\IdCardActivity.cs" />
+    <Compile Include="Activities\RegisterActivity.internal.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>RegisterActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activities\RegisterActivity.members.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>RegisterActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MainActivity.subscriptions.cs">
