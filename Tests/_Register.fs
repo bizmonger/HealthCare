@@ -5,6 +5,7 @@ open NUnit.Framework
 open MockMember
 
 open ValidationTrack
+open InteractionLogic
 
 open Account
 open ManageAccount
@@ -15,7 +16,7 @@ open Confirmation
 let ``register account`` () =
 
     // Setup
-    let viewModel = RegisterViewModel()
+    let viewModel = RegisterViewModel(Dispatcher())
     viewModel.FirstName   <- SomeFirstName
     viewModel.LastName    <- SomeLastName
     viewModel.DateOfBirth <- SomeDateOfBirth 
@@ -32,10 +33,33 @@ let ``register account`` () =
     | _ -> failwith ""
 
 [<Test>]
+let ``successful registration dispatches result`` () =
+
+    // Setup
+    let mutable recievedSuccessNotification = false
+
+    let dispatcher = Dispatcher()
+    dispatcher.RegistrationSuccessful.Add(fun _ -> recievedSuccessNotification <- true)
+    let viewModel = RegisterViewModel(dispatcher)
+    
+    viewModel.FirstName   <- SomeFirstName
+    viewModel.LastName    <- SomeLastName
+    viewModel.DateOfBirth <- SomeDateOfBirth 
+    viewModel.Email       <- match SomeEmail with Email address -> address 
+    viewModel.Password    <- SomePassword  
+    viewModel.Zipcode     <- match SomeZipCode with ZipCode zip -> zip
+
+    // Test
+    viewModel.Register.Execute()
+
+    // Verify
+    recievedSuccessNotification |> should equal true
+
+[<Test>]
 let ``registration failed: missing first name`` () =
 
     // Setup
-    let viewModel = RegisterViewModel()
+    let viewModel = RegisterViewModel(Dispatcher())
     viewModel.FirstName <- ""
 
     // Test
@@ -50,7 +74,7 @@ let ``registration failed: missing first name`` () =
 let ``registration failed: missing last name`` () =
 
     // Setup
-    let viewModel = RegisterViewModel()
+    let viewModel = RegisterViewModel(Dispatcher())
     viewModel.FirstName <- SomeFirstName
     viewModel.LastName  <- ""
 
@@ -66,7 +90,7 @@ let ``registration failed: missing last name`` () =
 let ``registration failed: missing memberId`` () =
 
     // Setup
-    let viewModel = RegisterViewModel()
+    let viewModel = RegisterViewModel(Dispatcher())
     viewModel.FirstName <- SomeFirstName
     viewModel.LastName  <- SomeLastName
     viewModel.Email     <- ""
@@ -83,7 +107,7 @@ let ``registration failed: missing memberId`` () =
 let ``registration failed: missing password`` () =
 
     // Setup
-    let viewModel = RegisterViewModel()
+    let viewModel = RegisterViewModel(Dispatcher())
     viewModel.FirstName <- SomeFirstName
     viewModel.LastName  <- SomeLastName
     viewModel.Email     <- match SomeEmail with Email address -> address 
@@ -101,7 +125,7 @@ let ``registration failed: missing password`` () =
 let ``registration failed: missing date of birth`` () =
 
     // Setup
-    let viewModel = RegisterViewModel()
+    let viewModel = RegisterViewModel(Dispatcher())
     viewModel.FirstName   <- SomeFirstName
     viewModel.LastName    <- SomeLastName
     viewModel.Email       <- match SomeEmail with Email address -> address 
@@ -120,7 +144,7 @@ let ``registration failed: missing date of birth`` () =
 let ``registration failed: missing zip code`` () =
 
     // Setup
-    let viewModel = RegisterViewModel()
+    let viewModel = RegisterViewModel(Dispatcher())
     viewModel.FirstName   <- SomeFirstName
     viewModel.LastName    <- SomeLastName
     viewModel.Email       <- match SomeEmail with Email address -> address 
@@ -140,7 +164,7 @@ let ``registration failed: missing zip code`` () =
 let ``display try again interface`` () =
     
     // Setup
-    let viewModel = RegisterViewModel()
+    let viewModel = RegisterViewModel(Dispatcher())
     let mutable interfaceRequested = false
     viewModel.TryAgainConfirmation.Show.Add(fun _ -> interfaceRequested <- true)
 
@@ -154,7 +178,7 @@ let ``display try again interface`` () =
 let ``user tries again`` () =
 
     // Setup
-    let viewModel = RegisterViewModel()
+    let viewModel = RegisterViewModel(Dispatcher())
 
     viewModel.TryAgainConfirmation.Show.Add(fun _ ->
         viewModel.FirstName   <- SomeFirstName
@@ -177,7 +201,7 @@ let ``user tries again`` () =
 let ``user cancels attempt`` () = 
 
     // Setup
-    let viewModel = RegisterViewModel()
+    let viewModel = RegisterViewModel(Dispatcher())
 
     viewModel.TryAgainConfirmation.Show.Add(fun _ -> ())
 

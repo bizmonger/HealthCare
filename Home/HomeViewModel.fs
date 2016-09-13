@@ -16,11 +16,11 @@ type HomeViewModel (dispatcher:Dispatcher) as this =
     member this.SignIn =
         DelegateCommand( (fun _ -> dispatcher.ViewSignIn()), fun _ -> true ) :> ICommand
 
-    member this.ViewTips =
-        DelegateCommand( (fun _ -> dispatcher.ViewTips()), fun _ -> true ) :> ICommand
-
     member this.Register =
         DelegateCommand( (fun _ -> dispatcher.ViewRegistration()), fun _ -> true ) :> ICommand
+
+    member this.ViewTips =
+        DelegateCommand( (fun _ -> dispatcher.ViewTips()), fun _ -> true ) :> ICommand
 
     member this.ViewContact =
         DelegateCommand( (fun _ -> dispatcher.ViewContact()), fun _ -> true ) :> ICommand

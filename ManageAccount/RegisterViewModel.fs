@@ -10,7 +10,7 @@ open Register
 open SignIn
 open Confirmation
 
-type RegisterViewModel() =
+type RegisterViewModel(dispatcher:Dispatcher) =
 
     let registrationSucceeded = new Event<_>()
 
@@ -38,19 +38,19 @@ type RegisterViewModel() =
 
         let name = getName this.FirstName this.MiddleName this.LastName
         let credentials = credentials this.UserName this.Password
-        let email = this.Email
+        let memberId = this.Email
         let password = Password this.Password
         let dob = DateOfBirth this.DateOfBirth
         let zip = this.Zipcode
 
         let onFormUpdated form = 
             match form with
-            | Success form   -> registrationSucceeded.Trigger(this, form)
+            | Success form   -> dispatcher.RegistrationIsValid(this, form)
             | Failure reason -> this.TryAgainConfirmation.Display()
 
         DelegateCommand( (fun _ -> this.Form <- 
                                     tryRegister { Name=        name
-                                                  Email=       Email email
+                                                  Email=       Email memberId
                                                   Password=    password
                                                   DateOfBirth= dob
                                                   ZipCode=     ZipCode zip }

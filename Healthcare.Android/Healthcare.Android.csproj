@@ -59,6 +59,7 @@
     <Compile Include="Activities\FAQActivity.cs" />
     <Compile Include="Activities\FindProvidersActivity.cs" />
     <Compile Include="Activities\IdCardActivity.cs" />
+    <Compile Include="Global.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MainActivity.subscriptions.cs">
       <SubType>Code</SubType>
@@ -102,6 +103,10 @@
     <ProjectReference Include="..\InteractionLogic\InteractionLogic.fsproj">
       <Project>{33826d30-2a22-4c31-b87d-8f158953c3c0}</Project>
       <Name>InteractionLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ManageAccount\ManageAccount.fsproj">
+      <Project>{723ff451-7032-47c8-9fff-64fda1c7b280}</Project>
+      <Name>ManageAccount</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

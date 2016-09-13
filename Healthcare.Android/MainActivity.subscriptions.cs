@@ -10,6 +10,7 @@ namespace Healthcare.Android
             _dispatcher.SignInSuccessful += (s, e) => StartActivity(typeof(SignInActivity));
 
             _dispatcher.RegistrationRequested += (s, e) => StartActivity(typeof(RegisterActivity));
+            _dispatcher.RegistrationSuccessful += (s, e) => StartActivity(typeof(PortalDashboardActivity));
 
             _dispatcher.IdRequested += (s, e) => StartActivity(typeof(IdCardActivity));
             _dispatcher.ProvidersRequested += (s, e) => StartActivity(typeof(FindProvidersActivity));

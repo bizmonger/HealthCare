@@ -8,10 +8,11 @@ open Claims
 type Dispatcher() =
 
     let signInRequested =       new Event<EventHandler<_>,_>()
-    let registrationRequested = new Event<EventHandler<_>,_>()
-
     let signInSuccessful =      new Event<EventHandler<_>,_>()
-    
+
+    let registrationRequested = new Event<EventHandler<_>,_>()
+    let receivedValidForm =new Event<EventHandler<_>,_>()
+
     let settingsChanged =       new Event<Features>()
 
     let idRequested =           new Event<EventHandler<_>,_>()
@@ -113,12 +114,17 @@ type Dispatcher() =
     member this.SignInRequested =         signInRequested.Publish
     [<CLIEvent>]
     member this.SignInSuccessful =         signInSuccessful.Publish
+
     [<CLIEvent>]
     member this.RegistrationRequested =    registrationRequested.Publish
 
+    [<CLIEvent>]
+    member this.RegistrationSuccessful =   receivedValidForm.Publish
+
     (* Triggers *)
-    member this.ViewPortalDashboard() =   signInSuccessful.Trigger(this , EventArgs.Empty)
-    member this.ChangeSettings settings = settingsChanged.Trigger settings
+    member this.ViewPortalDashboard() =      signInSuccessful.Trigger(this , EventArgs.Empty)
+    member this.RegistrationIsValid form = receivedValidForm.Trigger(this, form)
+    member this.ChangeSettings settings =    settingsChanged.Trigger settings
 
     member this.TryViewIdCard memberId =  idRequested.Trigger(this , EventArgs.Empty)
     member this.ViewContact() =           contactRequested.Trigger(this , EventArgs.Empty)
