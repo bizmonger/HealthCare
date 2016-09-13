@@ -43,6 +43,14 @@
     android:layout_height="wrap_content"
     android:hint="Member Id"
     />
+
+    <EditText
+      android:id="@+id/password"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:hint="Password"
+    />
+    
     <EditText
       android:id="@+id/dateOfBirth"
       android:layout_width="fill_parent"
@@ -56,6 +64,7 @@
       android:layout_height="wrap_content"
       android:hint="Zip Code"
     />
+    
   </LinearLayout>
 
   <Button

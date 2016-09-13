@@ -45,7 +45,10 @@ type RegisterViewModel(dispatcher:Dispatcher) =
 
         let onFormUpdated form = 
             match form with
-            | Success form   -> dispatcher.RegistrationIsValid(this, form)
+            | Success form   -> if box (dispatcher.RegistrationIsValid) <> null
+                                then dispatcher.RegistrationIsValid(this, form)
+                                else ()
+
             | Failure reason -> this.TryAgainConfirmation.Display()
 
         DelegateCommand( (fun _ -> this.Form <- 

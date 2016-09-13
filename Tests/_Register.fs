@@ -33,6 +33,27 @@ let ``register account`` () =
     | _ -> failwith ""
 
 [<Test>]
+let ``registering account without middle name`` () =
+
+    // Setup
+    let viewModel = RegisterViewModel(Dispatcher())
+    viewModel.FirstName   <- SomeFirstName
+    viewModel.MiddleName  <- ""
+    viewModel.LastName    <- SomeLastName
+    viewModel.DateOfBirth <- SomeDateOfBirth 
+    viewModel.Email       <- match SomeEmail with Email address -> address 
+    viewModel.Password    <- SomePassword  
+    viewModel.Zipcode     <- match SomeZipCode with ZipCode zip -> zip
+
+    // Test
+    viewModel.Register.Execute()
+
+    // Verify
+    match viewModel.Form with
+    | Success _ -> ()
+    | _ -> failwith ""
+
+[<Test>]
 let ``successful registration dispatches result`` () =
 
     // Setup

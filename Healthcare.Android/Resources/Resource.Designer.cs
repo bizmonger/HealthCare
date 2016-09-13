@@ -96,8 +96,8 @@ namespace Healthcare.Android
 			// aapt resource value: 0x7f050001
 			public const int Tips = 2131034113;
 			
-			// aapt resource value: 0x7f050010
-			public const int dateOfBirth = 2131034128;
+			// aapt resource value: 0x7f050011
+			public const int dateOfBirth = 2131034129;
 			
 			// aapt resource value: 0x7f05000d
 			public const int firstName = 2131034125;
@@ -114,11 +114,14 @@ namespace Healthcare.Android
 			// aapt resource value: 0x7f05000f
 			public const int memberId = 2131034127;
 			
-			// aapt resource value: 0x7f050012
-			public const int next = 2131034130;
+			// aapt resource value: 0x7f050013
+			public const int next = 2131034131;
 			
-			// aapt resource value: 0x7f050011
-			public const int zipCode = 2131034129;
+			// aapt resource value: 0x7f050010
+			public const int password = 2131034128;
+			
+			// aapt resource value: 0x7f050012
+			public const int zipCode = 2131034130;
 			
 			static Id()
 			{

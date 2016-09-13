@@ -43,6 +43,7 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
     <Reference Include="FSharp.Core, Version=3.98.4.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
       <HintPath>..\packages\FSharp.Core.4.0.0.1\lib\portable-net45+monoandroid10+monotouch10+xamarinios10\FSharp.Core.dll</HintPath>
       <Private>True</Private>
@@ -115,6 +116,10 @@
     <ProjectReference Include="..\ManageAccount\ManageAccount.fsproj">
       <Project>{723ff451-7032-47c8-9fff-64fda1c7b280}</Project>
       <Name>ManageAccount</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestAPI\TestAPI.fsproj">
+      <Project>{d1aee01b-fceb-49cb-af30-be4b8975f691}</Project>
+      <Name>TestAPI</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
