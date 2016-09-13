@@ -27,6 +27,10 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ManageProviders", "ManagePr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Healthcare.Android", "Healthcare.Android\Healthcare.Android.csproj", "{891289CE-895E-4E8C-A02A-10468C943690}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration", "{D472DA46-813C-470F-A39C-6EC0B48EEE4B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A94DCB37-B0B3-4C6F-AC39-D504C7981953}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,5 +90,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{17562653-B71A-4FCA-9DD3-42C53FBA90F0} = {A94DCB37-B0B3-4C6F-AC39-D504C7981953}
+		{33826D30-2A22-4C31-B87D-8F158953C3C0} = {D472DA46-813C-470F-A39C-6EC0B48EEE4B}
+		{D1AEE01B-FCEB-49CB-AF30-BE4B8975F691} = {A94DCB37-B0B3-4C6F-AC39-D504C7981953}
+		{5F3337C1-C224-4A2D-AAC0-06C72F86EE93} = {D472DA46-813C-470F-A39C-6EC0B48EEE4B}
+		{891289CE-895E-4E8C-A02A-10468C943690} = {D472DA46-813C-470F-A39C-6EC0B48EEE4B}
 	EndGlobalSection
 EndGlobal
