@@ -154,11 +154,6 @@
       <Project>{dbcbd491-ca74-4e58-8609-cd91ffaa2b66}</Project>
       <Private>True</Private>
     </ProjectReference>
-    <ProjectReference Include="..\GetSupport\GetSupport.fsproj">
-      <Name>GetSupport</Name>
-      <Project>{55259c8d-9c15-4b3f-acea-79d480dd87d6}</Project>
-      <Private>True</Private>
-    </ProjectReference>
     <ProjectReference Include="..\Home\Home.fsproj">
       <Name>Home</Name>
       <Project>{bba08341-c855-44e3-bceb-31941bb2fdda}</Project>

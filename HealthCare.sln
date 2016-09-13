@@ -21,8 +21,6 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ManageBenefits", "ManageBen
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ManageClaims", "ManageClaims\ManageClaims.fsproj", "{B4D72D4B-5CA7-44F1-B749-D527E8B358A1}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "GetSupport", "GetSupport\GetSupport.fsproj", "{55259C8D-9C15-4B3F-ACEA-79D480DD87D6}"
-EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ManageProviders", "ManageProviders\ManageProviders.fsproj", "{0075DC03-0B36-4975-BE35-286550F8FDF3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Healthcare.Android", "Healthcare.Android\Healthcare.Android.csproj", "{891289CE-895E-4E8C-A02A-10468C943690}"
@@ -73,10 +71,6 @@ Global
 		{B4D72D4B-5CA7-44F1-B749-D527E8B358A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4D72D4B-5CA7-44F1-B749-D527E8B358A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4D72D4B-5CA7-44F1-B749-D527E8B358A1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{55259C8D-9C15-4B3F-ACEA-79D480DD87D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{55259C8D-9C15-4B3F-ACEA-79D480DD87D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{55259C8D-9C15-4B3F-ACEA-79D480DD87D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{55259C8D-9C15-4B3F-ACEA-79D480DD87D6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0075DC03-0B36-4975-BE35-286550F8FDF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0075DC03-0B36-4975-BE35-286550F8FDF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0075DC03-0B36-4975-BE35-286550F8FDF3}.Release|Any CPU.ActiveCfg = Release|Any CPU

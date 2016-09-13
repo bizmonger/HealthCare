@@ -44,6 +44,7 @@
     <Compile Include="HomeViewModel.fs" />
     <Compile Include="PortalViewModel.fs" />
     <Content Include="packages.config" />
+    <Compile Include="SupportViewModel.fs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.fsproj">

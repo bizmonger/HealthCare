@@ -7,7 +7,7 @@ open MockClaim
 open TestAPI
 
 open InteractionLogic
-open GetSupport
+open Home
     
 [<Test>]
 let ``load last service summary`` () =
