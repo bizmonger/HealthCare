@@ -6,11 +6,11 @@ namespace Healthcare.Android
     {
         void MapNavigations()
         {
-            _dispatcher.IdRequested += (s, e) => _viewModel.ViewIdCard.Execute(null);
-            _dispatcher.ClaimsRequested += (s, e) => _viewModel.ViewClaims.Execute(null);
-            _dispatcher.ProvidersRequested += (s, e) => _viewModel.ViewProviders.Execute(null);
-            _dispatcher.ContactRequested += (s, e) => _viewModel.ViewBenefits.Execute(null);
-            _dispatcher.ProvidersRequested += (s, e) => _viewModel.ViewProviders.Execute(null);
+            _dispatcher.IdRequested += (s, e) => StartActivity(typeof(IdCardActivity));
+            _dispatcher.ClaimsRequested += (s, e) => StartActivity(typeof(ClaimsActivity));
+            _dispatcher.UsageRequested += (s, e) => StartActivity(typeof(BenefitsActivity));
+            _dispatcher.ContactRequested += (s, e) => StartActivity(typeof(ContactActivity));
+            _dispatcher.ProvidersRequested += (s, e) => StartActivity(typeof(ProvidersActivity));
         }
 
         void MapCommands()

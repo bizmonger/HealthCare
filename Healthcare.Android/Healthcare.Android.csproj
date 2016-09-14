@@ -56,6 +56,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities\BenefitsActivity.cs" />
+    <Compile Include="Activities\ClaimsActivity.cs" />
     <Compile Include="Activities\ContactActivity.cs" />
     <Compile Include="Activities\FAQActivity.cs" />
     <Compile Include="Activities\FindProvidersActivity.cs" />
@@ -67,6 +69,7 @@
     <Compile Include="Activities\PortalDashboardActivity.members.cs">
       <DependentUpon>PortalDashboardActivity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Activities\ProvidersActivity.cs" />
     <Compile Include="Activities\RegisterActivity.internal.cs">
       <SubType>Code</SubType>
       <DependentUpon>RegisterActivity.cs</DependentUpon>
