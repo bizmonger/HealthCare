@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+  <LinearLayout
+      android:id="@+id/Header"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingLeft="16dp"
+      android:paddingRight="16dp"
+      android:layout_alignParentTop="true"
+      android:layout_centerHorizontal="true"
+      android:orientation="vertical">
+    <TextView
+        android:id="@+id/Welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:gravity="center_horizontal"
+        android:text="Welcome Joe!" />
+    <TextView
+        android:id="@+id/Label1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:gravity="center_horizontal"
+        android:text="Here is your quick dental health check this year:" />
+
+    <LinearLayout
+        android:id="@+id/LastActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+      <TextView
+          android:id="@+id/LastCleaning"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="15sp"
+          android:gravity="center_vertical|left"
+          android:text="Last Cleaning:" />
+
+      <TextView
+          android:id="@+id/LastDentalVisit"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="15sp"
+          android:gravity="center_vertical|right"
+          android:text="Last Dentist Visit:" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:orientation="vertical">
+      <TextView
+          android:id="@+id/Label2"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="15sp"
+          android:gravity="center_horizontal"
+          android:text="You are taking a care of your smile!" />
+
+      <LinearLayout
+          android:id="@+id/Row1Options"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingLeft="16dp"
+          android:paddingRight="16dp"
+          android:orientation="horizontal">
+        <Button
+            android:id="@+id/IdCard"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="ID Card" />
+        <Button
+            android:id="@+id/Providers"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="Find a Provider" />
+      </LinearLayout>
+
+      <LinearLayout
+          android:id="@+id/Row2Options"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingLeft="16dp"
+          android:paddingRight="16dp"
+          android:layout_alignParentTop="true"
+          android:orientation="horizontal">
+        <Button
+            android:id="@+id/Benefits"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="Your Benefits" />
+        <Button
+            android:id="@+id/Claims"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="Your Caims" />
+      </LinearLayout>
+    </LinearLayout>
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/Footer"
+      android:layout_width="match_parent"
+      android:layout_height="48dp"
+      android:paddingLeft="5dp"
+      android:paddingRight="5dp"
+      android:layout_alignParentBottom="true"
+      android:orientation="horizontal">
+    <Button
+        android:id="@+id/Dashboard"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="Dashboard" />
+    <Button
+        android:id="@+id/Benefits"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="Benefits" />
+    <Button
+        android:id="@+id/Claims"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="Claims" />
+    <Button
+        android:id="@+id/Contact"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="Contact" />
+  </LinearLayout>
+</RelativeLayout>
