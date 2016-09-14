@@ -14,6 +14,9 @@ namespace Healthcare.Android
 
             var email = FindViewById<Button>(Resource.Id.Email);
             email.Click += (s, e) => _viewModel.Email.Execute(null);
+
+            var enableHomeAccess = FindViewById<Button>(Resource.Id.EnableIdViewing);
+            enableHomeAccess.Click += (s, e) => _viewModel.EnableHomeAccess.Execute(null);
         }
     }
 }

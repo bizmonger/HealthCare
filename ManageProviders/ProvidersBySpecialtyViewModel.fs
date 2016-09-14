@@ -14,6 +14,7 @@ type ProvidersBySpecialtyViewModel(memberId:MemberId , repository:IProvidersRepo
 
     member val Specialty = ""   with get,set
     member val Distance =  ""   with get,set
+    member val Network =   ""   with get,set
     member val Location =  ""   with get,set
     member val Providers = []   with get,set
 

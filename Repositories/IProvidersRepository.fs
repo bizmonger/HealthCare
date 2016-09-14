@@ -1,4 +1,4 @@
-﻿module ManageProviders
+﻿namespace Repositories
 
 open Account
 open Claims

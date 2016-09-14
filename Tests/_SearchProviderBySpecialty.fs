@@ -67,7 +67,7 @@ let ``search requires specialty`` () =
     viewModel.LoadProviders.Execute()
 
     // Verify
-    viewModel.Providers |> should equal SomeProviders
+    viewModel.ValidationResult |> should equal SomeProviders
 
 [<Test>]
 let ``search requires distance`` () = 
@@ -75,13 +75,28 @@ let ``search requires distance`` () =
     // Setup
     let viewModel = ProvidersBySpecialtyViewModel(SomeMemberId , MockProvidersRepository())
     viewModel.Specialty <- "some_specialty"
-    viewModel.Distance <- "50"
+    viewModel.Distance  <- "50"
 
     // Test
     viewModel.LoadProviders.Execute()
 
     // Verify
-    viewModel.Providers |> should equal SomeProviders
+    viewModel.ValidationResult |> should equal SomeProviders
+
+[<Test>]
+let ``search requires network`` () = 
+
+    // Setup
+    let viewModel = ProvidersBySpecialtyViewModel(SomeMemberId , MockProvidersRepository())
+    viewModel.Specialty <- "some_specialty"
+    viewModel.Distance  <- "50"
+    viewModel.Network   <- "some_network"
+
+    // Test
+    viewModel.LoadProviders.Execute()
+
+    // Verify
+    viewModel.ValidationResult |> should equal SomeProviders
 
 [<Test>]
 let ``search requires location`` () = 
@@ -96,4 +111,4 @@ let ``search requires location`` () =
     viewModel.LoadProviders.Execute()
 
     // Verify
-    viewModel.Providers |> should equal SomeProviders
+    viewModel.ValidationResult |> should equal SomeProviders

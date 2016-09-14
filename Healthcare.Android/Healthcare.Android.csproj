@@ -138,6 +138,9 @@
     <AndroidResource Include="Resources\layout\Benefits.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\FindProvider.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -169,6 +172,10 @@
     <ProjectReference Include="..\ManageBenefits\ManageBenefits.fsproj">
       <Project>{b561d92c-61b2-4338-9d73-ea23bd03da5b}</Project>
       <Name>ManageBenefits</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ManageProviders\ManageProviders.fsproj">
+      <Project>{0075dc03-0b36-4975-be35-286550f8fdf3}</Project>
+      <Name>ManageProviders</Name>
     </ProjectReference>
     <ProjectReference Include="..\Repositories\Repositories.fsproj">
       <Project>{5f3337c1-c224-4a2d-aac0-06c72f86ee93}</Project>
