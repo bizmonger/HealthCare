@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <TextView
+      android:id="@+id/BenefitsHeader"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5sp"
+      android:layout_centerHorizontal="true"
+      android:text="Your Insurance Plan" />
+  
+  <ImageView
+      android:id="@+id/Logo"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:layout_marginTop="15sp"
+      android:layout_centerHorizontal="true"
+      android:src="@drawable/SomeLogo" />
+
+  <TextView
+      android:id="@+id/PlanName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5sp"
+      android:layout_centerHorizontal="true"
+      android:text="Some Plan Name" />
+
+  <TextView
+    android:id="@+id/EffectiveFromLabel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5sp"
+    android:layout_centerHorizontal="true"
+    android:text="Effective From:" />
+
+  <TextView
+    android:id="@+id/EffectiveUntilLabel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5sp"
+    android:layout_centerHorizontal="true"
+    android:text="Effective Until:" />
+
+  <TextView
+    android:id="@+id/PlanCoverageLabel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5sp"
+    android:layout_centerHorizontal="true"
+    android:text="Effective Until:" />
+
+  <TextView
+    android:id="@+id/PlanCoverageLabel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5sp"
+    android:layout_centerHorizontal="true"
+    android:text="Effective Until:" />
+
+  <TextView
+    android:id="@+id/PlanNetworkLabel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5sp"
+    android:layout_centerHorizontal="true"
+    android:text="Network:" />
+
+  <TextView
+    android:id="@+id/Goup"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5sp"
+    android:layout_centerHorizontal="true"
+    android:text="Goup:" />
+
+  <Button
+    android:id="@+id/PlanBennefits"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15sp"
+    android:text="Plan Benefits" />
+
+  <Button
+    android:id="@+id/Coverage"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15sp"
+    android:text="Coverage" />
+
+  <Button
+    android:id="@+id/Usage"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15sp"
+    android:text="Benefits Usage"/>
+  
+</LinearLayout>

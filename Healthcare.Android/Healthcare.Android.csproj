@@ -57,8 +57,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\BenefitsActivity.cs" />
+    <Compile Include="Activities\BenefitsActivity.handlers.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>BenefitsActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activities\BenefitsActivity.internal.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>BenefitsActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activities\BenefitsActivity.members.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>BenefitsActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Activities\ClaimsActivity.cs" />
     <Compile Include="Activities\ContactActivity.cs" />
+    <Compile Include="Activities\CoverageActivity.cs" />
     <Compile Include="Activities\FAQActivity.cs" />
     <Compile Include="Activities\FindProvidersActivity.cs" />
     <Compile Include="Activities\IdCardActivity.cs" />
@@ -69,6 +82,7 @@
       <SubType>Code</SubType>
       <DependentUpon>IdCardActivity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Activities\PlanActivity.cs" />
     <Compile Include="Activities\PortalDashboardActivity.internal.cs">
       <SubType>Code</SubType>
       <DependentUpon>PortalDashboardActivity.cs</DependentUpon>
@@ -89,6 +103,7 @@
       <SubType>Code</SubType>
       <DependentUpon>RegisterActivity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Activities\UsageActivity.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="MainActivity.cs" />
@@ -120,6 +135,9 @@
     <AndroidResource Include="Resources\layout\IdCard.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\Benefits.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -147,6 +165,10 @@
     <ProjectReference Include="..\ManageAccount\ManageAccount.fsproj">
       <Project>{723ff451-7032-47c8-9fff-64fda1c7b280}</Project>
       <Name>ManageAccount</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ManageBenefits\ManageBenefits.fsproj">
+      <Project>{b561d92c-61b2-4338-9d73-ea23bd03da5b}</Project>
+      <Name>ManageBenefits</Name>
     </ProjectReference>
     <ProjectReference Include="..\Repositories\Repositories.fsproj">
       <Project>{5f3337c1-c224-4a2d-aac0-06c72f86ee93}</Project>

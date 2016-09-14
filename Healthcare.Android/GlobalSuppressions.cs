@@ -5,4 +5,7 @@
 // a specific target and scoped to a namespace, type, member, etc.
 
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Usage", "CC0057:Unused parameters", Justification = "<Pending>", Scope = "member", Target = "~M:Healthcare.Android.MainActivity.OnRegistrationSuccessful(System.Object,System.Object)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Usage", "CC0057:Unused parameters", Justification = "<Pending>", Scope = "member", Target = "~M:Healthcare.Android.BenefitsActivity.OnCoverageRequested(System.Object,System.Object)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Usage", "CC0057:Unused parameters", Justification = "<Pending>", Scope = "member", Target = "~M:Healthcare.Android.BenefitsActivity.OnPlanRequested(System.Object,System.Object)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Usage", "CC0057:Unused parameters", Justification = "<Pending>", Scope = "member", Target = "~M:Healthcare.Android.BenefitsActivity.OnUsageRequested(System.Object,System.Object)")]
 
