@@ -114,28 +114,28 @@
       android:id="@+id/Footer"
       android:layout_width="match_parent"
       android:layout_height="48dp"
-      android:paddingLeft="5dp"
-      android:paddingRight="5dp"
+      android:paddingLeft="1dp"
+      android:paddingRight="1dp"
       android:layout_alignParentBottom="true"
       android:orientation="horizontal">
     <Button
         android:id="@+id/Dashboard"
-        android:layout_width="110dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Dashboard" />
     <Button
         android:id="@+id/Benefits"
-        android:layout_width="170dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Benefits" />
     <Button
         android:id="@+id/Claims"
-        android:layout_width="110dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Claims" />
     <Button
         android:id="@+id/Contact"
-        android:layout_width="110dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Contact" />
   </LinearLayout>

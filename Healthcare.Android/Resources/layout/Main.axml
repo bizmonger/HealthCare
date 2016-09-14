@@ -63,17 +63,17 @@
         android:orientation="horizontal">
         <Button
             android:id="@+id/IdCard"
-            android:layout_width="110dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ID Card" />
         <Button
             android:id="@+id/Providers"
-            android:layout_width="170dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Find Provider" />
         <Button
             android:id="@+id/Contact"
-            android:layout_width="110dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Contact" />
     </LinearLayout>

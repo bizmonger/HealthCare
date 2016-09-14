@@ -62,6 +62,13 @@
     <Compile Include="Activities\FAQActivity.cs" />
     <Compile Include="Activities\FindProvidersActivity.cs" />
     <Compile Include="Activities\IdCardActivity.cs" />
+    <Compile Include="Activities\IdCardActivity.internal.cs">
+      <DependentUpon>IdCardActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activities\IdCardActivity.members.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>IdCardActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Activities\PortalDashboardActivity.internal.cs">
       <SubType>Code</SubType>
       <DependentUpon>PortalDashboardActivity.cs</DependentUpon>
@@ -108,6 +115,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\PortalDashboard.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\IdCard.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
