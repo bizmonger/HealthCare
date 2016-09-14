@@ -1,3 +1,4 @@
+using System;
 using Android.App;
 using Android.OS;
 using Android.Widget;
@@ -13,8 +14,14 @@ namespace Healthcare.Android
 
             SetContentView(Resource.Layout.Register);
 
-            var next = FindViewById<Button>(Resource.Id.next);
-            next.Click += OnNext;
+            MapNavigations();
+            MapCommands();
+        }
+
+        protected override void OnStop()
+        {
+            base.OnStop();
+            UnMapNavigations();
         }
     }
 }

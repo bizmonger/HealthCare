@@ -10,7 +10,6 @@ namespace Healthcare.Android
             _dispatcher.SignInSuccessful += OnSignInSuccessful;
 
             _dispatcher.RegistrationRequested += OnRegistrationRequested;
-            _dispatcher.RegistrationSuccessful += OnRegistrationSuccessful;
 
             _dispatcher.IdRequested += OnIdRequested;
             _dispatcher.ProvidersRequested += OnProvidersRequested;
@@ -26,7 +25,6 @@ namespace Healthcare.Android
             _dispatcher.SignInSuccessful -= OnSignInSuccessful;
 
             _dispatcher.RegistrationRequested -= OnRegistrationRequested;
-            _dispatcher.RegistrationSuccessful -= OnRegistrationSuccessful;
 
             _dispatcher.IdRequested -= OnIdRequested;
             _dispatcher.ProvidersRequested -= OnProvidersRequested;

@@ -78,9 +78,16 @@
       <SubType>Code</SubType>
       <DependentUpon>RegisterActivity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Activities\RegisterActivity.subscriptions.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>RegisterActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="MainActivity.handlers.cs">
+      <DependentUpon>MainActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainActivity.subscriptions.cs">
       <SubType>Code</SubType>
       <DependentUpon>MainActivity.cs</DependentUpon>
@@ -88,10 +95,6 @@
     <Compile Include="Activities\PrivacyActivity.cs" />
     <Compile Include="Activities\RegisterActivity.cs" />
     <Compile Include="Activities\PortalDashboardActivity.cs" />
-    <Compile Include="MainActivity.subscriptions.handlers.cs">
-      <SubType>Code</SubType>
-      <DependentUpon>MainActivity.subscriptions.cs</DependentUpon>
-    </Compile>
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Activities\SignInActivity.cs" />

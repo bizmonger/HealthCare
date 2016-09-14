@@ -1,5 +1,4 @@
 using System;
-using Android.Widget;
 using ManageAccount;
 using static MockMember;
 
