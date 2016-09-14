@@ -1,3 +1,4 @@
+using System;
 using Android.Widget;
 
 namespace Healthcare.Android
@@ -6,19 +7,46 @@ namespace Healthcare.Android
     {
         void MapNavigations()
         {
-            _dispatcher.SignInRequested += (s, e) => StartActivity(typeof(SignInActivity));
-            _dispatcher.SignInSuccessful += (s, e) => StartActivity(typeof(SignInActivity));
+            _dispatcher.SignInRequested += OnSignInRequested;
+            _dispatcher.SignInSuccessful += OnSignInSuccessful;
 
-            _dispatcher.RegistrationRequested += (s, e) => StartActivity(typeof(RegisterActivity));
-            _dispatcher.RegistrationSuccessful += (s, e) => StartActivity(typeof(PortalDashboardActivity));
+            _dispatcher.RegistrationRequested += OnRegistrationRequested;
+            _dispatcher.RegistrationSuccessful += OnRegistrationSuccessful;
 
-            _dispatcher.IdRequested += (s, e) => StartActivity(typeof(IdCardActivity));
-            _dispatcher.ProvidersRequested += (s, e) => StartActivity(typeof(FindProvidersActivity));
-            _dispatcher.ContactRequested += (s, e) => StartActivity(typeof(ContactActivity));
-            _dispatcher.PrivacyRequested += (s, e) => StartActivity(typeof(PrivacyActivity));
-            _dispatcher.FAQRequested += (s, e) => StartActivity(typeof(FAQActivity));
-            _dispatcher.TipsRequested += (s, e) => StartActivity(typeof(TipsActivity));
+            _dispatcher.IdRequested += OnIdRequested;
+            _dispatcher.ProvidersRequested += OnProvidersRequested;
+            _dispatcher.ContactRequested += OnContactRequested;
+            _dispatcher.PrivacyRequested += OnPrivacyRequested;
+            _dispatcher.FAQRequested += OnFAQRequested;
+            _dispatcher.TipsRequested += OnTipsRequested;
         }
+
+        void UnMapNavigations()
+        {
+            _dispatcher.SignInRequested -= OnSignInRequested;
+            _dispatcher.SignInSuccessful -= OnSignInSuccessful;
+
+            _dispatcher.RegistrationRequested -= OnRegistrationRequested;
+            _dispatcher.RegistrationSuccessful -= OnRegistrationSuccessful;
+
+            _dispatcher.IdRequested -= OnIdRequested;
+            _dispatcher.ProvidersRequested -= OnProvidersRequested;
+            _dispatcher.ContactRequested -= OnContactRequested;
+            _dispatcher.PrivacyRequested -= OnPrivacyRequested;
+            _dispatcher.FAQRequested -= OnFAQRequested;
+            _dispatcher.TipsRequested -= OnTipsRequested;
+        }
+
+        void OnSignInSuccessful(object sender, EventArgs e) => StartActivity(typeof(SignInActivity));
+        void OnSignInRequested(object sender, EventArgs e) => StartActivity(typeof(SignInActivity));
+        void OnRegistrationRequested(object sender, EventArgs e) => StartActivity(typeof(RegisterActivity));
+        void OnRegistrationSuccessful(object sender, object e) => StartActivity(typeof(PortalDashboardActivity));
+        void OnIdRequested(object sender, EventArgs e) => StartActivity(typeof(IdCardActivity));
+        void OnProvidersRequested(object sender, EventArgs e) => StartActivity(typeof(FindProvidersActivity));
+        void OnContactRequested(object sender, EventArgs e) => StartActivity(typeof(ContactActivity));
+        void OnPrivacyRequested(object sender, EventArgs e) => StartActivity(typeof(PrivacyActivity));
+        void OnFAQRequested(object sender, EventArgs e) => StartActivity(typeof(FAQActivity));
+        void OnTipsRequested(object sender, EventArgs e) => StartActivity(typeof(TipsActivity));
 
         void MapCommands()
         {

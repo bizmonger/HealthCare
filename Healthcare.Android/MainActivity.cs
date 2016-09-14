@@ -25,5 +25,11 @@ namespace Healthcare.Android
             MapNavigations();
             MapCommands();
         }
+
+        protected override void OnStop()
+        {
+            base.OnStop();
+            UnMapNavigations();
+        }
     }
 }
