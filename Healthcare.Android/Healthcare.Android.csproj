@@ -64,6 +64,9 @@
       <SubType>Code</SubType>
       <DependentUpon>PortalDashboardActivity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Activities\PortalDashboardActivity.members.cs">
+      <DependentUpon>PortalDashboardActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Activities\RegisterActivity.internal.cs">
       <SubType>Code</SubType>
       <DependentUpon>RegisterActivity.cs</DependentUpon>

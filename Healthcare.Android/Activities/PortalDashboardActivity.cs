@@ -1,5 +1,6 @@
 using Android.App;
 using Android.OS;
+using Android.Widget;
 using Home;
 
 namespace Healthcare.Android
@@ -14,6 +15,9 @@ namespace Healthcare.Android
             SetContentView(Resource.Layout.PortalDashboard);
 
             _viewModel = new PortalViewModel(_memberId, _dispatcher, _repository);
+
+            MapNavigations();
+            MapCommands();
         }
     }
 }
