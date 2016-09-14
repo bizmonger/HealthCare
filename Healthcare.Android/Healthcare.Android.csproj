@@ -60,6 +60,10 @@
     <Compile Include="Activities\FAQActivity.cs" />
     <Compile Include="Activities\FindProvidersActivity.cs" />
     <Compile Include="Activities\IdCardActivity.cs" />
+    <Compile Include="Activities\PortalDashboardActivity.internal.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>PortalDashboardActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Activities\RegisterActivity.internal.cs">
       <SubType>Code</SubType>
       <DependentUpon>RegisterActivity.cs</DependentUpon>
@@ -119,6 +123,10 @@
     <ProjectReference Include="..\ManageAccount\ManageAccount.fsproj">
       <Project>{723ff451-7032-47c8-9fff-64fda1c7b280}</Project>
       <Name>ManageAccount</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repositories\Repositories.fsproj">
+      <Project>{5f3337c1-c224-4a2d-aac0-06c72f86ee93}</Project>
+      <Name>Repositories</Name>
     </ProjectReference>
     <ProjectReference Include="..\TestAPI\TestAPI.fsproj">
       <Project>{d1aee01b-fceb-49cb-af30-be4b8975f691}</Project>
