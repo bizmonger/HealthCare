@@ -12,3 +12,4 @@ type ProvidersBySpecialtyResponse =
     | SpecialtyRequired
     | DistanceRequired
     | LocationRequired
+    | NetworkRequired

@@ -18,10 +18,23 @@
     type Service =  Service  of DateTime * DateTime
     type Office =   Office   of string
 
-    type Provider = {
+    type ProviderByName = {
         Name:Name
         Office:Office
         Network:Network
+    }
+
+    type NetworkName = NetworkName of string
+
+    type Specialty = Specialty of string
+    type Distance =  Distance  of int
+    type Location =  Location  of string
+
+    type ProviderBySpecialty = {
+        Specialty:Specialty
+        Distance:Distance
+        Location:Location
+        NetworkName:NetworkName
     }
 
     type ClaimId = ClaimId of string
@@ -29,7 +42,7 @@
     type Claim = {
         ClaimId:ClaimId
         Service:Service
-        Provider:Provider
+        Provider:ProviderByName
         Office:Office
         Network:Network
     }
@@ -51,5 +64,3 @@
         InsuranceSavings:InsuranceSavings
         TotalSavings:TotalSavings
     }
-
-    type Specialty = Specialty of string

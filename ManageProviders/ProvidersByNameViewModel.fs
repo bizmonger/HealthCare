@@ -27,11 +27,11 @@ type ProvidersByNameViewModel(memberId:MemberId , repository:IProvidersRepositor
     member val ValidationResult = Failure ProvidersByNameResponse.NA with get,set
     member val Providers = []   with get,set
 
-    member this.Validate() = this.ValidationResult <- validate { Name = { First=  this.FirstName
-                                                                          Middle= this.MiddleName
-                                                                          Last= this.LastName }
-                                                                 Office=  Office this.Office
-                                                                 Network= this.Network }
+    member this.Validate() = this.ValidationResult <- validateProviderByName { Name = { First=  this.FirstName
+                                                                                        Middle= this.MiddleName
+                                                                                        Last= this.LastName }
+                                                                               Office=  Office this.Office
+                                                                               Network= this.Network }
     member this.LoadProviders =
         DelegateCommand ( (fun _ -> this.Validate()
         

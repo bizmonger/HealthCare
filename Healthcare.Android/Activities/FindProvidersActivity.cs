@@ -5,6 +5,8 @@ using static Account;
 using Android.Widget;
 using Repositories;
 using ManageProviders;
+using static MockMember;
+using TestAPI;
 
 namespace Healthcare.Android
 {
@@ -12,8 +14,8 @@ namespace Healthcare.Android
     class FindProvidersActivity : Activity
     {
         ProvidersBySpecialtyViewModel _viewModel;
-        IProvidersRepository _repository;
-        MemberId _memberId;
+        IProvidersRepository _repository = new MockProvidersRepository();
+        MemberId _memberId = SomeMemberId;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -36,7 +38,7 @@ namespace Healthcare.Android
             network.ItemSelected += (s, e) => _viewModel.Network = network.SelectedItem.ToString();
 
             var distance = FindViewById<ListView>(Resource.Id.DistanceListView);
-            distance.ItemSelected += (s, e) => _viewModel.Distance = distance.SelectedItem.ToString();
+            distance.ItemSelected += (s, e) => _viewModel.Distance = int.Parse (distance.SelectedItem.ToString());
 
             var search = FindViewById<ListView>(Resource.Id.SearchProviders);
             search.Click += (s, e) => _viewModel.LoadProviders.Execute(null);

@@ -5,5 +5,5 @@ open Claims
 
 type IProvidersRepository =
     
-    abstract member GetProvidersByName      : Name      -> Provider list
-    abstract member GetProvidersBySpecialty : Specialty -> Provider list
+    abstract member GetProvidersByName      : Name      -> ProviderByName list
+    abstract member GetProvidersBySpecialty : Specialty -> ProviderByName list
