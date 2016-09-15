@@ -1,7 +1,5 @@
-using System;
 using Android.Views;
 using Android.Widget;
-using static Claims;
 using System.Collections.Generic;
 using Android.App;
 
