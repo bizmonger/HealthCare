@@ -45,6 +45,7 @@
     <Compile Include="MockOverview.fs" />
     <Compile Include="MockClaim.fs" />
     <Compile Include="MockSignIn.fs" />
+    <Compile Include="MockProviders.fs" />
     <Compile Include="MockBenefitsRepository.fs" />
     <Compile Include="MockClaimsRepository.fs" />
     <Compile Include="MockProfileRepository.fs" />

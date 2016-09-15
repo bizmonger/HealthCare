@@ -1,5 +1,6 @@
 using Android.Widget;
 using ManageProviders;
+using static MockProviders;
 
 namespace Healthcare.Android
 {
@@ -26,6 +27,10 @@ namespace Healthcare.Android
 
             var distance = FindViewById<ListView>(Resource.Id.DistanceListView);
             distance.ItemSelected += (s, e) => _viewModel.Distance = int.Parse(distance.SelectedItem.ToString());
+
+            var currentLocation = FindViewById<RadioButton>(Resource.Id.CurrentLocation);
+            currentLocation.CheckedChange += (s, e) => _viewModel.Location = currentLocation.Checked ? CurrentLocation : SomeOtherLocation;
+
 
             var search = FindViewById<Button>(Resource.Id.SearchProviders);
             search.Click += (s, e) =>

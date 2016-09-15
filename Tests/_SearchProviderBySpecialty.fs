@@ -5,6 +5,7 @@ open NUnit.Framework
 open TestAPI
 open MockClaim
 open MockMember
+open MockProviders
 
 open ValidationTrack
 open Repositories
@@ -13,19 +14,13 @@ open ManageProviders
 open FindProviders
 open Validation
 
-let SomeSpecialty =    "some_specialty"
-let CurrentLocation =  "current location"
-let SomeOtherAddress = "some_other_address"
-let SomeNetwork =      "some_network"
-let SomeDistance = 25
-
 [<Test>]
 let ``search provider`` () = 
 
     // Setup
     let viewModel = ProvidersBySpecialtyViewModel(SomeMemberId , MockProvidersRepository())
     viewModel.Specialty <- SomeSpecialty
-    viewModel.Location  <- SomeOtherAddress
+    viewModel.Location  <- SomeOtherLocation
     viewModel.Distance  <- SomeDistance
     viewModel.Network   <- SomeNetwork
 
@@ -57,7 +52,7 @@ let ``search requires distance`` () =
 
     // Setup
     let viewModel = ProvidersBySpecialtyViewModel(SomeMemberId , MockProvidersRepository())
-    viewModel.Location  <- SomeOtherAddress
+    viewModel.Location  <- SomeOtherLocation
     viewModel.Specialty <- SomeSpecialty
     viewModel.Distance  <- 0
 
@@ -76,7 +71,7 @@ let ``search requires network`` () =
     let viewModel = ProvidersBySpecialtyViewModel(SomeMemberId , MockProvidersRepository())
     viewModel.Specialty <- SomeSpecialty
     viewModel.Distance  <- SomeDistance
-    viewModel.Location  <- SomeOtherAddress
+    viewModel.Location  <- SomeOtherLocation
     viewModel.Network   <- ""
 
     // Test
