@@ -91,6 +91,7 @@
       <DependentUpon>IdCardActivity.cs</DependentUpon>
     </Compile>
     <Compile Include="Activities\PlanActivity.cs" />
+    <Compile Include="Activities\PortalDashboard.handlers.cs" />
     <Compile Include="Activities\PortalDashboardActivity.internal.cs">
       <SubType>Code</SubType>
       <DependentUpon>PortalDashboardActivity.cs</DependentUpon>

@@ -1,3 +1,4 @@
+using System;
 using Android.Widget;
 using Home;
 
@@ -6,6 +7,15 @@ namespace Healthcare.Android
     partial class PortalDashboardActivity
     {
         void MapNavigations()
+        {
+            _dispatcher.IdRequested += OnIdRequested;
+            _dispatcher.ClaimsRequested += OnClaimsRequested;
+            _dispatcher.CoverageRequested += OnCoverageRequested;
+            _dispatcher.ContactRequested += OnContactRequested;
+            _dispatcher.FindProvidersRequested += OnFindProvidersRequested;
+        }
+
+        void UnMapNavigations()
         {
             _dispatcher.IdRequested += (s, e) => StartActivity(typeof(IdCardActivity));
             _dispatcher.ClaimsRequested += (s, e) => StartActivity(typeof(ClaimsActivity));

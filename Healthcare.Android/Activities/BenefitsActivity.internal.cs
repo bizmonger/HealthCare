@@ -24,5 +24,12 @@ namespace Healthcare.Android
             _dispatcher.PlanRequested += OnPlanRequested;
             _dispatcher.UsageRequested += OnUsageRequested;
         }
+
+        void UnMapNavigations()
+        {
+            _dispatcher.CoverageRequested -= OnCoverageRequested;
+            _dispatcher.PlanRequested -= OnPlanRequested;
+            _dispatcher.UsageRequested -= OnUsageRequested;
+        }
     }
 }

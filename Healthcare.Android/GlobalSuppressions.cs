@@ -8,4 +8,5 @@
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Usage", "CC0057:Unused parameters", Justification = "<Pending>", Scope = "member", Target = "~M:Healthcare.Android.BenefitsActivity.OnCoverageRequested(System.Object,System.Object)")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Usage", "CC0057:Unused parameters", Justification = "<Pending>", Scope = "member", Target = "~M:Healthcare.Android.BenefitsActivity.OnPlanRequested(System.Object,System.Object)")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Usage", "CC0057:Unused parameters", Justification = "<Pending>", Scope = "member", Target = "~M:Healthcare.Android.BenefitsActivity.OnUsageRequested(System.Object,System.Object)")]
-
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Usage", "CC0057:Unused parameters", Justification = "<Pending>", Scope = "member", Target = "~M:Healthcare.Android.PortalDashboardActivity.OnCoverageRequested(System.Object,System.Object)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Usage", "CC0057:Unused parameters", Justification = "<Pending>", Scope = "member", Target = "~M:Healthcare.Android.PortalDashboardActivity.OnClaimsRequested(System.Object,System.Object)")]

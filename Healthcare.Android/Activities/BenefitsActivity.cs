@@ -11,9 +11,19 @@ namespace Healthcare.Android
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.Benefits);
-
-            MapNavigations();
             MapCommands();
+        }
+
+        protected override void OnStop()
+        {
+            base.OnStop();
+            UnMapNavigations();
+        }
+
+        protected override void OnStart()
+        {
+            base.OnStart();
+            MapNavigations();
         }
     }
 }
