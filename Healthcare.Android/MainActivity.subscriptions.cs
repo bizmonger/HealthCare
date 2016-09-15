@@ -12,7 +12,7 @@ namespace Healthcare.Android
             _dispatcher.RegistrationRequested += OnRegistrationRequested;
 
             _dispatcher.IdRequested += OnIdRequested;
-            _dispatcher.ProvidersRequested += OnProvidersRequested;
+            _dispatcher.FindProvidersRequested += OnFindProvidersRequested;
             _dispatcher.ContactRequested += OnContactRequested;
             _dispatcher.PrivacyRequested += OnPrivacyRequested;
             _dispatcher.FAQRequested += OnFAQRequested;
@@ -27,7 +27,7 @@ namespace Healthcare.Android
             _dispatcher.RegistrationRequested -= OnRegistrationRequested;
 
             _dispatcher.IdRequested -= OnIdRequested;
-            _dispatcher.ProvidersRequested -= OnProvidersRequested;
+            _dispatcher.FindProvidersRequested -= OnFindProvidersRequested;
             _dispatcher.ContactRequested -= OnContactRequested;
             _dispatcher.PrivacyRequested -= OnPrivacyRequested;
             _dispatcher.FAQRequested -= OnFAQRequested;
@@ -55,7 +55,7 @@ namespace Healthcare.Android
             idCard.Click += (s, e) => _viewModel.TryViewIdCard.Execute(null);
 
             var providers = FindViewById<Button>(Resource.Id.Providers);
-            providers.Click += (s, e) => _viewModel.ViewProviders.Execute(null);
+            providers.Click += (s, e) => _viewModel.FindProviders.Execute(null);
 
             var contact = FindViewById<Button>(Resource.Id.Contact);
             contact.Click += (s, e) => _viewModel.ViewContact.Execute(null);

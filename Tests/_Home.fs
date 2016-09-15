@@ -84,11 +84,11 @@ let ``navigate to findProvider`` () =
     let mutable ProvidersRequested = false;
     
     let dispatcher = Dispatcher()
-    dispatcher.ProvidersRequested.Add(fun _ -> ProvidersRequested <- true)
+    dispatcher.FindProvidersRequested.Add(fun _ -> ProvidersRequested <- true)
     let viewModel = HomeViewModel(dispatcher)
 
     // Test
-    viewModel.ViewProviders.Execute()
+    viewModel.FindProviders.Execute()
 
     // Verify
     ProvidersRequested |> should equal true

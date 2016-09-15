@@ -22,7 +22,7 @@ type PortalViewModel(memberId:MemberId , dispatcher:Dispatcher , repository:IBen
                           fun _ -> true ) :> ICommand
 
     member this.ViewProviders =
-        DelegateCommand( (fun _ -> dispatcher.ViewProviders()) , 
+        DelegateCommand( (fun _ -> dispatcher.FindProviders()) , 
                           fun _ -> true ) :> ICommand
 
     member this.ViewClaims =

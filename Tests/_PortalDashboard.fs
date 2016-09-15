@@ -56,7 +56,7 @@ let ``navigate to providers`` () =
     // Setup
     let mutable providersRequested = false
     let dispatcher = Dispatcher()
-    dispatcher.ProvidersRequested.Add (fun _ -> providersRequested <- true)
+    dispatcher.FindProvidersRequested.Add (fun _ -> providersRequested <- true)
     let viewModel = PortalViewModel(SomeMemberId , dispatcher , MockBenefitsRepository())
 
     // Test

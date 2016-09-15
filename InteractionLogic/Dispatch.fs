@@ -11,13 +11,14 @@ type Dispatcher() =
     let signInSuccessful =      new Event<EventHandler<_>,_>()
 
     let registrationRequested = new Event<EventHandler<_>,_>()
-    let receivedValidForm =new Event<EventHandler<_>,_>()
+    let receivedValidForm =     new Event<EventHandler<_>,_>()
 
     let settingsChanged =       new Event<Features>()
 
     let idRequested =           new Event<EventHandler<_>,_>()
     let contactRequested =      new Event<EventHandler<_>,_>()
-    let providersRequested =    new Event<EventHandler<_>,_>()
+    let viewProvidersRequested =new Event<EventHandler<_>,_>()
+    let findProvidersRequested =new Event<EventHandler<_>,_>()
     let tipsRequested =         new Event<EventHandler<_>,_>()
     let infoRequested =         new Event<EventHandler<_>,_>()
     let privacyRequested =      new Event<EventHandler<_>,_>()
@@ -57,7 +58,9 @@ type Dispatcher() =
     [<CLIEvent>]                        
     member this.ContactRequested =      contactRequested.Publish
     [<CLIEvent>]
-    member this.ProvidersRequested =    providersRequested.Publish
+    member this.FindProvidersRequested =findProvidersRequested.Publish
+    [<CLIEvent>]
+    member this.ViewProvidersRequested =viewProvidersRequested.Publish
     [<CLIEvent>]
     member this.InfoRequested =         infoRequested.Publish
     [<CLIEvent>]
@@ -128,7 +131,8 @@ type Dispatcher() =
 
     member this.TryViewIdCard memberId =  idRequested.Trigger(this , EventArgs.Empty)
     member this.ViewContact() =           contactRequested.Trigger(this , EventArgs.Empty)
-    member this.ViewProviders() =         providersRequested.Trigger(this , EventArgs.Empty)
+    member this.FindProviders() =         findProvidersRequested.Trigger(this , EventArgs.Empty)
+    member this.ViewProviders providers = viewProvidersRequested.Trigger(this , providers)
     member this.ViewTips() =              tipsRequested.Trigger(this , EventArgs.Empty)
     member this.ViewInfo() =              infoRequested.Trigger(this , EventArgs.Empty)
     member this.ViewPrivacy() =           privacyRequested.Trigger(this , EventArgs.Empty)

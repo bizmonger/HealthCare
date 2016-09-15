@@ -34,8 +34,8 @@ type HomeViewModel (dispatcher:Dispatcher) as this =
     member this.ViewInfo =
         DelegateCommand( (fun _ -> dispatcher.ViewInfo()), fun _ -> true ) :> ICommand
 
-    member this.ViewProviders =
-        DelegateCommand( (fun _ -> dispatcher.ViewProviders()), fun _ -> true ) :> ICommand
+    member this.FindProviders =
+        DelegateCommand( (fun _ -> dispatcher.FindProviders()), fun _ -> true ) :> ICommand
 
     member this.TryViewIdCard =    (* Requires security *)
         DelegateCommand( (fun _ -> if signedIn || this.Settings.ViewIdCardFromHome 

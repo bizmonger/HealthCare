@@ -11,7 +11,7 @@ namespace Healthcare.Android
             _dispatcher.ClaimsRequested += (s, e) => StartActivity(typeof(ClaimsActivity));
             _dispatcher.CoverageRequested += (s, e) => StartActivity(typeof(BenefitsActivity));
             _dispatcher.ContactRequested += (s, e) => StartActivity(typeof(ContactActivity));
-            _dispatcher.ProvidersRequested += (s, e) => StartActivity(typeof(ProvidersActivity));
+            _dispatcher.FindProvidersRequested += (s, e) => StartActivity(typeof(FindProvidersActivity));
         }
 
         void MapCommands()
