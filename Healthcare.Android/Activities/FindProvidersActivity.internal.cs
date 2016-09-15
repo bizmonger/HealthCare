@@ -31,7 +31,6 @@ namespace Healthcare.Android
             var currentLocation = FindViewById<RadioButton>(Resource.Id.CurrentLocation);
             currentLocation.CheckedChange += (s, e) => _viewModel.Location = currentLocation.Checked ? CurrentLocation : SomeOtherLocation;
 
-
             var search = FindViewById<Button>(Resource.Id.SearchProviders);
             search.Click += (s, e) =>
             {

@@ -168,6 +168,9 @@ namespace Healthcare.Android
 			// aapt resource value: 0x7f05001a
 			public const int Privacy = 2131034138;
 			
+			// aapt resource value: 0x7f050037
+			public const int ProviderSpecialty = 2131034167;
+			
 			// aapt resource value: 0x7f050020
 			public const int Providers = 2131034144;
 			
@@ -261,6 +264,9 @@ namespace Healthcare.Android
 			
 			// aapt resource value: 0x7f030006
 			public const int Register = 2130903046;
+			
+			// aapt resource value: 0x7f030007
+			public const int SpecialtiesListItem = 2130903047;
 			
 			static Layout()
 			{

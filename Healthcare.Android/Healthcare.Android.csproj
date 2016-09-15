@@ -113,6 +113,7 @@
       <DependentUpon>RegisterActivity.cs</DependentUpon>
     </Compile>
     <Compile Include="Activities\UsageActivity.cs" />
+    <Compile Include="Adapters\SpecialtiesAdapter.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="MainActivity.cs" />
@@ -151,6 +152,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\Providers.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\SpecialtiesListItem.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
