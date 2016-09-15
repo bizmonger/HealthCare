@@ -245,7 +245,7 @@ namespace Healthcare.Android
 			public const int Benefits = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int FindProvider = 2130903041;
+			public const int FindProviders = 2130903041;
 			
 			// aapt resource value: 0x7f030002
 			public const int IdCard = 2130903042;
@@ -257,7 +257,10 @@ namespace Healthcare.Android
 			public const int PortalDashboard = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int Register = 2130903045;
+			public const int Providers = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int Register = 2130903046;
 			
 			static Layout()
 			{

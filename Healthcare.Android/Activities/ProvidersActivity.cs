@@ -1,4 +1,3 @@
-
 using Android.App;
 using Android.OS;
 
@@ -11,7 +10,7 @@ namespace Healthcare.Android
         {
             base.OnCreate(savedInstanceState);
 
-            // Create your application here
+            SetContentView(Resource.Layout.Providers);
         }
     }
 }

@@ -74,6 +74,14 @@
     <Compile Include="Activities\CoverageActivity.cs" />
     <Compile Include="Activities\FAQActivity.cs" />
     <Compile Include="Activities\FindProvidersActivity.cs" />
+    <Compile Include="Activities\FindProvidersActivity.internal.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>FindProvidersActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activities\FindProvidersActivity.members.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>FindProvidersActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Activities\IdCardActivity.cs" />
     <Compile Include="Activities\IdCardActivity.internal.cs">
       <DependentUpon>IdCardActivity.cs</DependentUpon>
@@ -138,7 +146,10 @@
     <AndroidResource Include="Resources\layout\Benefits.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\FindProvider.axml">
+    <AndroidResource Include="Resources\layout\FindProviders.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Providers.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

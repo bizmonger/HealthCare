@@ -1,51 +1,24 @@
-﻿using System;
-using Android.App;
+﻿using Android.App;
 using Android.OS;
-using static Account;
-using Android.Widget;
-using Repositories;
-using ManageProviders;
-using static MockMember;
-using TestAPI;
-using InteractionLogic;
 
 namespace Healthcare.Android
 {
     [Activity(Label = nameof(FindProvidersActivity), Icon = "@drawable/icon")]
-    class FindProvidersActivity : Activity
+    partial class FindProvidersActivity : Activity
     {
-        ProvidersBySpecialtyViewModel _viewModel;
-        readonly IProvidersRepository _repository = new MockProvidersRepository();
-        readonly MemberId _memberId = SomeMemberId;
-        readonly Dispatcher _dispatcher = Global.Dispatcher;
-
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            SetContentView(Resource.Layout.Benefits);
+            SetContentView(Resource.Layout.FindProviders);
+            MapNavigations();
             MapCommands();
         }
 
-        void MapCommands()
+        protected override void OnStop()
         {
-            _viewModel = new ProvidersBySpecialtyViewModel(_memberId, _repository);
-
-            var specialty = FindViewById<ListView>(Resource.Id.SpecialtyListView);
-            specialty.ItemSelected += (s, e) => _viewModel.Specialty = specialty.SelectedItem.ToString();
-
-            var network = FindViewById<ListView>(Resource.Id.NetworkListView);
-            network.ItemSelected += (s, e) => _viewModel.Network = network.SelectedItem.ToString();
-
-            var distance = FindViewById<ListView>(Resource.Id.DistanceListView);
-            distance.ItemSelected += (s, e) => _viewModel.Distance = int.Parse(distance.SelectedItem.ToString());
-
-            var search = FindViewById<ListView>(Resource.Id.SearchProviders);
-            search.Click += (s, e) =>
-                {
-                    _viewModel.LoadProviders.Execute(null);
-                    _dispatcher.ViewProviders(_viewModel.Providers);
-                };
+            base.OnStop();
+            UnMapNavigations();
         }
     }
 }
