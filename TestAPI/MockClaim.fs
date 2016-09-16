@@ -62,4 +62,7 @@ let SomeProvider = {
     Network=SomeNetwork
 }
 
-let SomeProviders = [SomeProvider]
+let SomeProviders =   seq [SomeProvider]
+let SomeSpecialties = seq ["specialty_1" ; "specialty_2" ; "specialty_3"]
+let SomeNetworks =    seq ["network1" ; "network2" ; "network3"]
+let SomeDistances =   seq [5 ; 10 ; 25; 50]

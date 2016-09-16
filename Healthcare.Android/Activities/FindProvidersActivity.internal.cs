@@ -1,5 +1,6 @@
 using Android.Widget;
 using ManageProviders;
+using System.Collections.Generic;
 using static MockProviders;
 
 namespace Healthcare.Android
@@ -19,8 +20,7 @@ namespace Healthcare.Android
         {
             _viewModel = new ProvidersBySpecialtyViewModel(_memberId, _repository);
 
-            var specialty = FindViewById<ListView>(Resource.Id.SpecialtyListView);
-            specialty.ItemSelected += (s, e) => _viewModel.Specialty = specialty.SelectedItem.ToString();
+            LoadSpecialtiesList();
 
             var network = FindViewById<ListView>(Resource.Id.NetworkListView);
             network.ItemSelected += (s, e) => _viewModel.Network = network.SelectedItem.ToString();
@@ -40,6 +40,15 @@ namespace Healthcare.Android
                 if (isValidated)
                     _dispatcher.ViewProviders(_viewModel.Providers);
             };
+        }
+
+        void LoadSpecialtiesList()
+        {
+            _specialtiesListView = FindViewById<ListView>(Resource.Id.SpecialtyListView);
+            _specialtiesListView.ItemSelected += (s, e) => _viewModel.Specialty = _specialtiesListView.SelectedItem.ToString();
+            _viewModel.LoadSpecialties();
+            _specialtiesAdapter = new Adapters.SpecialtiesAdapter(this, new List<string>(_viewModel.Specialties));
+            _specialtiesListView.Adapter = _specialtiesAdapter;
         }
     }
 }

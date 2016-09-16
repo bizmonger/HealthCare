@@ -33,6 +33,45 @@ let ``search provider`` () =
     | _         -> ()
 
 [<Test>]
+let ``load specialties`` () = 
+
+    // Setup
+    let viewModel = ProvidersBySpecialtyViewModel(SomeMemberId , MockProvidersRepository())
+
+    // Test
+    viewModel.LoadSpecialties()
+    
+    // Verify
+    viewModel.Specialties |> Seq.length  
+                          |> should equal (SomeSpecialties |> Seq.length)
+
+[<Test>]
+let ``load networks`` () = 
+
+    // Setup
+    let viewModel = ProvidersBySpecialtyViewModel(SomeMemberId , MockProvidersRepository())
+
+    // Test
+    viewModel.LoadNetworks()
+    
+    // Verify
+    viewModel.Networks |> Seq.length  
+                       |> should equal (SomeNetworks |> Seq.length)
+
+[<Test>]
+let ``load distances`` () = 
+
+    // Setup
+    let viewModel = ProvidersBySpecialtyViewModel(SomeMemberId , MockProvidersRepository())
+
+    // Test
+    viewModel.LoadDistances()
+    
+    // Verify
+    viewModel.Distances |> Seq.length  
+                        |> should equal (SomeDistances |> Seq.length)
+
+[<Test>]
 let ``search requires specialty`` () = 
     
     // Setup

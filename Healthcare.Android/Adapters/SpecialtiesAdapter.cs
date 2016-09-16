@@ -22,7 +22,13 @@ namespace Healthcare.Android.Adapters
 
         public override long GetItemId(int position) => position;
 
-        public override View GetView(int position, View convertView, ViewGroup parent) =>
-            convertView ?? _context.LayoutInflater.Inflate(Resource.Layout.SpecialtiesListItem, null);
+        public override View GetView(int position, View convertView, ViewGroup parent)
+        {
+            var view = convertView ?? _context.LayoutInflater.Inflate(Resource.Layout.SpecialtiesListItem, null);
+            var specialty = this[position];
+            view.FindViewById<TextView>(Resource.Id.ProviderSpecialty).Text = specialty;
+
+            return view;
+        }
     }
 }

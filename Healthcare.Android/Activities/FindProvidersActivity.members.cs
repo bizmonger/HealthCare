@@ -1,3 +1,5 @@
+using Android.Widget;
+using Healthcare.Android.Adapters;
 using InteractionLogic;
 using ManageProviders;
 using Repositories;
@@ -13,5 +15,7 @@ namespace Healthcare.Android
         readonly IProvidersRepository _repository = new MockProvidersRepository();
         readonly MemberId _memberId = SomeMemberId;
         readonly Dispatcher _dispatcher = Global.Dispatcher;
+        ListView _specialtiesListView;
+        SpecialtiesAdapter _specialtiesAdapter;
     }
 }
