@@ -24,7 +24,7 @@ namespace Healthcare.Android.Adapters
 
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
-            var view = convertView ?? _context.LayoutInflater.Inflate(Resource.Layout.SpecialtiesListItem, null);
+            var view = convertView ?? _context.LayoutInflater.Inflate(Resource.Layout.DistancesListItem, null);
             var distance = this[position];
             view.FindViewById<TextView>(Resource.Id.ProviderDistance).Text = distance.ToString();
 
