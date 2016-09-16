@@ -113,6 +113,8 @@
       <DependentUpon>RegisterActivity.cs</DependentUpon>
     </Compile>
     <Compile Include="Activities\UsageActivity.cs" />
+    <Compile Include="Adapters\DistancesAdapter.cs" />
+    <Compile Include="Adapters\NetworksAdapter.cs" />
     <Compile Include="Adapters\SpecialtiesAdapter.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="GlobalSuppressions.cs" />
@@ -155,6 +157,12 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\SpecialtiesListItem.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\NetworksListItem.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\DistancesListItem.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
