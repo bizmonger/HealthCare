@@ -1,5 +1,4 @@
 using Android.Widget;
-using Healthcare.Android.Adapters;
 using InteractionLogic;
 using ManageProviders;
 using Repositories;

@@ -113,9 +113,6 @@
       <DependentUpon>RegisterActivity.cs</DependentUpon>
     </Compile>
     <Compile Include="Activities\UsageActivity.cs" />
-    <Compile Include="Adapters\DistancesAdapter.cs" />
-    <Compile Include="Adapters\NetworksAdapter.cs" />
-    <Compile Include="Adapters\SpecialtiesAdapter.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="MainActivity.cs" />

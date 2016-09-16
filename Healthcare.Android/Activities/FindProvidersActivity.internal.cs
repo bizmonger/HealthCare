@@ -1,8 +1,7 @@
 using Android.Widget;
-using Healthcare.Android.Adapters;
 using ManageProviders;
 using System.Collections.Generic;
-using static MockProviders;
+using System.Linq;
 
 namespace Healthcare.Android
 {
@@ -21,10 +20,23 @@ namespace Healthcare.Android
         {
             _viewModel = new ProvidersBySpecialtyViewModel(_memberId, _repository);
 
-            LoadSpecialties();
-            LoadNetworks();
+            _viewModel.LoadSpecialties();
+            _viewModel.LoadNetworks();
+            _viewModel.LoadDistances();
+
+            _specialtyListView = FindViewById<ListView>(Resource.Id.SpecialtyListView);
+            LoadListView(_specialtyListView, Resource.Id.SpecialtyListView, Resource.Layout.SpecialtiesListItem, _viewModel.Specialty, _viewModel.Specialties);
+
+            _networkListView = FindViewById<ListView>(Resource.Id.NetworkListView);
+            LoadListView(_networkListView, Resource.Id.NetworkListView, Resource.Layout.NetworksListItem, _viewModel.Network, _viewModel.Networks);
+
             LoadDistances();
 
+            ConfigureSearch();
+        }
+
+        void ConfigureSearch()
+        {
             var search = FindViewById<Button>(Resource.Id.SearchProviders);
             search.Click += (s, e) =>
             {
@@ -36,28 +48,24 @@ namespace Healthcare.Android
             };
         }
 
-        void LoadSpecialties()
+        void LoadListView(ListView listview, int listViewId, int listItemId, string selectedItem, IEnumerable<string> datasource)
         {
-            _specialtyListView = FindViewById<ListView>(Resource.Id.SpecialtyListView);
-            _specialtyListView.ItemSelected += (s, e) => _viewModel.Specialty = _specialtyListView.SelectedItem.ToString();
-            _viewModel.LoadSpecialties();
-            _specialtyListView.Adapter = new SpecialtiesAdapter(this, new List<string>(_viewModel.Specialties));
-        }
+            listview = FindViewById<ListView>(listViewId);
+            listview.ChoiceMode = ChoiceMode.Single;
+            listview.ItemClick += (s, e) => selectedItem = listview.GetItemIdAtPosition(e.Position).ToString();
 
-        void LoadNetworks()
-        {
-            _networkListView = FindViewById<ListView>(Resource.Id.NetworkListView);
-            _networkListView.ItemSelected += (s, e) => _viewModel.Network = _networkListView.SelectedItem.ToString();
-            _viewModel.LoadNetworks();
-            _networkListView.Adapter = new NetworksAdapter(this, new List<string>(_viewModel.Networks));
+            var items = datasource.ToArray();
+            listview.Adapter = new ArrayAdapter<string>(this, listItemId, items);
         }
 
         void LoadDistances()
         {
             _distanceListView = FindViewById<ListView>(Resource.Id.DistanceListView);
-            _distanceListView.ItemSelected += (s, e) => _viewModel.Distance = (int)_distanceListView.SelectedItem;
-            _viewModel.LoadDistances();
-            _distanceListView.Adapter = new DistancesAdapter(this, new List<int>(_viewModel.Distances));
+            _distanceListView.ChoiceMode = ChoiceMode.Single;
+            _distanceListView.ItemClick += (s, e) => _distanceListView.GetItemIdAtPosition(e.Position).ToString();
+
+            var items = _viewModel.Distances.ToArray();
+            _distanceListView.Adapter = new ArrayAdapter<int>(this, Resource.Layout.DistancesListItem, items);
         }
     }
 }
