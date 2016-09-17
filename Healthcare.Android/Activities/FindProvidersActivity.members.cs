@@ -18,5 +18,8 @@ namespace Healthcare.Android
         ListView _specialtyListView;
         ListView _networkListView;
         ListView _distanceListView;
+
+        RadioButton _currentLocation;
+        RadioButton _anotherAddress;
     }
 }
