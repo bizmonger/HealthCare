@@ -45,7 +45,6 @@
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="FeaturesRepository.fs" />
     <Compile Include="IBenefitsRepository.fs" />
-    <Compile Include="BenefitsRepository.fs" />
     <Compile Include="IClaimsRepository.fs" />
     <Compile Include="IProfileRepository.fs" />
     <Compile Include="IProvidersRepository.fs" />

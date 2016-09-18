@@ -1,4 +1,6 @@
-﻿module Account
+﻿
+[<System.Diagnostics.DebuggerNonUserCode>]
+module Account
 
     type MemberId = MemberId of string
 

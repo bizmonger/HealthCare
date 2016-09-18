@@ -4,7 +4,9 @@ open Settings
 open Account
 open System
 open Claims
+open System.Diagnostics
 
+[<DebuggerNonUserCode>]
 type Dispatcher() =
 
     let signInRequested =       new Event<EventHandler<_>,_>()

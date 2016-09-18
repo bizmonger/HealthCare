@@ -81,17 +81,49 @@ let ``navigate to viewIdCard after enabling feature`` () =
 let ``navigate to findProvider`` () =
 
     // Setup
-    let mutable ProvidersRequested = false;
+    let mutable providersRequested = false;
     
     let dispatcher = Dispatcher()
-    dispatcher.FindProvidersRequested.Add(fun _ -> ProvidersRequested <- true)
+    dispatcher.FindProvidersRequested.Add(fun _ -> providersRequested <- true)
     let viewModel = HomeViewModel(dispatcher)
 
     // Test
     viewModel.FindProviders.Execute()
 
     // Verify
-    ProvidersRequested |> should equal true
+    providersRequested |> should equal true
+
+[<Test>]
+let ``navigate to signin`` () =
+
+    // Setup
+    let mutable signinRequested = false;
+    
+    let dispatcher = Dispatcher()
+    dispatcher.SignInRequested.Add(fun _ -> signinRequested <- true)
+    let viewModel = HomeViewModel(dispatcher)
+
+    // Test
+    viewModel.SignIn.Execute()
+
+    // Verify
+    signinRequested |> should equal true
+
+[<Test>]
+let ``navigate to register`` () =
+
+    // Setup
+    let mutable registerRequested = false;
+    
+    let dispatcher = Dispatcher()
+    dispatcher.RegistrationRequested.Add(fun _ -> registerRequested <- true)
+    let viewModel = HomeViewModel(dispatcher)
+
+    // Test
+    viewModel.Register.Execute()
+
+    // Verify
+    registerRequested |> should equal true
 
 [<Test>]
 let ``navigate to contact`` () =

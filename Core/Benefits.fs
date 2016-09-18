@@ -1,4 +1,5 @@
-﻿module Benefits
+﻿[<System.Diagnostics.DebuggerNonUserCode>]
+module Benefits
 
     open Account
     open System

@@ -1,4 +1,5 @@
-﻿module Claims
+﻿[<System.Diagnostics.DebuggerNonUserCode>]
+module Claims
 
     open Account
 

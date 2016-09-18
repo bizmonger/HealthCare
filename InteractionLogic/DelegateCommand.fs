@@ -2,7 +2,9 @@
 
 open System
 open System.Windows.Input
+open System.Diagnostics
 
+[<DebuggerNonUserCode>]
 type DelegateCommand(action : obj -> unit, canExecute : obj -> bool) = 
     let event = new DelegateEvent<EventHandler>()
     interface ICommand with

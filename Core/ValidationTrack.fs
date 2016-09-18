@@ -1,4 +1,5 @@
-﻿module ValidationTrack
+﻿[<System.Diagnostics.DebuggerNonUserCode>]
+module ValidationTrack
 
 type Result<'TSuccess,'TFailure> = 
     | Success of 'TSuccess
