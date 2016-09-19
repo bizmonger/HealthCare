@@ -39,7 +39,7 @@ let ``signin failed: username required`` () =
     // Verify
     match viewModel.Form with
     | Failure reason -> reason |> should equal UserNameRequired
-    | _ -> failwith ""
+    | _              -> failwith ""
 
 [<Test>]
 let ``signin failed: password required`` () =

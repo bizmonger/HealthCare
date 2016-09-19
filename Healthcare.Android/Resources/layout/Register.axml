@@ -1,77 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="5dp"
     android:paddingRight="5dp">
-  
-  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/linearLayout"
-    android:orientation="vertical"
-    android:layout_alignParentTop="true"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp">
-
-    <TextView
-      android:id="@+id/instructions"
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:textStyle="bold"
-      android:gravity="center"
-      android:layout_marginTop="15sp"
-      android:text="Confirm Your Information" />
-
-    <EditText
-      android:id="@+id/firstName"
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:hint="First Name"
-    />
-    <EditText
-      android:id="@+id/lastName"
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:hint="Last Name"
-    />
-    <EditText
-    android:id="@+id/memberId"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:hint="Member Id"
-    />
-
-    <EditText
-      android:id="@+id/password"
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:hint="Password"
-    />
-    
-    <EditText
-      android:id="@+id/dateOfBirth"
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:hint="Date of Birth"
-    />
-
-    <EditText
-      android:id="@+id/zipCode"
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:hint="Zip Code"
-    />
-    
-  </LinearLayout>
-
-  <Button
-    android:id="@+id/next"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true"
-    android:text="Next"
-    />
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+        <TextView
+            android:id="@+id/instructions"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="15sp"
+            android:text="Confirm Your Information" />
+        <EditText
+            android:id="@+id/firstName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="First Name" />
+        <EditText
+            android:id="@+id/lastName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Last Name" />
+        <EditText
+            android:id="@+id/memberId"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Member Id" />
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password" />
+        <EditText
+            android:id="@+id/dateOfBirth"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date of Birth" />
+        <EditText
+            android:id="@+id/zipCode"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Zip Code" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Next" />
 </RelativeLayout>

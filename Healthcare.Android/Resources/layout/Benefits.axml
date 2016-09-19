@@ -13,20 +13,20 @@
       android:text="Your Insurance Plan" />
   
   <ImageView
-      android:id="@+id/Logo"
+      android:id="@+id/ThinLogo"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_alignParentTop="true"
       android:layout_marginTop="15sp"
       android:layout_centerHorizontal="true"
-      android:src="@drawable/SomeLogo" />
+      android:src="@drawable/ThinLogo" />
 
   <TextView
       android:id="@+id/PlanName"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="5sp"
-      android:layout_centerHorizontal="true"
+      android:gravity="center"
       android:text="Some Plan Name" />
 
   <TextView
@@ -51,15 +51,7 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="5sp"
     android:layout_centerHorizontal="true"
-    android:text="Effective Until:" />
-
-  <TextView
-    android:id="@+id/PlanCoverageLabel"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="5sp"
-    android:layout_centerHorizontal="true"
-    android:text="Effective Until:" />
+    android:text="Plan Coverage:" />
 
   <TextView
     android:id="@+id/PlanNetworkLabel"
@@ -75,7 +67,7 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="5sp"
     android:layout_centerHorizontal="true"
-    android:text="Goup:" />
+    android:text="Goup #:" />
 
   <Button
     android:id="@+id/PlanBennefits"
