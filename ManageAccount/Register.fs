@@ -6,7 +6,6 @@ open Account
 open System.Diagnostics
 
 (* Types *)
-[<DebuggerNonUserCode>]
 type Form = { 
     Name:Name
     Email:Email
@@ -15,7 +14,6 @@ type Form = {
     ZipCode:ZipCode
 }
 
-[<DebuggerNonUserCode>]
 type RegisterResponse =
     | RegistrationNA
     | FirstNameRequired

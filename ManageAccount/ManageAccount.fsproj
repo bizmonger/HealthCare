@@ -52,6 +52,7 @@
     <Compile Include="ProfileViewModel.fs" />
     <Compile Include="EditProfileViewModel.fs" />
     <Content Include="packages.config" />
+    <Compile Include="IOnlineSession.fs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.fsproj">

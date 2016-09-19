@@ -1,5 +1,6 @@
 ﻿module SignIn
 
+open Account
 open ValidationTrack
 open InteractionLogic
 open Confirmation
@@ -13,11 +14,19 @@ type SignInResponse =
     | SignInNA
     | UserNameRequired
     | PasswordRequired
+    | SignedIn
+
+type SignOutResponse =
+    | FailedToSignOut
+    | SignedOut
 
 (* Functions *)
 let credentials user password = { 
     User=      User     user
     Password = Password password }
+
+let signout memberSession =
+    SignedOut
 
 let trySignIn (credentials:Credentials) =
 
@@ -29,9 +38,7 @@ let trySignIn (credentials:Credentials) =
         match credentials.Password with
         | Password p -> p |> failOnEmpty credentials PasswordRequired
                         
-    let validate =
-        let validatePassword' = bind validatePassword
-        validateUserName >> validatePassword'
+    let validate = validateUserName >> bind validatePassword
     
     validate credentials
 

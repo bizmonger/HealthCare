@@ -60,7 +60,6 @@
     <None Include="Script.fsx" />
     <Compile Include="_Home.fs" />
     <Compile Include="_Register.fs" />
-    <Compile Include="_SignIn.fs" />
     <Compile Include="_BenefitsOverview.fs" />
     <Compile Include="_BenefitsPlan.fs" />
     <Compile Include="_BenefitsUsage.fs" />
@@ -79,6 +78,7 @@
     <Compile Include="_PaymentDetails.fs" />
     <Content Include="packages.config" />
     <Content Include="App.config" />
+    <Compile Include="_SignIn.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSharp.Core">
