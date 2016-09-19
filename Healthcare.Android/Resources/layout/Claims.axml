@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <TextView
+    android:id="@+id/FamilySummary"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5sp"
+    android:layout_centerHorizontal="true"
+    android:text="Family Summary:" />
+
+  <TextView
+    android:id="@+id/ProvidersCharged"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5sp"
+    android:layout_centerHorizontal="true"
+    android:text="Providers Charged:" />
+
+  <TextView
+    android:id="@+id/InsuranceSavedYou"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5sp"
+    android:layout_centerHorizontal="true"
+    android:text="Insurance Saved You:" />
+
+  <TextView
+    android:id="@+id/Saving"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5sp"
+    android:layout_centerHorizontal="true"
+    android:text="Saving:" />
+
+  <TextView
+    android:id="@+id/DependentClaimsSummary"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5sp"
+    android:layout_centerHorizontal="true"
+    android:text="Dependent Claims Summary:" />
+
+  <ListView
+    android:id="@+id/MemberClaimsListView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5sp"
+    android:layout_centerHorizontal="true" />
+
+</LinearLayout>
