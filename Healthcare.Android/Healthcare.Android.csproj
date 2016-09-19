@@ -113,6 +113,7 @@
       <DependentUpon>RegisterActivity.cs</DependentUpon>
     </Compile>
     <Compile Include="Activities\UsageActivity.cs" />
+    <Compile Include="Adapters\MemberCoverageAdapter.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="MainActivity.cs" />
@@ -172,6 +173,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\Claims.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MemberCoverageItem.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
