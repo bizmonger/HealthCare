@@ -5,7 +5,6 @@ using Healthcare.Android.Adapters;
 using ManageBenefits;
 using System.Collections.Generic;
 using TestAPI;
-using static Account;
 using static Benefits;
 using static MockMember;
 
