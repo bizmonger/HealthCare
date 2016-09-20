@@ -17,11 +17,11 @@ namespace Healthcare.Android
 
         void UnMapNavigations()
         {
-            _dispatcher.IdRequested += (s, e) => StartActivity(typeof(IdCardActivity));
-            _dispatcher.ClaimsRequested += (s, e) => StartActivity(typeof(ClaimsActivity));
-            _dispatcher.CoverageRequested += (s, e) => StartActivity(typeof(BenefitsActivity));
-            _dispatcher.ContactRequested += (s, e) => StartActivity(typeof(ContactActivity));
-            _dispatcher.FindProvidersRequested += (s, e) => StartActivity(typeof(FindProvidersActivity));
+            _dispatcher.IdRequested -= OnIdRequested;
+            _dispatcher.ClaimsRequested -= OnClaimsRequested;
+            _dispatcher.CoverageRequested -= OnCoverageRequested;
+            _dispatcher.ContactRequested -= OnContactRequested;
+            _dispatcher.FindProvidersRequested -= OnFindProvidersRequested;
         }
 
         void MapCommands()

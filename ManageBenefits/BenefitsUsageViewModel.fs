@@ -14,14 +14,11 @@ type BenefitsUsageViewModel(memberId , repository:IBenefitsRepository) =
     member val OutOfNetworkNetworkUsage = { Deductable= deductable; OutOfPocket=outOfPocket } with get,set
     member val Members = seq [] with get,set
 
-    member this.LoadInNetworkUsage =
-        DelegateCommand( (fun _ -> this.InNetworkUsage <- repository.GetUsage memberId) , 
-                          fun _ -> true ) :> ICommand
+    member this.LoadInNetworkUsage() =
+        this.InNetworkUsage <- repository.GetUsage memberId
 
-    member this.LoadOutOfNetworkUsage =
-        DelegateCommand( (fun _ -> this.OutOfNetworkNetworkUsage <- repository.GetUsage memberId) , 
-                          fun _ -> true ) :> ICommand
+    member this.LoadOutOfNetworkUsage() =
+        this.OutOfNetworkNetworkUsage <- repository.GetUsage memberId
 
-    member this.LoadMembers =
-        DelegateCommand( (fun _ -> this.Members <- repository.GetMembers memberId) , 
-                          fun _ -> true ) :> ICommand
+    member this.LoadMembers() =
+        this.Members <- repository.GetMemberCoverages memberId

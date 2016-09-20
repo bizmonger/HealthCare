@@ -3,124 +3,112 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-  <LinearLayout
-      android:orientation="horizontal"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/DeductableRemaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="Deductable Remaining:" />
+        <TextView
+            android:id="@+id/DeductableRemainingValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="need value" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/Spent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="Spent:" />
+        <TextView
+            android:id="@+id/SpentValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="need value" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/Remaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="Remaining:" />
+        <TextView
+            android:id="@+id/RemainingValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="need value" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/Total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="Total:" />
+        <TextView
+            android:id="@+id/TotalValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="need value" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/OutOfPocketRemaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="OutOfPocketRemaining:" />
+        <TextView
+            android:id="@+id/OutOfPocketRemainingValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="need value" />
+    </LinearLayout>
     <TextView
-      android:id="@+id/DeductableRemaining"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="5sp"
-      android:layout_centerHorizontal="true"
-      android:text="Deductable Remaining:" />
-
-    <TextView
-      android:id="@+id/DeductableRemainingValue"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="5sp"
-      android:layout_centerHorizontal="true"
-      android:text="need value" />
-  </LinearLayout>
-
-  <LinearLayout
-    android:orientation="horizontal"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-    <TextView
-        android:id="@+id/Spent"
+        android:id="@+id/PerMember"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5sp"
         android:layout_centerHorizontal="true"
-        android:text="Spent:" />
-
-    <TextView
-        android:id="@+id/SpentValue"
+        android:text="Per Member:" />
+    <ListView
+        android:id="@+id/MemberUsageListView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="need value" />
-  </LinearLayout>
-
-  <LinearLayout
-    android:orientation="horizontal"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-    <TextView
-        android:id="@+id/Remaining"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="Remaining:" />
-
-    <TextView
-        android:id="@+id/RemainingValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="need value" />
-  </LinearLayout>
-
-  <LinearLayout
-    android:orientation="horizontal"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-    <TextView
-        android:id="@+id/Total"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="Total:" />
-
-    <TextView
-        android:id="@+id/TotalValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="need value" />
-  </LinearLayout>
-
-
-  <LinearLayout
-    android:orientation="horizontal"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-    <TextView
-        android:id="@+id/OutOfPocketRemaining"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="OutOfPocketRemaining:" />
-
-    <TextView
-        android:id="@+id/OutOfPocketRemainingValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="need value" />
-  </LinearLayout>
-
-
-  <TextView
-      android:id="@+id/PerMember"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="5sp"
-      android:layout_centerHorizontal="true"
-      android:text="Per Member:" />
-  <ListView
-      android:id="@+id/MemberUsageListView"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="5sp"
-      android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true" />
 </LinearLayout>
