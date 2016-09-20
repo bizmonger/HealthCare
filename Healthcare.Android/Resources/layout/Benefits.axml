@@ -62,19 +62,19 @@
         android:text="Goup #:" />
     <Button
         android:id="@+id/PlanBennefits"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15sp"
         android:text="Plan Benefits" />
     <Button
         android:id="@+id/Coverage"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15sp"
         android:text="Coverage" />
     <Button
         android:id="@+id/Usage"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15sp"
         android:text="Benefits Usage" />
