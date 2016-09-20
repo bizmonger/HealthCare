@@ -30,6 +30,13 @@ namespace Healthcare.Android.Adapters
             var memberCoverage = this[position];
             var member = memberCoverage.Member;
 
+            UpdateUI(view, member);
+
+            return view;
+        }
+
+        static void UpdateUI(View view, IdCard member)
+        {
             var nameLabel = view.FindViewById<TextView>(Resource.Id.NameValue);
             nameLabel.Text = $"{member.Name.First} {member.Name.Last}";
 
@@ -38,8 +45,6 @@ namespace Healthcare.Android.Adapters
 
             var dateOfBirthLabel = view.FindViewById<TextView>(Resource.Id.DOBValue);
             dateOfBirthLabel.Text = member.DateOfBirth.Item;
-
-            return view;
         }
     }
 }
