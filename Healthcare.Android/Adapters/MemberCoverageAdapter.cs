@@ -28,15 +28,16 @@ namespace Healthcare.Android.Adapters
         {
             var view = convertView ?? _context.LayoutInflater.Inflate(Resource.Layout.MemberCoverageItem, null);
             var memberCoverage = this[position];
+            var member = memberCoverage.Member;
 
             var nameLabel = view.FindViewById<TextView>(Resource.Id.NameValue);
-            nameLabel.Text = $"{memberCoverage.Member.Name.First} {memberCoverage.Member.Name.Last}";
+            nameLabel.Text = $"{member.Name.First} {member.Name.Last}";
 
             var memberIdLabel = view.FindViewById<TextView>(Resource.Id.MemberIdValue);
-            memberIdLabel.Text = memberCoverage.Member.MemberId.Item;
+            memberIdLabel.Text = member.MemberId.Item;
 
             var dateOfBirthLabel = view.FindViewById<TextView>(Resource.Id.DOBValue);
-            dateOfBirthLabel.Text = memberCoverage.Member.DateOfBirth.Item;
+            dateOfBirthLabel.Text = member.DateOfBirth.Item;
 
             return view;
         }
