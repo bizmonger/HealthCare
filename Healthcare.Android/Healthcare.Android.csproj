@@ -72,6 +72,7 @@
     <Compile Include="Activities\ClaimsActivity.cs" />
     <Compile Include="Activities\ContactActivity.cs" />
     <Compile Include="Activities\CoverageActivity.cs" />
+    <Compile Include="Activities\CoverageActivity.internal.cs" />
     <Compile Include="Activities\FAQActivity.cs" />
     <Compile Include="Activities\FindProvidersActivity.cs" />
     <Compile Include="Activities\FindProvidersActivity.internal.cs">
