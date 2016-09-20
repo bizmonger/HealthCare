@@ -16,7 +16,7 @@ let ``view your coverage`` () =
     let viewModel = CoverageViewModel(SomeMemberId , MockBenefitsRepository())
 
     // Test
-    viewModel.LoadCoverage.Execute()
+    viewModel.LoadCoverage()
 
     // Verify
-    viewModel.Coverage |> should equal (Some anonymousCoverage)
+    viewModel.MemberCoverages |> should equal (seq [anonymousCoverage])
