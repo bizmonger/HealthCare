@@ -3,7 +3,6 @@
 open System
 open Claims
 open MockMember
-open MockOverview
 open Benefits
 
 let SomeClaimId = ClaimId "some_claim_id"

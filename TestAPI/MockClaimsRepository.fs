@@ -2,13 +2,13 @@
 
 open Claims
 open Account
-open MockOverview
 open MockClaim
 open Repositories
 
 type MockClaimsRepository() =
 
     interface IClaimsRepository with
+
         member this.GetFamilySummary      memberId = anonymousFamilySummary
         member this.GetDependentSummaries memberId = anonymousMemberSummaries
         member this.GetDetails            claimId =  Some anonymousClaim

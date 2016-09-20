@@ -42,7 +42,6 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="MockMember.fs" />
-    <Compile Include="MockOverview.fs" />
     <Compile Include="MockClaim.fs" />
     <Compile Include="MockSignIn.fs" />
     <Compile Include="MockProviders.fs" />

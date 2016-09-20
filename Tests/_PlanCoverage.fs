@@ -4,7 +4,6 @@ open FsUnit
 open NUnit.Framework
 open TestAPI
 open MockMember
-open MockOverview
 
 open ManageBenefits
 open Account
@@ -19,4 +18,4 @@ let ``view your coverage`` () =
     viewModel.LoadCoverage()
 
     // Verify
-    viewModel.MemberCoverages |> should equal (seq [anonymousCoverage])
+    viewModel.MemberCoverages |> should equal SomeMemberCoverages

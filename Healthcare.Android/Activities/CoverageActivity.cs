@@ -27,10 +27,11 @@ namespace Healthcare.Android
 
         void LoadListView()
         {
+            _viewModel.LoadCoverage();
+
             var listview = FindViewById<ListView>(Resource.Id.MemberCoverageListView);
             listview.ChoiceMode = ChoiceMode.Single;
             listview.Adapter = new MemberCoverageAdapter(this, new List<MemberPlan>(_viewModel.MemberCoverages));
-            _viewModel.LoadCoverage();
         }
     }
 }

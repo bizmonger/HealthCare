@@ -23,7 +23,32 @@ let SomeIdCard = {
     Zipcode = SomeZipCode
 }
 
-let SomeMembers = seq [SomeIdCard]
+let inNetwork = { 
+    PreventiveAndDiagnostic= PreventiveAndDiagnostic 100
+    Restoration=             Restoration  100
+    OralSurgery=             OralSurgery  100
+    Periodontics=            Periodontics 100 }
+
+let outOfNetwork = { 
+    PreventiveAndDiagnostic= PreventiveAndDiagnostic 100
+    Restoration=             Restoration  100
+    OralSurgery=             OralSurgery  100
+    Periodontics=            Periodontics 100 }
+
+let SomeDeductable = { Total=100m; Spent=50m }
+let anonymousUsage = { Deductable=SomeDeductable; OutOfPocket=OutOfPocket 100m }
+let networks =       { InNetwork= inNetwork ; OutOfNetwork=outOfNetwork }
+
+let summary:Summary = {
+    Deductable=SomeDeductable
+    OutOfPocket=OutOfPocket     100m
+    AnnualMaximum=AnnualMaximum 100m
+    Networks=networks }
+
+let anonymousCoverage =   { Member=SomeIdCard ; Summary=summary }
+let anonymousOverview =   { Coverage= anonymousCoverage ; Usage=anonymousUsage }
+let SomeMembers =         seq [SomeIdCard ; SomeIdCard ; SomeIdCard]
+let SomeMemberCoverages = seq [anonymousCoverage ; anonymousCoverage ; anonymousCoverage]
 
 let SomeSSN = SSN 123456789
 
