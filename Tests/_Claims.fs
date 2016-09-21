@@ -9,18 +9,19 @@ open ManageClaims
 open Account
 open Claims
 open Repositories
+open InteractionLogic
     
 [<Test>]
 let ``load family claims summary`` () =
 
     // Setup
-    let viewModel = ClaimsSummaryViewModel(SomeMemberId , MockClaimsRepository())
+    let viewModel = ClaimsSummaryViewModel(SomeMemberId , Dispatcher() , MockClaimsRepository())
 
     // Test
     viewModel.LoadFamilySummary()
 
     // Verify
-    viewModel.FamilySummary |> should equal SomeFamilyClaimsSummary
+    viewModel.FamilySummary |> should equal anonymousFamilySummary
 
 [<Test>]
 let ``get total insurance savings`` () =
@@ -45,7 +46,7 @@ let ``get total insurance savings`` () =
 let ``load dependent claims summary`` () =
 
     // Setup
-    let viewModel = ClaimsSummaryViewModel(SomeMemberId , MockClaimsRepository())
+    let viewModel = ClaimsSummaryViewModel(SomeMemberId , Dispatcher() , MockClaimsRepository())
 
     // Test
     viewModel.LoadMemberSummaries()

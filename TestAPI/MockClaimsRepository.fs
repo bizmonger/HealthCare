@@ -10,7 +10,7 @@ type MockClaimsRepository() =
     interface IClaimsRepository with
 
         member this.GetFamilySummary      memberId = anonymousFamilySummary
-        member this.GetDependentSummaries memberId = anonymousMemberSummaries
+        member this.GetDependentSummaries memberId = SomeDependentSummaries
         member this.GetDetails            claimId =  Some anonymousClaim
         member this.GetPaymentSummary     claimId =  Some mockPaymentSummary
         member this.GetPaymentDetails     claimId =  Some anonymousPaymentDetails

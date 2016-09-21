@@ -70,6 +70,11 @@
       <DependentUpon>BenefitsActivity.cs</DependentUpon>
     </Compile>
     <Compile Include="Activities\ClaimsActivity.cs" />
+    <Compile Include="Activities\ClaimsActivity.internal.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>ClaimsActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activities\ClaimsActivity.members.cs" />
     <Compile Include="Activities\ContactActivity.cs" />
     <Compile Include="Activities\CoverageActivity.cs" />
     <Compile Include="Activities\CoverageActivity.internal.cs" />
