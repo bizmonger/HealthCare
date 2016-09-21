@@ -32,10 +32,10 @@ let ``get total insurance savings`` () =
         InsuranceSavings=SomeInsuranceSavings }
 
     let providersCharged = match anonymousFamilySummary.ProvidersCharged with 
-                            | ProvidersCharged pc -> pc
+                            | ProvidersCharged v -> v
 
     let insuranceSavings = match anonymousFamilySummary.InsuranceSavings with
-                            | InsuranceSavings is -> is
+                            | InsuranceSavings v -> v
 
     // Test
     anonymousFamilySummary.TotalSavings() |> should equal (providersCharged - insuranceSavings)
