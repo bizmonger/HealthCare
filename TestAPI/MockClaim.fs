@@ -6,7 +6,7 @@ open MockMember
 open Benefits
 
 let SomeClaimId = ClaimId "some_claim_id"
-let SomeOffice =  Office "some_office"
+let SomeOffice =  Office  "some_office"
 
 let SomeNetwork = { PreventiveAndDiagnostic= PreventiveAndDiagnostic 0
                     Restoration=             Restoration 0
