@@ -7,8 +7,8 @@ open Claims
 
 type ClaimsSummaryViewModel(memberId , dispatcher:Dispatcher , repository:IClaimsRepository) = 
 
-    member val FamilySummary =                repository.GetFamilySummary      memberId with get,set
-    member val DependentSummaries =           repository.GetDependentSummaries memberId with get,set
+    member val FamilySummary =      None   with get,set
+    member val DependentSummaries = seq [] with get,set
 
     member this.LoadFamilySummary() =
         this.FamilySummary      <- repository.GetFamilySummary memberId

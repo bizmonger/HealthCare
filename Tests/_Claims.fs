@@ -22,7 +22,7 @@ let ``load family claims summary`` () =
     viewModel.LoadFamilySummary()
 
     // Verify
-    viewModel.FamilySummary |> should equal anonymousFamilySummary
+    viewModel.FamilySummary |> should equal SomeFamilySummary
 
 [<Test>]
 let ``get total insurance savings`` () =

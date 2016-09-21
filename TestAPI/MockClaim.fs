@@ -37,13 +37,19 @@ let SomeClaims = [anonymousClaim]
 let SomeProvidersCharged =  ProvidersCharged 50m
 let SomeInsuranceSavings =  InsuranceSavings 50m
 
-let anonymousFamilySummary = {
+let SomeFamilySummary = {
     Member = SomeIdCard
     Claims=SomeClaims
     ProvidersCharged=SomeProvidersCharged
     InsuranceSavings=SomeInsuranceSavings }
 
-let SomeDependentSummaries = seq [anonymousFamilySummary ; anonymousFamilySummary ; anonymousFamilySummary]
+let SomeClaimsSummary = {
+    Member = SomeIdCard
+    Claims=SomeClaims
+    ProvidersCharged=SomeProvidersCharged
+    InsuranceSavings=SomeInsuranceSavings }
+
+let SomeDependentSummaries = seq [SomeFamilySummary ; SomeFamilySummary ; SomeFamilySummary]
 
 let SomeProvider = {
     Name=SomeName

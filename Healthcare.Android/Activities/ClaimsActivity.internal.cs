@@ -2,10 +2,10 @@ using ManageClaims;
 using TestAPI;
 using static MockMember;
 using Android.Widget;
-using System.Linq;
 using Healthcare.Android.Adapters;
 using System.Collections.Generic;
 using static Claims;
+using Healthcare.Android;
 
 namespace Healthcare.Android
 {
@@ -13,11 +13,16 @@ namespace Healthcare.Android
     {
         void Load()
         {
-            _viewModel = new ClaimsSummaryViewModel(SomeMemberId, Global.Dispatcher, new MockClaimsRepository());
+            _viewModel = new ClaimsSummaryViewModel(SomeMemberId, _dispatcher, new MockClaimsRepository());
             _viewModel.LoadFamilySummary();
             _viewModel.LoadMemberSummaries();
 
             var familySummary = FindViewById<TextView>(Resource.Id.FamilySummaryValue);
+            if (_viewModel.FamilySummary.IsSome())
+            {
+
+            }
+
             familySummary.Text = _viewModel.FamilySummary.Claims.Count().ToString();
 
             var providersCharged = FindViewById<TextView>(Resource.Id.ProvidersChargedValue);

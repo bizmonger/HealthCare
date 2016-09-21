@@ -43,11 +43,12 @@
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\FSharp\Microsoft.Portable.FSharp.Targets" />
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
-    <Compile Include="ClaimsSummaryViewModel.fs" />
+    <Compile Include="MemberClaimsSummaryViewModel.fs" />
     <Compile Include="ClaimsDetailViewModel.fs" />
     <Compile Include="ServiceDetailsViewModel.fs" />
     <Compile Include="PaymentDetailsViewModel.fs" />
     <Content Include="packages.config" />
+    <Compile Include="ClaimsSummaryViewModel.fs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.fsproj">

@@ -8,8 +8,9 @@ open Repositories
 type MockClaimsRepository() =
 
     interface IClaimsRepository with
-
-        member this.GetFamilySummary      memberId = anonymousFamilySummary
+        
+        member this.GetFamilySummary      memberId = Some SomeFamilySummary
+        member this.GetSummary            memberId = Some SomeClaimsSummary
         member this.GetDependentSummaries memberId = SomeDependentSummaries
         member this.GetDetails            claimId =  Some anonymousClaim
         member this.GetPaymentSummary     claimId =  Some mockPaymentSummary

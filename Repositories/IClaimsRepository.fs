@@ -5,8 +5,9 @@ open Claims
 
 type IClaimsRepository =
 
-    abstract member GetFamilySummary      : MemberId -> ClaimsSummary
+    abstract member GetFamilySummary      : MemberId -> ClaimsSummary option
     abstract member GetDependentSummaries : MemberId -> ClaimsSummary seq
+    abstract member GetSummary            : MemberId -> ClaimsSummary option
     abstract member GetDetails            : ClaimId  -> Claim option
     abstract member GetPaymentSummary     : ClaimId  -> PaymentSummary option
     abstract member GetPaymentDetails     : ClaimId  -> PaymentDetails option

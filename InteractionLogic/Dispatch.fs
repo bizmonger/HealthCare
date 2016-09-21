@@ -37,9 +37,10 @@ type Dispatcher() =
     let oralSurgeryRequested =  new Event<EventHandler<_>,_>()      
     let periodonticsRequested = new Event<EventHandler<_>,_>()  
     
-    let profileRequested = new Event<EventHandler<_>,_>()
-    let familyClaimsRequested =  new Event<EventHandler<_>,_>()
-    let memberClaimsRequested =  new Event<EventHandler<_>,_>()
+    let profileRequested =      new Event<EventHandler<_>,_>()
+    let familyClaimsRequested = new Event<EventHandler<_>,_>()
+    let claimRequested        = new Event<EventHandler<_>,_>()
+    let memberClaimsRequested = new Event<EventHandler<_>,_>()
 
     let printIdCardRequested =  new Event<EventHandler<_>,_>()
     let emailIdRequested =      new Event<EventHandler<_>,_>()
@@ -103,6 +104,8 @@ type Dispatcher() =
     member this.FamilyClaimsRequested =   familyClaimsRequested.Publish
     [<CLIEvent>]
     member this.MemberClaimsRequested =   memberClaimsRequested.Publish
+    [<CLIEvent>]
+    member this.ClaimRequested =          claimRequested.Publish
                                           
     [<CLIEvent>]                          
     member this.PrintIdRequested =        printIdCardRequested.Publish
@@ -162,6 +165,7 @@ type Dispatcher() =
     member this.ViewProfile memberId =                 profileRequested.Trigger (this , memberId)
     member this.ViewFamilyClaims memberId =            familyClaimsRequested.Trigger (this , memberId)
     member this.ViewMemberClaims memberId =            memberClaimsRequested.Trigger (this , memberId)
+    member this.ViewClaim claimId =                    claimRequested.Trigger (this , claimId)
 
     member this.PrintId idCard = printIdCardRequested.Trigger (this , idCard)
     member this.EmailId idCard = emailIdRequested.Trigger (this , idCard)
