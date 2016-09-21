@@ -57,11 +57,12 @@ module Claims
 
     type ProvidersCharged = ProvidersCharged of decimal
     type InsuranceSavings = InsuranceSavings of decimal
-    type TotalSavings =     TotalSavings     of int
 
-    type ClaimsSummary = {
-        Claims:Claim list
-        ProvidersCharged:ProvidersCharged
-        InsuranceSavings:InsuranceSavings
-        TotalSavings:TotalSavings
-    }
+    type ClaimsSummary = 
+        { Claims:Claim seq
+          ProvidersCharged:ProvidersCharged
+          InsuranceSavings:InsuranceSavings 
+        } member this.TotalSavings() = match this.ProvidersCharged with 
+                                       | ProvidersCharged charged -> 
+                                            match this.InsuranceSavings with
+                                            | InsuranceSavings savings -> charged - savings

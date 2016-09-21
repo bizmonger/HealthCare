@@ -222,6 +222,10 @@
       <Project>{b561d92c-61b2-4338-9d73-ea23bd03da5b}</Project>
       <Name>ManageBenefits</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ManageClaims\ManageClaims.fsproj">
+      <Project>{b4d72d4b-5ca7-44f1-b749-d527e8b358a1}</Project>
+      <Name>ManageClaims</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ManageProviders\ManageProviders.fsproj">
       <Project>{0075dc03-0b36-4975-be35-286550f8fdf3}</Project>
       <Name>ManageProviders</Name>
