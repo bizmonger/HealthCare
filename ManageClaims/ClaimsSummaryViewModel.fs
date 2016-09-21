@@ -9,7 +9,6 @@ type ClaimsSummaryViewModel(memberId , dispatcher:Dispatcher , repository:IClaim
 
     member val FamilySummary =                repository.GetFamilySummary      memberId with get,set
     member val DependentSummaries =           repository.GetDependentSummaries memberId with get,set
-    member val Summary:ClaimsSummary option = None with get,set
 
     member this.LoadFamilySummary() =
         this.FamilySummary      <- repository.GetFamilySummary memberId
@@ -17,7 +16,5 @@ type ClaimsSummaryViewModel(memberId , dispatcher:Dispatcher , repository:IClaim
     member this.LoadMemberSummaries() =
         this.DependentSummaries <- repository.GetDependentSummaries memberId
 
-    member this.MemberClaimsSummary =
-        DelegateCommand ( (fun _ -> match this.Summary with
-                                    | Some s -> dispatcher.ViewClaims s.Member.MemberId
-                                    | None   -> ()) , fun _ -> true) :> ICommand
+    member this.OnSummarySelected summary =
+        dispatcher.ViewMemberClaims summary.Member.MemberId

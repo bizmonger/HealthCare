@@ -127,6 +127,7 @@
     <Compile Include="Fragments\WelcomeFragment.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="JavaToCSharpCaster.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MainActivity.handlers.cs">
       <DependentUpon>MainActivity.cs</DependentUpon>

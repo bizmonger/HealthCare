@@ -9,7 +9,7 @@ namespace Healthcare.Android
         void MapNavigations()
         {
             _dispatcher.IdRequested += OnIdRequested;
-            _dispatcher.ClaimsRequested += OnClaimsRequested;
+            _dispatcher.FamilyClaimsRequested += OnClaimsRequested;
             _dispatcher.CoverageRequested += OnCoverageRequested;
             _dispatcher.ContactRequested += OnContactRequested;
             _dispatcher.FindProvidersRequested += OnFindProvidersRequested;
@@ -18,7 +18,7 @@ namespace Healthcare.Android
         void UnMapNavigations()
         {
             _dispatcher.IdRequested -= OnIdRequested;
-            _dispatcher.ClaimsRequested -= OnClaimsRequested;
+            _dispatcher.FamilyClaimsRequested -= OnClaimsRequested;
             _dispatcher.CoverageRequested -= OnCoverageRequested;
             _dispatcher.ContactRequested -= OnContactRequested;
             _dispatcher.FindProvidersRequested -= OnFindProvidersRequested;
@@ -32,7 +32,7 @@ namespace Healthcare.Android
             idCard.Click += (s, e) => _viewModel.ViewIdCard.Execute(null);
 
             var claims = FindViewById<Button>(Resource.Id.Claims);
-            claims.Click += (s, e) => _viewModel.ViewClaims.Execute(null);
+            claims.Click += (s, e) => _viewModel.ViewFamilyClaims.Execute(null);
 
             var benefits = FindViewById<Button>(Resource.Id.Benefits);
             benefits.Click += (s, e) => _viewModel.ViewBenefits.Execute(null);

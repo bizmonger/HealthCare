@@ -66,16 +66,16 @@ let ``navigate to providers`` () =
     providersRequested |> should equal true
 
 [<Test>]
-let ``navigate to claims`` () =
+let ``navigate to family claims`` () =
 
     // Setup
     let mutable claimsRequested = false
     let dispatcher = Dispatcher()
-    dispatcher.ClaimsRequested.Add (fun _ -> claimsRequested <- true)
+    dispatcher.FamilyClaimsRequested.Add (fun _ -> claimsRequested <- true)
     let viewModel = PortalViewModel(SomeMemberId , dispatcher , MockBenefitsRepository())
 
     // Test
-    viewModel.ViewClaims.Execute()
+    viewModel.ViewFamilyClaims.Execute()
 
     // Verify
     claimsRequested |> should equal true
