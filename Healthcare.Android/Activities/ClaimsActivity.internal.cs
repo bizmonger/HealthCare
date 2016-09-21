@@ -13,7 +13,7 @@ namespace Healthcare.Android
     {
         void Load()
         {
-            _viewModel = new ClaimsSummaryViewModel(SomeMemberId, _dispatcher, new MockClaimsRepository());
+            _viewModel = new ClaimsSummaryViewModel(SomeMemberId, Global.Dispatcher, new MockClaimsRepository());
             _viewModel.LoadFamilySummary();
             _viewModel.LoadMemberSummaries();
 
@@ -32,6 +32,7 @@ namespace Healthcare.Android
             var listview = FindViewById<ListView>(Resource.Id.MemberClaimsListView);
             listview.ChoiceMode = ChoiceMode.Single;
             listview.Adapter = new ClaimSummaryAdapter(this, new List<ClaimsSummary>(_viewModel.DependentSummaries));
+            listview.Click += (s, e) => _viewModel.MemberClaimsSummary.Execute(null);
         }
     }
 }
