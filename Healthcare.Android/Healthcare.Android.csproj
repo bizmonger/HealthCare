@@ -114,6 +114,7 @@
       <DependentUpon>RegisterActivity.cs</DependentUpon>
     </Compile>
     <Compile Include="Activities\UsageActivity.cs" />
+    <Compile Include="Adapters\ClaimSummaryAdapter.cs" />
     <Compile Include="Adapters\MemberCoverageAdapter.cs" />
     <Compile Include="Fragments\WelcomeFragment.cs" />
     <Compile Include="Global.cs" />

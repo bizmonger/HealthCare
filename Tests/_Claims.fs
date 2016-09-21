@@ -26,7 +26,8 @@ let ``load family claims summary`` () =
 let ``get total insurance savings`` () =
 
     // Setup
-    let anonymousFamilySummary = { 
+    let anonymousFamilySummary = {
+        Member = SomeIdCard
         Claims=SomeClaims
         ProvidersCharged=SomeProvidersCharged
         InsuranceSavings=SomeInsuranceSavings }

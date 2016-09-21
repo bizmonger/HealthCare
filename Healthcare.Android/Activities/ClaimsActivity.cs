@@ -5,6 +5,9 @@ using static MockMember;
 using TestAPI;
 using Android.Widget;
 using System.Linq;
+using Healthcare.Android.Adapters;
+using System.Collections.Generic;
+using static Claims;
 
 namespace Healthcare.Android
 {
@@ -39,6 +42,10 @@ namespace Healthcare.Android
 
             var totalSavings = FindViewById<TextView>(Resource.Id.SavingValue);
             totalSavings.Text = $"{ _viewModel.FamilySummary.TotalSavings().ToString()}%";
+
+            var listview = FindViewById<ListView>(Resource.Id.MemberClaimsListView);
+            listview.ChoiceMode = ChoiceMode.Single;
+            listview.Adapter = new ClaimSummaryAdapter(this, new List<ClaimsSummary>(_viewModel.DependentSummaries));
         }
     }
 }

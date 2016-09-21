@@ -59,7 +59,8 @@ module Claims
     type InsuranceSavings = InsuranceSavings of decimal
 
     type ClaimsSummary = 
-        { Claims:Claim seq
+        { Member:IdCard
+          Claims:Claim seq
           ProvidersCharged:ProvidersCharged
           InsuranceSavings:InsuranceSavings 
         } member this.TotalSavings() = match this.ProvidersCharged with 
