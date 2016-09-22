@@ -13,7 +13,7 @@ let SomeNetwork = { PreventiveAndDiagnostic= PreventiveAndDiagnostic 0
                     OralSurgery=             OralSurgery 0
                     Periodontics=            Periodontics 0 }
 
-let anonymousClaim = {
+let SomeClaim = {
     ClaimId = SomeClaimId
     Service=Service (DateTime.Now , DateTime.Now.AddMonths(1))
     Provider={Name=SomeName ; Office= SomeOffice; Network=SomeNetwork}
@@ -21,7 +21,7 @@ let anonymousClaim = {
     Network= inNetwork
 }
 
-let mockPaymentSummary = { 
+let SomePaymentSummary = { 
     ClaimId=SomeClaimId
     ProviderCharged=100m
     NetworkDiscount=10m
@@ -32,7 +32,7 @@ let anonymousPaymentDetails = { ClaimId=SomeClaimId ; Paid=100.00m }
 let anonymousServiceDetails = { Description= SeviceDescription "some_service_details"
                                 Date= ServiceDate DateTime.Now }
 
-let SomeClaims = [anonymousClaim]
+let SomeClaims = [SomeClaim]
 
 let SomeProvidersCharged =  ProvidersCharged 50m
 let SomeInsuranceSavings =  InsuranceSavings 50m

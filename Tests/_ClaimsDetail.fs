@@ -22,7 +22,7 @@ let ``load claim`` () =
     viewModel.LoadClaim.Execute()
 
     // Verify
-    viewModel.Claim |> should equal (Some anonymousClaim)
+    viewModel.Claim |> should equal (Some SomeClaim)
 
 [<Test>]
 let ``load payment summary`` () =
@@ -34,7 +34,7 @@ let ``load payment summary`` () =
     viewModel.LoadPaymentSummary.Execute()
 
     // Verify
-    viewModel.PaymentSummary |> should equal (Some mockPaymentSummary)
+    viewModel.PaymentSummary |> should equal (Some SomePaymentSummary)
 
 [<Test>]
 let ``view service details`` () =
