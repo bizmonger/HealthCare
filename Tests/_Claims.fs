@@ -25,6 +25,18 @@ let ``load family claims summary`` () =
     viewModel.FamilySummary |> should equal (Some SomeFamilySummary)
 
 [<Test>]
+let ``load member claims`` () =
+
+    // Setup
+    let viewModel = MemberClaimsSummaryViewModel(SomeMemberId , Dispatcher() , MockClaimsRepository())
+
+    // Test
+    viewModel.Load()
+
+    // Verify
+    viewModel.Claims |> should equal SomeClaims
+
+[<Test>]
 let ``get total insurance savings`` () =
 
     // Setup
