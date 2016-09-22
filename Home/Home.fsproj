@@ -45,8 +45,8 @@
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="HomeViewModel.fs" />
     <Compile Include="PortalViewModel.fs" />
-    <Content Include="packages.config" />
     <Compile Include="SupportViewModel.fs" />
+    <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.fsproj">

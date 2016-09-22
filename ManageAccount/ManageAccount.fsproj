@@ -51,8 +51,8 @@
     <Compile Include="IDCardViewModel.fs" />
     <Compile Include="ProfileViewModel.fs" />
     <Compile Include="EditProfileViewModel.fs" />
-    <Content Include="packages.config" />
     <Compile Include="IOnlineSession.fs" />
+    <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.fsproj">

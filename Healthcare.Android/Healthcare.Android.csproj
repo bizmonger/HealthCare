@@ -56,74 +56,79 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Activities\BenefitsActivity.cs" />
-    <Compile Include="Activities\BenefitsActivity.handlers.cs">
+    <Compile Include="Activities\Benefits\BenefitsActivity.cs" />
+    <Compile Include="Activities\Benefits\BenefitsActivity.handlers.cs">
       <SubType>Code</SubType>
       <DependentUpon>BenefitsActivity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\BenefitsActivity.internal.cs">
+    <Compile Include="Activities\Benefits\BenefitsActivity.internal.cs">
       <SubType>Code</SubType>
       <DependentUpon>BenefitsActivity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\BenefitsActivity.members.cs">
+    <Compile Include="Activities\Benefits\BenefitsActivity.members.cs">
       <SubType>Code</SubType>
       <DependentUpon>BenefitsActivity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\ClaimsActivity.cs" />
-    <Compile Include="Activities\ClaimsActivity.internal.cs">
+    <Compile Include="Activities\Claims\ClaimsActivity.cs" />
+    <Compile Include="Activities\Claims\ClaimsActivity.internal.cs">
       <SubType>Code</SubType>
       <DependentUpon>ClaimsActivity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\ClaimsActivity.members.cs">
+    <Compile Include="Activities\Claims\ClaimsActivity.members.cs">
       <SubType>Code</SubType>
       <DependentUpon>ClaimsActivity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\ContactActivity.cs" />
-    <Compile Include="Activities\CoverageActivity.cs" />
-    <Compile Include="Activities\CoverageActivity.internal.cs" />
-    <Compile Include="Activities\FAQActivity.cs" />
-    <Compile Include="Activities\FindProvidersActivity.cs" />
-    <Compile Include="Activities\FindProvidersActivity.internal.cs">
+    <Compile Include="Activities\Home\ContactActivity.cs" />
+    <Compile Include="Activities\Benefits\CoverageActivity.cs" />
+    <Compile Include="Activities\Benefits\CoverageActivity.internal.cs">
+      <DependentUpon>CoverageActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activities\Home\FAQActivity.cs" />
+    <Compile Include="Activities\Home\FindProvidersActivity.cs" />
+    <Compile Include="Activities\Home\FindProvidersActivity.internal.cs">
       <SubType>Code</SubType>
       <DependentUpon>FindProvidersActivity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\FindProvidersActivity.members.cs">
+    <Compile Include="Activities\Home\FindProvidersActivity.members.cs">
       <SubType>Code</SubType>
       <DependentUpon>FindProvidersActivity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\IdCardActivity.cs" />
-    <Compile Include="Activities\IdCardActivity.internal.cs">
+    <Compile Include="Activities\Home\IdCardActivity.cs" />
+    <Compile Include="Activities\Home\IdCardActivity.internal.cs">
       <DependentUpon>IdCardActivity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\IdCardActivity.members.cs">
+    <Compile Include="Activities\Home\IdCardActivity.members.cs">
       <SubType>Code</SubType>
       <DependentUpon>IdCardActivity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\PlanActivity.cs" />
-    <Compile Include="Activities\PortalDashboard.handlers.cs" />
-    <Compile Include="Activities\PortalDashboardActivity.internal.cs">
+    <Compile Include="Activities\Benefits\PlanActivity.cs" />
+    <Compile Include="Activities\Home\PortalDashboard.handlers.cs">
+      <DependentUpon>PortalDashboardActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activities\Home\PortalDashboardActivity.internal.cs">
       <SubType>Code</SubType>
       <DependentUpon>PortalDashboardActivity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\PortalDashboardActivity.members.cs">
+    <Compile Include="Activities\Home\PortalDashboardActivity.members.cs">
       <DependentUpon>PortalDashboardActivity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\ProvidersActivity.cs" />
-    <Compile Include="Activities\RegisterActivity.internal.cs">
+    <Compile Include="Activities\Home\ProvidersActivity.cs" />
+    <Compile Include="Activities\Home\RegisterActivity.internal.cs">
       <SubType>Code</SubType>
       <DependentUpon>RegisterActivity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\RegisterActivity.members.cs">
+    <Compile Include="Activities\Home\RegisterActivity.members.cs">
       <SubType>Code</SubType>
       <DependentUpon>RegisterActivity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\RegisterActivity.subscriptions.cs">
+    <Compile Include="Activities\Home\RegisterActivity.subscriptions.cs">
       <SubType>Code</SubType>
       <DependentUpon>RegisterActivity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\UsageActivity.cs" />
+    <Compile Include="Activities\Benefits\UsageActivity.cs" />
     <Compile Include="Adapters\ClaimSummaryAdapter.cs" />
     <Compile Include="Adapters\MemberCoverageAdapter.cs" />
+    <Compile Include="Activities\Claims\ClaimDetailActivity.cs" />
     <Compile Include="Fragments\WelcomeFragment.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="GlobalSuppressions.cs" />
@@ -136,14 +141,14 @@
       <SubType>Code</SubType>
       <DependentUpon>MainActivity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\PrivacyActivity.cs" />
-    <Compile Include="Activities\RegisterActivity.cs" />
-    <Compile Include="Activities\PortalDashboardActivity.cs" />
-    <Compile Include="Activities\MemberClaimsActivity.cs" />
+    <Compile Include="Activities\Home\PrivacyActivity.cs" />
+    <Compile Include="Activities\Home\RegisterActivity.cs" />
+    <Compile Include="Activities\Home\PortalDashboardActivity.cs" />
+    <Compile Include="Activities\Claims\MemberClaimsActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Activities\SignInActivity.cs" />
-    <Compile Include="Activities\TipsActivity.cs" />
+    <Compile Include="Activities\Home\SignInActivity.cs" />
+    <Compile Include="Activities\Home\TipsActivity.cs" />
     <Compile Include="Utility.cs" />
   </ItemGroup>
   <ItemGroup>

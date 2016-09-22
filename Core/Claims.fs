@@ -63,7 +63,7 @@ module Claims
           Claims:Claim seq
           ProvidersCharged:ProvidersCharged
           InsuranceSavings:InsuranceSavings 
-        } member this.TotalSavings() = match this.ProvidersCharged with 
-                                       | ProvidersCharged charged -> 
-                                            match this.InsuranceSavings with
-                                            | InsuranceSavings savings -> charged - savings
+        } member this.TotalSavings() =
+            let (ProvidersCharged charged) = this.ProvidersCharged
+            let (InsuranceSavings savings) = this.InsuranceSavings
+            charged - savings

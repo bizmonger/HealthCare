@@ -19,10 +19,10 @@ let ``load family claims summary`` () =
     let viewModel = ClaimsSummaryViewModel(SomeMemberId , Dispatcher() , MockClaimsRepository())
 
     // Test
-    viewModel.LoadFamilySummary()
+    viewModel.Load()
 
     // Verify
-    viewModel.FamilySummary |> should equal SomeFamilySummary
+    viewModel.FamilySummary |> should equal (Some SomeFamilySummary)
 
 [<Test>]
 let ``get total insurance savings`` () =
@@ -50,7 +50,7 @@ let ``load dependent claims summary`` () =
     let viewModel = ClaimsSummaryViewModel(SomeMemberId , Dispatcher() , MockClaimsRepository())
 
     // Test
-    viewModel.LoadMemberSummaries()
+    viewModel.Load()
 
     // Verify
     viewModel.DependentSummaries |> should equal SomeDependentSummaries
@@ -63,7 +63,7 @@ let ``navigate to member claims`` () =
     let dispatcher = Dispatcher()
     dispatcher.MemberClaimsRequested.Add (fun _ -> claimsRequested <- true)
     let viewModel = ClaimsSummaryViewModel(SomeMemberId , dispatcher , MockClaimsRepository())
-
+    viewModel.Load();
     // Test
     viewModel.OnSummarySelected (viewModel.DependentSummaries.First())
 
