@@ -127,6 +127,7 @@
     </Compile>
     <Compile Include="Activities\Benefits\UsageActivity.cs" />
     <Compile Include="Adapters\ClaimSummaryAdapter.cs" />
+    <Compile Include="Adapters\MemberClaimAdapter.cs" />
     <Compile Include="Adapters\MemberCoverageAdapter.cs" />
     <Compile Include="Activities\Claims\ClaimDetailActivity.cs" />
     <Compile Include="Fragments\WelcomeFragment.cs" />

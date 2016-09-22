@@ -28,7 +28,7 @@ let mockPaymentSummary = {
     InsurancePaid=20m
 }
 
-let anonymousPaymentDetails = PaymentDetails "some_payment_details"
+let anonymousPaymentDetails = { ClaimId=SomeClaimId ; Paid=100.00m }
 let anonymousServiceDetails = { Description= SeviceDescription "some_service_details"
                                 Date= ServiceDate DateTime.Now }
 

@@ -1,20 +1,16 @@
 ﻿[<System.Diagnostics.DebuggerNonUserCode>]
 module Claims
 
-    open Account
-
     open System
+    open Account
     open Benefits
 
-    type SeviceDescription = SeviceDescription of string
-    type ServiceDate =     ServiceDate         of DateTime
+    type ClaimId = ClaimId of string
 
-    type ServiceDetails = {
-        Description:SeviceDescription
-        Date:ServiceDate
+    type PaymentDetails = {
+        ClaimId:ClaimId
+        Paid:decimal
     }
-
-    type PaymentDetails = PaymentDetails of string
 
     type Service =  Service  of DateTime * DateTime
     type Office =   Office   of string
@@ -38,8 +34,6 @@ module Claims
         NetworkName:NetworkName
     }
 
-    type ClaimId = ClaimId of string
-
     type Claim = {
         ClaimId:ClaimId
         Service:Service
@@ -48,7 +42,7 @@ module Claims
         Network:Network
     }
 
-    type PaymentSummary = 
+    type PaymentOwedSummary = 
         { ClaimId:ClaimId
           ProviderCharged:decimal
           NetworkDiscount:decimal
@@ -67,3 +61,11 @@ module Claims
             let (ProvidersCharged charged) = this.ProvidersCharged
             let (InsuranceSavings savings) = this.InsuranceSavings
             charged - savings
+
+    type SeviceDescription = SeviceDescription of string
+    type ServiceDate =       ServiceDate       of DateTime
+
+    type ServiceDetails = {
+        Description:SeviceDescription
+        Date:ServiceDate
+    }
