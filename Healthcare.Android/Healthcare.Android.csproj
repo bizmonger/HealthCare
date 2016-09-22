@@ -78,6 +78,11 @@
       <SubType>Code</SubType>
       <DependentUpon>ClaimsActivity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Activities\Claims\ClaimActivity.cs" />
+    <Compile Include="Activities\Claims\MemberClaimsActivity.internal.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>MemberClaimsActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Activities\Home\ContactActivity.cs" />
     <Compile Include="Activities\Benefits\CoverageActivity.cs" />
     <Compile Include="Activities\Benefits\CoverageActivity.internal.cs">
@@ -126,6 +131,8 @@
       <DependentUpon>RegisterActivity.cs</DependentUpon>
     </Compile>
     <Compile Include="Activities\Benefits\UsageActivity.cs" />
+    <Compile Include="Activities\Claims\PaymentDetailsActivity.cs" />
+    <Compile Include="Activities\Claims\ServiceDetailsActivity.cs" />
     <Compile Include="Adapters\ClaimSummaryAdapter.cs" />
     <Compile Include="Adapters\MemberClaimAdapter.cs" />
     <Compile Include="Adapters\MemberCoverageAdapter.cs" />

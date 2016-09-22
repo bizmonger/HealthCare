@@ -11,7 +11,6 @@ namespace Healthcare.Android
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.Claims);
-            Load();
         }
 
         protected override void OnStop()
@@ -26,13 +25,23 @@ namespace Healthcare.Android
             MapNavigations();
         }
 
-        void MapNavigations() =>
-            _dispatcher.MemberClaimsRequested += OnMemberClaimsRequested;
+        void MapNavigations()
+        {
+            _dispatcher.ServiceDetailsRequested += OnServiceDetailsRequested;
+            _dispatcher.PaymentDetailsRequested += OnPaymentDetailsRequested;
+        }
 
-        void OnMemberClaimsRequested(object sender, object e) =>
-            StartActivity(typeof(MemberClaimsActivity));
 
-        void UnMapNavigations() =>
-            _dispatcher.MemberClaimsRequested -= OnMemberClaimsRequested;
+        void OnServiceDetailsRequested(object sender, object e) =>
+            StartActivity(typeof(ServiceDetailsActivity));
+
+        void OnPaymentDetailsRequested(object sender, object e) =>
+            StartActivity(typeof(PaymentDetailsActivity));
+
+        void UnMapNavigations()
+        {
+            _dispatcher.ServiceDetailsRequested -= OnServiceDetailsRequested;
+            _dispatcher.PaymentDetailsRequested -= OnPaymentDetailsRequested;
+        }
     }
 }
