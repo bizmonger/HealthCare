@@ -11,7 +11,7 @@ type ClaimsSummaryViewModel(memberId , dispatcher:Dispatcher , repository:IClaim
     member val DependentSummaries = seq [] with get,set
 
     member this.Load() =
-        this.FamilySummary      <- repository.GetFamilySummary memberId
+        this.FamilySummary      <- repository.GetFamilySummary      memberId
         this.DependentSummaries <- repository.GetDependentSummaries memberId
 
     member this.OnSummarySelected summary =
