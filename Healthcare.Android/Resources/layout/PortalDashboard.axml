@@ -4,91 +4,91 @@
     android:layout_height="match_parent"
     android:paddingLeft="5dp"
     android:paddingRight="5dp">
-  <LinearLayout
-      android:id="@+id/Header"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:paddingLeft="16dp"
-      android:paddingRight="16dp"
-      android:layout_alignParentTop="true"
-      android:layout_centerHorizontal="true"
-      android:orientation="vertical">
-    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-      android:name="Healthcare.Android.Fragments.WelcomeFragment"
-        android:id="@+id/WelcomeFragment"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" />
     <LinearLayout
-        android:id="@+id/Row1Options"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:layout_centerHorizontal="true"
-        android:orientation="horizontal">
-      <Button
-          android:id="@+id/IdCard"
-          android:layout_width="110dp"
-          android:layout_height="wrap_content"
-          android:layout_centerHorizontal="true"
-          android:text="ID Card" />
-      <Button
-          android:id="@+id/Providers"
-          android:layout_width="110dp"
-          android:layout_height="wrap_content"
-          android:layout_centerHorizontal="true"
-          android:text="Find a Provider" />
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/Row2Options"
-        android:layout_width="match_parent"
+        android:id="@+id/Header"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:orientation="horizontal">
-      <Button
-          android:id="@+id/Benefits"
-          android:layout_width="110dp"
-          android:layout_height="wrap_content"
-          android:layout_centerHorizontal="true"
-          android:text="Your Benefits" />
-      <Button
-          android:id="@+id/Claims"
-          android:layout_width="110dp"
-          android:layout_height="wrap_content"
-          android:layout_centerHorizontal="true"
-          android:text="Your Caims" />
+        android:orientation="vertical">
+        <fragment
+            android:name="Healthcare.Android.Fragments.WelcomeFragment"
+            android:id="@+id/WelcomeFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent" />
+        <LinearLayout
+            android:id="@+id/Row1Options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/IdCard"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="ID Card" />
+            <Button
+                android:id="@+id/Providers"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Find a Provider" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Row2Options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/Benefits"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Your Benefits" />
+            <Button
+                android:id="@+id/Claims"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Your Caims" />
+        </LinearLayout>
     </LinearLayout>
-  </LinearLayout>
-  <LinearLayout
-      android:id="@+id/Footer"
-      android:layout_width="match_parent"
-      android:layout_height="48dp"
-      android:paddingLeft="1dp"
-      android:paddingRight="1dp"
-      android:layout_alignParentBottom="true"
-      android:orientation="horizontal">
-    <Button
-        android:id="@+id/Dashboard"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Dashboard" />
-    <Button
-        android:id="@+id/Benefits"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Benefits" />
-    <Button
-        android:id="@+id/Claims"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Claims" />
-    <Button
-        android:id="@+id/Contact"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contact" />
-  </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Footer"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/Dashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dashboard" />
+        <Button
+            android:id="@+id/Benefits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Benefits" />
+        <Button
+            android:id="@+id/Claims"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Claims" />
+        <Button
+            android:id="@+id/Contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact" />
+    </LinearLayout>
 </RelativeLayout>

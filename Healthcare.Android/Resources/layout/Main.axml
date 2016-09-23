@@ -6,11 +6,12 @@
     android:paddingRight="5dp">
     <LinearLayout
         android:id="@+id/Header"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:orientation="horizontal">
         <Button
             android:id="@+id/Tips"
@@ -52,14 +53,14 @@
         android:layout_below="@id/SignIn"
         android:layout_centerHorizontal="true"
         android:text="or Register" />
-  
     <LinearLayout
         android:id="@+id/Footer"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:orientation="horizontal">
         <Button
             android:id="@+id/IdCard"
