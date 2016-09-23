@@ -124,18 +124,18 @@ type Dispatcher() =
     [<CLIEvent>]
     member this.SignInRequested =         signInRequested.Publish
     [<CLIEvent>]
-    member this.SignInSuccessful =         signInSuccessful.Publish
+    member this.SignInSuccessful =        signInSuccessful.Publish
 
     [<CLIEvent>]
-    member this.RegistrationRequested =    registrationRequested.Publish
+    member this.RegistrationRequested =   registrationRequested.Publish
 
     [<CLIEvent>]
-    member this.RegistrationSuccessful =   receivedValidForm.Publish
+    member this.RegistrationSuccessful =  receivedValidForm.Publish
 
     (* Triggers *)
-    member this.ViewPortalDashboard() =      signInSuccessful.Trigger(this , EventArgs.Empty)
+    member this.ViewPortalDashboard() =    signInSuccessful.Trigger(this , EventArgs.Empty)
     member this.RegistrationIsValid form = receivedValidForm.Trigger(this, form)
-    member this.ChangeSettings settings =    settingsChanged.Trigger settings
+    member this.ChangeSettings settings =  settingsChanged.Trigger settings
 
     member this.TryViewIdCard memberId =  idRequested.Trigger(this , EventArgs.Empty)
     member this.ViewContact() =           contactRequested.Trigger(this , EventArgs.Empty)
