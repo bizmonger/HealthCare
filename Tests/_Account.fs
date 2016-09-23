@@ -7,27 +7,66 @@ open MockMember
 
 open InteractionLogic
 open ManageAccount
+open Home
+open TestAPI
 
 
 [<Test>]
 let ``navigate to account info`` () =
 
     // Setup
-//    let mutable accountInfoRequested = false
-//    let dispatcher = Dispatcher()
-//    dispatcher.AccountInfoRequested.Add(fun _ -> accountInfoRequested <- true)
+    let mutable accountRequested = false
+    let dispatcher = Dispatcher()
+    dispatcher.AccountRequested.Add(fun _ -> accountRequested <- true)
+    let viewModel = MenuViewModel(SomeMemberId , dispatcher)
 
     // Test
-    failwith ""
+    viewModel.ViewAccount.Execute()
 
     // Verify
-    //accountInfoRequested |> should equal true
+    accountRequested |> should equal true
 
 [<Test>]
-let ``view profile`` () = failwith ""
+let ``view profile`` () =
+
+    // Setup
+    let mutable profileRequested = false
+    let dispatcher = Dispatcher()
+    dispatcher.ProfileRequested.Add(fun _ -> profileRequested <- true)
+    let viewModel = AccountViewModel(SomeMemberId , dispatcher)
+
+    // Test
+    viewModel.ViewProfile.Execute()
+
+    // Verify
+    profileRequested |> should equal true
 
 [<Test>]
-let ``view dependents profile`` () = failwith ""
+let ``view dependents profile`` () =
+
+    // Setup
+    let mutable dependentProfilesRequested = false
+    let dispatcher = Dispatcher()
+    dispatcher.DependentProfilesRequested.Add(fun _ -> dependentProfilesRequested <- true)
+    let viewModel = AccountViewModel(SomeMemberId , dispatcher)
+
+    // Test
+    viewModel.ViewDependentProfiles.Execute()
+
+    // Verify
+    dependentProfilesRequested |> should equal true
 
 [<Test>]
-let ``login settings`` () = failwith ""
+let ``login settings`` () =
+
+    // Setup
+    let mutable loginSettingsRequested = false
+    let dispatcher = Dispatcher()
+    dispatcher.LoginSettingsRequested.Add(fun _ -> loginSettingsRequested <- true)
+    let viewModel = AccountViewModel(SomeMemberId , dispatcher)
+
+    // Test
+    viewModel.ViewLoginSettings.Execute()
+
+    // Verify
+    loginSettingsRequested |> should equal true

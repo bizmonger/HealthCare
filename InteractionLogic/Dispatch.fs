@@ -18,6 +18,8 @@ type Dispatcher() =
     let settingsChanged =       new Event<Features>()
 
     let idRequested =           new Event<EventHandler<_>,_>()
+    let accountRequested =      new Event<EventHandler<_>,_>()
+    let profileRequested =      new Event<EventHandler<_>,_>()
     let contactRequested =      new Event<EventHandler<_>,_>()
     let viewProvidersRequested =new Event<EventHandler<_>,_>()
     let findProvidersRequested =new Event<EventHandler<_>,_>()
@@ -37,10 +39,12 @@ type Dispatcher() =
     let oralSurgeryRequested =  new Event<EventHandler<_>,_>()      
     let periodonticsRequested = new Event<EventHandler<_>,_>()  
     
-    let profileRequested =      new Event<EventHandler<_>,_>()
-    let familyClaimsRequested = new Event<EventHandler<_>,_>()
-    let claimRequested        = new Event<EventHandler<_>,_>()
-    let memberClaimsRequested = new Event<EventHandler<_>,_>()
+    let profileRequested =           new Event<EventHandler<_>,_>()
+    let dependentProfilesRequested = new Event<EventHandler<_>,_>()
+    let loginSettingsRequested  =    new Event<EventHandler<_>,_>()
+    let familyClaimsRequested =      new Event<EventHandler<_>,_>()
+    let claimRequested        =      new Event<EventHandler<_>,_>()
+    let memberClaimsRequested =      new Event<EventHandler<_>,_>()
 
     let printIdCardRequested =  new Event<EventHandler<_>,_>()
     let emailIdRequested =      new Event<EventHandler<_>,_>()
@@ -59,6 +63,16 @@ type Dispatcher() =
 
     [<CLIEvent>]
     member this.IdRequested =           idRequested.Publish
+    [<CLIEvent>]
+    member this.AccountRequested =      accountRequested.Publish
+
+    [<CLIEvent>]
+    member this.ProfileRequested =      profileRequested.Publish
+    [<CLIEvent>]
+    member this.DependentProfilesRequested = dependentProfilesRequested.Publish
+    [<CLIEvent>]
+    member this.LoginSettingsRequested = loginSettingsRequested.Publish
+
     [<CLIEvent>]                        
     member this.ContactRequested =      contactRequested.Publish
     [<CLIEvent>]
@@ -98,9 +112,6 @@ type Dispatcher() =
     member this.PaymentDetailsRequested = paymentDetailsRequested.Publish
 
     [<CLIEvent>]
-    member this.ProfileRequested =        profileRequested.Publish
-
-    [<CLIEvent>]
     member this.FamilyClaimsRequested =   familyClaimsRequested.Publish
     [<CLIEvent>]
     member this.MemberClaimsRequested =   memberClaimsRequested.Publish
@@ -137,16 +148,20 @@ type Dispatcher() =
     member this.RegistrationIsValid form = receivedValidForm.Trigger(this, form)
     member this.ChangeSettings settings =  settingsChanged.Trigger settings
 
-    member this.TryViewIdCard memberId =  idRequested.Trigger(this , EventArgs.Empty)
-    member this.ViewContact() =           contactRequested.Trigger(this , EventArgs.Empty)
-    member this.FindProviders() =         findProvidersRequested.Trigger(this , EventArgs.Empty)
-    member this.ViewProviders providers = viewProvidersRequested.Trigger(this , providers)
-    member this.ViewTips() =              tipsRequested.Trigger(this , EventArgs.Empty)
-    member this.ViewInfo() =              infoRequested.Trigger(this , EventArgs.Empty)
-    member this.ViewPrivacy() =           privacyRequested.Trigger(this , EventArgs.Empty)
-    member this.ViewFAQ() =               faqRequested.Trigger(this , EventArgs.Empty)
-    member this.ViewSignIn() =            signInRequested.Trigger(this , EventArgs.Empty)
-    member this.ViewRegistration() =      registrationRequested.Trigger(this , EventArgs.Empty)
+    member this.TryViewIdCard memberId =         idRequested.Trigger(this , EventArgs.Empty)
+    member this.ViewAccount memberId =           accountRequested.Trigger(this, EventArgs.Empty) 
+    member this.ViewProfile memberId =           profileRequested.Trigger(this, EventArgs.Empty) 
+    member this.ViewDependentProfiles memberId = dependentProfilesRequested.Trigger(this, EventArgs.Empty) 
+    member this.ViewLoginSettings memberId =     loginSettingsRequested.Trigger(this, EventArgs.Empty) 
+    member this.ViewContact() =                  contactRequested.Trigger(this , EventArgs.Empty)
+    member this.FindProviders() =                findProvidersRequested.Trigger(this , EventArgs.Empty)
+    member this.ViewProviders providers =        viewProvidersRequested.Trigger(this , providers)
+    member this.ViewTips() =                     tipsRequested.Trigger(this , EventArgs.Empty)
+    member this.ViewInfo() =                     infoRequested.Trigger(this , EventArgs.Empty)
+    member this.ViewPrivacy() =                  privacyRequested.Trigger(this , EventArgs.Empty)
+    member this.ViewFAQ() =                      faqRequested.Trigger(this , EventArgs.Empty)
+    member this.ViewSignIn() =                   signInRequested.Trigger(this , EventArgs.Empty)
+    member this.ViewRegistration() =             registrationRequested.Trigger(this , EventArgs.Empty)
 
     member this.ViewPlan memberId =      planRequested.Trigger (this , memberId)
     member this.ViewCoverage memberId =  coverageRequested.Trigger (this , memberId)
@@ -163,6 +178,8 @@ type Dispatcher() =
     member this.ViewPaymentDetails claimId =           paymentDetailsRequested.Trigger (this , claimId)
 
     member this.ViewProfile memberId =                 profileRequested.Trigger (this , memberId)
+    member this.ViewDependentProfiles memberId =       dependentProfilesRequested.Trigger(this , memberId)
+    member this.ViewLoginSettings memberId =           loginSettingsRequested.Trigger(this , memberId)
     member this.ViewFamilyClaims memberId =            familyClaimsRequested.Trigger (this , memberId)
     member this.ViewMemberClaims memberId =            memberClaimsRequested.Trigger (this , memberId)
     member this.ViewClaim claimId =                    claimRequested.Trigger (this , claimId)
