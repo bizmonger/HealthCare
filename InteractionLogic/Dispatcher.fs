@@ -39,12 +39,12 @@ type Dispatcher() =
     let oralSurgeryRequested =  new Event<EventHandler<_>,_>()      
     let periodonticsRequested = new Event<EventHandler<_>,_>()  
     
-    let profileRequested =           new Event<EventHandler<_>,_>()
-    let dependentProfilesRequested = new Event<EventHandler<_>,_>()
-    let loginSettingsRequested  =    new Event<EventHandler<_>,_>()
-    let familyClaimsRequested =      new Event<EventHandler<_>,_>()
-    let claimRequested        =      new Event<EventHandler<_>,_>()
-    let memberClaimsRequested =      new Event<EventHandler<_>,_>()
+    let profileRequested =          new Event<EventHandler<_>,_>()
+    let dependentProfilesRequested= new Event<EventHandler<_>,_>()
+    let loginSettingsRequested  =   new Event<EventHandler<_>,_>()
+    let familyClaimsRequested =     new Event<EventHandler<_>,_>()
+    let claimRequested        =     new Event<EventHandler<_>,_>()
+    let memberClaimsRequested =     new Event<EventHandler<_>,_>()
 
     let printIdCardRequested =  new Event<EventHandler<_>,_>()
     let emailIdRequested =      new Event<EventHandler<_>,_>()

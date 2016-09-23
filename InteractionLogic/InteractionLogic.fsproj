@@ -44,7 +44,7 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="DelegateCommand.fs" />
-    <Compile Include="Dispatch.fs" />
+    <Compile Include="Dispatcher.fs" />
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
