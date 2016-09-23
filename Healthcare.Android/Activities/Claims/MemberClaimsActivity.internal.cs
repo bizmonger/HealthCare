@@ -12,6 +12,7 @@ namespace Healthcare.Android
         void Load()
         {
             _viewModel = new MemberClaimsSummaryViewModel(SomeMemberId, _dispatcher, _repository);
+            _viewModel.Load();
 
             var listview = FindViewById<ListView>(Resource.Id.ClaimsListView);
             listview.ChoiceMode = ChoiceMode.Single;

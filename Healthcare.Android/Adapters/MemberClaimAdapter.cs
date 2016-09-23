@@ -25,7 +25,7 @@ namespace Healthcare.Android.Adapters
 
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
-            var view = convertView ?? _context.LayoutInflater.Inflate(Resource.Layout.MemberCoverageItem, null);
+            var view = convertView ?? _context.LayoutInflater.Inflate(Resource.Layout.MemberClaimListItem, null);
             var claim = this[position];
 
             UpdateUI(view, claim);
