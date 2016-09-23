@@ -1,14 +1,22 @@
 using ManageClaims;
-using InteractionLogic;
-using TestAPI;
-using Repositories;
+using Android.Widget;
+using Healthcare.Android.Adapters;
+using static Claims;
+using System.Collections.Generic;
+using static MockMember;
 
 namespace Healthcare.Android
 {
     partial class MemberClaimsActivity
     {
-        MemberClaimsSummaryViewModel _viewModel;
-        Dispatcher _dispatcher = Global.Dispatcher;
-        readonly IClaimsRepository _repository = new MockClaimsRepository();
+        void Load()
+        {
+            _viewModel = new MemberClaimsSummaryViewModel(SomeMemberId, _dispatcher, _repository);
+
+            var listview = FindViewById<ListView>(Resource.Id.ClaimsListView);
+            listview.ChoiceMode = ChoiceMode.Single;
+            listview.Adapter = new MemberClaimAdapter(this, new List<Claim>(_viewModel.Claims));
+            listview.ItemClick += (s, e) => _viewModel.OnClaimSelected(listview.GetItemAtPosition(e.Position).Cast<Claim>());
+        }
     }
 }
