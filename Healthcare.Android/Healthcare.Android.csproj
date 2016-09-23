@@ -71,11 +71,11 @@
     </Compile>
     <Compile Include="Activities\Claims\ClaimActivity.internal.cs">
       <SubType>Code</SubType>
-      <DependentUpon>ClaimActivity.cs</DependentUpon>
+      <DependentUpon>ClaimDetailActivity.cs</DependentUpon>
     </Compile>
     <Compile Include="Activities\Claims\ClaimActivity.members.cs">
       <SubType>Code</SubType>
-      <DependentUpon>ClaimActivity.cs</DependentUpon>
+      <DependentUpon>ClaimDetailActivity.cs</DependentUpon>
     </Compile>
     <Compile Include="Activities\Claims\ClaimsActivity.cs" />
     <Compile Include="Activities\Claims\ClaimsActivity.internal.cs">
@@ -86,7 +86,7 @@
       <SubType>Code</SubType>
       <DependentUpon>ClaimsActivity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\Claims\ClaimActivity.cs" />
+    <Compile Include="Activities\Claims\ClaimDetailActivity.cs" />
     <Compile Include="Activities\Claims\MemberClaimsActivity.internal.cs">
       <SubType>Code</SubType>
       <DependentUpon>MemberClaimsActivity.cs</DependentUpon>
@@ -148,7 +148,6 @@
     <Compile Include="Adapters\ClaimSummaryAdapter.cs" />
     <Compile Include="Adapters\MemberClaimAdapter.cs" />
     <Compile Include="Adapters\MemberCoverageAdapter.cs" />
-    <Compile Include="Activities\Claims\ClaimDetailActivity.cs" />
     <Compile Include="Fragments\WelcomeFragment.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="GlobalSuppressions.cs" />
@@ -235,6 +234,12 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\MemberClaimListItem.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ServiceDetails.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\PaymentDetails.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

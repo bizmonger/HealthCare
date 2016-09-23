@@ -527,25 +527,31 @@ namespace Healthcare.Android
 			public const int NetworksListItem = 2130903052;
 			
 			// aapt resource value: 0x7f03000d
-			public const int Plan = 2130903053;
+			public const int PaymentDetails = 2130903053;
 			
 			// aapt resource value: 0x7f03000e
-			public const int PortalDashboard = 2130903054;
+			public const int Plan = 2130903054;
 			
 			// aapt resource value: 0x7f03000f
-			public const int Providers = 2130903055;
+			public const int PortalDashboard = 2130903055;
 			
 			// aapt resource value: 0x7f030010
-			public const int Register = 2130903056;
+			public const int Providers = 2130903056;
 			
 			// aapt resource value: 0x7f030011
-			public const int SpecialtiesListItem = 2130903057;
+			public const int Register = 2130903057;
 			
 			// aapt resource value: 0x7f030012
-			public const int Usage = 2130903058;
+			public const int ServiceDetails = 2130903058;
 			
 			// aapt resource value: 0x7f030013
-			public const int WelcomeFragment = 2130903059;
+			public const int SpecialtiesListItem = 2130903059;
+			
+			// aapt resource value: 0x7f030014
+			public const int Usage = 2130903060;
+			
+			// aapt resource value: 0x7f030015
+			public const int WelcomeFragment = 2130903061;
 			
 			static Layout()
 			{
