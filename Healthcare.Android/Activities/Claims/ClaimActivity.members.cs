@@ -1,11 +1,9 @@
 using InteractionLogic;
-using ManageClaims;
 
 namespace Healthcare.Android
 {
-    partial class ClaimsActivity
+    partial class ClaimActivity
     {
-        ClaimsSummaryViewModel _viewModel;
         readonly Dispatcher _dispatcher = Global.Dispatcher;
     }
 }
