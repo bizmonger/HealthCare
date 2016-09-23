@@ -13,5 +13,22 @@ namespace Healthcare.Android
             SetContentView(Resource.Layout.MemberClaims);
             Load();
         }
+
+        protected override void OnStart()
+        {
+            base.OnStart();
+            MapNavigations();
+        }
+
+        protected override void OnStop()
+        {
+            base.OnStop();
+            UnMapNavigations();
+        }
+
+        void MapNavigations() => _dispatcher.ClaimRequested += OnViewClaim;
+        void UnMapNavigations() => _dispatcher.ClaimRequested += OnViewClaim;
+
+        void OnViewClaim(object sender, object e) => StartActivity(typeof(ClaimDetailActivity));
     }
 }
