@@ -9,10 +9,10 @@ namespace Healthcare.Android
     partial class FindProvidersActivity
     {
         void MapNavigations() =>
-            _dispatcher.ViewProvidersRequested += OnViewProvidersRequested;
+            _dispatcher.ProvidersRequested += OnViewProvidersRequested;
 
         void UnMapNavigations() =>
-            _dispatcher.ViewProvidersRequested -= OnViewProvidersRequested;
+            _dispatcher.ProvidersRequested -= OnViewProvidersRequested;
 
         void OnViewProvidersRequested(object sender, object e) =>
             StartActivity(typeof(ProvidersActivity));

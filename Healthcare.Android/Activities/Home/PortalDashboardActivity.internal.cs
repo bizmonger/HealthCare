@@ -13,8 +13,9 @@ namespace Healthcare.Android
             _dispatcher.CoverageRequested += OnCoverageRequested;
             _dispatcher.ContactRequested += OnContactRequested;
             _dispatcher.FindProvidersRequested += OnFindProvidersRequested;
+            _dispatcher.AccountRequested += OnAccountRequested;
         }
-
+        
         void UnMapNavigations()
         {
             _dispatcher.IdRequested -= OnIdRequested;

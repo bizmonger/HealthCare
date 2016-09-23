@@ -66,413 +66,416 @@ namespace Healthcare.Android
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050031
-			public const int AnotherAddress = 2131034161;
+			// aapt resource value: 0x7f060088
+			public const int Account = 2131099784;
 			
-			// aapt resource value: 0x7f05005c
-			public const int AnualMaximum = 2131034204;
+			// aapt resource value: 0x7f060031
+			public const int AnotherAddress = 2131099697;
 			
-			// aapt resource value: 0x7f05005d
-			public const int AnualMaximumValue = 2131034205;
+			// aapt resource value: 0x7f06005c
+			public const int AnualMaximum = 2131099740;
 			
-			// aapt resource value: 0x7f05006a
-			public const int Benefits = 2131034218;
+			// aapt resource value: 0x7f06005d
+			public const int AnualMaximumValue = 2131099741;
 			
-			// aapt resource value: 0x7f050000
-			public const int BenefitsHeader = 2131034112;
+			// aapt resource value: 0x7f06006a
+			public const int Benefits = 2131099754;
 			
-			// aapt resource value: 0x7f05006b
-			public const int Claims = 2131034219;
+			// aapt resource value: 0x7f060000
+			public const int BenefitsHeader = 2131099648;
 			
-			// aapt resource value: 0x7f05004f
-			public const int ClaimsListView = 2131034191;
+			// aapt resource value: 0x7f06006b
+			public const int Claims = 2131099755;
 			
-			// aapt resource value: 0x7f050042
-			public const int Contact = 2131034178;
+			// aapt resource value: 0x7f06004f
+			public const int ClaimsListView = 2131099727;
 			
-			// aapt resource value: 0x7f050009
-			public const int Coverage = 2131034121;
+			// aapt resource value: 0x7f060042
+			public const int Contact = 2131099714;
 			
-			// aapt resource value: 0x7f050030
-			public const int CurrentLocation = 2131034160;
+			// aapt resource value: 0x7f060009
+			public const int Coverage = 2131099657;
 			
-			// aapt resource value: 0x7f050053
-			public const int DOBLabel = 2131034195;
+			// aapt resource value: 0x7f060030
+			public const int CurrentLocation = 2131099696;
 			
-			// aapt resource value: 0x7f050054
-			public const int DOBValue = 2131034196;
+			// aapt resource value: 0x7f060053
+			public const int DOBLabel = 2131099731;
 			
-			// aapt resource value: 0x7f05006c
-			public const int Dashboard = 2131034220;
+			// aapt resource value: 0x7f060054
+			public const int DOBValue = 2131099732;
 			
-			// aapt resource value: 0x7f050058
-			public const int Deductable = 2131034200;
+			// aapt resource value: 0x7f06006c
+			public const int Dashboard = 2131099756;
 			
-			// aapt resource value: 0x7f050077
-			public const int DeductableRemaining = 2131034231;
+			// aapt resource value: 0x7f060058
+			public const int Deductable = 2131099736;
 			
-			// aapt resource value: 0x7f050078
-			public const int DeductableRemainingValue = 2131034232;
+			// aapt resource value: 0x7f060077
+			public const int DeductableRemaining = 2131099767;
 			
-			// aapt resource value: 0x7f050059
-			public const int DeductableValue = 2131034201;
+			// aapt resource value: 0x7f060078
+			public const int DeductableRemainingValue = 2131099768;
 			
-			// aapt resource value: 0x7f050043
-			public const int DentistName = 2131034179;
+			// aapt resource value: 0x7f060059
+			public const int DeductableValue = 2131099737;
 			
-			// aapt resource value: 0x7f050026
-			public const int DependentClaimsSummary = 2131034150;
+			// aapt resource value: 0x7f060043
+			public const int DentistName = 2131099715;
 			
-			// aapt resource value: 0x7f050034
-			public const int DisclaimerLabel = 2131034164;
+			// aapt resource value: 0x7f060026
+			public const int DependentClaimsSummary = 2131099686;
 			
-			// aapt resource value: 0x7f05002d
-			public const int DistanceListView = 2131034157;
+			// aapt resource value: 0x7f060034
+			public const int DisclaimerLabel = 2131099700;
 			
-			// aapt resource value: 0x7f050003
-			public const int EffectiveFromLabel = 2131034115;
+			// aapt resource value: 0x7f06002d
+			public const int DistanceListView = 2131099693;
 			
-			// aapt resource value: 0x7f050004
-			public const int EffectiveUntilLabel = 2131034116;
+			// aapt resource value: 0x7f060003
+			public const int EffectiveFromLabel = 2131099651;
 			
-			// aapt resource value: 0x7f050038
-			public const int Email = 2131034168;
+			// aapt resource value: 0x7f060004
+			public const int EffectiveUntilLabel = 2131099652;
 			
-			// aapt resource value: 0x7f050036
-			public const int EnableIdViewing = 2131034166;
+			// aapt resource value: 0x7f060038
+			public const int Email = 2131099704;
 			
-			// aapt resource value: 0x7f05003c
-			public const int FAQ = 2131034172;
+			// aapt resource value: 0x7f060036
+			public const int EnableIdViewing = 2131099702;
 			
-			// aapt resource value: 0x7f05001e
-			public const int FamilySummary = 2131034142;
+			// aapt resource value: 0x7f06003c
+			public const int FAQ = 2131099708;
 			
-			// aapt resource value: 0x7f05001f
-			public const int FamilySummaryValue = 2131034143;
+			// aapt resource value: 0x7f06001e
+			public const int FamilySummary = 2131099678;
 			
-			// aapt resource value: 0x7f05003f
-			public const int Footer = 2131034175;
+			// aapt resource value: 0x7f06001f
+			public const int FamilySummaryValue = 2131099679;
 			
-			// aapt resource value: 0x7f05002e
-			public const int FromLabel = 2131034158;
+			// aapt resource value: 0x7f06003f
+			public const int Footer = 2131099711;
 			
-			// aapt resource value: 0x7f050007
-			public const int Goup = 2131034119;
+			// aapt resource value: 0x7f06002e
+			public const int FromLabel = 2131099694;
 			
-			// aapt resource value: 0x7f050039
-			public const int Header = 2131034169;
+			// aapt resource value: 0x7f060007
+			public const int Goup = 2131099655;
 			
-			// aapt resource value: 0x7f050040
-			public const int IdCard = 2131034176;
+			// aapt resource value: 0x7f060039
+			public const int Header = 2131099705;
 			
-			// aapt resource value: 0x7f050018
-			public const int InsurancePaidLabel = 2131034136;
+			// aapt resource value: 0x7f060040
+			public const int IdCard = 2131099712;
 			
-			// aapt resource value: 0x7f050019
-			public const int InsurancePaidValue = 2131034137;
+			// aapt resource value: 0x7f060018
+			public const int InsurancePaidLabel = 2131099672;
 			
-			// aapt resource value: 0x7f050057
-			public const int InsurancePlanHighlights = 2131034199;
+			// aapt resource value: 0x7f060019
+			public const int InsurancePaidValue = 2131099673;
 			
-			// aapt resource value: 0x7f050056
-			public const int InsurancePlanName = 2131034198;
+			// aapt resource value: 0x7f060057
+			public const int InsurancePlanHighlights = 2131099735;
 			
-			// aapt resource value: 0x7f050022
-			public const int InsuranceSavedYou = 2131034146;
+			// aapt resource value: 0x7f060056
+			public const int InsurancePlanName = 2131099734;
 			
-			// aapt resource value: 0x7f050023
-			public const int InsuranceSavedYouValue = 2131034147;
+			// aapt resource value: 0x7f060022
+			public const int InsuranceSavedYou = 2131099682;
 			
-			// aapt resource value: 0x7f050084
-			public const int Label1 = 2131034244;
+			// aapt resource value: 0x7f060023
+			public const int InsuranceSavedYouValue = 2131099683;
 			
-			// aapt resource value: 0x7f050085
-			public const int LastActivity = 2131034245;
+			// aapt resource value: 0x7f060084
+			public const int Label1 = 2131099780;
 			
-			// aapt resource value: 0x7f050086
-			public const int LastCleaning = 2131034246;
+			// aapt resource value: 0x7f060085
+			public const int LastActivity = 2131099781;
 			
-			// aapt resource value: 0x7f050087
-			public const int LastDentalVisit = 2131034247;
+			// aapt resource value: 0x7f060086
+			public const int LastCleaning = 2131099782;
 			
-			// aapt resource value: 0x7f050033
-			public const int Logo = 2131034163;
+			// aapt resource value: 0x7f060087
+			public const int LastDentalVisit = 2131099783;
 			
-			// aapt resource value: 0x7f05004e
-			public const int MemberClaimsLabel = 2131034190;
+			// aapt resource value: 0x7f060033
+			public const int Logo = 2131099699;
 			
-			// aapt resource value: 0x7f050027
-			public const int MemberClaimsListView = 2131034151;
+			// aapt resource value: 0x7f06004e
+			public const int MemberClaimsLabel = 2131099726;
 			
-			// aapt resource value: 0x7f050029
-			public const int MemberCoverageListView = 2131034153;
+			// aapt resource value: 0x7f060027
+			public const int MemberClaimsListView = 2131099687;
 			
-			// aapt resource value: 0x7f050051
-			public const int MemberIdLabel = 2131034193;
+			// aapt resource value: 0x7f060029
+			public const int MemberCoverageListView = 2131099689;
 			
-			// aapt resource value: 0x7f050052
-			public const int MemberIdValue = 2131034194;
+			// aapt resource value: 0x7f060051
+			public const int MemberIdLabel = 2131099729;
 			
-			// aapt resource value: 0x7f05004a
-			public const int MemberInsuranceSavedYou = 2131034186;
+			// aapt resource value: 0x7f060052
+			public const int MemberIdValue = 2131099730;
 			
-			// aapt resource value: 0x7f05004b
-			public const int MemberInsuranceSavedYouValue = 2131034187;
+			// aapt resource value: 0x7f06004a
+			public const int MemberInsuranceSavedYou = 2131099722;
 			
-			// aapt resource value: 0x7f050048
-			public const int MemberProvidersCharged = 2131034184;
+			// aapt resource value: 0x7f06004b
+			public const int MemberInsuranceSavedYouValue = 2131099723;
 			
-			// aapt resource value: 0x7f050049
-			public const int MemberProvidersChargedValue = 2131034185;
+			// aapt resource value: 0x7f060048
+			public const int MemberProvidersCharged = 2131099720;
 			
-			// aapt resource value: 0x7f05004c
-			public const int MemberSaving = 2131034188;
+			// aapt resource value: 0x7f060049
+			public const int MemberProvidersChargedValue = 2131099721;
 			
-			// aapt resource value: 0x7f05004d
-			public const int MemberSavingValue = 2131034189;
+			// aapt resource value: 0x7f06004c
+			public const int MemberSaving = 2131099724;
 			
-			// aapt resource value: 0x7f050046
-			public const int MemberSummary = 2131034182;
+			// aapt resource value: 0x7f06004d
+			public const int MemberSavingValue = 2131099725;
 			
-			// aapt resource value: 0x7f050047
-			public const int MemberSummaryValue = 2131034183;
+			// aapt resource value: 0x7f060046
+			public const int MemberSummary = 2131099718;
 			
-			// aapt resource value: 0x7f050082
-			public const int MemberUsageListView = 2131034242;
+			// aapt resource value: 0x7f060047
+			public const int MemberSummaryValue = 2131099719;
 			
-			// aapt resource value: 0x7f050050
-			public const int NameValue = 2131034192;
+			// aapt resource value: 0x7f060082
+			public const int MemberUsageListView = 2131099778;
 			
-			// aapt resource value: 0x7f05005e
-			public const int NetworkBenefits = 2131034206;
+			// aapt resource value: 0x7f060050
+			public const int NameValue = 2131099728;
 			
-			// aapt resource value: 0x7f05005f
-			public const int NetworkBenefitsValue = 2131034207;
+			// aapt resource value: 0x7f06005e
+			public const int NetworkBenefits = 2131099742;
 			
-			// aapt resource value: 0x7f050016
-			public const int NetworkDiscountLabel = 2131034134;
+			// aapt resource value: 0x7f06005f
+			public const int NetworkBenefitsValue = 2131099743;
 			
-			// aapt resource value: 0x7f050017
-			public const int NetworkDiscountValue = 2131034135;
+			// aapt resource value: 0x7f060016
+			public const int NetworkDiscountLabel = 2131099670;
 			
-			// aapt resource value: 0x7f050011
-			public const int NetworkLabel = 2131034129;
+			// aapt resource value: 0x7f060017
+			public const int NetworkDiscountValue = 2131099671;
 			
-			// aapt resource value: 0x7f05002c
-			public const int NetworkListView = 2131034156;
+			// aapt resource value: 0x7f060011
+			public const int NetworkLabel = 2131099665;
 			
-			// aapt resource value: 0x7f050012
-			public const int NetworkValue = 2131034130;
+			// aapt resource value: 0x7f06002c
+			public const int NetworkListView = 2131099692;
 			
-			// aapt resource value: 0x7f05000f
-			public const int OfficeLabel = 2131034127;
+			// aapt resource value: 0x7f060012
+			public const int NetworkValue = 2131099666;
 			
-			// aapt resource value: 0x7f050010
-			public const int OfficeValue = 2131034128;
+			// aapt resource value: 0x7f06000f
+			public const int OfficeLabel = 2131099663;
 			
-			// aapt resource value: 0x7f050035
-			public const int OptionsLabel = 2131034165;
+			// aapt resource value: 0x7f060010
+			public const int OfficeValue = 2131099664;
 			
-			// aapt resource value: 0x7f050064
-			public const int OralSurgery = 2131034212;
+			// aapt resource value: 0x7f060035
+			public const int OptionsLabel = 2131099701;
 			
-			// aapt resource value: 0x7f050065
-			public const int OralSurgeryValue = 2131034213;
+			// aapt resource value: 0x7f060064
+			public const int OralSurgery = 2131099748;
 			
-			// aapt resource value: 0x7f05005a
-			public const int OutOfPocker = 2131034202;
+			// aapt resource value: 0x7f060065
+			public const int OralSurgeryValue = 2131099749;
 			
-			// aapt resource value: 0x7f05005b
-			public const int OutOfPockerValue = 2131034203;
+			// aapt resource value: 0x7f06005a
+			public const int OutOfPocker = 2131099738;
 			
-			// aapt resource value: 0x7f05007f
-			public const int OutOfPocketRemaining = 2131034239;
+			// aapt resource value: 0x7f06005b
+			public const int OutOfPockerValue = 2131099739;
 			
-			// aapt resource value: 0x7f050080
-			public const int OutOfPocketRemainingValue = 2131034240;
+			// aapt resource value: 0x7f06007f
+			public const int OutOfPocketRemaining = 2131099775;
 			
-			// aapt resource value: 0x7f05001d
-			public const int PaymentDetails = 2131034141;
+			// aapt resource value: 0x7f060080
+			public const int OutOfPocketRemainingValue = 2131099776;
 			
-			// aapt resource value: 0x7f050013
-			public const int PaymentSummaryLabel = 2131034131;
+			// aapt resource value: 0x7f06001d
+			public const int PaymentDetails = 2131099677;
 			
-			// aapt resource value: 0x7f050081
-			public const int PerMember = 2131034241;
+			// aapt resource value: 0x7f060013
+			public const int PaymentSummaryLabel = 2131099667;
 			
-			// aapt resource value: 0x7f050066
-			public const int Periodontics = 2131034214;
+			// aapt resource value: 0x7f060081
+			public const int PerMember = 2131099777;
 			
-			// aapt resource value: 0x7f050067
-			public const int PeriodonticsValue = 2131034215;
+			// aapt resource value: 0x7f060066
+			public const int Periodontics = 2131099750;
 			
-			// aapt resource value: 0x7f050008
-			public const int PlanBennefits = 2131034120;
+			// aapt resource value: 0x7f060067
+			public const int PeriodonticsValue = 2131099751;
 			
-			// aapt resource value: 0x7f050005
-			public const int PlanCoverageLabel = 2131034117;
+			// aapt resource value: 0x7f060008
+			public const int PlanBennefits = 2131099656;
 			
-			// aapt resource value: 0x7f050002
-			public const int PlanName = 2131034114;
+			// aapt resource value: 0x7f060005
+			public const int PlanCoverageLabel = 2131099653;
 			
-			// aapt resource value: 0x7f050006
-			public const int PlanNetworkLabel = 2131034118;
+			// aapt resource value: 0x7f060002
+			public const int PlanName = 2131099650;
 			
-			// aapt resource value: 0x7f050060
-			public const int PreventiveAndDiagnostic = 2131034208;
+			// aapt resource value: 0x7f060006
+			public const int PlanNetworkLabel = 2131099654;
 			
-			// aapt resource value: 0x7f050061
-			public const int PreventiveAndDiagnosticValue = 2131034209;
+			// aapt resource value: 0x7f060060
+			public const int PreventiveAndDiagnostic = 2131099744;
 			
-			// aapt resource value: 0x7f050037
-			public const int Print = 2131034167;
+			// aapt resource value: 0x7f060061
+			public const int PreventiveAndDiagnosticValue = 2131099745;
 			
-			// aapt resource value: 0x7f05003b
-			public const int Privacy = 2131034171;
+			// aapt resource value: 0x7f060037
+			public const int Print = 2131099703;
 			
-			// aapt resource value: 0x7f050014
-			public const int ProviderChargedLabel = 2131034132;
+			// aapt resource value: 0x7f06003b
+			public const int Privacy = 2131099707;
 			
-			// aapt resource value: 0x7f050015
-			public const int ProviderChargedValue = 2131034133;
+			// aapt resource value: 0x7f060014
+			public const int ProviderChargedLabel = 2131099668;
 			
-			// aapt resource value: 0x7f05002a
-			public const int ProviderDistance = 2131034154;
+			// aapt resource value: 0x7f060015
+			public const int ProviderChargedValue = 2131099669;
 			
-			// aapt resource value: 0x7f05000d
-			public const int ProviderLabel = 2131034125;
+			// aapt resource value: 0x7f06002a
+			public const int ProviderDistance = 2131099690;
 			
-			// aapt resource value: 0x7f050055
-			public const int ProviderNetwork = 2131034197;
+			// aapt resource value: 0x7f06000d
+			public const int ProviderLabel = 2131099661;
 			
-			// aapt resource value: 0x7f050076
-			public const int ProviderSpecialty = 2131034230;
+			// aapt resource value: 0x7f060055
+			public const int ProviderNetwork = 2131099733;
 			
-			// aapt resource value: 0x7f05000e
-			public const int ProviderValue = 2131034126;
+			// aapt resource value: 0x7f060076
+			public const int ProviderSpecialty = 2131099766;
 			
-			// aapt resource value: 0x7f050041
-			public const int Providers = 2131034177;
+			// aapt resource value: 0x7f06000e
+			public const int ProviderValue = 2131099662;
 			
-			// aapt resource value: 0x7f050020
-			public const int ProvidersCharged = 2131034144;
+			// aapt resource value: 0x7f060041
+			public const int Providers = 2131099713;
 			
-			// aapt resource value: 0x7f050021
-			public const int ProvidersChargedValue = 2131034145;
+			// aapt resource value: 0x7f060020
+			public const int ProvidersCharged = 2131099680;
 			
-			// aapt resource value: 0x7f05003e
-			public const int Register = 2131034174;
+			// aapt resource value: 0x7f060021
+			public const int ProvidersChargedValue = 2131099681;
 			
-			// aapt resource value: 0x7f05007b
-			public const int Remaining = 2131034235;
+			// aapt resource value: 0x7f06003e
+			public const int Register = 2131099710;
 			
-			// aapt resource value: 0x7f05007c
-			public const int RemainingValue = 2131034236;
+			// aapt resource value: 0x7f06007b
+			public const int Remaining = 2131099771;
 			
-			// aapt resource value: 0x7f050062
-			public const int Restoration = 2131034210;
+			// aapt resource value: 0x7f06007c
+			public const int RemainingValue = 2131099772;
 			
-			// aapt resource value: 0x7f050063
-			public const int RestorationValue = 2131034211;
+			// aapt resource value: 0x7f060062
+			public const int Restoration = 2131099746;
 			
-			// aapt resource value: 0x7f050068
-			public const int Row1Options = 2131034216;
+			// aapt resource value: 0x7f060063
+			public const int RestorationValue = 2131099747;
 			
-			// aapt resource value: 0x7f050069
-			public const int Row2Options = 2131034217;
+			// aapt resource value: 0x7f060068
+			public const int Row1Options = 2131099752;
 			
-			// aapt resource value: 0x7f050024
-			public const int Saving = 2131034148;
+			// aapt resource value: 0x7f060069
+			public const int Row2Options = 2131099753;
 			
-			// aapt resource value: 0x7f050025
-			public const int SavingValue = 2131034149;
+			// aapt resource value: 0x7f060024
+			public const int Saving = 2131099684;
 			
-			// aapt resource value: 0x7f050032
-			public const int SearchProviders = 2131034162;
+			// aapt resource value: 0x7f060025
+			public const int SavingValue = 2131099685;
 			
-			// aapt resource value: 0x7f05001c
-			public const int ServiceDetails = 2131034140;
+			// aapt resource value: 0x7f060032
+			public const int SearchProviders = 2131099698;
 			
-			// aapt resource value: 0x7f05000b
-			public const int ServiceLabel = 2131034123;
+			// aapt resource value: 0x7f06001c
+			public const int ServiceDetails = 2131099676;
 			
-			// aapt resource value: 0x7f05000c
-			public const int ServiceValue = 2131034124;
+			// aapt resource value: 0x7f06000b
+			public const int ServiceLabel = 2131099659;
 			
-			// aapt resource value: 0x7f05003d
-			public const int SignIn = 2131034173;
+			// aapt resource value: 0x7f06000c
+			public const int ServiceValue = 2131099660;
 			
-			// aapt resource value: 0x7f05002b
-			public const int SpecialtyListView = 2131034155;
+			// aapt resource value: 0x7f06003d
+			public const int SignIn = 2131099709;
 			
-			// aapt resource value: 0x7f050079
-			public const int Spent = 2131034233;
+			// aapt resource value: 0x7f06002b
+			public const int SpecialtyListView = 2131099691;
 			
-			// aapt resource value: 0x7f05007a
-			public const int SpentValue = 2131034234;
+			// aapt resource value: 0x7f060079
+			public const int Spent = 2131099769;
 			
-			// aapt resource value: 0x7f050001
-			public const int ThinLogo = 2131034113;
+			// aapt resource value: 0x7f06007a
+			public const int SpentValue = 2131099770;
 			
-			// aapt resource value: 0x7f05003a
-			public const int Tips = 2131034170;
+			// aapt resource value: 0x7f060001
+			public const int ThinLogo = 2131099649;
 			
-			// aapt resource value: 0x7f05007d
-			public const int Total = 2131034237;
+			// aapt resource value: 0x7f06003a
+			public const int Tips = 2131099706;
 			
-			// aapt resource value: 0x7f05007e
-			public const int TotalValue = 2131034238;
+			// aapt resource value: 0x7f06007d
+			public const int Total = 2131099773;
 			
-			// aapt resource value: 0x7f05000a
-			public const int Usage = 2131034122;
+			// aapt resource value: 0x7f06007e
+			public const int TotalValue = 2131099774;
 			
-			// aapt resource value: 0x7f050083
-			public const int Welcome = 2131034243;
+			// aapt resource value: 0x7f06000a
+			public const int Usage = 2131099658;
 			
-			// aapt resource value: 0x7f050028
-			public const int WelcomeFragment = 2131034152;
+			// aapt resource value: 0x7f060083
+			public const int Welcome = 2131099779;
 			
-			// aapt resource value: 0x7f050044
-			public const int YouPaidLabel = 2131034180;
+			// aapt resource value: 0x7f060028
+			public const int WelcomeFragment = 2131099688;
 			
-			// aapt resource value: 0x7f050045
-			public const int YouPaidValue = 2131034181;
+			// aapt resource value: 0x7f060044
+			public const int YouPaidLabel = 2131099716;
 			
-			// aapt resource value: 0x7f05001a
-			public const int YourPayLabel = 2131034138;
+			// aapt resource value: 0x7f060045
+			public const int YouPaidValue = 2131099717;
 			
-			// aapt resource value: 0x7f05001b
-			public const int YourPayValue = 2131034139;
+			// aapt resource value: 0x7f06001a
+			public const int YourPayLabel = 2131099674;
 			
-			// aapt resource value: 0x7f050073
-			public const int dateOfBirth = 2131034227;
+			// aapt resource value: 0x7f06001b
+			public const int YourPayValue = 2131099675;
 			
-			// aapt resource value: 0x7f05006f
-			public const int firstName = 2131034223;
+			// aapt resource value: 0x7f060073
+			public const int dateOfBirth = 2131099763;
 			
-			// aapt resource value: 0x7f05006e
-			public const int instructions = 2131034222;
+			// aapt resource value: 0x7f06006f
+			public const int firstName = 2131099759;
 			
-			// aapt resource value: 0x7f050070
-			public const int lastName = 2131034224;
+			// aapt resource value: 0x7f06006e
+			public const int instructions = 2131099758;
 			
-			// aapt resource value: 0x7f05006d
-			public const int linearLayout = 2131034221;
+			// aapt resource value: 0x7f060070
+			public const int lastName = 2131099760;
 			
-			// aapt resource value: 0x7f050071
-			public const int memberId = 2131034225;
+			// aapt resource value: 0x7f06006d
+			public const int linearLayout = 2131099757;
 			
-			// aapt resource value: 0x7f050075
-			public const int next = 2131034229;
+			// aapt resource value: 0x7f060071
+			public const int memberId = 2131099761;
 			
-			// aapt resource value: 0x7f050072
-			public const int password = 2131034226;
+			// aapt resource value: 0x7f060075
+			public const int next = 2131099765;
 			
-			// aapt resource value: 0x7f05002f
-			public const int radiogroup = 2131034159;
+			// aapt resource value: 0x7f060072
+			public const int password = 2131099762;
 			
-			// aapt resource value: 0x7f050074
-			public const int zipCode = 2131034228;
+			// aapt resource value: 0x7f06002f
+			public const int radiogroup = 2131099695;
+			
+			// aapt resource value: 0x7f060074
+			public const int zipCode = 2131099764;
 			
 			static Id()
 			{
@@ -488,70 +491,73 @@ namespace Healthcare.Android
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Benefits = 2130903040;
+			public const int Account = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int ClaimDetail = 2130903041;
+			public const int Benefits = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int Claims = 2130903042;
+			public const int ClaimDetail = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int Contact = 2130903043;
+			public const int Claims = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int Coverage = 2130903044;
+			public const int Contact = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int DistancesListItem = 2130903045;
+			public const int Coverage = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int FindProviders = 2130903046;
+			public const int DistancesListItem = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int IdCard = 2130903047;
+			public const int FindProviders = 2130903047;
 			
 			// aapt resource value: 0x7f030008
-			public const int Main = 2130903048;
+			public const int IdCard = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int MemberClaimListItem = 2130903049;
+			public const int Main = 2130903049;
 			
 			// aapt resource value: 0x7f03000a
-			public const int MemberClaims = 2130903050;
+			public const int MemberClaimListItem = 2130903050;
 			
 			// aapt resource value: 0x7f03000b
-			public const int MemberCoverageItem = 2130903051;
+			public const int MemberClaims = 2130903051;
 			
 			// aapt resource value: 0x7f03000c
-			public const int NetworksListItem = 2130903052;
+			public const int MemberCoverageItem = 2130903052;
 			
 			// aapt resource value: 0x7f03000d
-			public const int PaymentDetails = 2130903053;
+			public const int NetworksListItem = 2130903053;
 			
 			// aapt resource value: 0x7f03000e
-			public const int Plan = 2130903054;
+			public const int PaymentDetails = 2130903054;
 			
 			// aapt resource value: 0x7f03000f
-			public const int PortalDashboard = 2130903055;
+			public const int Plan = 2130903055;
 			
 			// aapt resource value: 0x7f030010
-			public const int Providers = 2130903056;
+			public const int PortalDashboard = 2130903056;
 			
 			// aapt resource value: 0x7f030011
-			public const int Register = 2130903057;
+			public const int Providers = 2130903057;
 			
 			// aapt resource value: 0x7f030012
-			public const int ServiceDetails = 2130903058;
+			public const int Register = 2130903058;
 			
 			// aapt resource value: 0x7f030013
-			public const int SpecialtiesListItem = 2130903059;
+			public const int ServiceDetails = 2130903059;
 			
 			// aapt resource value: 0x7f030014
-			public const int Usage = 2130903060;
+			public const int SpecialtiesListItem = 2130903060;
 			
 			// aapt resource value: 0x7f030015
-			public const int WelcomeFragment = 2130903061;
+			public const int Usage = 2130903061;
+			
+			// aapt resource value: 0x7f030016
+			public const int WelcomeFragment = 2130903062;
 			
 			static Layout()
 			{
@@ -559,6 +565,22 @@ namespace Healthcare.Android
 			}
 			
 			private Layout()
+			{
+			}
+		}
+		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f050000
+			public const int HomeMenu = 2131034112;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
 			{
 			}
 		}

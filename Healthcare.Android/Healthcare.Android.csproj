@@ -95,6 +95,7 @@
       <SubType>Code</SubType>
       <DependentUpon>MemberClaimsActivity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Activities\Home\AccountActivity.cs" />
     <Compile Include="Activities\Home\ContactActivity.cs" />
     <Compile Include="Activities\Benefits\CoverageActivity.cs" />
     <Compile Include="Activities\Benefits\CoverageActivity.internal.cs">
@@ -242,6 +243,9 @@
     <AndroidResource Include="Resources\layout\PaymentDetails.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\Account.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -300,6 +304,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ThinLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Menu\HomeMenu.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

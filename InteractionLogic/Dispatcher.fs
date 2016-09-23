@@ -78,7 +78,7 @@ type Dispatcher() =
     [<CLIEvent>]
     member this.FindProvidersRequested =findProvidersRequested.Publish
     [<CLIEvent>]
-    member this.ViewProvidersRequested =viewProvidersRequested.Publish
+    member this.ProvidersRequested =viewProvidersRequested.Publish
     [<CLIEvent>]
     member this.InfoRequested =         infoRequested.Publish
     [<CLIEvent>]

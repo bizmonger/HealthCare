@@ -1,5 +1,7 @@
 using Android.App;
 using Android.OS;
+using Android.Views;
+using static MockMember;
 
 namespace Healthcare.Android
 {
@@ -12,6 +14,26 @@ namespace Healthcare.Android
 
             SetContentView(Resource.Layout.PortalDashboard);
             MapCommands();
+        }
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.HomeMenu, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Resource.Id.Account:
+                    {
+                        _dispatcher.ViewAccount(SomeMemberId);
+                        return true;
+                    }
+            }
+
+            return base.OnOptionsItemSelected(item);
         }
 
         protected override void OnStop()
