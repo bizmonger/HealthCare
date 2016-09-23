@@ -157,6 +157,10 @@
     <Compile Include="MainActivity.handlers.cs">
       <DependentUpon>MainActivity.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainActivity.members.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>MainActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainActivity.subscriptions.cs">
       <SubType>Code</SubType>
       <DependentUpon>MainActivity.cs</DependentUpon>

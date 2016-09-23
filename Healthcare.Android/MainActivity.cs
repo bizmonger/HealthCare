@@ -1,16 +1,12 @@
 ﻿using Android.App;
 using Android.OS;
 using Home;
-using InteractionLogic;
 
 namespace Healthcare.Android
 {
     [Activity(Label = "Healthcare.Android", MainLauncher = true, Icon = "@drawable/icon")]
-    public partial class MainActivity : Activity
+    partial class MainActivity : Activity
     {
-        readonly Dispatcher _dispatcher = Global.Dispatcher;
-        readonly HomeViewModel _viewModel;
-
         public MainActivity()
         {
             _viewModel = new HomeViewModel(_dispatcher);
