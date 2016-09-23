@@ -46,6 +46,7 @@
     <Compile Include="Confirmation.fs" />
     <Compile Include="SignIn.fs" />
     <Compile Include="Register.fs" />
+    <Compile Include="AccountViewModel.fs" />
     <Compile Include="SignInViewModel.fs" />
     <Compile Include="RegisterViewModel.fs" />
     <Compile Include="IDCardViewModel.fs" />

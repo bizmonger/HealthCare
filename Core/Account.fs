@@ -2,7 +2,8 @@
 [<System.Diagnostics.DebuggerNonUserCode>]
 module Account
 
-    type MemberId = MemberId of string
+    type MemberId =      MemberId of string
+    type AccountNumber = AccountNumber of string
 
     type Name = { 
         First:string
