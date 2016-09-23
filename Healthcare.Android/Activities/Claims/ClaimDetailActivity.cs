@@ -21,7 +21,7 @@ namespace Healthcare.Android
         {
             _viewModel = new ClaimsDetailViewModel(SomeClaimId, _dispatcher, _repository);
 
-            var paymentDetails = FindViewById<Button>(Resource.Id.ServiceDetails);
+            var paymentDetails = FindViewById<Button>(Resource.Id.PaymentDetails);
             paymentDetails.Click += (s, e) => _viewModel.ViewPaymentDetails.Execute(null);
 
             var serviceDetails = FindViewById<Button>(Resource.Id.ServiceDetails);
