@@ -95,12 +95,12 @@
       <SubType>Code</SubType>
       <DependentUpon>MemberClaimsActivity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\Home\AccountActivity.cs" />
-    <Compile Include="Activities\Home\AccountActivity.internal.cs">
+    <Compile Include="Activities\Account\AccountActivity.cs" />
+    <Compile Include="Activities\Account\AccountActivity.internal.cs">
       <SubType>Code</SubType>
       <DependentUpon>AccountActivity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\Home\AccountActivity.members.cs">
+    <Compile Include="Activities\Account\AccountActivity.members.cs">
       <SubType>Code</SubType>
       <DependentUpon>AccountActivity.cs</DependentUpon>
     </Compile>
@@ -109,7 +109,7 @@
     <Compile Include="Activities\Benefits\CoverageActivity.internal.cs">
       <DependentUpon>CoverageActivity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\Home\DependentProfilesActivity.cs" />
+    <Compile Include="Activities\Account\DependentProfilesActivity.cs" />
     <Compile Include="Activities\Home\FAQActivity.cs" />
     <Compile Include="Activities\Home\FindProvidersActivity.cs" />
     <Compile Include="Activities\Home\FindProvidersActivity.internal.cs">
@@ -120,27 +120,27 @@
       <SubType>Code</SubType>
       <DependentUpon>FindProvidersActivity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\Home\IdCardActivity.cs" />
-    <Compile Include="Activities\Home\IdCardActivity.internal.cs">
+    <Compile Include="Activities\Account\IdCardActivity.cs" />
+    <Compile Include="Activities\Account\IdCardActivity.internal.cs">
       <DependentUpon>IdCardActivity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\Home\IdCardActivity.members.cs">
+    <Compile Include="Activities\Account\IdCardActivity.members.cs">
       <SubType>Code</SubType>
       <DependentUpon>IdCardActivity.cs</DependentUpon>
     </Compile>
     <Compile Include="Activities\Benefits\PlanActivity.cs" />
-    <Compile Include="Activities\Home\LoginSettingsActivity.cs" />
-    <Compile Include="Activities\Home\PortalDashboard.handlers.cs">
+    <Compile Include="Activities\Account\LoginSettingsActivity.cs" />
+    <Compile Include="Activities\Account\PortalDashboard.handlers.cs">
       <DependentUpon>PortalDashboardActivity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\Home\PortalDashboardActivity.internal.cs">
+    <Compile Include="Activities\Account\PortalDashboardActivity.internal.cs">
       <SubType>Code</SubType>
       <DependentUpon>PortalDashboardActivity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\Home\PortalDashboardActivity.members.cs">
+    <Compile Include="Activities\Account\PortalDashboardActivity.members.cs">
       <DependentUpon>PortalDashboardActivity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\Home\ProfileActivity.cs" />
+    <Compile Include="Activities\Account\ProfileActivity.cs" />
     <Compile Include="Activities\Home\ProvidersActivity.cs" />
     <Compile Include="Activities\Home\RegisterActivity.internal.cs">
       <SubType>Code</SubType>
@@ -178,7 +178,7 @@
     </Compile>
     <Compile Include="Activities\Home\PrivacyActivity.cs" />
     <Compile Include="Activities\Home\RegisterActivity.cs" />
-    <Compile Include="Activities\Home\PortalDashboardActivity.cs" />
+    <Compile Include="Activities\Account\PortalDashboardActivity.cs" />
     <Compile Include="Activities\Claims\MemberClaimsActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -328,6 +328,7 @@
   <ItemGroup>
     <AndroidResource Include="Resources\Menu\HomeMenu.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
      Other similar extension points exist, see Microsoft.Common.targets.
