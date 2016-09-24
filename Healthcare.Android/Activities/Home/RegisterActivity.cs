@@ -14,16 +14,16 @@ namespace Healthcare.Android
             MapCommands();
         }
 
-        protected override void OnStop()
-        {
-            base.OnStop();
-            UnMapNavigations();
-        }
-
         protected override void OnStart()
         {
             base.OnStart();
             MapNavigations();
+        }
+
+        protected override void OnStop()
+        {
+            base.OnStop();
+            UnMapNavigations();
         }
     }
 }

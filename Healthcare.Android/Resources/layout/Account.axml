@@ -3,4 +3,131 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+  <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+      android:id="@+id/AccountNumberLabel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5sp"
+      android:layout_centerHorizontal="true"
+      android:text="Account #:" />
+
+    <TextView
+      android:id="@+id/AccountNumberValue"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5sp"
+      android:layout_centerHorizontal="true"
+      android:text="need value" />
+  </LinearLayout>
+  
+  <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+      android:id="@+id/GroupLabel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5sp"
+      android:layout_centerHorizontal="true"
+      android:text="Group:" />
+
+    <TextView
+      android:id="@+id/GroupValue"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5sp"
+      android:layout_centerHorizontal="true"
+      android:text="need value" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+    <TextView
+      android:id="@+id/GroupIdLabel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5sp"
+      android:layout_centerHorizontal="true"
+      android:text="Group ID:" />
+
+    <TextView
+      android:id="@+id/GroupIdValue"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5sp"
+      android:layout_centerHorizontal="true"
+      android:text="need value" />
+  </LinearLayout>
+  
+  <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+      android:id="@+id/SubscriptionTypeLabel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5sp"
+      android:layout_centerHorizontal="true"
+      android:text="Subscription Type:" />
+
+    <TextView
+      android:id="@+id/SubscriptionTypeValue"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5sp"
+      android:layout_centerHorizontal="true"
+      android:text="need value" />
+  </LinearLayout>
+  
+  <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+      android:id="@+id/ExpirationDateLabel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5sp"
+      android:layout_centerHorizontal="true"
+      android:text="Expiration Date:" />
+
+    <TextView
+      android:id="@+id/ExpirationDateValue"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5sp"
+      android:layout_centerHorizontal="true"
+      android:text="need value" />
+  </LinearLayout>
+  
+    <Button
+        android:id="@+id/MyProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:text="My Profile" />
+  
+    <Button
+        android:id="@+id/DependentsProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:text="Dependents' Profiles" />
+  
+    <Button
+        android:id="@+id/LoginSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:text="Login Settings" />
+
 </LinearLayout>

@@ -54,12 +54,12 @@
         android:layout_centerHorizontal="true"
         android:text="Network:" />
     <TextView
-        android:id="@+id/Goup"
+        android:id="@+id/GroupLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5sp"
         android:layout_centerHorizontal="true"
-        android:text="Goup #:" />
+        android:text="Group #:" />
     <Button
         android:id="@+id/PlanBennefits"
         android:layout_width="match_parent"

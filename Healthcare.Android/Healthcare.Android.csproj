@@ -96,11 +96,20 @@
       <DependentUpon>MemberClaimsActivity.cs</DependentUpon>
     </Compile>
     <Compile Include="Activities\Home\AccountActivity.cs" />
+    <Compile Include="Activities\Home\AccountActivity.internal.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>AccountActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activities\Home\AccountActivity.members.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>AccountActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Activities\Home\ContactActivity.cs" />
     <Compile Include="Activities\Benefits\CoverageActivity.cs" />
     <Compile Include="Activities\Benefits\CoverageActivity.internal.cs">
       <DependentUpon>CoverageActivity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Activities\Home\DependentProfilesActivity.cs" />
     <Compile Include="Activities\Home\FAQActivity.cs" />
     <Compile Include="Activities\Home\FindProvidersActivity.cs" />
     <Compile Include="Activities\Home\FindProvidersActivity.internal.cs">
@@ -120,6 +129,7 @@
       <DependentUpon>IdCardActivity.cs</DependentUpon>
     </Compile>
     <Compile Include="Activities\Benefits\PlanActivity.cs" />
+    <Compile Include="Activities\Home\LoginSettingsActivity.cs" />
     <Compile Include="Activities\Home\PortalDashboard.handlers.cs">
       <DependentUpon>PortalDashboardActivity.cs</DependentUpon>
     </Compile>
@@ -130,6 +140,7 @@
     <Compile Include="Activities\Home\PortalDashboardActivity.members.cs">
       <DependentUpon>PortalDashboardActivity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Activities\Home\ProfileActivity.cs" />
     <Compile Include="Activities\Home\ProvidersActivity.cs" />
     <Compile Include="Activities\Home\RegisterActivity.internal.cs">
       <SubType>Code</SubType>
@@ -244,6 +255,15 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\Account.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Profile.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\DependentProfiles.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\LoginSettings.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
