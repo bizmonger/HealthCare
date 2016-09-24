@@ -2,4 +2,143 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+    android:layout_height="match_parent">
+  <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/NameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="Name:" />
+    <TextView
+        android:id="@+id/NameValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="need value" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/DateOfBirthLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="Date of Birth:" />
+    <TextView
+        android:id="@+id/DateOfBirthValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="need value" />
+  </LinearLayout>
+  <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/SSNLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="SSN:" />
+    <TextView
+        android:id="@+id/SSNValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="need value" />
+  </LinearLayout>
+
+  <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/EmailLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="Email:" />
+    <TextView
+        android:id="@+id/EmailValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="need value" />
+  </LinearLayout>
+
+  <LinearLayout
+  android:orientation="horizontal"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/HomePhoneLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="Home Phone:" />
+    <TextView
+        android:id="@+id/HomePhoneValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="need value" />
+  </LinearLayout>
+
+  <LinearLayout
+  android:orientation="horizontal"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/WorkPhoneLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="Work Phone:" />
+    <TextView
+        android:id="@+id/WorkPhoneValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="need value" />
+  </LinearLayout>
+
+  <LinearLayout
+  android:orientation="horizontal"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/MobileLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="Mobile:" />
+    <TextView
+        android:id="@+id/MobileValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="need value" />
+  </LinearLayout>
+</LinearLayout>
