@@ -49,9 +49,9 @@
     <Compile Include="MockClaimsRepository.fs" />
     <Compile Include="MockProfileRepository.fs" />
     <Compile Include="MockProvidersRepository.fs" />
+    <Compile Include="MockAccountRepository.fs" />
     <Compile Include="MockMemberSession.fs" />
     <Content Include="packages.config" />
-    <Compile Include="MockAccountRepository.fs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.fsproj">

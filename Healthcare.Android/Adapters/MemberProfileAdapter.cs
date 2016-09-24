@@ -7,43 +7,43 @@ using static Claims;
 
 namespace Healthcare.Android.Adapters
 {
-    class MemberProfileAdapter : BaseAdapter<IdCard>
+    class MemberProfileAdapter : BaseAdapter<Profile>
     {
         readonly Activity _context;
-        readonly List<IdCard> _idCards;
+        readonly List<Profile> _profiles;
 
-        public MemberProfileAdapter(Activity context, List<IdCard> idCards)
+        public MemberProfileAdapter(Activity context, List<Profile> idCards)
         {
             _context = context;
-            _idCards = idCards;
+            _profiles = idCards;
         }
 
-        public override IdCard this[int position] => _idCards[position];
+        public override Profile this[int position] => _profiles[position];
 
-        public override int Count => _idCards.Count;
+        public override int Count => _profiles.Count;
 
         public override long GetItemId(int position) => position;
 
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
             var view = convertView ?? _context.LayoutInflater.Inflate(Resource.Layout.MemberProfileListItem, null);
-            var claim = this[position];
+            var profile = this[position];
 
-            UpdateUI(view, claim);
+            UpdateUI(view, profile);
 
             return view;
         }
 
-        static void UpdateUI(View view, IdCard idCard)
+        static void UpdateUI(View view, Profile profile)
         {
             var nameLabel = view.FindViewById<TextView>(Resource.Id.NameValue);
-            nameLabel.Text = $"{idCard.Name.First} {idCard.Name.Last}";
+            nameLabel.Text = $"{profile.IdCard.Name.First} {profile.IdCard.Name.Last}";
 
             var memberLabel = view.FindViewById<TextView>(Resource.Id.MemberIdValue);
-            memberLabel.Text = idCard.MemberId.Item;
+            memberLabel.Text = profile.IdCard.MemberId.Item;
 
             var dobLabel = view.FindViewById<TextView>(Resource.Id.DOBValue);
-            dobLabel.Text = idCard.DateOfBirth.Item;
+            dobLabel.Text = profile.IdCard.DateOfBirth.Item;
         }
     }
 }

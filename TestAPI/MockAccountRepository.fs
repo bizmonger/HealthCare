@@ -3,4 +3,3 @@
 type MockAccountRepository() =
 
     member this.Foo = ()
-
