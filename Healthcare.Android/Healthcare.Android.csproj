@@ -77,6 +77,10 @@
       <SubType>Code</SubType>
       <DependentUpon>BenefitsActivity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Activities\Benefits\CoverageActivity.members.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>CoverageActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Activities\Claims\ClaimActivity.internal.cs">
       <SubType>Code</SubType>
       <DependentUpon>ClaimDetailActivity.cs</DependentUpon>

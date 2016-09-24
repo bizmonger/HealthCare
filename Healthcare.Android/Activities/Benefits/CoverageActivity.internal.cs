@@ -1,6 +1,5 @@
 using Android.Widget;
 using Healthcare.Android.Adapters;
-using ManageBenefits;
 using System.Collections.Generic;
 using static Benefits;
 
@@ -8,8 +7,6 @@ namespace Healthcare.Android
 {
     partial class CoverageActivity
     {
-        CoverageViewModel _viewModel;
-
         void LoadListView()
         {
             _viewModel.LoadCoverage();
