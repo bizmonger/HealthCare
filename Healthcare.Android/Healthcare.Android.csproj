@@ -158,6 +158,7 @@
     <Compile Include="Activities\Claims\PaymentDetailsActivity.cs" />
     <Compile Include="Activities\Claims\ServiceDetailsActivity.cs" />
     <Compile Include="Adapters\ClaimSummaryAdapter.cs" />
+    <Compile Include="Adapters\MemberProfileAdapter.cs" />
     <Compile Include="Adapters\MemberClaimAdapter.cs" />
     <Compile Include="Adapters\MemberCoverageAdapter.cs" />
     <Compile Include="Fragments\WelcomeFragment.cs" />
@@ -264,6 +265,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\LoginSettings.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MemberProfileListItem.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

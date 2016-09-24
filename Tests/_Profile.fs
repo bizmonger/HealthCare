@@ -18,7 +18,7 @@ let ``load dependents info`` () =
     let viewModel = ProfileViewModel(SomeMemberId , Dispatcher() , MockProfileRepository())
 
     // Test
-    viewModel.LoadDependents.Execute()
+    viewModel.Load()
 
     // Verify
     viewModel.Dependents |> should equal [SomeProfile]
@@ -45,7 +45,7 @@ let ``load profile info`` () =
     let viewModel = ProfileViewModel(SomeMemberId , Dispatcher() , MockProfileRepository())
 
     // Test
-    viewModel.LoadProfile.Execute()
+    viewModel.Load()
 
     // Verify
     viewModel.Profile |> should equal (Some SomeProfile)

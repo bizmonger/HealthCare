@@ -1,4 +1,3 @@
-using System;
 using Android.Widget;
 using Home;
 
@@ -15,7 +14,7 @@ namespace Healthcare.Android
             _dispatcher.FindProvidersRequested += OnFindProvidersRequested;
             _dispatcher.AccountRequested += OnAccountRequested;
         }
-        
+
         void UnMapNavigations()
         {
             _dispatcher.IdRequested -= OnIdRequested;
