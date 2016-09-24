@@ -10,5 +10,5 @@ type MockProfileRepository() =
 
     interface IProfileRepository with
         member this.GetProfile    memberId =       Some profile
-        member this.GetDependents memberId =       [SomeProfile]
+        member this.GetDependents memberId =       [SomeProfile ; SomeProfile ; SomeProfile]
         member this.Save          editedProfile  = profile <- editedProfile
