@@ -1,6 +1,9 @@
 ﻿using InteractionLogic;
 
-class Global
+namespace Healthcare.Android
 {
-    public static Dispatcher Dispatcher = new Dispatcher();
+    class Global
+    {
+        public static Dispatcher Dispatcher = new Dispatcher();
+    }
 }

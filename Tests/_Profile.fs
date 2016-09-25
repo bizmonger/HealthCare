@@ -21,7 +21,7 @@ let ``load dependents info`` () =
     viewModel.Load()
 
     // Verify
-    viewModel.Dependents |> should equal [SomeProfile]
+    viewModel.Dependents |> should equal [SomeProfile ; SomeProfile ; SomeProfile]
 
 [<Test>]
 let ``view dependent`` () =
