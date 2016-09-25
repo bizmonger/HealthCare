@@ -46,6 +46,7 @@ namespace Healthcare.Android
             search.Click += (s, e) =>
                 {
                     _viewModel.LoadProviders.Execute(null);
+
                     var isValidated = _viewModel.ValidationResult.IsSuccess;
 
                     if (isValidated)
