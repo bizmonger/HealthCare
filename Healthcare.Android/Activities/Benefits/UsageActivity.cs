@@ -22,7 +22,7 @@ namespace Healthcare.Android
             SetContentView(Resource.Layout.Usage);
 
             _viewModel = new BenefitsUsageViewModel(SomeMemberId, new MockBenefitsRepository());
-            _viewModel.LoadMembers();
+            _viewModel.Load();
 
             var listview = FindViewById<ListView>(Resource.Id.MemberUsageListView);
             listview.ChoiceMode = ChoiceMode.Single;

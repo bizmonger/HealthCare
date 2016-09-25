@@ -14,7 +14,7 @@ let ``load in benefits usage`` () =
     let viewModel = BenefitsUsageViewModel(SomeMemberId , MockBenefitsRepository())
 
     // Test
-    viewModel.LoadInNetworkUsage()
+    viewModel.Load()
 
     // Verify
     viewModel.InNetworkUsage |> should equal anonymousUsage
@@ -26,7 +26,7 @@ let ``load out of network info`` () =
     let viewModel = BenefitsUsageViewModel(SomeMemberId , MockBenefitsRepository())
 
     // Test
-    viewModel.LoadOutOfNetworkUsage()
+    viewModel.Load()
 
     // Verify
     viewModel.OutOfNetworkNetworkUsage |> should equal anonymousUsage
@@ -38,7 +38,7 @@ let ``load members`` () =
     let viewModel = BenefitsUsageViewModel(SomeMemberId , MockBenefitsRepository())
 
     // Test
-    viewModel.LoadMembers()
+    viewModel.Load()
 
     // Verify
     viewModel.Members |> should equal SomeMemberCoverages

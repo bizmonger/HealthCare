@@ -14,11 +14,7 @@ type BenefitsUsageViewModel(memberId , repository:IBenefitsRepository) =
     member val OutOfNetworkNetworkUsage = { Deductable= deductable; OutOfPocket=outOfPocket } with get,set
     member val Members = seq [] with get,set
 
-    member this.LoadInNetworkUsage() =
-        this.InNetworkUsage <- repository.GetUsage memberId
-
-    member this.LoadOutOfNetworkUsage() =
+    member this.Load() =
+        this.InNetworkUsage           <- repository.GetUsage memberId
         this.OutOfNetworkNetworkUsage <- repository.GetUsage memberId
-
-    member this.LoadMembers() =
-        this.Members <- repository.GetMemberCoverages memberId
+        this.Members                  <- repository.GetMemberCoverages memberId

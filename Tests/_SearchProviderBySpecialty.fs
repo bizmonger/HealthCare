@@ -39,7 +39,7 @@ let ``load specialties`` () =
     let viewModel = ProvidersBySpecialtyViewModel(SomeMemberId , MockProvidersRepository())
 
     // Test
-    viewModel.LoadSpecialties()
+    viewModel.Load()
     
     // Verify
     viewModel.Specialties |> Seq.length  
@@ -52,7 +52,7 @@ let ``load networks`` () =
     let viewModel = ProvidersBySpecialtyViewModel(SomeMemberId , MockProvidersRepository())
 
     // Test
-    viewModel.LoadNetworks()
+    viewModel.Load()
     
     // Verify
     viewModel.Networks |> Seq.length  
@@ -65,7 +65,7 @@ let ``load distances`` () =
     let viewModel = ProvidersBySpecialtyViewModel(SomeMemberId , MockProvidersRepository())
 
     // Test
-    viewModel.LoadDistances()
+    viewModel.Load()
     
     // Verify
     viewModel.Distances |> Seq.length  

@@ -26,9 +26,11 @@ type ProvidersBySpecialtyViewModel(memberId:MemberId , repository:IProvidersRepo
 
     member val ValidationResult = Failure ProvidersBySpecialtyResponse.NA with get,set
 
-    member this.LoadSpecialties() = this.Specialties <- repository.GetSpecialties()
-    member this.LoadNetworks() =    this.Networks    <- repository.GetNetworks()
-    member this.LoadDistances() =   this.Distances   <- repository.GetDistances()
+    member this.Load() = 
+
+        this.Specialties <- repository.GetSpecialties()
+        this.Networks    <- repository.GetNetworks()
+        this.Distances   <- repository.GetDistances()
 
     member this.LoadProviders =
         

@@ -10,13 +10,9 @@ type ClaimsDetailViewModel(claimId:ClaimId , dispatcher:Dispatcher , repository:
     member val Claim = None with get,set
     member val PaymentSummary = None with get,set
 
-    member this.LoadClaim =
-        DelegateCommand( (fun _ -> this.Claim <- repository.GetDetails claimId) , 
-                          fun _ -> true ) :> ICommand
-
-    member this.LoadPaymentSummary =
-        DelegateCommand( (fun _ -> this.PaymentSummary <- repository.GetPaymentSummary claimId) , 
-                          fun _ -> true ) :> ICommand
+    member this.Load() =
+        this.Claim          <- repository.GetDetails claimId
+        this.PaymentSummary <- repository.GetPaymentSummary claimId
 
     member this.ViewServiceDetails =
         DelegateCommand( (fun _ -> dispatcher.ViewServiceDetails claimId) , 

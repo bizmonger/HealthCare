@@ -19,7 +19,7 @@ let ``load claim`` () =
     let viewModel = ClaimsDetailViewModel(SomeClaimId , Dispatcher() , MockClaimsRepository())
 
     // Test
-    viewModel.LoadClaim.Execute()
+    viewModel.Load()
 
     // Verify
     viewModel.Claim |> should equal (Some SomeClaim)
@@ -31,7 +31,7 @@ let ``load payment summary`` () =
     let viewModel = ClaimsDetailViewModel(SomeClaimId , Dispatcher() , MockClaimsRepository())
 
     // Test
-    viewModel.LoadPaymentSummary.Execute()
+    viewModel.Load()
 
     // Verify
     viewModel.PaymentSummary |> should equal (Some SomePaymentSummary)

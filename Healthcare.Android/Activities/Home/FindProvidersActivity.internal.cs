@@ -21,9 +21,7 @@ namespace Healthcare.Android
         {
             _viewModel = new ProvidersBySpecialtyViewModel(_memberId, _repository);
 
-            _viewModel.LoadSpecialties();
-            _viewModel.LoadNetworks();
-            _viewModel.LoadDistances();
+            _viewModel.Load();
 
             _specialtyListView = FindViewById<ListView>(Resource.Id.SpecialtyListView);
             LoadListView(_specialtyListView, Resource.Id.SpecialtyListView, Resource.Layout.SpecialtiesListItem, _viewModel.Specialties);
