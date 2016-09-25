@@ -17,7 +17,7 @@ let ``load service details`` () =
     let viewModel = ServiceDetailsViewModel(SomeClaimId , MockClaimsRepository())
 
     // Test
-    viewModel.LoadServiceDetails.Execute()
+    viewModel.Load()
 
     // Verify
     viewModel.ServiceDetails |> should equal (Some anonymousServiceDetails)

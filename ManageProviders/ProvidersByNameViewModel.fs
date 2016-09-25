@@ -33,13 +33,13 @@ type ProvidersByNameViewModel(memberId:MemberId , repository:IProvidersRepositor
                                                                                Office=  Office this.Office
                                                                                Network= this.Network }
 
-    member this.LoadProviders =
+    member this.Load() =
 
-        DelegateCommand ( (fun _ -> this.Validate()
+        this.Validate()
         
-                                    match this.ValidationResult with
-                                    | Failure reason -> this.Providers <- seq []
-                                    | Success v      -> this.Providers <- repository.GetProvidersByName { First=  this.FirstName
-                                                                                                          Middle= this.MiddleName
-                                                                                                          Last= this.LastName }) , 
-                           fun _ -> true ) :> ICommand
+        match this.ValidationResult with
+        | Failure reason -> this.Providers <- seq []
+        | Success v      -> this.Providers <- 
+                                repository.GetProvidersByName { First=  this.FirstName
+                                                                Middle= this.MiddleName
+                                                                Last= this.LastName }

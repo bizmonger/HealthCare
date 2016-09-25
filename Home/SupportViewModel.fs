@@ -31,6 +31,5 @@ type SupportViewModel(memberId:MemberId , dispatcher:Dispatcher , repository:ICl
         DelegateCommand( (fun _ -> dispatcher.EmailSupport()) , 
                           fun _ -> true ) :> ICommand
 
-    member this.LoadLastService =
-        DelegateCommand( (fun _ -> this.LastService <- repository.GetLastService memberId) , 
-                          fun _ -> true ) :> ICommand
+    member this.Load() =
+        this.LastService <- repository.GetLastService memberId

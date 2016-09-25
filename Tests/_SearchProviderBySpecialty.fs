@@ -25,7 +25,7 @@ let ``search provider`` () =
     viewModel.Network   <- SomeNetwork
 
     // Test
-    viewModel.LoadProviders.Execute()
+    viewModel.Load()
     
     // Verify
     match viewModel.ValidationResult with
@@ -79,7 +79,7 @@ let ``search requires specialty`` () =
     viewModel.Specialty <- ""
 
     // Test
-    viewModel.LoadProviders.Execute()
+    viewModel.Load()
 
     // Verify
     match viewModel.ValidationResult with
@@ -96,7 +96,7 @@ let ``search requires distance`` () =
     viewModel.Distance  <- 0
 
     // Test
-    viewModel.LoadProviders.Execute()
+    viewModel.Load()
 
     // Verify
     match viewModel.ValidationResult with
@@ -114,7 +114,7 @@ let ``search requires network`` () =
     viewModel.Network   <- ""
 
     // Test
-    viewModel.LoadProviders.Execute()
+    viewModel.Load()
 
     // Verify
     match viewModel.ValidationResult with
@@ -131,7 +131,7 @@ let ``search requires location`` () =
     viewModel.Location  <- ""
 
     // Test
-    viewModel.LoadProviders.Execute()
+    viewModel.Load()
 
     // Verify
     match viewModel.ValidationResult with

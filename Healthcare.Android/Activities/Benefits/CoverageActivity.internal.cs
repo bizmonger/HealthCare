@@ -9,7 +9,7 @@ namespace Healthcare.Android
     {
         void LoadListView()
         {
-            _viewModel.LoadCoverage();
+            _viewModel.Load();
 
             var listview = FindViewById<ListView>(Resource.Id.MemberCoverageListView);
             listview.ChoiceMode = ChoiceMode.Single;

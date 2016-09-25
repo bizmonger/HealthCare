@@ -10,5 +10,5 @@ type PaymentDetailsViewModel(claimId:ClaimId , repository:IClaimsRepository) =
 
     member val PaymentDetails = None with get,set
 
-    member this.LoadPaymentDetails =
-        DelegateCommand ( (fun _ -> this.PaymentDetails <- repository.GetPaymentDetails claimId) , fun _ -> true ) :> ICommand
+    member this.Load() =
+        this.PaymentDetails <- repository.GetPaymentDetails claimId

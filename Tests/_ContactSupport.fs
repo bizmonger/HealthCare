@@ -16,7 +16,7 @@ let ``load last service summary`` () =
     let viewModel = SupportViewModel(SomeMemberId , Dispatcher() , MockClaimsRepository())
 
     // Test
-    viewModel.LoadLastService.Execute()
+    viewModel.Load()
 
     // Verify
     match viewModel.LastService with

@@ -45,7 +45,7 @@ namespace Healthcare.Android
             var search = FindViewById<Button>(Resource.Id.SearchProviders);
             search.Click += (s, e) =>
                 {
-                    _viewModel.LoadProviders.Execute(null);
+                    _viewModel.Load();
 
                     var isValidated = _viewModel.ValidationResult.IsSuccess;
 

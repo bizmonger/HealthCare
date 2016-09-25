@@ -10,5 +10,5 @@ type CoverageViewModel(memberId , repository:IBenefitsRepository) =
 
     member val MemberCoverages = seq [] with get,set
 
-    member this.LoadCoverage() =
+    member this.Load() =
         this.MemberCoverages <- repository.GetMemberCoverages memberId

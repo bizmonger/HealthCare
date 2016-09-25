@@ -15,7 +15,7 @@ let ``load last appointment info`` () =
     let viewModel = PortalViewModel(SomeMemberId , Dispatcher() , MockBenefitsRepository())
 
     // Test
-    viewModel.LoadLastAppointment.Execute()
+    viewModel.Load()
 
     // Verify
     viewModel.LastAppointment |> should equal (Some SomeAppointment)

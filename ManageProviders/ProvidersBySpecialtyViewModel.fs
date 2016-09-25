@@ -31,8 +31,6 @@ type ProvidersBySpecialtyViewModel(memberId:MemberId , repository:IProvidersRepo
         this.Specialties <- repository.GetSpecialties()
         this.Networks    <- repository.GetNetworks()
         this.Distances   <- repository.GetDistances()
-
-    member this.LoadProviders =
         
         let searchCriteria = { Specialty=   Specialty this.Specialty
                                Distance=    Distance  this.Distance
@@ -41,7 +39,6 @@ type ProvidersBySpecialtyViewModel(memberId:MemberId , repository:IProvidersRepo
 
         this.ValidationResult <- validateProviderBySpecialty searchCriteria
 
-        DelegateCommand ( (fun _ -> match this.ValidationResult with
-                                    | Success v -> this.Providers <- repository.GetProvidersBySpecialty (Specialty this.Specialty)
-                                    | _ -> this.Providers <- [] ) ,
-                           fun _ -> true ) :> ICommand
+        match this.ValidationResult with
+        | Success v -> this.Providers <- repository.GetProvidersBySpecialty (Specialty this.Specialty)
+        | _ -> this.Providers <- []

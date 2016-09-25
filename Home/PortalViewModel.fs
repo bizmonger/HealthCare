@@ -9,9 +9,8 @@ type PortalViewModel(memberId:MemberId , dispatcher:Dispatcher , repository:IBen
 
     member val LastAppointment = None with get,set
 
-    member this.LoadLastAppointment =
-        DelegateCommand( (fun _ -> this.LastAppointment <- repository.GetLastAppointment memberId) , 
-                          fun _ -> true ) :> ICommand
+    member this.Load() =
+        this.LastAppointment <- repository.GetLastAppointment memberId
 
     member this.ViewIdCard =
         DelegateCommand( (fun _ -> dispatcher.TryViewIdCard memberId) , 

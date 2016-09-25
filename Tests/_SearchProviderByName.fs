@@ -24,7 +24,7 @@ let ``search provider by name`` () =
     viewModel.Office     <- match SomeOffice with Office v -> v
 
     // Test
-    viewModel.LoadProviders.Execute()
+    viewModel.Load()
 
     // Verify
     viewModel.Providers |> should equal SomeProviders

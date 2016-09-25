@@ -18,7 +18,7 @@ let ``load payment details`` () =
     let viewModel = PaymentDetailsViewModel(SomeClaimId , MockClaimsRepository())
 
     // Test
-    viewModel.LoadPaymentDetails.Execute()
+    viewModel.Load()
 
     // Verify
     viewModel.PaymentDetails |> should equal (Some anonymousPaymentDetails)
