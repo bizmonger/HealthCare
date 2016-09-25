@@ -66,8 +66,8 @@ namespace Healthcare.Android
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0600a2
-			public const int Account = 2131099810;
+			// aapt resource value: 0x7f0600a3
+			public const int Account = 2131099811;
 			
 			// aapt resource value: 0x7f060000
 			public const int AccountNumberLabel = 2131099648;
@@ -235,13 +235,16 @@ namespace Healthcare.Android
 			public const int Label1 = 2131099806;
 			
 			// aapt resource value: 0x7f06009f
-			public const int LastActivity = 2131099807;
+			public const int LastCleaningLabel = 2131099807;
 			
 			// aapt resource value: 0x7f0600a0
-			public const int LastCleaning = 2131099808;
+			public const int LastCleaningValue = 2131099808;
 			
 			// aapt resource value: 0x7f0600a1
-			public const int LastDentalVisit = 2131099809;
+			public const int LastDentalVisitLabel = 2131099809;
+			
+			// aapt resource value: 0x7f0600a2
+			public const int LastDentalVisitValue = 2131099810;
 			
 			// aapt resource value: 0x7f06000c
 			public const int LoginSettings = 2131099660;
