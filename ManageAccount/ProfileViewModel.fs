@@ -9,7 +9,15 @@ type ProfileViewModel(memberId:MemberId , dispatcher:Dispatcher , repository:IPr
 
     member val Profile:Profile option = None with get,set
     member val Dependents:Profile list = [] with get,set
+    member val Dependent:Profile option = None with get,set
 
     member this.Load() =
         this.Profile    <- repository.GetProfile    memberId
         this.Dependents <- repository.GetDependents memberId
+
+    member this.ViewDependent =
+
+        DelegateCommand ( (fun _ -> match this.Dependent with
+                                    | Some v -> dispatcher.ViewProfile v.IdCard.MemberId
+                                    | None   -> ()) , 
+                           fun _ -> this.Dependent.IsSome) :> ICommand

@@ -19,7 +19,6 @@ type Dispatcher() =
 
     let idRequested =           new Event<EventHandler<_>,_>()
     let accountRequested =      new Event<EventHandler<_>,_>()
-    let profileRequested =      new Event<EventHandler<_>,_>()
     let contactRequested =      new Event<EventHandler<_>,_>()
     let viewProvidersRequested =new Event<EventHandler<_>,_>()
     let findProvidersRequested =new Event<EventHandler<_>,_>()
@@ -67,7 +66,7 @@ type Dispatcher() =
     member this.AccountRequested =      accountRequested.Publish
 
     [<CLIEvent>]
-    member this.ProfileRequested =      profileRequested.Publish
+    member this.ProfileRequested  =      profileRequested.Publish
     [<CLIEvent>]
     member this.DependentProfilesRequested = dependentProfilesRequested.Publish
     [<CLIEvent>]
@@ -150,7 +149,6 @@ type Dispatcher() =
 
     member this.TryViewIdCard memberId =         idRequested.Trigger(this , EventArgs.Empty)
     member this.ViewAccount memberId =           accountRequested.Trigger(this, EventArgs.Empty) 
-    member this.ViewProfile memberId =           profileRequested.Trigger(this, EventArgs.Empty) 
     member this.ViewDependentProfiles memberId = dependentProfilesRequested.Trigger(this, EventArgs.Empty) 
     member this.ViewLoginSettings memberId =     loginSettingsRequested.Trigger(this, EventArgs.Empty) 
     member this.ViewContact() =                  contactRequested.Trigger(this , EventArgs.Empty)

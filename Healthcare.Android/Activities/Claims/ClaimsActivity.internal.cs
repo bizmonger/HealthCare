@@ -24,7 +24,7 @@ namespace Healthcare.Android
             _viewModel = new ClaimsSummaryViewModel(SomeMemberId, _dispatcher, new MockClaimsRepository());
             _viewModel.Load();
 
-            //var familySummary = FindViewById<TextView>(Resource.Id.FamilySummaryValue);
+            var familySummary = FindViewById<TextView>(Resource.Id.FamilySummaryValue);
             //if (_viewModel.FamilySummary.IsSome())
             //{
 

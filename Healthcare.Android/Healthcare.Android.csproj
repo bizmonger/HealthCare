@@ -56,6 +56,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities\Account\DependentProfilesActivity.internal.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>DependentProfilesActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activities\Account\DependentProfilesActivity.members.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>DependentProfilesActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Activities\Account\ProfileActivity.internal.cs">
       <SubType>Code</SubType>
       <DependentUpon>ProfileActivity.cs</DependentUpon>

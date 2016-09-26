@@ -33,7 +33,7 @@ namespace Healthcare.Android
             _dispatcher.LoginSettingsRequested -= OnLoginSettingsRequested;
         }
 
-        void OnProfileRequested(object sender, EventArgs e) => StartActivity(typeof(ProfileActivity));
+        void OnProfileRequested(object sender, object e) => StartActivity(typeof(ProfileActivity));
         void OnDependentsProfileRequested(object sender, EventArgs e) => StartActivity(typeof(DependentProfilesActivity));
         void OnLoginSettingsRequested(object sender, EventArgs e) => StartActivity(typeof(LoginSettingsActivity));
     }

@@ -31,9 +31,11 @@ let ``view dependent`` () =
     let dispatcher = Dispatcher()
     dispatcher.ProfileRequested.Add (fun _ -> profileRequested <- true)
     let viewModel = ProfileViewModel(SomeMemberId , dispatcher , MockProfileRepository())
+    viewModel.Load();
 
     // Test
-    viewModel.ViewProfile.Execute()
+    viewModel.Dependent <- Some viewModel.Dependents.Head;
+    viewModel.ViewDependent.Execute();
 
     // Verify
     profileRequested |> should equal true
