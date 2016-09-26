@@ -1,10 +1,10 @@
-using ManageClaims;
-using TestAPI;
-using static MockMember;
 using Android.Widget;
 using Healthcare.Android.Adapters;
+using ManageClaims;
 using System.Collections.Generic;
+using TestAPI;
 using static Claims;
+using static MockMember;
 
 namespace Healthcare.Android
 {

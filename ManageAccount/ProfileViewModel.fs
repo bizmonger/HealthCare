@@ -13,7 +13,3 @@ type ProfileViewModel(memberId:MemberId , dispatcher:Dispatcher , repository:IPr
     member this.Load() =
         this.Profile    <- repository.GetProfile    memberId
         this.Dependents <- repository.GetDependents memberId
-
-    member this.ViewProfile =
-        DelegateCommand( (fun _ -> dispatcher.ViewProfile memberId) , 
-                          fun _ -> true ) :> ICommand
