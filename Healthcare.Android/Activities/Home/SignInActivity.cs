@@ -2,7 +2,7 @@
 
 namespace Healthcare.Android
 {
-    [Activity(Label = nameof(SignInActivity), Icon = "@drawable/icon")]
+    [Activity(Label = "Sign In", Icon = "@drawable/icon")]
     class SignInActivity : Activity
     {
     }

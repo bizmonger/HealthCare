@@ -2,7 +2,7 @@
 
 namespace Healthcare.Android
 {
-    [Activity(Label = nameof(PrivacyActivity), Icon = "@drawable/icon")]
+    [Activity(Label = "Privacy", Icon = "@drawable/icon")]
     class PrivacyActivity : Activity
     {
     }

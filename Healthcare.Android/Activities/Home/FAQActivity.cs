@@ -4,7 +4,7 @@ using Android.OS;
 
 namespace Healthcare.Android
 {
-    [Activity(Label = nameof(FAQActivity), Icon = "@drawable/icon")]
+    [Activity(Label = "FAQ", Icon = "@drawable/icon")]
     class FAQActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
