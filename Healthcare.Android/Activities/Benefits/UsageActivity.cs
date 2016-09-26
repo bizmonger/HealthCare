@@ -10,7 +10,7 @@ using static MockMember;
 
 namespace Healthcare.Android
 {
-    [Activity(Label = nameof(UsageActivity), Icon = "@drawable/icon")]
+    [Activity(Label = "Usage", Icon = "@drawable/icon")]
     class UsageActivity : Activity
     {
         BenefitsUsageViewModel _viewModel;

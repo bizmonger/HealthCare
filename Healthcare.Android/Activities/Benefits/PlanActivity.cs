@@ -3,7 +3,7 @@ using Android.OS;
 
 namespace Healthcare.Android
 {
-    [Activity(Label = nameof(PlanActivity), Icon = "@drawable/icon")]
+    [Activity(Label = "Plan", Icon = "@drawable/icon")]
     class PlanActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

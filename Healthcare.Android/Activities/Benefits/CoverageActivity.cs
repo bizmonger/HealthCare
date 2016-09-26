@@ -6,7 +6,7 @@ using static MockMember;
 
 namespace Healthcare.Android
 {
-    [Activity(Label = nameof(CoverageActivity), Icon = "@drawable/icon")]
+    [Activity(Label = "Coverage", Icon = "@drawable/icon")]
     partial class CoverageActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
