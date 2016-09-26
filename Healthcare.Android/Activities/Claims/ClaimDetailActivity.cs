@@ -6,7 +6,7 @@ using static MockClaim;
 
 namespace Healthcare.Android
 {
-    [Activity(Label = nameof(ClaimDetailActivity))]
+    [Activity(Label = "Claim")]
     partial class ClaimDetailActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

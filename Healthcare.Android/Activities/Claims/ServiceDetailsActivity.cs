@@ -1,10 +1,9 @@
-
 using Android.App;
 using Android.OS;
 
 namespace Healthcare.Android
 {
-    [Activity(Label = nameof(ServiceDetailsActivity))]
+    [Activity(Label = "Service")]
     public class ServiceDetailsActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

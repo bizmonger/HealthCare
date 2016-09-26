@@ -4,7 +4,7 @@ using Android.OS;
 
 namespace Healthcare.Android
 {
-    [Activity(Label = nameof(ClaimsActivity))]
+    [Activity(Label = "Claims")]
     partial class ClaimsActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
