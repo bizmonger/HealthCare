@@ -9,10 +9,15 @@ type ClaimsSummaryViewModel(memberId , dispatcher:Dispatcher , repository:IClaim
 
     member val FamilySummary =      None   with get,set
     member val DependentSummaries = seq [] with get,set
+    member val DependentSummary =   None with get,set
 
     member this.Load() =
         this.FamilySummary      <- repository.GetFamilySummary      memberId
         this.DependentSummaries <- repository.GetDependentSummaries memberId
 
-    member this.OnSummarySelected summary =
-        dispatcher.ViewMemberClaims summary.Member.MemberId
+    member this.ViewClaims =
+
+        DelegateCommand( (fun _ -> match this.DependentSummary with
+                                   | Some v -> dispatcher.ViewMemberClaims v.Member.MemberId
+                                   | None   -> ()), 
+                         fun _ -> true ) :> ICommand

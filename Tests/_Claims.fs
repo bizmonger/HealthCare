@@ -10,7 +10,6 @@ open Account
 open Claims
 open Repositories
 open InteractionLogic
-open System.Linq
     
 [<Test>]
 let ``load family claims summary`` () =
@@ -74,10 +73,14 @@ let ``navigate to member claims`` () =
     let mutable claimsRequested = false
     let dispatcher = Dispatcher()
     dispatcher.MemberClaimsRequested.Add (fun _ -> claimsRequested <- true)
+
     let viewModel = ClaimsSummaryViewModel(SomeMemberId , dispatcher , MockClaimsRepository())
     viewModel.Load();
+
+    viewModel.DependentSummary <- Some (Seq.head viewModel.DependentSummaries)
+
     // Test
-    viewModel.OnSummarySelected (viewModel.DependentSummaries.First())
+    viewModel.ViewClaims.Execute()
 
     // Verify
     claimsRequested |> should equal true

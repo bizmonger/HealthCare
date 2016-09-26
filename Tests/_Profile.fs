@@ -30,6 +30,7 @@ let ``view dependent`` () =
     let mutable profileRequested = false
     let dispatcher = Dispatcher()
     dispatcher.ProfileRequested.Add (fun _ -> profileRequested <- true)
+
     let viewModel = ProfileViewModel(SomeMemberId , dispatcher , MockProfileRepository())
     viewModel.Load();
 

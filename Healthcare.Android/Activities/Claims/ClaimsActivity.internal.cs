@@ -44,7 +44,13 @@ namespace Healthcare.Android
             var listview = FindViewById<ListView>(Resource.Id.MemberClaimsListView);
             listview.ChoiceMode = ChoiceMode.Single;
             listview.Adapter = new ClaimSummaryAdapter(this, new List<ClaimsSummary>(_viewModel.DependentSummaries));
-            listview.ItemClick += (s, e) => _viewModel.OnSummarySelected(listview.GetItemAtPosition(e.Position).Cast<ClaimsSummary>());
+
+
+            //listview.ItemClick += (s, e) =>
+            //    {
+            //        _viewModel.DependentSummary = listview.GetItemAtPosition(e.Position).Cast<ClaimsSummary>();
+            //        _viewModel.ViewClaims.Execute(null);
+            //    };
         }
     }
 }
