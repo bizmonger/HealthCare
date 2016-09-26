@@ -3,49 +3,47 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-  <TextView
-      android:id="@+id/NameValue"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="5sp"
-      android:layout_centerHorizontal="true"
-      android:text="need name" />
-  <LinearLayout
-      android:orientation="horizontal"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent">
     <TextView
-        android:id="@+id/MemberIdLabel"
+        android:id="@+id/NameValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5sp"
         android:layout_centerHorizontal="true"
-        android:text="Member ID:" />
-    <TextView
-        android:id="@+id/MemberIdValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="need value" />
-  </LinearLayout>
-  <LinearLayout
-      android:orientation="horizontal"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent">
-    <TextView
-        android:id="@+id/DOBLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="DOB:" />
-    <TextView
-        android:id="@+id/DOBValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="need value" />
-  </LinearLayout>
+        android:text="need name" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="Member ID:" />
+        <TextView
+            android:id="@+id/MemberIdValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="need value" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="DOB:" />
+        <TextView
+            android:id="@+id/DOBValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="need value" />
+    </LinearLayout>
 </LinearLayout>

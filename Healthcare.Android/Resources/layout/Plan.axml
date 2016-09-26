@@ -3,183 +3,164 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-  <TextView
-      android:id="@+id/InsurancePlanName"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="5sp"
-      android:layout_centerHorizontal="true"
-      android:text="Plan Name" />
-  <TextView
-      android:id="@+id/InsurancePlanHighlights"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="5sp"
-      android:layout_centerHorizontal="true"
-      android:text="Plan Highlights" />
-
-  <LinearLayout
-      android:orientation="horizontal"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content">
     <TextView
-        android:id="@+id/Deductable"
+        android:id="@+id/InsurancePlanName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5sp"
         android:layout_centerHorizontal="true"
-        android:text="Deductable:" />
+        android:text="Plan Name" />
     <TextView
-        android:id="@+id/DeductableValue"
+        android:id="@+id/InsurancePlanHighlights"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5sp"
         android:layout_centerHorizontal="true"
-        android:text="need value" />
-  </LinearLayout>
-
-  <LinearLayout
-    android:orientation="horizontal"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-    <TextView
-        android:id="@+id/OutOfPocker"
+        android:text="Plan Highlights" />
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="Out of Pocket:" />
-
-    <TextView
-        android:id="@+id/OutOfPockerValue"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="Deductable:" />
+        <TextView
+            android:id="@+id/DeductableValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="need value" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="need value" />
-  </LinearLayout>
-
-  <LinearLayout
-    android:orientation="horizontal"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-    <TextView
-      android:id="@+id/AnualMaximum"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="5sp"
-      android:layout_centerHorizontal="true"
-      android:text="Anual Maximum:" />
-
-    <TextView
-        android:id="@+id/AnualMaximumValue"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="Out of Pocket:" />
+        <TextView
+            android:id="@+id/OutOfPockerValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="need value" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="need value" />
-  </LinearLayout>
-
-  <LinearLayout
-    android:orientation="horizontal"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-    <TextView
-        android:id="@+id/NetworkBenefits"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="Anual Maximum:" />
+        <TextView
+            android:id="@+id/AnualMaximumValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="need value" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="Network Benefits:" />
-
-    <TextView
-        android:id="@+id/NetworkBenefitsValue"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="Network Benefits:" />
+        <TextView
+            android:id="@+id/NetworkBenefitsValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="need value" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="need value" />
-  </LinearLayout>
-
-  <LinearLayout
-    android:orientation="horizontal"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-    <TextView
-        android:id="@+id/PreventiveAndDiagnostic"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="Preventive and Diagnostic:" />
+        <TextView
+            android:id="@+id/PreventiveAndDiagnosticValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="need value" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="Preventive and Diagnostic:" />
-    <TextView
-        android:id="@+id/PreventiveAndDiagnosticValue"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="Restoration:" />
+        <TextView
+            android:id="@+id/RestorationValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="need value" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="need value" />
-  </LinearLayout>
-
-  <LinearLayout
-    android:orientation="horizontal"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-    <TextView
-        android:id="@+id/Restoration"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/OralSurgery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="Oral Surgery:" />
+        <TextView
+            android:id="@+id/OralSurgeryValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="need value" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="Restoration:" />
-
-    <TextView
-        android:id="@+id/RestorationValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="need value" />
-  </LinearLayout>
-
-  <LinearLayout
-    android:orientation="horizontal"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-    <TextView
-        android:id="@+id/OralSurgery"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="Oral Surgery:" />
-    <TextView
-        android:id="@+id/OralSurgeryValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="need value" />
-  </LinearLayout>
-
-  <LinearLayout
-    android:orientation="horizontal"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-    <TextView
-        android:id="@+id/Periodontics"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="Periodontics:" />
-
-    <TextView
-        android:id="@+id/PeriodonticsValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="need value" />
-  </LinearLayout>
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/Periodontics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="Periodontics:" />
+        <TextView
+            android:id="@+id/PeriodonticsValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="need value" />
+    </LinearLayout>
 </LinearLayout>

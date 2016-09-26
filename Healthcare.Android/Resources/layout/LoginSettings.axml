@@ -2,4 +2,111 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+    android:layout_height="match_parent">
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5sp"
+      android:layout_centerHorizontal="true"
+      android:text="Your Login Info:" />
+
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="Enable Touch ID:" />
+
+    <TextView
+        android:id="@+id/EnableTouchIdValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="need value" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="User ID:" />
+
+    <TextView
+        android:id="@+id/UserIdValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="need value" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="Password:" />
+
+    <TextView
+        android:id="@+id/PasswordValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="need value" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="Security Question #1:" />
+
+    <TextView
+        android:id="@+id/SecurityQuestion1Value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="need value" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="Security Question #2:" />
+
+    <TextView
+        android:id="@+id/SecurityQuestion2Value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="need value" />
+  </LinearLayout>
+</LinearLayout>
