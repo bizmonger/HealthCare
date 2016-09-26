@@ -3,7 +3,7 @@ using Android.OS;
 
 namespace Healthcare.Android
 {
-    [Activity(Label = nameof(AccountActivity))]
+    [Activity(Label = "Account")]
     partial class AccountActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

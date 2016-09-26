@@ -3,7 +3,7 @@ using Android.OS;
 
 namespace Healthcare.Android
 {
-    [Activity(Label = nameof(IdCardActivity), Icon = "@drawable/icon")]
+    [Activity(Label = "ID Card", Icon = "@drawable/icon")]
     partial class IdCardActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

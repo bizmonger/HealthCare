@@ -6,7 +6,7 @@ using static MockMember;
 
 namespace Healthcare.Android
 {
-    [Activity(Label = nameof(ProfileActivity))]
+    [Activity(Label = "Profile")]
     partial class ProfileActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

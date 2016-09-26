@@ -3,7 +3,7 @@ using Android.OS;
 
 namespace Healthcare.Android
 {
-    [Activity(Label = nameof(DependentProfilesActivity))]
+    [Activity(Label = "Dependents")]
     partial class DependentProfilesActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

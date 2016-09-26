@@ -5,7 +5,7 @@ using static MockMember;
 
 namespace Healthcare.Android
 {
-    [Activity(Label = nameof(PortalDashboardActivity))]
+    [Activity(Label = "Company Name")]
     partial class PortalDashboardActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

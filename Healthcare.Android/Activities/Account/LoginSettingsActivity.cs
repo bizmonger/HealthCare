@@ -3,7 +3,7 @@ using Android.OS;
 
 namespace Healthcare.Android
 {
-    [Activity(Label = nameof(LoginSettingsActivity))]
+    [Activity(Label = "Login Settings")]
     public class LoginSettingsActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

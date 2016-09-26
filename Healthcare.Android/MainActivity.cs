@@ -4,7 +4,7 @@ using Home;
 
 namespace Healthcare.Android
 {
-    [Activity(Label = "Healthcare.Android", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Company Name", MainLauncher = true, Icon = "@drawable/icon")]
     partial class MainActivity : Activity
     {
         public MainActivity()
