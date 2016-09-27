@@ -1,19 +1,40 @@
 using Android.App;
 using Android.OS;
 using Android.Views;
+using Android.Widget;
+using Home;
+using TestAPI;
+using static MockMember;
 
 namespace Healthcare.Android.Fragments
 {
     public class WelcomeFragment : Fragment
     {
+        readonly WelcomeViewModel _viewModel = new WelcomeViewModel(SomeMemberId, new MockProfileRepository());
+
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
-            // Create your fragment here
+            _viewModel.Load();
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) =>
             inflater.Inflate(Resource.Layout.WelcomeFragment, container, false);
+
+        public override void OnViewCreated(View view, Bundle savedInstanceState)
+        {
+            base.OnViewCreated(view, savedInstanceState);
+
+            var name = _viewModel.Profile.IsSome() ? _viewModel.Profile.Value.IdCard.Name : null;
+
+            var welcomeLabel = View.FindViewById<TextView>(Resource.Id.Welcome);
+            welcomeLabel.Text = $"Welcome {name.First}";
+
+            var lastCleaningLabel = View.FindViewById<TextView>(Resource.Id.LastCleaningValue);
+            lastCleaningLabel.Text = $"Last Cleaning: {_viewModel.LastCleaning}";
+
+            var lastVisit = View.FindViewById<TextView>(Resource.Id.LastDentalVisitValue);
+            lastVisit.Text = $"Last Cleaning: {_viewModel.LastVisit}";
+        }
     }
 }

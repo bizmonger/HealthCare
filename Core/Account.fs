@@ -2,6 +2,8 @@
 [<System.Diagnostics.DebuggerNonUserCode>]
 module Account
 
+open System
+
     type MemberId =      MemberId of string
     type AccountNumber = AccountNumber of string
 

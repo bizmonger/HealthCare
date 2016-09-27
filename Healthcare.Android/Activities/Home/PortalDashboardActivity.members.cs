@@ -1,9 +1,9 @@
-﻿using Repositories;
-using static Account;
-using TestAPI;
-using static MockMember;
-using Home;
+﻿using Home;
 using InteractionLogic;
+using Repositories;
+using TestAPI;
+using static Account;
+using static MockMember;
 
 namespace Healthcare.Android
 {
