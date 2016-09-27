@@ -31,10 +31,15 @@ namespace Healthcare.Android.Fragments
             welcomeLabel.Text = $"Welcome {name.First}";
 
             var lastCleaningLabel = View.FindViewById<TextView>(Resource.Id.LastCleaningValue);
-            lastCleaningLabel.Text = $"Last Cleaning: {_viewModel.LastCleaning}";
+
+            lastCleaningLabel.Text = _viewModel.LastCleaning.IsSome()
+                ? $"{_viewModel.LastCleaning.Value.ToShortDateString()}"
+                : "No history";
 
             var lastVisit = View.FindViewById<TextView>(Resource.Id.LastDentalVisitValue);
-            lastVisit.Text = $"Last Cleaning: {_viewModel.LastVisit}";
+            lastVisit.Text = _viewModel.LastVisit.IsSome()
+                ? $"{_viewModel.LastVisit.Value.ToShortDateString()}"
+                : "No history";
         }
     }
 }
