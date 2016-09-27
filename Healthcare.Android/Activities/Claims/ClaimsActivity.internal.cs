@@ -2,6 +2,7 @@ using Android.Widget;
 using Healthcare.Android.Adapters;
 using ManageClaims;
 using System.Collections.Generic;
+using System.Linq;
 using TestAPI;
 using static Claims;
 using static MockMember;
@@ -25,32 +26,36 @@ namespace Healthcare.Android
             _viewModel.Load();
 
             var familySummary = FindViewById<TextView>(Resource.Id.FamilySummaryValue);
-            //if (_viewModel.FamilySummary.IsSome())
-            //{
+            familySummary.Text = _viewModel.FamilySummary.IsSome()
+                ? _viewModel.FamilySummary.Value.Claims.Count().ToString()
+                : string.Empty;
 
-            //}
+            var providersCharged = FindViewById<TextView>(Resource.Id.ProvidersChargedValue);
+            providersCharged.Text = _viewModel.FamilySummary.IsSome()
+                ? _viewModel.FamilySummary.Value.ProvidersCharged.Item.ToString("C2")
+                : string.Empty;
 
-            //familySummary.Text = _viewModel.FamilySummary.Claims.Count().ToString();
+            var insuranceSavings = FindViewById<TextView>(Resource.Id.InsuranceSavedYouValue);
+            insuranceSavings.Text = _viewModel.FamilySummary.IsSome()
+                ? _viewModel.FamilySummary.Value.InsuranceSavings.Item.ToString("C2")
+                : string.Empty;
 
-            //var providersCharged = FindViewById<TextView>(Resource.Id.ProvidersChargedValue);
-            //providersCharged.Text = _viewModel.FamilySummary.ProvidersCharged.Item.ToString("C2");
-
-            //var insuranceSavings = FindViewById<TextView>(Resource.Id.InsuranceSavedYouValue);
-            //insuranceSavings.Text = _viewModel.FamilySummary.InsuranceSavings.Item.ToString("C2");
-
-            //var totalSavings = FindViewById<TextView>(Resource.Id.SavingValue);
-            //totalSavings.Text = $"{ _viewModel.FamilySummary.TotalSavings().ToString()}%";
+            var totalSavings = FindViewById<TextView>(Resource.Id.SavingValue);
+            totalSavings.Text = _viewModel.FamilySummary.IsSome()
+                ? $"{ _viewModel.FamilySummary.Value.TotalSavings().ToString()}%"
+                : string.Empty;
 
             var listview = FindViewById<ListView>(Resource.Id.MemberClaimsListView);
             listview.ChoiceMode = ChoiceMode.Single;
             listview.Adapter = new ClaimSummaryAdapter(this, new List<ClaimsSummary>(_viewModel.DependentSummaries));
 
 
-            //listview.ItemClick += (s, e) =>
-            //    {
-            //        _viewModel.DependentSummary = listview.GetItemAtPosition(e.Position).Cast<ClaimsSummary>();
-            //        _viewModel.ViewClaims.Execute(null);
-            //    };
+            listview.ItemClick += (s, e) =>
+                {
+                    var item = listview.GetItemAtPosition(e.Position).Cast<ClaimsSummary>();
+                    _viewModel.SetDependentSummary(item);
+                    _viewModel.ViewClaims.Execute(null);
+                };
         }
     }
 }

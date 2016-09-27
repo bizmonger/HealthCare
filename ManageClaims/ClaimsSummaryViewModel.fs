@@ -15,6 +15,9 @@ type ClaimsSummaryViewModel(memberId , dispatcher:Dispatcher , repository:IClaim
         this.FamilySummary      <- repository.GetFamilySummary      memberId
         this.DependentSummaries <- repository.GetDependentSummaries memberId
 
+    member this.SetDependentSummary summary =
+        this.DependentSummary <- Some summary
+
     member this.ViewClaims =
 
         DelegateCommand( (fun _ -> match this.DependentSummary with
