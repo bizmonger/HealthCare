@@ -49,7 +49,6 @@ namespace Healthcare.Android
             listview.ChoiceMode = ChoiceMode.Single;
             listview.Adapter = new ClaimSummaryAdapter(this, new List<ClaimsSummary>(_viewModel.DependentSummaries));
 
-
             listview.ItemClick += (s, e) =>
                 {
                     var item = listview.GetItemAtPosition(e.Position).Cast<ClaimsSummary>();
