@@ -5,13 +5,12 @@ open InteractionLogic
 open Settings
 
 type HomeViewModel (dispatcher:Dispatcher) as this =
-    
-    let mutable signedIn = false
 
-    do dispatcher.SignInSuccessful.Add(fun _ -> signedIn <- true)
+    do dispatcher.SignInSuccessful.Add(fun _ -> this.SignedIn <- true)
     do dispatcher.SettingsChanged.Add(fun s -> this.Settings <- s)
 
     member val Settings = { ViewIdCardFromHome=false } with get,set
+    member val SignedIn = false with get,set
 
     member this.SignIn =
         DelegateCommand( (fun _ -> dispatcher.ViewSignIn()), fun _ -> true ) :> ICommand
@@ -38,7 +37,7 @@ type HomeViewModel (dispatcher:Dispatcher) as this =
         DelegateCommand( (fun _ -> dispatcher.FindProviders()), fun _ -> true ) :> ICommand
 
     member this.TryViewIdCard =    (* Requires security *)
-        DelegateCommand( (fun _ -> if signedIn || this.Settings.ViewIdCardFromHome 
+        DelegateCommand( (fun _ -> if this.SignedIn || this.Settings.ViewIdCardFromHome
                                    then dispatcher.TryViewIdCard()
                                    else ()), 
                           fun _ -> true ) :> ICommand

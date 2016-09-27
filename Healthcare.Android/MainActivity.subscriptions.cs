@@ -1,3 +1,4 @@
+using Android.Views;
 using Android.Widget;
 
 namespace Healthcare.Android
@@ -52,6 +53,10 @@ namespace Healthcare.Android
             faq.Click += (s, e) => _viewModel.ViewFAQ.Execute(null);
 
             var idCard = FindViewById<Button>(Resource.Id.IdCard);
+            idCard.Visibility = _viewModel.SignedIn ||
+                                _viewModel.Settings.ViewIdCardFromHome
+                                ? ViewStates.Visible : ViewStates.Gone;
+
             idCard.Click += (s, e) => _viewModel.TryViewIdCard.Execute(null);
 
             var providers = FindViewById<Button>(Resource.Id.Providers);

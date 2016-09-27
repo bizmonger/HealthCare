@@ -9,7 +9,7 @@ type ClaimsSummaryViewModel(memberId , dispatcher:Dispatcher , repository:IClaim
 
     member val FamilySummary =      None   with get,set
     member val DependentSummaries = seq [] with get,set
-    member val DependentSummary =   None with get,set
+    member val DependentSummary =   None   with get,set
 
     member this.Load() =
         this.FamilySummary      <- repository.GetFamilySummary      memberId
