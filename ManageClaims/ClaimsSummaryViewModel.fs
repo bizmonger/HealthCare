@@ -23,4 +23,4 @@ type ClaimsSummaryViewModel(memberId , dispatcher:Dispatcher , repository:IClaim
         DelegateCommand( (fun _ -> match this.DependentSummary with
                                    | Some v -> dispatcher.ViewMemberClaims v.Member.MemberId
                                    | None   -> ()), 
-                         fun _ -> true ) :> ICommand
+                          fun _ -> true ) :> ICommand

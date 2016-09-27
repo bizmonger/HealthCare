@@ -1,5 +1,4 @@
 using Microsoft.FSharp.Core;
-using static Claims;
 
 namespace Healthcare.Android
 {
