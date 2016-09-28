@@ -3,7 +3,7 @@ using Android.OS;
 
 namespace Healthcare.Android
 {
-    [Activity(Label = "Payment")]
+    [Activity(Label = "Payment Details")]
     public class PaymentDetailsActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
