@@ -4,78 +4,78 @@
     android:layout_height="match_parent"
     android:paddingLeft="5dp"
     android:paddingRight="5dp">
-    <LinearLayout
-        android:id="@+id/Header"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/Tips"
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:text="Tips" />
-        <Button
-            android:id="@+id/Privacy"
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:text="Privacy" />
-        <Button
-            android:id="@+id/FAQ"
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:text="FAQ" />
-    </LinearLayout>
-    <ImageView
-        android:id="@+id/Logo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="15sp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/Header"
-        android:src="@drawable/SomeLogo" />
+  <LinearLayout
+      android:id="@+id/Header"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:paddingLeft="16dp"
+      android:paddingRight="16dp"
+      android:layout_alignParentTop="true"
+      android:layout_centerHorizontal="true"
+      android:orientation="horizontal">
     <Button
-        android:id="@+id/SignIn"
-        android:layout_width="250dp"
+        android:id="@+id/Tips"
+        android:layout_width="110dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/Logo"
-        android:text="SignIn" />
-    <TextView
-        android:id="@+id/Register"
+        android:text="Tips" />
+    <Button
+        android:id="@+id/Privacy"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="Privacy" />
+    <Button
+        android:id="@+id/FAQ"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="FAQ" />
+  </LinearLayout>
+  <ImageView
+      android:id="@+id/Logo"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:layout_marginTop="15sp"
+      android:layout_centerHorizontal="true"
+      android:layout_below="@id/Header"
+      android:src="@drawable/SomeLogo" />
+  <Button
+      android:id="@+id/SignIn"
+      android:layout_width="250dp"
+      android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:layout_below="@id/Logo"
+      android:text="SignIn" />
+  <TextView
+      android:id="@+id/Register"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="15sp"
+      android:layout_below="@id/SignIn"
+      android:layout_centerHorizontal="true"
+      android:text="or Register" />
+  <LinearLayout
+      android:id="@+id/Footer"
+      android:layout_width="wrap_content"
+      android:layout_height="48dp"
+      android:paddingLeft="5dp"
+      android:paddingRight="5dp"
+      android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
+      android:orientation="horizontal">
+    <Button
+        android:id="@+id/IdCard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15sp"
-        android:layout_below="@id/SignIn"
-        android:layout_centerHorizontal="true"
-        android:text="or Register" />
-    <LinearLayout
-        android:id="@+id/Footer"
+        android:text="ID Card" />
+    <Button
+        android:id="@+id/Providers"
         android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/IdCard"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ID Card" />
-        <Button
-            android:id="@+id/Providers"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Providers" />
-        <Button
-            android:id="@+id/Contact"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Contact" />
-    </LinearLayout>
+        android:layout_height="wrap_content"
+        android:text="Providers" />
+    <Button
+        android:id="@+id/Contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact" />
+  </LinearLayout>
 </RelativeLayout>

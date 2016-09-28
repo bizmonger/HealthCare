@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+  <LinearLayout
+      android:id="@+id/Header"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:paddingLeft="16dp"
+      android:paddingRight="16dp"
+      android:layout_alignParentTop="true"
+      android:orientation="vertical">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,108 +38,121 @@
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5sp"
-            android:layout_centerHorizontal="true"
-            android:text="Effective From:" />
-        <TextView
-            android:id="@+id/EffectiveFromValue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5sp"
-            android:layout_centerHorizontal="true"
-            android:text="need value" />
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5sp"
+          android:layout_centerHorizontal="true"
+          android:text="Effective From:" />
+      <TextView
+          android:id="@+id/EffectiveFromValue"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5sp"
+          android:layout_centerHorizontal="true"
+          android:text="need value" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5sp"
-            android:layout_centerHorizontal="true"
-            android:text="Effective Until:" />
-        <TextView
-            android:id="@+id/EffectiveUntilValue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5sp"
-            android:layout_centerHorizontal="true"
-            android:text="need value" />
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5sp"
+          android:layout_centerHorizontal="true"
+          android:text="Effective Until:" />
+      <TextView
+          android:id="@+id/EffectiveUntilValue"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5sp"
+          android:layout_centerHorizontal="true"
+          android:text="need value" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5sp"
-            android:layout_centerHorizontal="true"
-            android:text="Plan Coverage:" />
-        <TextView
-            android:id="@+id/PlanCoverageValue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5sp"
-            android:layout_centerHorizontal="true"
-            android:text="need value" />
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5sp"
+          android:layout_centerHorizontal="true"
+          android:text="Plan Coverage:" />
+      <TextView
+          android:id="@+id/PlanCoverageValue"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5sp"
+          android:layout_centerHorizontal="true"
+          android:text="need value" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5sp"
-            android:layout_centerHorizontal="true"
-            android:text="Network:" />
-        <TextView
-            android:id="@+id/NetworkValue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5sp"
-            android:layout_centerHorizontal="true"
-            android:text="need value" />
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5sp"
+          android:layout_centerHorizontal="true"
+          android:text="Network:" />
+      <TextView
+          android:id="@+id/NetworkValue"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5sp"
+          android:layout_centerHorizontal="true"
+          android:text="need value" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5sp"
-            android:layout_centerHorizontal="true"
-            android:text="Group #:" />
-        <TextView
-            android:id="@+id/GroupNumberValue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5sp"
-            android:layout_centerHorizontal="true"
-            android:text="need value" />
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5sp"
+          android:layout_centerHorizontal="true"
+          android:text="Group #:" />
+      <TextView
+          android:id="@+id/GroupNumberValue"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5sp"
+          android:layout_centerHorizontal="true"
+          android:text="need value" />
     </LinearLayout>
+  </LinearLayout>
+
+  <LinearLayout
+          android:id="@+id/Footer"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingLeft="5dp"
+          android:paddingRight="5dp"
+          android:layout_alignParentBottom="true"
+          android:layout_centerHorizontal="true"
+          android:orientation="horizontal">
     <Button
         android:id="@+id/PlanBennefits"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15sp"
         android:text="Plan" />
     <Button
         android:id="@+id/Coverage"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15sp"
         android:text="Coverage" />
     <Button
         android:id="@+id/Usage"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15sp"
         android:text="Usage" />
-</LinearLayout>
+  </LinearLayout>
+
+</RelativeLayout>
