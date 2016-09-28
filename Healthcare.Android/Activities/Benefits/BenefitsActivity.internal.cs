@@ -10,6 +10,23 @@ namespace Healthcare.Android
         {
             _viewModel = new BenefitsOverviewViewModel(SomeMemberId, _repository, _dispatcher);
             _viewModel.Load();
+
+            var timeline = _viewModel.Overview.Value.Coverage.Summary.Effective;
+
+            var effectiveFrom = FindViewById<TextView>(Resource.Id.EffectiveFromValue);
+            effectiveFrom.Text = $"{timeline.ActiveFrom.Item}";
+
+            var effectiveUntil = FindViewById<TextView>(Resource.Id.EffectiveUntilValue);
+            effectiveUntil.Text = $"{timeline.ActiveUntil.Item}";
+
+            var planCoverage = FindViewById<TextView>(Resource.Id.PlanCoverageValue);
+            planCoverage.Text = $"need value";
+
+            var network = FindViewById<TextView>(Resource.Id.NetworkValue);
+            network.Text = $"need value";
+
+            var groupNumber = FindViewById<TextView>(Resource.Id.GroupNumberValue);
+            groupNumber.Text = $"need value";
         }
 
         void MapCommands()

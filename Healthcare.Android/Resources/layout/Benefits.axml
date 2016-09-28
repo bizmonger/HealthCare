@@ -3,148 +3,133 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-  <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="5sp"
-      android:layout_centerHorizontal="true"
-      android:text="Your Insurance Plan" />
-  <ImageView
-      android:id="@+id/ThinLogo"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_alignParentTop="true"
-      android:layout_marginTop="15sp"
-      android:layout_centerHorizontal="true"
-      android:src="@drawable/ThinLogo" />
-  <TextView
-      android:id="@+id/PlanName"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="5sp"
-      android:gravity="center"
-      android:text="Some Plan Name" />
-
-  <LinearLayout
-      android:orientation="horizontal"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5sp"
         android:layout_centerHorizontal="true"
-        android:text="Effective From:" />
-
+        android:text="Your Insurance Plan" />
+    <ImageView
+        android:id="@+id/ThinLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15sp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ThinLogo" />
     <TextView
-        android:id="@+id/EffectiveFromValue"
+        android:id="@+id/PlanName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="need value" />
-  </LinearLayout>
-
-  <LinearLayout
-      android:orientation="horizontal"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content">
-
-    <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="5sp"
-      android:layout_centerHorizontal="true"
-      android:text="Effective Until:" />
-
-    <TextView
-        android:id="@+id/EffectiveUntilValue"
+        android:gravity="center"
+        android:text="Some Plan Name" />
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="need value" />
-  </LinearLayout>
-
-  <LinearLayout
-      android:orientation="horizontal"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content">
-
-    <TextView
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="Effective From:" />
+        <TextView
+            android:id="@+id/EffectiveFromValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="need value" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="Plan Coverage:" />
-
-    <TextView
-        android:id="@+id/PlanCoverageValue"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="Effective Until:" />
+        <TextView
+            android:id="@+id/EffectiveUntilValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="need value" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="need value" />
-  </LinearLayout>
-
-  <LinearLayout
-    android:orientation="horizontal"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-
-    <TextView
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="Plan Coverage:" />
+        <TextView
+            android:id="@+id/PlanCoverageValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="need value" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="Network:" />
-
-    <TextView
-        android:id="@+id/NetworkValue"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="Network:" />
+        <TextView
+            android:id="@+id/NetworkValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="need value" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="Group #:" />
+        <TextView
+            android:id="@+id/GroupNumberValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_centerHorizontal="true"
+            android:text="need value" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/PlanBennefits"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="need value" />
-  </LinearLayout>
-
-
-  <LinearLayout
-    android:orientation="horizontal"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-    <TextView
-        android:layout_width="wrap_content"
+        android:layout_marginTop="15sp"
+        android:text="Plan Benefits" />
+    <Button
+        android:id="@+id/Coverage"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="Group #:" />
-
-    <TextView
-        android:id="@+id/GroupNumberValue"
-        android:layout_width="wrap_content"
+        android:layout_marginTop="15sp"
+        android:text="Coverage" />
+    <Button
+        android:id="@+id/Usage"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5sp"
-        android:layout_centerHorizontal="true"
-        android:text="need value" />
-  </LinearLayout>
-
-  <Button
-      android:id="@+id/PlanBennefits"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="15sp"
-      android:text="Plan Benefits" />
-  <Button
-      android:id="@+id/Coverage"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="15sp"
-      android:text="Coverage" />
-  <Button
-      android:id="@+id/Usage"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="15sp"
-      android:text="Benefits Usage" />
+        android:layout_marginTop="15sp"
+        android:text="Benefits Usage" />
 </LinearLayout>

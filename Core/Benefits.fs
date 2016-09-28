@@ -27,11 +27,20 @@ module Benefits
         OutOfNetwork:Network
     }
 
+    type ActiveFrom  = ActiveFrom  of DateTime
+    type ActiveUntil = ActiveUntil of DateTime
+
+    type Efective = {
+        ActiveFrom:ActiveFrom
+        ActiveUntil:ActiveUntil
+    } 
+
     type Summary = {
         Deductable:Deductable
         OutOfPocket:OutOfPocket
         AnnualMaximum:AnnualMaximum
         Networks:Networks
+        Effective:Efective
     }
 
     type MemberPlan =    { Member:IdCard ; Summary:Summary }

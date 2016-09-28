@@ -2,6 +2,7 @@
 
 open Account
 open Benefits
+open System
 
 (*Account Info*)
 let SomeMemberId =    MemberId "some_member_id"
@@ -43,7 +44,10 @@ let summary:Summary = {
     Deductable=SomeDeductable
     OutOfPocket=OutOfPocket     100m
     AnnualMaximum=AnnualMaximum 100m
-    Networks=networks }
+    Networks=networks
+    Effective= { ActiveFrom = ActiveFrom DateTime.Now
+                 ActiveUntil= ActiveUntil (DateTime.Now.AddYears 1) }
+    }
 
 let anonymousCoverage =   { Member=SomeIdCard ; Summary=summary }
 let anonymousOverview =   { Coverage= anonymousCoverage ; Usage=anonymousUsage }
