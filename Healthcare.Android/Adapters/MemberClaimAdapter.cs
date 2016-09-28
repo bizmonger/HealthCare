@@ -39,7 +39,7 @@ namespace Healthcare.Android.Adapters
             dentistLabel.Text = $"{claim.Provider.Name.First} {claim.Provider.Name.Last}";
 
             var serviceLabel = view.FindViewById<TextView>(Resource.Id.ServiceValue);
-            serviceLabel.Text = claim.Service.Item1.ToShortDateString();
+            serviceLabel.Text = claim.Service.Name.Item;
 
             var youPaidLabel = view.FindViewById<TextView>(Resource.Id.YouPaidValue);
             youPaidLabel.Text = "not_implemented";

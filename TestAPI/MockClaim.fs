@@ -5,8 +5,9 @@ open Claims
 open MockMember
 open Benefits
 
-let SomeClaimId = ClaimId "some_claim_id"
-let SomeOffice =  Office  "some_office"
+let SomeClaimId =     ClaimId     "some_claim_id"
+let SomeOffice =      Office      "some_office"
+let SomeServiceName = ServiceName "some_service_name"
 
 let SomeNetwork = { PreventiveAndDiagnostic= PreventiveAndDiagnostic 0
                     Restoration=             Restoration 0
@@ -14,9 +15,17 @@ let SomeNetwork = { PreventiveAndDiagnostic= PreventiveAndDiagnostic 0
                     Periodontics=            Periodontics 0 }
 
 let SomeClaim = {
+
     ClaimId = SomeClaimId
-    Service=Service (DateTime.Now , DateTime.Now.AddMonths(1))
-    Provider={Name=SomeName ; Office= SomeOffice; Network=SomeNetwork}
+
+    Service=  { Name=SomeServiceName
+                FromDate=DateTime.Now
+                ToDate=DateTime.Now.AddMonths(1) }
+
+    Provider= { Name=SomeName
+                Office= SomeOffice
+                Network=SomeNetwork }
+
     Office=SomeOffice
     Network= inNetwork
 }

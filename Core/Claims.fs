@@ -7,13 +7,20 @@ module Claims
 
     type ClaimId = ClaimId of string
 
+    type ServiceName = ServiceName of string
+
     type PaymentDetails = {
         ClaimId:ClaimId
         Paid:decimal
     }
 
-    type Service =  Service  of DateTime * DateTime
-    type Office =   Office   of string
+    type Service =  {
+        FromDate:DateTime
+        ToDate:DateTime
+        Name:ServiceName
+    }
+
+    type Office = Office of string
 
     type ProviderByName = {
         Name:Name

@@ -1,8 +1,5 @@
 using Android.App;
 using Android.OS;
-using Android.Widget;
-using ManageClaims;
-using static MockClaim;
 
 namespace Healthcare.Android
 {
@@ -14,18 +11,9 @@ namespace Healthcare.Android
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.ClaimDetail);
+
+            Load();
             MapCommands();
-        }
-
-        void MapCommands()
-        {
-            _viewModel = new ClaimsDetailViewModel(SomeClaimId, _dispatcher, _repository);
-
-            var paymentDetails = FindViewById<Button>(Resource.Id.PaymentDetails);
-            paymentDetails.Click += (s, e) => _viewModel.ViewPaymentDetails.Execute(null);
-
-            var serviceDetails = FindViewById<Button>(Resource.Id.ServiceDetails);
-            serviceDetails.Click += (s, e) => _viewModel.ViewServiceDetails.Execute(null);
         }
 
         protected override void OnStart()
