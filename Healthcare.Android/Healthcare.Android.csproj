@@ -124,6 +124,14 @@
       <SubType>Code</SubType>
       <DependentUpon>AccountActivity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Activities\Claims\PaymentDetailsActivity.internal.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>PaymentDetailsActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activities\Claims\PaymentDetailsActivity.members.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>PaymentDetailsActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Activities\Claims\ServiceDetailsActivity.internal.cs">
       <SubType>Code</SubType>
       <DependentUpon>ServiceDetailsActivity.cs</DependentUpon>
