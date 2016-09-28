@@ -15,13 +15,13 @@ open TestAPI
 let ``load benefits summary`` () =
 
     // Setup
-    let viewModel = BenefitsOverviewViewModel(MockBenefitsRepository(), Dispatcher() , SomeIdCard)
+    let viewModel = BenefitsOverviewViewModel(SomeMemberId, MockBenefitsRepository(), Dispatcher())
 
     // Test
-    viewModel.Load (SomeMemberId)
+    viewModel.Load()
 
     // Verify
-    viewModel.Overview.Coverage.Member.Name |> should equal SomeName
+    viewModel.Overview.Value.Coverage.Member.Name |> should equal SomeName
 
 [<Test>]
 let ``view benefits plan benefits`` () =
@@ -31,7 +31,8 @@ let ``view benefits plan benefits`` () =
     let dispatcher = Dispatcher()
     dispatcher.PlanRequested.Add (fun _ -> planRequested <- true)
 
-    let viewModel =  BenefitsOverviewViewModel(MockBenefitsRepository(), dispatcher , SomeIdCard)
+    let viewModel =  BenefitsOverviewViewModel(SomeMemberId, MockBenefitsRepository(), dispatcher)
+    viewModel.Load()
 
     // Test
     viewModel.ViewPlan.Execute()
@@ -47,7 +48,8 @@ let ``view benefits coverage`` () =
     let dispatcher = Dispatcher()
     dispatcher.CoverageRequested.Add (fun _ -> coverageRequested <- true)
 
-    let viewModel =  BenefitsOverviewViewModel(MockBenefitsRepository(), dispatcher , SomeIdCard)
+    let viewModel =  BenefitsOverviewViewModel(SomeMemberId, MockBenefitsRepository(), dispatcher)
+    viewModel.Load()
 
     // Test
     viewModel.ViewCoverage.Execute()
@@ -63,7 +65,8 @@ let ``view benefits usage`` () =
     let dispatcher = Dispatcher()
     dispatcher.UsageRequested.Add (fun _ -> usageRequested <- true)
 
-    let viewModel =  BenefitsOverviewViewModel(MockBenefitsRepository(), dispatcher , SomeIdCard)
+    let viewModel =  BenefitsOverviewViewModel(SomeMemberId, MockBenefitsRepository(), dispatcher)
+    viewModel.Load()
 
     // Test
     viewModel.ViewUsage.Execute()

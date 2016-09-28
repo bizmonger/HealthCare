@@ -6,7 +6,7 @@ open Benefits
 open Repositories
 open InteractionLogic
 
-type BenefitsOverviewViewModel(repository:IBenefitsRepository , dispatcher:Dispatcher , account:IdCard) =
+type BenefitsOverviewViewModel(memberId:MemberId , repository:IBenefitsRepository , dispatcher:Dispatcher) =
 
     let deductable = { Total=100m; Spent=50m } 
 
@@ -22,28 +22,25 @@ type BenefitsOverviewViewModel(repository:IBenefitsRepository , dispatcher:Dispa
         OralSurgery=             OralSurgery  100
         Periodontics=            Periodontics 100 }
 
-    let networks = { InNetwork= inNetwork ; OutOfNetwork=outOfNetwork }
+    member val Overview:BenefitsOverview option = None with get,set
 
-    let summary:Summary = {
-        Deductable=deductable
-        OutOfPocket=OutOfPocket     100m
-        AnnualMaximum=AnnualMaximum 100m
-        Networks=networks }
-
-    let usage =    { Deductable=deductable; OutOfPocket=OutOfPocket 100m }
-    let coverage = { Member=account ; Summary=summary }
-    let overview = { Coverage= coverage ; Usage=usage }
-
-    member val Overview = overview with get,set
-
-    member this.Load memberId = 
+    member this.Load() = 
         this.Overview <- repository.GetOverview memberId
 
     member this.ViewPlan =
-        DelegateCommand ( (fun _ -> dispatcher.ViewPlan(account.MemberId)) , fun _ -> true ) :> ICommand
+        DelegateCommand ( (fun _ -> match this.Overview with
+                                    | Some v -> dispatcher.ViewPlan(v.Coverage.Member.MemberId)
+                                    | None   -> ()) , 
+                           fun _ -> true ) :> ICommand
 
     member this.ViewCoverage =
-        DelegateCommand ( (fun _ -> dispatcher.ViewCoverage(account.MemberId)) , fun _ -> true ) :> ICommand
+        DelegateCommand ( (fun _ -> match this.Overview with
+                                    | Some v -> dispatcher.ViewCoverage(v.Coverage.Member.MemberId)
+                                    | None   -> ()) ,  
+                           fun _ -> true ) :> ICommand
 
     member this.ViewUsage =
-        DelegateCommand ( (fun _ -> dispatcher.ViewUsage(account.MemberId)) , fun _ -> true ) :> ICommand
+        DelegateCommand ( (fun _ -> match this.Overview with
+                                    | Some v -> dispatcher.ViewUsage(v.Coverage.Member.MemberId)
+                                    | None   -> ()) ,  
+                           fun _ -> true ) :> ICommand

@@ -1,13 +1,19 @@
 using Android.Widget;
 using ManageBenefits;
+using static MockMember;
 
 namespace Healthcare.Android
 {
     partial class BenefitsActivity
     {
+        void Load()
+        {
+            _viewModel = new BenefitsOverviewViewModel(SomeMemberId, _repository, _dispatcher);
+            _viewModel.Load();
+        }
+
         void MapCommands()
         {
-            _viewModel = new BenefitsOverviewViewModel(_repository, _dispatcher, _account);
             var coverage = FindViewById<Button>(Resource.Id.Coverage);
             coverage.Click += (s, e) => _viewModel.ViewCoverage.Execute(null);
 
