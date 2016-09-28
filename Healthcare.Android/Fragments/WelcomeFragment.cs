@@ -2,16 +2,11 @@ using Android.App;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
-using Home;
-using TestAPI;
-using static MockMember;
 
 namespace Healthcare.Android.Fragments
 {
-    public class WelcomeFragment : Fragment
+    partial class WelcomeFragment : Fragment
     {
-        readonly WelcomeViewModel _viewModel = new WelcomeViewModel(SomeMemberId, new MockProfileRepository());
-
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
