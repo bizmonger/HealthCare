@@ -13,7 +13,7 @@ namespace Healthcare.Android
             var phone = FindViewById<TextView>(Resource.Id.PhoneValue);
             phone.Text = _viewModel.Phone.Item;
 
-            var email = FindViewById<TextView>(Resource.Id.Email);
+            var email = FindViewById<TextView>(Resource.Id.EmailValue);
             email.Text = _viewModel.Email.Item;
         }
     }
