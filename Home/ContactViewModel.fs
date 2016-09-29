@@ -6,7 +6,7 @@ open Account
 open Contact
 open Repositories
 
-type SupportViewModel(memberId , companyId , dispatcher:Dispatcher , companyRepository:ICompanyRepository, claimsRepository:IClaimsRepository) =
+type ContactViewModel(memberId , companyId , dispatcher:Dispatcher , companyRepository:ICompanyRepository, claimsRepository:IClaimsRepository) =
     
     let mutable phone =       Phone ""
     let mutable email =       Email ""

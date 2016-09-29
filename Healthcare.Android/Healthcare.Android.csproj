@@ -146,6 +146,14 @@
       <DependentUpon>CoverageActivity.cs</DependentUpon>
     </Compile>
     <Compile Include="Activities\Account\DependentProfilesActivity.cs" />
+    <Compile Include="Activities\Home\ContactActivity.internal.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>ContactActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activities\Home\ContactActivity.members.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>ContactActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Activities\Home\FAQActivity.cs" />
     <Compile Include="Activities\Home\FindProvidersActivity.cs" />
     <Compile Include="Activities\Home\FindProvidersActivity.internal.cs">

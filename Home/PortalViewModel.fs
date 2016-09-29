@@ -27,3 +27,7 @@ type PortalViewModel(memberId:MemberId , dispatcher:Dispatcher , repository:IBen
     member this.ViewFamilyClaims =
         DelegateCommand( (fun _ -> dispatcher.ViewFamilyClaims memberId) , 
                           fun _ -> true ) :> ICommand
+
+    member this.ViewContactInfo =
+        DelegateCommand( (fun _ -> dispatcher.ViewContact()) , 
+                          fun _ -> true ) :> ICommand

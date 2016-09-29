@@ -45,7 +45,7 @@
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="HomeViewModel.fs" />
     <Compile Include="PortalViewModel.fs" />
-    <Compile Include="SupportViewModel.fs" />
+    <Compile Include="ContactViewModel.fs" />
     <Compile Include="MenuViewModel.fs" />
     <Compile Include="WelcomeViewModel.fs" />
     <Content Include="packages.config" />

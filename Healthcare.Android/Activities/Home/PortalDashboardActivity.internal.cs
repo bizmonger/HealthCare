@@ -39,6 +39,9 @@ namespace Healthcare.Android
 
             var providers = FindViewById<Button>(Resource.Id.Providers);
             providers.Click += (s, e) => _viewModel.ViewProviders.Execute(null);
+
+            var contact = FindViewById<Button>(Resource.Id.Contact);
+            contact.Click += (s, e) => _viewModel.ViewContactInfo.Execute(null);
         }
     }
 }
