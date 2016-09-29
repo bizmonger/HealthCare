@@ -93,6 +93,10 @@
       <SubType>Code</SubType>
       <DependentUpon>PlanActivity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Activities\Benefits\PlanActivity.members.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>PlanActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Activities\Claims\ClaimActivity.internal.cs">
       <SubType>Code</SubType>
       <DependentUpon>ClaimDetailActivity.cs</DependentUpon>

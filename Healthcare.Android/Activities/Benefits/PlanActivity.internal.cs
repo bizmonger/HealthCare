@@ -1,4 +1,5 @@
 using Android.Widget;
+using ManageBenefits;
 
 namespace Healthcare.Android
 {
@@ -6,6 +7,7 @@ namespace Healthcare.Android
     {
         void Load()
         {
+            _viewModel = new BenefitsPlanViewModel(_memberId , _dispatcher);
             var planName = FindViewById<TextView>(Resource.Id.PlanName);
             planName.Text = "need value";
 
