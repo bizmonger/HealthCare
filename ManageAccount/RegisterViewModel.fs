@@ -4,11 +4,11 @@ open System.Windows.Input
 
 open InteractionLogic
 open ValidationTrack
-
 open Account
 open Register
 open SignIn
 open Confirmation
+open Contact
 
 type RegisterViewModel(dispatcher:Dispatcher) =
 

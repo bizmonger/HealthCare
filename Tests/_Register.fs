@@ -11,6 +11,7 @@ open Account
 open ManageAccount
 open Register
 open Confirmation
+open Contact
 
 [<Test>]
 let ``register account`` () =

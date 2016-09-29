@@ -48,6 +48,7 @@
     <Compile Include="IClaimsRepository.fs" />
     <Compile Include="IProfileRepository.fs" />
     <Compile Include="IProvidersRepository.fs" />
+    <Compile Include="ICompanyRepository.fs" />
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

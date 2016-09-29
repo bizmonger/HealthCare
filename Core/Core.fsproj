@@ -45,6 +45,7 @@
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="ValidationTrack.fs" />
     <Compile Include="Settings.fs" />
+    <Compile Include="Contact.fs" />
     <Compile Include="Account.fs" />
     <Compile Include="Benefits.fs" />
     <Compile Include="Claims.fs" />

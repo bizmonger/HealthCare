@@ -2,10 +2,12 @@
 [<System.Diagnostics.DebuggerNonUserCode>]
 module Account
 
-open System
+    open System
+    open Contact
 
-    type MemberId =      MemberId of string
+    type MemberId =      MemberId      of string
     type AccountNumber = AccountNumber of string
+    type CompanyId =     CompanyId     of string
 
     type Name = { 
         First:string
@@ -16,7 +18,6 @@ open System
     type Street =      Street of string
     type City =        City   of string
     type State =       State  of string
-    type PhoneNumber = Phone  of string
 
     type Phones = {
         Home:PhoneNumber
@@ -24,7 +25,6 @@ open System
         Mobile:PhoneNumber
     }
 
-    type Email =       Email       of string
     type DateOfBirth = DateOfBirth of string
     type ZipCode =     ZipCode     of int
 

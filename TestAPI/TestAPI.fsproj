@@ -51,6 +51,7 @@
     <Compile Include="MockProvidersRepository.fs" />
     <Compile Include="MockAccountRepository.fs" />
     <Compile Include="MockMemberSession.fs" />
+    <Compile Include="MockCompanyRepository.fs" />
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

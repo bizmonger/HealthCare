@@ -1,9 +1,10 @@
 ﻿module Register
 
+open System.Diagnostics
 open ValidationTrack
 open SignIn
 open Account
-open System.Diagnostics
+open Contact
 
 (* Types *)
 type Form = { 

@@ -8,6 +8,7 @@ open TestAPI
 open Account
 open ManageAccount
 open Repositories
+open Contact
 
 [<Test>]
 let ``edit profile's email`` () = 

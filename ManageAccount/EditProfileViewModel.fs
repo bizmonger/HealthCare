@@ -5,6 +5,7 @@ open System
 open InteractionLogic
 open Repositories
 open Account
+open Contact
 
 
 type EditProfileViewModel(memberId:MemberId , repository:IProfileRepository) =

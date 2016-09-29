@@ -3,9 +3,10 @@
 open System.Windows.Input
 open InteractionLogic
 open Account
+open Contact
 open Repositories
 
-type SupportViewModel(memberId:MemberId , dispatcher:Dispatcher , repository:IClaimsRepository) =
+type SupportViewModel(memberId , dispatcher:Dispatcher , repository:IClaimsRepository) =
     
     let mutable phone = Phone ""
     let mutable email = Email ""

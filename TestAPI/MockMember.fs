@@ -1,8 +1,9 @@
 ﻿module MockMember
 
+open System
 open Account
 open Benefits
-open System
+open Contact
 
 (*Account Info*)
 let SomeMemberId =    MemberId "some_member_id"
