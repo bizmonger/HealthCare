@@ -33,14 +33,20 @@ module Benefits
     type Efective = {
         ActiveFrom:ActiveFrom
         ActiveUntil:ActiveUntil
-    } 
+    }
+
+    type PlanType =    PlanType    of string
+    type NetworkName = NetworkName of string
+    type GroupNumber = GroupNumber of string
 
     type Summary = {
         Deductable:Deductable
         OutOfPocket:OutOfPocket
         AnnualMaximum:AnnualMaximum
-        Networks:Networks
+        NetworkName:NetworkName
         Effective:Efective
+        PlanType:PlanType
+        GroupNumber:GroupNumber
     }
 
     type MemberPlan =    { Member:IdCard ; Summary:Summary }

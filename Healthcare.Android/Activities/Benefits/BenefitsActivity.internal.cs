@@ -20,13 +20,19 @@ namespace Healthcare.Android
             effectiveUntil.Text = $"{timeline.ActiveUntil.Item}";
 
             var planCoverage = FindViewById<TextView>(Resource.Id.PlanCoverageValue);
-            planCoverage.Text = $"need value";
+            planCoverage.Text = _viewModel.Overview.IsSome()
+                ? _viewModel.Overview.Value.Coverage.Summary.PlanType.Item
+                : "No plan found";
 
             var network = FindViewById<TextView>(Resource.Id.NetworkValue);
-            network.Text = $"need value";
+            network.Text = _viewModel.Overview.IsSome()
+                ? _viewModel.Overview.Value.Coverage.Summary.NetworkName.Item
+                : "No network found";
 
             var groupNumber = FindViewById<TextView>(Resource.Id.GroupNumberValue);
-            groupNumber.Text = $"need value";
+            groupNumber.Text = _viewModel.Overview.IsSome()
+                ? _viewModel.Overview.Value.Coverage.Summary.GroupNumber.Item
+                : "No group found";
         }
 
         void MapCommands()

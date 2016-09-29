@@ -7,7 +7,6 @@ open ValidationTrack
 open Repositories
 open Account
 open Claims
-open Benefits
 open FindProviders
 open Validation
 
@@ -32,9 +31,9 @@ type ProvidersBySpecialtyViewModel(memberId:MemberId , repository:IProvidersRepo
         this.Networks    <- repository.GetNetworks()
         this.Distances   <- repository.GetDistances()
         
-        let searchCriteria = { Specialty=   Specialty this.Specialty
-                               Distance=    Distance  this.Distance
-                               Location=    Location  this.Location
+        let searchCriteria = { Specialty=   Specialty   this.Specialty
+                               Distance=    Distance    this.Distance
+                               Location=    Location    this.Location
                                NetworkName= NetworkName this.Network }
 
         this.ValidationResult <- validateProviderBySpecialty searchCriteria
