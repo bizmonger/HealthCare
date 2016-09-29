@@ -6,10 +6,10 @@ open Account
 open Contact
 open Repositories
 
-type SupportViewModel(memberId , dispatcher:Dispatcher , repository:IClaimsRepository) =
+type SupportViewModel(memberId , companyId , dispatcher:Dispatcher , companyRepository:ICompanyRepository, claimsRepository:IClaimsRepository) =
     
-    let mutable phone = Phone ""
-    let mutable email = Email ""
+    let mutable phone =       Phone ""
+    let mutable email =       Email ""
     let mutable lastService = None
 
     member this.LastService 
@@ -33,4 +33,7 @@ type SupportViewModel(memberId , dispatcher:Dispatcher , repository:IClaimsRepos
                           fun _ -> true ) :> ICommand
 
     member this.Load() =
-        this.LastService <- repository.GetLastService memberId
+        let contact = companyRepository.GetContactInfo companyId
+        this.Phone <- contact.Phone
+        this.Email <- contact.Email
+        this.LastService <- claimsRepository.GetLastService memberId

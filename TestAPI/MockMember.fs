@@ -7,6 +7,8 @@ open Contact
 
 (*Account Info*)
 let SomeMemberId =    MemberId "some_member_id"
+let SomeCompanyId =   CompanyId "some_member_id"
+
 let SomePhone =       Phone "555.555.5555"
 let SomeEmail =       Email "some_name@some_website.com"
 let SomeZipCode =     ZipCode 55555
