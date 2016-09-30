@@ -1,6 +1,7 @@
 
 using Android.App;
 using Android.OS;
+using Android.Widget;
 
 namespace Healthcare.Android
 {
@@ -10,8 +11,10 @@ namespace Healthcare.Android
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            SetContentView(Resource.Layout.FAQ);
 
-            // Create your application here
+            var tips = FindViewById<TextView>(Resource.Id.FAQValue);
+            tips.Text = Utility.LoremIpsum(5, 20, 2, 4, 3);
         }
     }
 }

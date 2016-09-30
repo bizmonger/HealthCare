@@ -1,5 +1,6 @@
 using Android.App;
 using Android.OS;
+using Android.Widget;
 
 namespace Healthcare.Android
 {
@@ -10,7 +11,10 @@ namespace Healthcare.Android
         {
             base.OnCreate(savedInstanceState);
 
-            // Create your application here
+            SetContentView(Resource.Layout.Tips);
+
+            var tips = FindViewById<TextView>(Resource.Id.TipsValue);
+            tips.Text = Utility.LoremIpsum(5, 20, 2, 4, 3);
         }
     }
 }
