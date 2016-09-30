@@ -81,13 +81,6 @@
             android:layout_marginTop="5sp"
             android:layout_centerHorizontal="true"
             android:text="Network Benefits:" />
-        <TextView
-            android:id="@+id/NetworkBenefitsValue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5sp"
-            android:layout_centerHorizontal="true"
-            android:text="need value" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
