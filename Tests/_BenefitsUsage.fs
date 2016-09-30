@@ -17,7 +17,7 @@ let ``load in benefits usage`` () =
     viewModel.Load()
 
     // Verify
-    viewModel.InNetworkUsage |> should equal anonymousUsage
+    viewModel.InNetworkUsage |> should equal (Some anonymousUsage)
 
 [<Test>]
 let ``load out of network info`` () =
@@ -29,7 +29,7 @@ let ``load out of network info`` () =
     viewModel.Load()
 
     // Verify
-    viewModel.OutOfNetworkNetworkUsage |> should equal anonymousUsage
+    viewModel.OutOfNetworkNetworkUsage |> should equal (Some anonymousUsage)
 
 [<Test>]
 let ``load members`` () =

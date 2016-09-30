@@ -43,18 +43,25 @@ let SomeDeductable =  { Total=100m; Spent=50m }
 let anonymousUsage =  { Deductable=SomeDeductable; OutOfPocket=OutOfPocket 100m }
 let networks =        { InNetwork= inNetwork ; OutOfNetwork=outOfNetwork }
 let SomeNetwork =     NetworkName "some_network_name"
+
+let SomeNetworkCoverage = { PreventiveAndDiagnostic=PreventiveAndDiagnostic 50
+                            Restoration=Restoration 50
+                            OralSurgery=OralSurgery 50
+                            Periodontics=Periodontics 50 }
+
 let SomePlanType =    PlanType "some_plan_type"
 let SomeGroupNumber = GroupNumber "some_group_number"
 
 let summary:Summary = {
-    Deductable=    SomeDeductable
-    OutOfPocket=   OutOfPocket     100m
-    AnnualMaximum= AnnualMaximum 100m
-    NetworkName=   SomeNetwork
-    PlanType=      SomePlanType
-    GroupNumber=   SomeGroupNumber
-    Effective=     { ActiveFrom = ActiveFrom DateTime.Now
-                     ActiveUntil= ActiveUntil (DateTime.Now.AddYears 1) }
+    Deductable=      SomeDeductable
+    OutOfPocket=     OutOfPocket     100m
+    AnnualMaximum=   AnnualMaximum 100m
+    NetworkName=     SomeNetwork
+    NetworkCoverage= SomeNetworkCoverage
+    PlanType=        SomePlanType
+    GroupNumber=     SomeGroupNumber
+    Effective=       { ActiveFrom = ActiveFrom DateTime.Now
+                       ActiveUntil= ActiveUntil (DateTime.Now.AddYears 1) }
     }
 
 let anonymousCoverage =   { Member=SomeIdCard ; Summary=summary }

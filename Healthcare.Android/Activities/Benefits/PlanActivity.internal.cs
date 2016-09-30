@@ -1,5 +1,6 @@
 using Android.Widget;
 using ManageBenefits;
+using TestAPI;
 
 namespace Healthcare.Android
 {
@@ -7,36 +8,50 @@ namespace Healthcare.Android
     {
         void Load()
         {
-            _viewModel = new BenefitsPlanViewModel(_memberId , _dispatcher);
-            var planName = FindViewById<TextView>(Resource.Id.PlanName);
-            planName.Text = "need value";
+            _viewModel = new BenefitsPlanViewModel(_memberId, _dispatcher, new MockBenefitsRepository());
 
-            var planHighlights = FindViewById<TextView>(Resource.Id.PlanHighlights);
-            planHighlights.Text = "need value";
+            _viewModel.Load();
+            var summary = _viewModel.Summary.Value;
+
+            var planName = FindViewById<TextView>(Resource.Id.PlanName);
+            planName.Text = _viewModel.Summary.IsSome()
+                           ? summary.PlanType.Item
+                           : "no plan exists";
 
             var deductable = FindViewById<TextView>(Resource.Id.DeductableValue);
-            deductable.Text = "need value";
+            deductable.Text = _viewModel.Summary.IsSome()
+                           ? summary.Deductable.Total.ToString("C2")
+                           : "no deductable exists";
 
             var outOfPocket = FindViewById<TextView>(Resource.Id.OutOfPockerValue);
-            outOfPocket.Text = "need value";
+            outOfPocket.Text = _viewModel.Summary.IsSome()
+                           ? summary.OutOfPocket.Item.ToString("C2")
+                           : "no out of pocket exists";
 
             var annualMaximum = FindViewById<TextView>(Resource.Id.AnualMaximumValue);
-            annualMaximum.Text = "need value";
-
-            var networkBenefits = FindViewById<TextView>(Resource.Id.NetworkBenefitsValue);
-            networkBenefits.Text = "need value";
+            annualMaximum.Text = _viewModel.Summary.IsSome()
+                           ? summary.AnnualMaximum.Item.ToString("C2")
+                           : "no annual maximum exists";
 
             var preventiveAndDiagnostic = FindViewById<TextView>(Resource.Id.PreventiveAndDiagnosticValue);
-            preventiveAndDiagnostic.Text = "need value";
+            preventiveAndDiagnostic.Text = _viewModel.Summary.IsSome()
+                           ? $"{summary.NetworkCoverage.PreventiveAndDiagnostic.Item}%"
+                           : "no preventive and diagnostic exists";
 
             var restoration = FindViewById<TextView>(Resource.Id.RestorationValue);
-            restoration.Text = "need value";
+            restoration.Text = _viewModel.Summary.IsSome()
+                           ? $"{summary.NetworkCoverage.Restoration.Item}%"
+                           : "no restoration exists";
 
             var oralSurgery = FindViewById<TextView>(Resource.Id.OralSurgeryValue);
-            oralSurgery.Text = "need value";
+            oralSurgery.Text = _viewModel.Summary.IsSome()
+                           ? $"{summary.NetworkCoverage.OralSurgery.Item}%"
+                           : "no oral surgery exists";
 
             var periodontics = FindViewById<TextView>(Resource.Id.PeriodonticsValue);
-            periodontics.Text = "need value";
+            periodontics.Text = _viewModel.Summary.IsSome()
+                           ? $"{summary.NetworkCoverage.Periodontics.Item}%"
+                           : "no periodontics exists";
         }
     }
 }

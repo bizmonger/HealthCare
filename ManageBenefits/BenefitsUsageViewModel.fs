@@ -6,13 +6,10 @@ open Benefits
 open Repositories
 
 type BenefitsUsageViewModel(memberId , repository:IBenefitsRepository) =
-    
-    let deductable = { Total= 0m; Spent=0m }
-    let outOfPocket = OutOfPocket 0m
 
-    member val InNetworkUsage =           { Deductable= deductable; OutOfPocket=outOfPocket } with get,set
-    member val OutOfNetworkNetworkUsage = { Deductable= deductable; OutOfPocket=outOfPocket } with get,set
-    member val Members = seq [] with get,set
+    member val InNetworkUsage =           None with get,set
+    member val OutOfNetworkNetworkUsage = None with get,set
+    member val Members =                  seq [] with get,set
 
     member this.Load() =
         this.InNetworkUsage           <- repository.GetUsage memberId

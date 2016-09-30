@@ -11,9 +11,9 @@ module Benefits
     type AnnualMaximum = AnnualMaximum of decimal
 
     type PreventiveAndDiagnostic = PreventiveAndDiagnostic of int
-    type Restoration =  Restoration  of int
-    type OralSurgery =  OralSurgery  of int
-    type Periodontics = Periodontics of int
+    type Restoration =             Restoration  of int
+    type OralSurgery =             OralSurgery  of int
+    type Periodontics =            Periodontics of int
 
     type Network = { 
         PreventiveAndDiagnostic:PreventiveAndDiagnostic
@@ -44,6 +44,7 @@ module Benefits
         OutOfPocket:OutOfPocket
         AnnualMaximum:AnnualMaximum
         NetworkName:NetworkName
+        NetworkCoverage:Network
         Effective:Efective
         PlanType:PlanType
         GroupNumber:GroupNumber
