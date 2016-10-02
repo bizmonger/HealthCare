@@ -237,6 +237,7 @@
     <Compile Include="Activities\Home\RegisterActivity.cs" />
     <Compile Include="Activities\Home\PortalDashboardActivity.cs" />
     <Compile Include="Activities\Claims\MemberClaimsActivity.cs" />
+    <Compile Include="RepositoryFactory.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Activities\Home\SignInActivity.cs" />

@@ -10,6 +10,7 @@ namespace Healthcare.Android
         public MainActivity()
         {
             _viewModel = new HomeViewModel(_dispatcher);
+            var repositoryFactory = new RepositoryFactory(isIntegration:false);
         }
 
         protected override void OnCreate(Bundle savedInstanceState)
