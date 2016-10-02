@@ -52,7 +52,7 @@ let SomeNetworkCoverage = { PreventiveAndDiagnostic=PreventiveAndDiagnostic 50
 let SomePlanType =    PlanType "some_plan_type"
 let SomeGroupNumber = GroupNumber "some_group_number"
 
-let summary:Summary = {
+let anonymousSummary:Summary = {
     Deductable=      SomeDeductable
     OutOfPocket=     OutOfPocket     100m
     AnnualMaximum=   AnnualMaximum 100m
@@ -64,7 +64,7 @@ let summary:Summary = {
                        ActiveUntil= ActiveUntil (DateTime.Now.AddYears 1) }
     }
 
-let anonymousCoverage =   { Member=SomeIdCard ; Summary=summary }
+let anonymousCoverage =   { Member=SomeIdCard ; Summary=anonymousSummary }
 let anonymousOverview =   { Coverage= anonymousCoverage ; Usage=anonymousUsage }
 let SomeMembers =         seq [SomeIdCard ; SomeIdCard ; SomeIdCard]
 let SomeMemberCoverages = seq [anonymousCoverage ; anonymousCoverage ; anonymousCoverage]

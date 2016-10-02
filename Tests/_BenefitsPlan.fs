@@ -22,7 +22,6 @@ let ``view in network`` () =
     // Verify
     inNetworkRequested |> should equal true
 
-
 [<Test>]
 let ``view out of network`` () =
 
@@ -97,5 +96,15 @@ let ``view periodontics`` () =
 
     // Verify
     periodonticsRequested |> should equal true
-    
 
+[<Test>]
+let ``load viewmodel`` () =
+
+    // Setup
+    let viewModel = new BenefitsPlanViewModel(SomeMemberId , Dispatcher(), MockBenefitsRepository())
+
+    // Test
+    viewModel.Load()
+
+    // Verify
+    viewModel.Summary |> should equal (Some anonymousSummary)
