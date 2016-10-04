@@ -5,8 +5,7 @@ module Claims
     open Account
     open Benefits
 
-    type ClaimId = ClaimId of string
-
+    type ClaimId =     ClaimId     of string
     type ServiceName = ServiceName of string
 
     type PaymentDetails = {
@@ -29,10 +28,9 @@ module Claims
     }
 
     type NetworkName = NetworkName of string
-
-    type Specialty = Specialty of string
-    type Distance =  Distance  of int
-    type Location =  Location  of string
+    type Distance =    Distance    of int
+    type Specialty =   Specialty   of string
+    type Location =    Location    of string
 
     type ProviderBySpecialty = {
         Specialty:Specialty
