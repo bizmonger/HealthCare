@@ -53,8 +53,10 @@ module Claims
         { ClaimId:ClaimId
           ProviderCharged:decimal
           NetworkDiscount:decimal
-          InsurancePaid:decimal
-        } member this.YourPay() = this.ProviderCharged - this.NetworkDiscount - this.InsurancePaid
+          InsurancePaid:decimal } 
+
+          member this.YourPay() = 
+            this.ProviderCharged - this.NetworkDiscount - this.InsurancePaid
 
     type ProvidersCharged = ProvidersCharged of decimal
     type InsuranceSavings = InsuranceSavings of decimal
@@ -63,8 +65,9 @@ module Claims
         { Member:IdCard
           Claims:Claim seq
           ProvidersCharged:ProvidersCharged
-          InsuranceSavings:InsuranceSavings 
-        } member this.TotalSavings() =
+          InsuranceSavings:InsuranceSavings } 
+          
+          member this.TotalSavings() =
             let (ProvidersCharged charged) = this.ProvidersCharged
             let (InsuranceSavings savings) = this.InsuranceSavings
             charged - savings
