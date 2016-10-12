@@ -1,6 +1,5 @@
 using Android.Widget;
 using ManageBenefits;
-using static MockMember;
 
 namespace Healthcare.Android
 {
@@ -8,7 +7,6 @@ namespace Healthcare.Android
     {
         void Load()
         {
-            _viewModel = new BenefitsOverviewViewModel(SomeMemberId, _repository, _dispatcher);
             _viewModel.Load();
 
             var timeline = _viewModel.Overview.Value.Coverage.Summary.Effective;
@@ -33,6 +31,15 @@ namespace Healthcare.Android
             groupNumber.Text = _viewModel.Overview.IsSome()
                 ? _viewModel.Overview.Value.Coverage.Summary.GroupNumber.Item
                 : "No group found";
+        }
+
+        void CreateViewModel()
+        {
+            var factory = new RepositoryFactory(Global.IsIntegrated);
+            var memberId = factory.GetMemberId();
+            var repository = factory.CreateBenefitsRepository();
+
+            _viewModel = new BenefitsOverviewViewModel(memberId, repository, _dispatcher);
         }
 
         void MapCommands()

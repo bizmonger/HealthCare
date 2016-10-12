@@ -12,6 +12,7 @@ namespace Healthcare.Android
 
             SetContentView(Resource.Layout.Benefits);
 
+            CreateViewModel();
             Load();
             MapCommands();
         }
