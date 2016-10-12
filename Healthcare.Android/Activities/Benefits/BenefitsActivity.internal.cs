@@ -5,6 +5,15 @@ namespace Healthcare.Android
 {
     partial class BenefitsActivity
     {
+        void CreateViewModel()
+        {
+            var factory = new RepositoryFactory(Global.IsIntegrated);
+            var memberId = factory.GetMemberId();
+            var repository = factory.CreateBenefitsRepository();
+
+            _viewModel = new BenefitsOverviewViewModel(memberId, repository, _dispatcher);
+        }
+
         void Load()
         {
             _viewModel.Load();
@@ -31,15 +40,6 @@ namespace Healthcare.Android
             groupNumber.Text = _viewModel.Overview.IsSome()
                 ? _viewModel.Overview.Value.Coverage.Summary.GroupNumber.Item
                 : "No group found";
-        }
-
-        void CreateViewModel()
-        {
-            var factory = new RepositoryFactory(Global.IsIntegrated);
-            var memberId = factory.GetMemberId();
-            var repository = factory.CreateBenefitsRepository();
-
-            _viewModel = new BenefitsOverviewViewModel(memberId, repository, _dispatcher);
         }
 
         void MapCommands()

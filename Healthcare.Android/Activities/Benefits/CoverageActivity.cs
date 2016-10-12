@@ -1,8 +1,5 @@
 ﻿using Android.App;
 using Android.OS;
-using ManageBenefits;
-using TestAPI;
-using static MockMember;
 
 namespace Healthcare.Android
 {
@@ -15,7 +12,7 @@ namespace Healthcare.Android
 
             SetContentView(Resource.Layout.Coverage);
 
-            _viewModel = new CoverageViewModel(SomeMemberId, new MockBenefitsRepository());
+            CreateViewModel();
             LoadListView();
         }
     }
