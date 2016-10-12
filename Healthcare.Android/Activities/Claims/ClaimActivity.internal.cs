@@ -1,14 +1,25 @@
 using Android.Widget;
 using ManageClaims;
-using static MockClaim;
+using static Claims;
 
 namespace Healthcare.Android
 {
     partial class ClaimDetailActivity
     {
+        void CreateViewModel()
+        {
+            var factory = new RepositoryFactory(Global.IsIntegrated);
+            var repository = factory.CreateClaimsRepository();
+
+            var claimId = !string.IsNullOrEmpty(Intent.GetStringExtra("ClaimIdKey"))
+                          ? Intent.GetStringExtra("ClaimIdKey")
+                          : "no_claim_found";
+
+            _viewModel = new ClaimsDetailViewModel(ClaimId.NewClaimId(claimId), _dispatcher, repository);
+        }
+
         void Load()
         {
-            _viewModel = new ClaimsDetailViewModel(SomeClaimId, _dispatcher, _repository);
             _viewModel.Load();
 
             var serviceLabel = FindViewById<TextView>(Resource.Id.ServiceValue);

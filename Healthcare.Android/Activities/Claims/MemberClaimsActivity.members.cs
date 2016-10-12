@@ -1,7 +1,5 @@
-using ManageClaims;
 using InteractionLogic;
-using TestAPI;
-using Repositories;
+using ManageClaims;
 
 namespace Healthcare.Android
 {
@@ -9,6 +7,5 @@ namespace Healthcare.Android
     {
         MemberClaimsSummaryViewModel _viewModel;
         Dispatcher _dispatcher = Global.Dispatcher;
-        readonly IClaimsRepository _repository = new MockClaimsRepository();
     }
 }

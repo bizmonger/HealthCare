@@ -4,15 +4,23 @@ using ManageClaims;
 using System.Collections.Generic;
 using System.Linq;
 using static Claims;
-using static MockMember;
 
 namespace Healthcare.Android
 {
     partial class MemberClaimsActivity
     {
+        void CreateViewModel()
+        {
+            var factory = new RepositoryFactory(Global.IsIntegrated);
+            var memberId = factory.GetMemberId();
+            var repository = factory.CreateClaimsRepository();
+
+            _viewModel = new MemberClaimsSummaryViewModel(memberId, _dispatcher, repository);
+        }
+
         void Load()
         {
-            _viewModel = new MemberClaimsSummaryViewModel(SomeMemberId, _dispatcher, _repository);
+            CreateViewModel();
             _viewModel.Load();
 
             var memberSummary = FindViewById<TextView>(Resource.Id.MemberSummaryValue);

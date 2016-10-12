@@ -3,9 +3,7 @@ using Healthcare.Android.Adapters;
 using ManageClaims;
 using System.Collections.Generic;
 using System.Linq;
-using TestAPI;
 using static Claims;
-using static MockMember;
 
 namespace Healthcare.Android
 {
@@ -20,9 +18,18 @@ namespace Healthcare.Android
         void OnMemberClaimsRequested(object sender, object e) =>
             StartActivity(typeof(MemberClaimsActivity));
 
+        void CreateViewModel()
+        {
+            var factory = new RepositoryFactory(Global.IsIntegrated);
+            var memberId = factory.GetMemberId();
+            var repository = factory.CreateClaimsRepository();
+
+            _viewModel = new ClaimsSummaryViewModel(memberId, _dispatcher, repository);
+        }
+
         void Load()
         {
-            _viewModel = new ClaimsSummaryViewModel(SomeMemberId, _dispatcher, new MockClaimsRepository());
+            CreateViewModel();
             _viewModel.Load();
 
             var familySummary = FindViewById<TextView>(Resource.Id.FamilySummaryValue);
@@ -50,11 +57,11 @@ namespace Healthcare.Android
             listview.Adapter = new ClaimSummaryAdapter(this, new List<ClaimsSummary>(_viewModel.DependentSummaries));
 
             listview.ItemClick += (s, e) =>
-                {
-                    var item = listview.GetItemAtPosition(e.Position).Cast<ClaimsSummary>();
-                    _viewModel.SetDependentSummary(item);
-                    _viewModel.ViewClaims.Execute(null);
-                };
+            {
+                var item = listview.GetItemAtPosition(e.Position).Cast<ClaimsSummary>();
+                _viewModel.SetDependentSummary(item);
+                _viewModel.ViewClaims.Execute(null);
+            };
         }
     }
 }
