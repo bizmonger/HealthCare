@@ -17,7 +17,7 @@ namespace Healthcare.Android
             enableHomeAccess.Click += (s, e) => _viewModel.EnableHomeAccess.Execute(null);
         }
 
-        void PrepareViewModel()
+        void CreateViewModel()
         {
             var factory = new RepositoryFactory(Global.IsIntegrated);
             var repository = factory.CreateProfileRepository();
