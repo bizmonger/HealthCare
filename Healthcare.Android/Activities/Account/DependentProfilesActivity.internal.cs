@@ -4,7 +4,6 @@ using ManageAccount;
 using System.Collections.Generic;
 using TestAPI;
 using static Account;
-using static MockMember;
 
 namespace Healthcare.Android
 {
@@ -15,9 +14,15 @@ namespace Healthcare.Android
 
         void OnProfileRequested(object sender, object e) => StartActivity(typeof(ProfileActivity));
 
+        void CreateViewModel()
+        {
+            var factory = new RepositoryFactory(Global.IsIntegrated);
+            _memberId = factory.GetMemberId();
+            _viewModel = new DependentProfilesViewModel(_memberId, _dispatcher, new MockProfileRepository());
+        }
+
         void LoadListView()
         {
-            _viewModel = new DependentProfilesViewModel(SomeMemberId, _dispatcher, new MockProfileRepository());
             _viewModel.Load();
 
             var listview = FindViewById<ListView>(Resource.Id.Dependents);

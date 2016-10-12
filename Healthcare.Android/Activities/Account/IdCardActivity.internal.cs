@@ -7,8 +7,6 @@ namespace Healthcare.Android
     {
         void MapCommands()
         {
-            PrepareViewModel();
-
             var print = FindViewById<Button>(Resource.Id.Print);
             print.Click += (s, e) => _viewModel.Print.Execute(null);
 

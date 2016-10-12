@@ -1,5 +1,5 @@
-using System;
 using Android.Widget;
+using System;
 
 namespace Healthcare.Android
 {
@@ -7,8 +7,6 @@ namespace Healthcare.Android
     {
         void MapCommands()
         {
-            _viewModel = new ManageAccount.AccountViewModel(_memberId, _dispatcher);
-
             var myProfile = FindViewById<Button>(Resource.Id.MyProfile);
             myProfile.Click += (s, e) => _viewModel.ViewProfile.Execute(null);
 
@@ -17,6 +15,14 @@ namespace Healthcare.Android
 
             var loginSettings = FindViewById<Button>(Resource.Id.LoginSettings);
             loginSettings.Click += (s, e) => _viewModel.ViewLoginSettings.Execute(null);
+        }
+
+        void CreateViewModel()
+        {
+            var factory = new RepositoryFactory(Global.IsIntegrated);
+            _memberId = factory.GetMemberId();
+
+            _viewModel = new ManageAccount.AccountViewModel(_memberId, _dispatcher);
         }
 
         void MapNavigations()
