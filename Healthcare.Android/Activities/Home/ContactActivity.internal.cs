@@ -5,9 +5,19 @@ namespace Healthcare.Android
 {
     partial class ContactActivity
     {
+        void CreateViewModel()
+        {
+            var factory = new RepositoryFactory(Global.IsIntegrated);
+            var memberId = factory.GetMemberId();
+            var companyRepository = factory.CreateCompanyRepository();
+            var companyId = companyRepository.GetCompanyId(memberId);
+            var claimsRepository = factory.CreateClaimsRepository();
+
+            _viewModel = new ContactViewModel(memberId, companyId, _dispatcher, companyRepository, claimsRepository);
+        }
+
         void Load()
         {
-            _viewModel = new ContactViewModel(_memberId, _companyId, _dispatcher, _companyRepository, _claimsRepository);
             _viewModel.Load();
 
             var phone = FindViewById<TextView>(Resource.Id.PhoneValue);

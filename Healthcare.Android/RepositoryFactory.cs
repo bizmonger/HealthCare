@@ -23,6 +23,9 @@ namespace Healthcare.Android
         public IClaimsRepository CreateClaimsRepository() =>
             !_isIntegration ? new MockClaimsRepository() : null;
 
+        public ICompanyRepository CreateCompanyRepository() =>
+            !_isIntegration ? new MockCompanyRepository() : null;
+
         public IProfileRepository CreateProfileRepository() =>
             !_isIntegration ? new MockProfileRepository() : null;
     }
