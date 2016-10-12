@@ -20,9 +20,9 @@ namespace Healthcare.Android
         void CreateViewModel()
         {
             var factory = new RepositoryFactory(Global.IsIntegrated);
-            _memberId = factory.GetMemberId();
+            var memberId = factory.GetMemberId();
 
-            _viewModel = new ManageAccount.AccountViewModel(_memberId, _dispatcher);
+            _viewModel = new ManageAccount.AccountViewModel(memberId, _dispatcher);
         }
 
         void MapNavigations()

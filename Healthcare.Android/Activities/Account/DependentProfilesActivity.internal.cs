@@ -17,8 +17,8 @@ namespace Healthcare.Android
         void CreateViewModel()
         {
             var factory = new RepositoryFactory(Global.IsIntegrated);
-            _memberId = factory.GetMemberId();
-            _viewModel = new DependentProfilesViewModel(_memberId, _dispatcher, new MockProfileRepository());
+            var memberId = factory.GetMemberId();
+            _viewModel = new DependentProfilesViewModel(memberId, _dispatcher, new MockProfileRepository());
         }
 
         void LoadListView()
