@@ -1,6 +1,5 @@
 using Android.Widget;
 using ManageBenefits;
-using TestAPI;
 
 namespace Healthcare.Android
 {
@@ -8,8 +7,6 @@ namespace Healthcare.Android
     {
         void Load()
         {
-            _viewModel = new BenefitsPlanViewModel(_memberId, _dispatcher, new MockBenefitsRepository());
-
             _viewModel.Load();
             var summary = _viewModel.Summary.Value;
 
@@ -52,6 +49,15 @@ namespace Healthcare.Android
             periodontics.Text = _viewModel.Summary.IsSome()
                            ? $"{summary.NetworkCoverage.Periodontics.Item}%"
                            : "no periodontics exists";
+        }
+
+        void CreateViewModel()
+        {
+            var factory = new RepositoryFactory(Global.IsIntegrated);
+            var memberId = factory.GetMemberId();
+            var repository = factory.CreateBenefitsRepository();
+
+            _viewModel = new BenefitsPlanViewModel(memberId, _dispatcher, repository);
         }
     }
 }

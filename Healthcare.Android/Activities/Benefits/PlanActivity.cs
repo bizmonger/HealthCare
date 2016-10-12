@@ -12,6 +12,8 @@ namespace Healthcare.Android
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.Plan);
+
+            CreateViewModel();
             Load();
         }
     }
