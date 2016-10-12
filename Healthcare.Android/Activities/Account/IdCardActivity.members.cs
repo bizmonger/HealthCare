@@ -9,6 +9,6 @@ namespace Healthcare.Android
     {
         IdCardViewModel _viewModel;
         Dispatcher _dispatcher = Global.Dispatcher;
-        IdCard _idCard = SomeIdCard;
+        MemberId _memberId = SomeMemberId;
     }
 }

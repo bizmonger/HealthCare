@@ -12,7 +12,10 @@ namespace Healthcare.Android
             _isIntegration = isIntegration;
         }
 
-        IBenefitsRepository CreateBenefitsRepository() =>
+        public IBenefitsRepository CreateBenefitsRepository() =>
             !_isIntegration ? new MockBenefitsRepository() : null;
+
+        public IProfileRepository CreateProfileRepository() =>
+            !_isIntegration ? new MockProfileRepository() : null;
     }
 }

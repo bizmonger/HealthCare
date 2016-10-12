@@ -26,7 +26,7 @@ namespace Healthcare.Android
 
             for (int p = 0; p < numParagraphs; p++)
             {
-                result.Append("<p>");
+                result.Append("\n");
                 for (int s = 0; s < numSentences; s++)
                 {
                     for (int w = 0; w < numWords; w++)
@@ -36,7 +36,7 @@ namespace Healthcare.Android
                     }
                     result.Append(". ");
                 }
-                result.Append("</p>");
+                result.Append("\n");
             }
 
             return result.ToString();
