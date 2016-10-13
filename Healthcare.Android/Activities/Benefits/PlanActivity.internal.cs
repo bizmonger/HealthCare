@@ -53,7 +53,7 @@ namespace Healthcare.Android
 
         void CreateViewModel()
         {
-            var factory = new RepositoryFactory(Global.IsIntegrated);
+            var factory = new DependencyFactory(Global.IsIntegrated);
             var memberId = factory.GetMemberId();
             var repository = factory.CreateBenefitsRepository();
 

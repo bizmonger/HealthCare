@@ -5,11 +5,11 @@ using static MockMember;
 
 namespace Healthcare.Android
 {
-    class RepositoryFactory
+    class DependencyFactory
     {
         readonly bool _isIntegration;
 
-        public RepositoryFactory(bool isIntegration)
+        public DependencyFactory(bool isIntegration)
         {
             _isIntegration = isIntegration;
         }

@@ -7,7 +7,7 @@ namespace Healthcare.Android
     {
         void CreateViewModel()
         {
-            var factory = new RepositoryFactory(Global.IsIntegrated);
+            var factory = new DependencyFactory(Global.IsIntegrated);
             var memberId = factory.GetMemberId();
             var repository = factory.CreateBenefitsRepository();
             _viewModel = new PortalViewModel(memberId, _dispatcher, repository);
@@ -34,8 +34,6 @@ namespace Healthcare.Android
 
         void MapCommands()
         {
-            CreateViewModel();
-
             var idCard = FindViewById<Button>(Resource.Id.IdCard);
             idCard.Click += (s, e) => _viewModel.ViewIdCard.Execute(null);
 

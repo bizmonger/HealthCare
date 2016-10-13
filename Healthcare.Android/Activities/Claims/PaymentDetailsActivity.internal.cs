@@ -8,7 +8,7 @@ namespace Healthcare.Android
     {
         void CreateViewModel()
         {
-            var factory = new RepositoryFactory(Global.IsIntegrated);
+            var factory = new DependencyFactory(Global.IsIntegrated);
             var repository = factory.CreateClaimsRepository();
 
             var claimId = !string.IsNullOrEmpty(Intent.GetStringExtra("ClaimIdKey"))
