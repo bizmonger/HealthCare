@@ -1,9 +1,5 @@
 ﻿using Home;
 using InteractionLogic;
-using Repositories;
-using TestAPI;
-using static Account;
-using static MockMember;
 
 namespace Healthcare.Android
 {
@@ -11,7 +7,5 @@ namespace Healthcare.Android
     {
         PortalViewModel _viewModel;
         Dispatcher _dispatcher = Global.Dispatcher;
-        MemberId _memberId = SomeMemberId;
-        IBenefitsRepository _repository = new MockBenefitsRepository();
     }
 }

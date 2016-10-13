@@ -5,6 +5,14 @@ namespace Healthcare.Android
 {
     partial class PortalDashboardActivity
     {
+        void CreateViewModel()
+        {
+            var factory = new RepositoryFactory(Global.IsIntegrated);
+            var memberId = factory.GetMemberId();
+            var repository = factory.CreateBenefitsRepository();
+            _viewModel = new PortalViewModel(memberId, _dispatcher, repository);
+        }
+
         void MapNavigations()
         {
             _dispatcher.IdRequested += OnIdRequested;
@@ -26,7 +34,7 @@ namespace Healthcare.Android
 
         void MapCommands()
         {
-            _viewModel = new PortalViewModel(_memberId, _dispatcher, _repository);
+            CreateViewModel();
 
             var idCard = FindViewById<Button>(Resource.Id.IdCard);
             idCard.Click += (s, e) => _viewModel.ViewIdCard.Execute(null);
