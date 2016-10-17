@@ -5,9 +5,9 @@ open ValidationTrack
 open FindProviders
 open Claims
 
-let validateProviderByName (provider:ProviderByName) =
+let validateProviderByName provider =
 
-    let validateName (provider:ProviderByName) =
+    let validateName provider =
         match provider.Name with
         | { First=""; Middle=_; Last=_ } -> Failure FirstNameRequired
         | { First=_; Middle=_; Last="" } -> Failure LastNameRequired
@@ -19,19 +19,19 @@ let validateProviderByName (provider:ProviderByName) =
     let validate = validateName >> bind validateOffice
     validate provider
 
-let validateProviderBySpecialty (provider:ProviderBySpecialty) =
+let validateProviderBySpecialty provider =
 
     let validateSpecialty provider = match provider.Specialty with 
                                      | Specialty v -> v |> failOnEmpty provider SpecialtyRequired
 
-    let validateNetwork provider = match provider.NetworkName with 
-                                   | NetworkName v -> v |> failOnEmpty provider NetworkRequired
-
-    let validateDistance provider = match provider.Distance with 
-                                    | Distance v -> if v <= 0
-                                                    then Failure DistanceRequired
-                                                    else Success provider
-
+    let validateNetwork provider   = match provider.NetworkName with 
+                                     | NetworkName v -> v |> failOnEmpty provider NetworkRequired
+                                       
+    let validateDistance provider  = match provider.Distance with 
+                                     | Distance v -> if v <= 0
+                                                     then Failure DistanceRequired
+                                                     else Success provider
+                                     
     let validateLocation provider = match provider.Location with 
                                     | Location v -> v |> failOnEmpty provider LocationRequired
 

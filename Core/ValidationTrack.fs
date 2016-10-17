@@ -10,7 +10,7 @@ let bind switchFunction twoTrackInput =
     | Success s -> switchFunction s
     | Failure f -> Failure f
 
-let failOnEmpty container error field =
-    if field = "" 
+let failOnEmpty container error entry =
+    if entry = "" 
     then Failure error
     else Success container
