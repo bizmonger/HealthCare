@@ -12,16 +12,15 @@ open Validation
 
 type ProvidersBySpecialtyViewModel(memberId:MemberId , repository:IProvidersRepository) =
 
-    member val Specialty = ""     with get,set
-    member val Distance =  0      with get,set
-    member val Network =   ""     with get,set
-    member val Location =  ""     with get,set
+    member val Specialty = "" with get,set
+    member val Distance =  0  with get,set
+    member val Network =   "" with get,set
+    member val Location =  "" with get,set
 
     member val Specialties = seq [] with get,set
     member val Networks =    seq [] with get,set
     member val Distances =   seq [] with get,set
-
-    member val Providers = seq [] with get,set
+    member val Providers =   seq [] with get,set
 
     member val ValidationResult = Failure ProvidersBySpecialtyResponse.NA with get,set
 
