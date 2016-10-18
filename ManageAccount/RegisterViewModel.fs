@@ -43,9 +43,8 @@ type RegisterViewModel(dispatcher:Dispatcher) =
         let dob = DateOfBirth this.DateOfBirth
         let zip = this.Zipcode
 
-        let onFormUpdated form = 
-            match form with
-            | Success form   -> if box (dispatcher.RegistrationIsValid) <> null
+        let onFormUpdated = function
+            | Success form   -> if not (box (dispatcher.RegistrationIsValid) |> isNull)
                                 then dispatcher.RegistrationIsValid(this, form)
                                 else ()
 

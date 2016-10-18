@@ -16,8 +16,7 @@ let validateProviderByName provider =
     let validateOffice (provider:ProviderByName) =
         match provider.Office with Office v -> v |> failOnEmpty provider OfficeRequired
 
-    let validate = validateName >> bind validateOffice
-    validate provider
+    provider |> (validateName >> bind validateOffice)
 
 let validateProviderBySpecialty provider =
 

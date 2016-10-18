@@ -58,10 +58,10 @@ let ``registering account without middle name`` () =
 let ``successful registration dispatches result`` () =
 
     // Setup
-    let mutable recievedSuccessNotification = false
+    let mutable receivedSuccessNotification = false
 
     let dispatcher = Dispatcher()
-    dispatcher.RegistrationSuccessful.Add(fun _ -> recievedSuccessNotification <- true)
+    dispatcher.RegistrationSuccessful.Add(fun _ -> receivedSuccessNotification <- true)
     let viewModel = RegisterViewModel(dispatcher)
     
     viewModel.FirstName   <- SomeFirstName
@@ -75,7 +75,7 @@ let ``successful registration dispatches result`` () =
     viewModel.Register.Execute()
 
     // Verify
-    recievedSuccessNotification |> should equal true
+    receivedSuccessNotification |> should equal true
 
 [<Test>]
 let ``registration failed: missing first name`` () =

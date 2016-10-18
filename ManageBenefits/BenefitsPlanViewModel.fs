@@ -29,10 +29,7 @@ type BenefitsPlanViewModel(memberId , dispatcher:Dispatcher, repository:IBenefit
         DelegateCommand ( (fun _ -> dispatcher.ViewPeriodontics memberId) , fun _ -> true ) :> ICommand
 
     member this.Load() =
-
-        let coverage = repository.GetCoverage memberId
-
-        match coverage with
+        match repository.GetCoverage memberId with
         | Some v -> this.Summary <- Some v.Summary
         | None   -> this.Summary <- None
         
