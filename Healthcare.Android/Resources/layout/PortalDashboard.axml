@@ -30,11 +30,6 @@
                 android:layout_width="110dp"
                 android:layout_height="80dp"
                 android:text="ID\nCard" />
-            <Button
-                android:id="@+id/Providers"
-                android:layout_width="110dp"
-                android:layout_height="80dp"
-                android:text="Find a Provider" />
         </LinearLayout>
         <LinearLayout
             android:id="@+id/Row2Options"

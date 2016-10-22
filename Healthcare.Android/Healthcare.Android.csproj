@@ -163,15 +163,6 @@
       <DependentUpon>ContactActivity.cs</DependentUpon>
     </Compile>
     <Compile Include="Activities\Home\FAQActivity.cs" />
-    <Compile Include="Activities\Home\FindProvidersActivity.cs" />
-    <Compile Include="Activities\Home\FindProvidersActivity.internal.cs">
-      <SubType>Code</SubType>
-      <DependentUpon>FindProvidersActivity.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Activities\Home\FindProvidersActivity.members.cs">
-      <SubType>Code</SubType>
-      <DependentUpon>FindProvidersActivity.cs</DependentUpon>
-    </Compile>
     <Compile Include="Activities\Account\IdCardActivity.cs" />
     <Compile Include="Activities\Account\IdCardActivity.internal.cs">
       <DependentUpon>IdCardActivity.cs</DependentUpon>
@@ -193,7 +184,6 @@
       <DependentUpon>PortalDashboardActivity.cs</DependentUpon>
     </Compile>
     <Compile Include="Activities\Account\ProfileActivity.cs" />
-    <Compile Include="Activities\Home\ProvidersActivity.cs" />
     <Compile Include="Activities\Home\RegisterActivity.internal.cs">
       <SubType>Code</SubType>
       <DependentUpon>RegisterActivity.cs</DependentUpon>

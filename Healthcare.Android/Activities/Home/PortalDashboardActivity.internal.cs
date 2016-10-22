@@ -19,7 +19,6 @@ namespace Healthcare.Android
             _dispatcher.FamilyClaimsRequested += OnClaimsRequested;
             _dispatcher.CoverageRequested += OnCoverageRequested;
             _dispatcher.ContactRequested += OnContactRequested;
-            _dispatcher.FindProvidersRequested += OnFindProvidersRequested;
             _dispatcher.AccountRequested += OnAccountRequested;
         }
 
@@ -29,7 +28,6 @@ namespace Healthcare.Android
             _dispatcher.FamilyClaimsRequested -= OnClaimsRequested;
             _dispatcher.CoverageRequested -= OnCoverageRequested;
             _dispatcher.ContactRequested -= OnContactRequested;
-            _dispatcher.FindProvidersRequested -= OnFindProvidersRequested;
         }
 
         void MapCommands()

@@ -13,7 +13,6 @@ namespace Healthcare.Android
             _dispatcher.RegistrationRequested += OnRegistrationRequested;
 
             _dispatcher.IdRequested += OnIdRequested;
-            _dispatcher.FindProvidersRequested += OnFindProvidersRequested;
             _dispatcher.ContactRequested += OnContactRequested;
             _dispatcher.PrivacyRequested += OnPrivacyRequested;
             _dispatcher.FAQRequested += OnFAQRequested;
@@ -28,7 +27,6 @@ namespace Healthcare.Android
             _dispatcher.RegistrationRequested -= OnRegistrationRequested;
 
             _dispatcher.IdRequested -= OnIdRequested;
-            _dispatcher.FindProvidersRequested -= OnFindProvidersRequested;
             _dispatcher.ContactRequested -= OnContactRequested;
             _dispatcher.PrivacyRequested -= OnPrivacyRequested;
             _dispatcher.FAQRequested -= OnFAQRequested;
