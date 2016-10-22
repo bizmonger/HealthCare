@@ -7,22 +7,10 @@ open Contact
 open Repositories
 
 type ContactViewModel(memberId , companyId , dispatcher:Dispatcher , companyRepository:ICompanyRepository, claimsRepository:IClaimsRepository) =
-    
-    let mutable phone =       Phone ""
-    let mutable email =       Email ""
-    let mutable lastService = None
 
-    member this.LastService 
-        with get() = lastService
-        and private set(value) = lastService <- value
-
-    member this.Phone 
-        with get() = phone
-        and private set(value) = phone <- value
-
-    member this.Email
-        with get() = email
-        and private set(value) = email <- value
+    member val LastService = None with get,set
+    member val Phone       = "" with get,set
+    member val Email       = "" with get,set
 
     member this.CallSupport =
         DelegateCommand( (fun _ -> dispatcher.CallSupport()) , 
@@ -34,6 +22,11 @@ type ContactViewModel(memberId , companyId , dispatcher:Dispatcher , companyRepo
 
     member this.Load() =
         let contact = companyRepository.GetContactInfo companyId
-        this.Phone <- contact.Phone
-        this.Email <- contact.Email
+
+        match contact with
+        | Some c -> 
+            this.Phone <- match c.Phone with Phone v -> v
+            this.Email <- match c.Email with Email v -> v
+        | None   -> ()
+
         this.LastService <- claimsRepository.GetLastService memberId

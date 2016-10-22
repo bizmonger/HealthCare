@@ -13,7 +13,8 @@ namespace Healthcare.Android
             var companyId = companyRepository.GetCompanyId(memberId);
             var claimsRepository = factory.CreateClaimsRepository();
 
-            _viewModel = new ContactViewModel(memberId, companyId, _dispatcher, companyRepository, claimsRepository);
+            if (companyId.IsSome())
+                _viewModel = new ContactViewModel(memberId, companyId.Value, _dispatcher, companyRepository, claimsRepository);
         }
 
         void Load()
@@ -21,10 +22,10 @@ namespace Healthcare.Android
             _viewModel.Load();
 
             var phone = FindViewById<TextView>(Resource.Id.PhoneValue);
-            phone.Text = _viewModel.Phone.Item;
+            phone.Text = _viewModel.Phone;
 
             var email = FindViewById<TextView>(Resource.Id.EmailValue);
-            email.Text = _viewModel.Email.Item;
+            email.Text = _viewModel.Email;
         }
     }
 }
