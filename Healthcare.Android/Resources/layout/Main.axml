@@ -68,11 +68,6 @@
             android:layout_height="wrap_content"
             android:text="ID Card" />
         <Button
-            android:id="@+id/Providers"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:text="Providers" />
-        <Button
             android:id="@+id/Contact"
             android:layout_width="160dp"
             android:layout_height="wrap_content"

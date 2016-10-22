@@ -41,9 +41,6 @@ namespace Healthcare.Android
             var benefits = FindViewById<Button>(Resource.Id.Benefits);
             benefits.Click += (s, e) => _viewModel.ViewBenefits.Execute(null);
 
-            var providers = FindViewById<Button>(Resource.Id.Providers);
-            providers.Click += (s, e) => _viewModel.ViewProviders.Execute(null);
-
             var contact = FindViewById<Button>(Resource.Id.Contact);
             contact.Click += (s, e) => _viewModel.ViewContactInfo.Execute(null);
         }

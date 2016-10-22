@@ -57,9 +57,6 @@ namespace Healthcare.Android
 
             idCard.Click += (s, e) => _viewModel.TryViewIdCard.Execute(null);
 
-            var providers = FindViewById<Button>(Resource.Id.Providers);
-            providers.Click += (s, e) => _viewModel.FindProviders.Execute(null);
-
             var contact = FindViewById<Button>(Resource.Id.Contact);
             contact.Click += (s, e) => _viewModel.ViewContact.Execute(null);
         }
