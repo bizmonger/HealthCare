@@ -7,19 +7,11 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:orientation="vertical"
-        android:layout_alignParentTop="true"
+        android:gravity="center"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:paddingLeft="20dp"
         android:paddingRight="20dp">
-      
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_marginTop="15sp"
-            android:text="Confirm Your Information" />
 
         <EditText
             android:id="@+id/PatientId"
