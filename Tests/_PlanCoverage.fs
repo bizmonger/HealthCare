@@ -12,7 +12,7 @@ open Account
 let ``view your coverage`` () =
     
     // Setup
-    let viewModel = CoverageViewModel(SomeMemberId , MockBenefitsRepository())
+    let viewModel = CoverageViewModel(SomePatientId , MockBenefitsRepository())
 
     // Test
     viewModel.Load()

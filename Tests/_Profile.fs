@@ -15,7 +15,7 @@ open ManageAccount
 let ``load dependents info`` () =
 
     // Setup
-    let viewModel = ProfileViewModel(SomeMemberId , Dispatcher() , MockProfileRepository())
+    let viewModel = ProfileViewModel(SomePatientId , Dispatcher() , MockProfileRepository())
 
     // Test
     viewModel.Load()
@@ -31,7 +31,7 @@ let ``view dependent`` () =
     let dispatcher = Dispatcher()
     dispatcher.ProfileRequested.Add (fun _ -> profileRequested <- true)
 
-    let viewModel = ProfileViewModel(SomeMemberId , dispatcher , MockProfileRepository())
+    let viewModel = ProfileViewModel(SomePatientId , dispatcher , MockProfileRepository())
     viewModel.Load();
 
     // Test
@@ -45,7 +45,7 @@ let ``view dependent`` () =
 let ``load profile info`` () =
 
     // Setup
-    let viewModel = ProfileViewModel(SomeMemberId , Dispatcher() , MockProfileRepository())
+    let viewModel = ProfileViewModel(SomePatientId , Dispatcher() , MockProfileRepository())
 
     // Test
     viewModel.Load()

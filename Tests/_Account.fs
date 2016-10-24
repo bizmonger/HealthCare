@@ -18,7 +18,7 @@ let ``navigate to account info`` () =
     let mutable accountRequested = false
     let dispatcher = Dispatcher()
     dispatcher.AccountRequested.Add(fun _ -> accountRequested <- true)
-    let viewModel = MenuViewModel(SomeMemberId , dispatcher)
+    let viewModel = MenuViewModel(SomePatientId , dispatcher)
 
     // Test
     viewModel.ViewAccount.Execute()
@@ -33,7 +33,7 @@ let ``view profile`` () =
     let mutable profileRequested = false
     let dispatcher = Dispatcher()
     dispatcher.ProfileRequested.Add(fun _ -> profileRequested <- true)
-    let viewModel = AccountViewModel(SomeMemberId , dispatcher)
+    let viewModel = AccountViewModel(SomePatientId , dispatcher)
 
     // Test
     viewModel.ViewProfile.Execute()
@@ -48,7 +48,7 @@ let ``view dependents profile`` () =
     let mutable dependentProfilesRequested = false
     let dispatcher = Dispatcher()
     dispatcher.DependentProfilesRequested.Add(fun _ -> dependentProfilesRequested <- true)
-    let viewModel = AccountViewModel(SomeMemberId , dispatcher)
+    let viewModel = AccountViewModel(SomePatientId , dispatcher)
 
     // Test
     viewModel.ViewDependentProfiles.Execute()
@@ -63,7 +63,7 @@ let ``login settings`` () =
     let mutable loginSettingsRequested = false
     let dispatcher = Dispatcher()
     dispatcher.LoginSettingsRequested.Add(fun _ -> loginSettingsRequested <- true)
-    let viewModel = AccountViewModel(SomeMemberId , dispatcher)
+    let viewModel = AccountViewModel(SomePatientId , dispatcher)
 
     // Test
     viewModel.ViewLoginSettings.Execute()

@@ -5,9 +5,9 @@ open Benefits
 
 type IBenefitsRepository =
 
-    abstract member GetOverview        : MemberId -> BenefitsOverview option
-    abstract member GetUsage           : MemberId -> BenefitsUsage    option
-    abstract member GetCoverage        : MemberId -> MemberPlan       option
-    abstract member GetMemberCoverages : MemberId -> MemberPlan       seq
-    abstract member GetMembers         : MemberId -> IdCard           seq
-    abstract member GetLastAppointment : MemberId -> Appointment      option
+    abstract member GetOverview        : PatientId -> BenefitsOverview option
+    abstract member GetUsage           : PatientId -> BenefitsUsage    option
+    abstract member GetCoverage        : PatientId -> MemberPlan       option
+    abstract member GetMemberCoverages : PatientId -> MemberPlan       seq
+    abstract member GetMembers         : PatientId -> IdCard           seq
+    abstract member GetLastAppointment : PatientId -> Appointment      option

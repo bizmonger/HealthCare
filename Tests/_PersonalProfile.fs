@@ -15,7 +15,7 @@ let ``edit profile's email`` () =
 
     // Setup
     let repository = MockProfileRepository() :> IProfileRepository
-    let viewModel =  EditProfileViewModel(SomeMemberId , repository)
+    let viewModel =  EditProfileViewModel(SomePatientId , repository)
 
     viewModel.SSN     <- match SomeSSN     with SSN     v -> v.ToString()
     viewModel.ZipCode <- match SomeZipCode with ZipCode v -> v.ToString()
@@ -28,7 +28,7 @@ let ``edit profile's email`` () =
     
 
     // Verify
-    let updatedProfile = repository.GetProfile SomeMemberId
+    let updatedProfile = repository.GetProfile SomePatientId
     match updatedProfile with
     | Some p ->  match p.Email with
                  | Email v when v = "edited@abc.com" -> ()
@@ -40,7 +40,7 @@ let ``edit profile's address`` () =
 
     // Setup
     let repository = MockProfileRepository() :> IProfileRepository
-    let viewModel =  EditProfileViewModel(SomeMemberId , repository)
+    let viewModel =  EditProfileViewModel(SomePatientId , repository)
 
     viewModel.SSN      <- match SomeSSN     with SSN     v -> v.ToString()
     viewModel.ZipCode  <- match SomeZipCode with ZipCode v -> v.ToString()
@@ -53,7 +53,7 @@ let ``edit profile's address`` () =
     
 
     // Verify
-    let updatedProfile = repository.GetProfile SomeMemberId
+    let updatedProfile = repository.GetProfile SomePatientId
     match updatedProfile with
     | Some p ->  match p.Address.Address1 with
                  | Street "some_updated_address" -> ()

@@ -29,7 +29,7 @@ namespace Healthcare.Android
             {
                 case Resource.Id.Account:
                     {
-                        _dispatcher.ViewAccount(SomeMemberId);
+                        _dispatcher.ViewAccount(SomePatientId);
                         return true;
                     }
             }

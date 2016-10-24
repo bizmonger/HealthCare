@@ -11,7 +11,7 @@ open ManageBenefits
 let ``load in benefits usage`` () =
     
     // Setup
-    let viewModel = BenefitsUsageViewModel(SomeMemberId , MockBenefitsRepository())
+    let viewModel = BenefitsUsageViewModel(SomePatientId , MockBenefitsRepository())
 
     // Test
     viewModel.Load()
@@ -23,7 +23,7 @@ let ``load in benefits usage`` () =
 let ``load out of network info`` () =
 
     // Setup
-    let viewModel = BenefitsUsageViewModel(SomeMemberId , MockBenefitsRepository())
+    let viewModel = BenefitsUsageViewModel(SomePatientId , MockBenefitsRepository())
 
     // Test
     viewModel.Load()
@@ -35,7 +35,7 @@ let ``load out of network info`` () =
 let ``load members`` () =
 
     // Setup
-    let viewModel = BenefitsUsageViewModel(SomeMemberId , MockBenefitsRepository())
+    let viewModel = BenefitsUsageViewModel(SomePatientId , MockBenefitsRepository())
 
     // Test
     viewModel.Load()

@@ -18,7 +18,7 @@ open Validation
 let ``search provider`` () = 
 
     // Setup
-    let viewModel = ProvidersBySpecialtyViewModel(SomeMemberId , MockProvidersRepository())
+    let viewModel = ProvidersBySpecialtyViewModel(SomePatientId , MockProvidersRepository())
     viewModel.Specialty <- SomeSpecialty
     viewModel.Location  <- SomeOtherLocation
     viewModel.Distance  <- SomeDistance
@@ -36,7 +36,7 @@ let ``search provider`` () =
 let ``load specialties`` () = 
 
     // Setup
-    let viewModel = ProvidersBySpecialtyViewModel(SomeMemberId , MockProvidersRepository())
+    let viewModel = ProvidersBySpecialtyViewModel(SomePatientId , MockProvidersRepository())
 
     // Test
     viewModel.Load()
@@ -49,7 +49,7 @@ let ``load specialties`` () =
 let ``load networks`` () = 
 
     // Setup
-    let viewModel = ProvidersBySpecialtyViewModel(SomeMemberId , MockProvidersRepository())
+    let viewModel = ProvidersBySpecialtyViewModel(SomePatientId , MockProvidersRepository())
 
     // Test
     viewModel.Load()
@@ -62,7 +62,7 @@ let ``load networks`` () =
 let ``load distances`` () = 
 
     // Setup
-    let viewModel = ProvidersBySpecialtyViewModel(SomeMemberId , MockProvidersRepository())
+    let viewModel = ProvidersBySpecialtyViewModel(SomePatientId , MockProvidersRepository())
 
     // Test
     viewModel.Load()
@@ -75,7 +75,7 @@ let ``load distances`` () =
 let ``search requires specialty`` () = 
     
     // Setup
-    let viewModel = ProvidersBySpecialtyViewModel(SomeMemberId , MockProvidersRepository())
+    let viewModel = ProvidersBySpecialtyViewModel(SomePatientId , MockProvidersRepository())
     viewModel.Specialty <- ""
 
     // Test
@@ -90,7 +90,7 @@ let ``search requires specialty`` () =
 let ``search requires distance`` () = 
 
     // Setup
-    let viewModel = ProvidersBySpecialtyViewModel(SomeMemberId , MockProvidersRepository())
+    let viewModel = ProvidersBySpecialtyViewModel(SomePatientId , MockProvidersRepository())
     viewModel.Location  <- SomeOtherLocation
     viewModel.Specialty <- SomeSpecialty
     viewModel.Distance  <- 0
@@ -107,7 +107,7 @@ let ``search requires distance`` () =
 let ``search requires network`` () = 
 
     // Setup
-    let viewModel = ProvidersBySpecialtyViewModel(SomeMemberId , MockProvidersRepository())
+    let viewModel = ProvidersBySpecialtyViewModel(SomePatientId , MockProvidersRepository())
     viewModel.Specialty <- SomeSpecialty
     viewModel.Distance  <- SomeDistance
     viewModel.Location  <- SomeOtherLocation
@@ -125,7 +125,7 @@ let ``search requires network`` () =
 let ``search requires location`` () = 
 
     // Setup
-    let viewModel = ProvidersBySpecialtyViewModel(SomeMemberId , MockProvidersRepository())
+    let viewModel = ProvidersBySpecialtyViewModel(SomePatientId , MockProvidersRepository())
     viewModel.Specialty <- SomeSpecialty
     viewModel.Distance  <- SomeDistance
     viewModel.Location  <- ""

@@ -21,10 +21,10 @@ namespace Healthcare.Android
         void CreateViewModel()
         {
             var factory = new DependencyFactory(Global.IsIntegrated);
-            var memberId = factory.GetMemberId();
+            var PatientId = factory.GetPatientId();
             var repository = factory.CreateClaimsRepository();
 
-            _viewModel = new ClaimsSummaryViewModel(memberId, _dispatcher, repository);
+            _viewModel = new ClaimsSummaryViewModel(PatientId, _dispatcher, repository);
         }
 
         void Load()

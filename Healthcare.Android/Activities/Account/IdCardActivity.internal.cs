@@ -22,9 +22,9 @@ namespace Healthcare.Android
             var factory = new DependencyFactory(Global.IsIntegrated);
             var repository = factory.CreateProfileRepository();
 
-            if (repository.GetProfile(_memberId).IsSome())
+            if (repository.GetProfile(_patientId).IsSome())
             {
-                var profile = repository.GetProfile(_memberId).Value;
+                var profile = repository.GetProfile(_patientId).Value;
                 _viewModel = new IdCardViewModel(profile.IdCard, _dispatcher);
             }
         }

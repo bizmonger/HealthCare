@@ -8,7 +8,7 @@ open Account
 open Contact
 
 
-type EditProfileViewModel(memberId:MemberId , repository:IProfileRepository) =
+type EditProfileViewModel(PatientId:PatientId , repository:IProfileRepository) =
 
     member val SSN  = "" with get,set
     member val First  = "" with get,set
@@ -34,7 +34,7 @@ type EditProfileViewModel(memberId:MemberId , repository:IProfileRepository) =
                      Middle=Some this.Middle
                      Last=this.Last }
 
-        let idCard = { MemberId=memberId
+        let idCard = { PatientId=PatientId
                        Name=name
                        DateOfBirth=DateOfBirth this.DateOfBirth
                        Zipcode= ZipCode (Int32.Parse( this.ZipCode )) }

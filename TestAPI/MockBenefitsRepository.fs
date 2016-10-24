@@ -6,9 +6,9 @@ open MockMember
 type MockBenefitsRepository() =
     
     interface IBenefitsRepository with
-        member this.GetOverview        memberId = Some anonymousOverview
-        member this.GetUsage           memberId = Some anonymousUsage
-        member this.GetCoverage        memberId = Some anonymousCoverage
-        member this.GetMemberCoverages memberId = SomeMemberCoverages
-        member this.GetMembers         memberId = SomeMembers
-        member this.GetLastAppointment memberId = Some SomeAppointment
+        member this.GetOverview        PatientId = Some anonymousOverview
+        member this.GetUsage           PatientId = Some anonymousUsage
+        member this.GetCoverage        PatientId = Some anonymousCoverage
+        member this.GetMemberCoverages PatientId = SomeMemberCoverages
+        member this.GetMembers         PatientId = SomeMembers
+        member this.GetLastAppointment PatientId = Some SomeAppointment

@@ -6,6 +6,6 @@ namespace Healthcare.Android.Fragments
 {
     partial class WelcomeFragment
     {
-        readonly WelcomeViewModel _viewModel = new WelcomeViewModel(SomeMemberId, new MockProfileRepository());
+        readonly WelcomeViewModel _viewModel = new WelcomeViewModel(SomePatientId, new MockProfileRepository());
     }
 }

@@ -15,7 +15,7 @@ open InteractionLogic
 let ``load family claims summary`` () =
 
     // Setup
-    let viewModel = ClaimsSummaryViewModel(SomeMemberId , Dispatcher() , MockClaimsRepository())
+    let viewModel = ClaimsSummaryViewModel(SomePatientId , Dispatcher() , MockClaimsRepository())
 
     // Test
     viewModel.Load()
@@ -27,7 +27,7 @@ let ``load family claims summary`` () =
 let ``load member claims`` () =
 
     // Setup
-    let viewModel = MemberClaimsSummaryViewModel(SomeMemberId , Dispatcher() , MockClaimsRepository())
+    let viewModel = MemberClaimsSummaryViewModel(SomePatientId , Dispatcher() , MockClaimsRepository())
 
     // Test
     viewModel.Load()
@@ -58,7 +58,7 @@ let ``get total insurance savings`` () =
 let ``load dependent claims summary`` () =
 
     // Setup
-    let viewModel = ClaimsSummaryViewModel(SomeMemberId , Dispatcher() , MockClaimsRepository())
+    let viewModel = ClaimsSummaryViewModel(SomePatientId , Dispatcher() , MockClaimsRepository())
 
     // Test
     viewModel.Load()
@@ -74,7 +74,7 @@ let ``navigate to member claims`` () =
     let dispatcher = Dispatcher()
     dispatcher.MemberClaimsRequested.Add (fun _ -> claimsRequested <- true)
 
-    let viewModel = ClaimsSummaryViewModel(SomeMemberId , dispatcher , MockClaimsRepository())
+    let viewModel = ClaimsSummaryViewModel(SomePatientId , dispatcher , MockClaimsRepository())
     viewModel.Load();
 
     viewModel.DependentSummary <- Some (Seq.head viewModel.DependentSummaries)

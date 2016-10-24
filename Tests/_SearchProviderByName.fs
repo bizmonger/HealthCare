@@ -17,7 +17,7 @@ open Claims
 let ``search provider by name`` () =
     
     // Setup
-    let viewModel = ProvidersByNameViewModel(SomeMemberId , MockProvidersRepository())
+    let viewModel = ProvidersByNameViewModel(SomePatientId , MockProvidersRepository())
     viewModel.FirstName  <- SomeFirstName
     viewModel.MiddleName <- None
     viewModel.LastName   <- SomeLastName
@@ -33,7 +33,7 @@ let ``search provider by name`` () =
 let ``search requires first name`` () =
 
     // Setup
-    let viewModel = ProvidersByNameViewModel(SomeMemberId , MockProvidersRepository())
+    let viewModel = ProvidersByNameViewModel(SomePatientId , MockProvidersRepository())
     viewModel.FirstName  <- ""
     viewModel.MiddleName <- None
     viewModel.LastName   <- SomeLastName
@@ -51,7 +51,7 @@ let ``search requires first name`` () =
 let ``search requires last name`` () =
 
     // Setup
-    let viewModel = ProvidersByNameViewModel(SomeMemberId , MockProvidersRepository())
+    let viewModel = ProvidersByNameViewModel(SomePatientId , MockProvidersRepository())
     viewModel.FirstName  <- SomeFirstName
     viewModel.MiddleName <- None
     viewModel.LastName   <- ""
@@ -69,7 +69,7 @@ let ``search requires last name`` () =
 let ``search requires office name`` () =
 
     // Setup
-    let viewModel = ProvidersByNameViewModel(SomeMemberId , MockProvidersRepository())
+    let viewModel = ProvidersByNameViewModel(SomePatientId , MockProvidersRepository())
     viewModel.FirstName  <- SomeFirstName
     viewModel.MiddleName <- None
     viewModel.LastName   <- SomeLastName

@@ -5,14 +5,14 @@ open Repositories
 open InteractionLogic
 open Claims
 
-type MemberClaimsSummaryViewModel(memberId , dispatcher:Dispatcher , repository:IClaimsRepository) = 
+type MemberClaimsSummaryViewModel(PatientId , dispatcher:Dispatcher , repository:IClaimsRepository) = 
 
     member val Summary = None with get,set
     member val Claims  = seq [] with get,set
 
     member this.Load() =
 
-        this.Summary <- repository.GetSummary memberId
+        this.Summary <- repository.GetSummary PatientId
         this.Claims  <- match this.Summary with
                         | Some v -> v.Claims
                         | None   -> seq []

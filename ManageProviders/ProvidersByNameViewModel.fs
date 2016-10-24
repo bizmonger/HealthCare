@@ -10,7 +10,7 @@ open Validation
 open Claims
 open Benefits
 
-type ProvidersByNameViewModel(memberId:MemberId , repository:IProvidersRepository) =
+type ProvidersByNameViewModel(PatientId:PatientId , repository:IProvidersRepository) =
 
     let network = { PreventiveAndDiagnostic= PreventiveAndDiagnostic 0
                     Restoration=             Restoration  0

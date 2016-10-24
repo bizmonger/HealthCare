@@ -5,15 +5,15 @@ open Repositories
 open InteractionLogic
 open Claims
 
-type ClaimsSummaryViewModel(memberId , dispatcher:Dispatcher , repository:IClaimsRepository) = 
+type ClaimsSummaryViewModel(PatientId , dispatcher:Dispatcher , repository:IClaimsRepository) = 
 
     member val FamilySummary =      None   with get,set
     member val DependentSummaries = seq [] with get,set
     member val DependentSummary =   None   with get,set
 
     member this.Load() =
-        this.FamilySummary      <- repository.GetFamilySummary      memberId
-        this.DependentSummaries <- repository.GetDependentSummaries memberId
+        this.FamilySummary      <- repository.GetFamilySummary      PatientId
+        this.DependentSummaries <- repository.GetDependentSummaries PatientId
 
     member this.SetDependentSummary summary =
         this.DependentSummary <- Some summary
@@ -21,6 +21,6 @@ type ClaimsSummaryViewModel(memberId , dispatcher:Dispatcher , repository:IClaim
     member this.ViewClaims =
 
         DelegateCommand( (fun _ -> match this.DependentSummary with
-                                   | Some v -> dispatcher.ViewMemberClaims v.Member.MemberId
+                                   | Some v -> dispatcher.ViewMemberClaims v.Member.PatientId
                                    | None   -> ()), 
                           fun _ -> true ) :> ICommand

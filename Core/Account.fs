@@ -5,7 +5,7 @@ module Account
     open System
     open Contact
 
-    type MemberId =      MemberId      of string
+    type PatientId =     PatientId     of string
     type AccountNumber = AccountNumber of string
     type CompanyId =     CompanyId     of string
 
@@ -29,7 +29,7 @@ module Account
     type ZipCode =     ZipCode     of int
 
     type IdCard = {
-        MemberId:MemberId
+        PatientId:PatientId
         Name:Name
         DateOfBirth:DateOfBirth
         Zipcode : ZipCode

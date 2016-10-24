@@ -15,7 +15,7 @@ open Claims
 let ``load last service summary`` () =
 
     // Setup
-    let viewModel = ContactViewModel(SomeMemberId , SomeCompanyId , Dispatcher() , MockCompanyRepository() , MockClaimsRepository())
+    let viewModel = ContactViewModel(SomePatientId , SomeCompanyId , Dispatcher() , MockCompanyRepository() , MockClaimsRepository())
 
     // Test
     viewModel.Load()
@@ -32,7 +32,7 @@ let ``call`` () =
     let mutable callRequested = false
     let dispatcher = Dispatcher()
     dispatcher.CallSupportRequested.Add (fun _ -> callRequested <- true)
-    let viewModel = ContactViewModel(SomeMemberId , SomeCompanyId , dispatcher , MockCompanyRepository() , MockClaimsRepository())
+    let viewModel = ContactViewModel(SomePatientId , SomeCompanyId , dispatcher , MockCompanyRepository() , MockClaimsRepository())
 
     // Test
     viewModel.CallSupport.Execute()
@@ -47,7 +47,7 @@ let ``email`` () =
     let mutable emailRequested = false
     let dispatcher = Dispatcher()
     dispatcher.EmailSupportRequested.Add (fun _ -> emailRequested <- true)
-    let viewModel = ContactViewModel(SomeMemberId , SomeCompanyId , dispatcher , MockCompanyRepository() , MockClaimsRepository())
+    let viewModel = ContactViewModel(SomePatientId , SomeCompanyId , dispatcher , MockCompanyRepository() , MockClaimsRepository())
 
     // Test
     viewModel.EmailSupport.Execute()

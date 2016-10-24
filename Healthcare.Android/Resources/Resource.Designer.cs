@@ -207,9 +207,6 @@ namespace Healthcare.Android
 			// aapt resource value: 0x7f060026
 			public const int MemberCoverageListView = 2131099686;
 			
-			// aapt resource value: 0x7f06004a
-			public const int MemberIdValue = 2131099722;
-			
 			// aapt resource value: 0x7f060046
 			public const int MemberInsuranceSavedYouValue = 2131099718;
 			
@@ -260,6 +257,12 @@ namespace Healthcare.Android
 			
 			// aapt resource value: 0x7f060038
 			public const int PasswordValue = 2131099704;
+			
+			// aapt resource value: 0x7f060065
+			public const int PatientId = 2131099749;
+			
+			// aapt resource value: 0x7f06004a
+			public const int PatientIdValue = 2131099722;
 			
 			// aapt resource value: 0x7f06001d
 			public const int PaymentDetails = 2131099677;
@@ -404,9 +407,6 @@ namespace Healthcare.Android
 			
 			// aapt resource value: 0x7f060062
 			public const int linearLayout = 2131099746;
-			
-			// aapt resource value: 0x7f060065
-			public const int memberId = 2131099749;
 			
 			// aapt resource value: 0x7f060069
 			public const int next = 2131099753;

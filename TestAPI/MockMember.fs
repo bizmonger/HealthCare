@@ -6,7 +6,7 @@ open Benefits
 open Contact
 
 (*Account Info*)
-let SomeMemberId =    MemberId "some_member_id"
+let SomePatientId =   PatientId "some_member_id"
 let SomeCompanyId =   CompanyId "some_member_id"
 
 let SomePhone =       Phone "555.555.5555"
@@ -21,7 +21,7 @@ let SomeDateOfBirth = "some_dob"
 let SomeName = { First=SomeFirstName; Middle=None; Last =SomeLastName }
 
 let SomeIdCard = {
-    MemberId = SomeMemberId
+    PatientId = SomePatientId
     Name = SomeName
     DateOfBirth = DateOfBirth SomeDateOfBirth
     Zipcode = SomeZipCode

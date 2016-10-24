@@ -54,10 +54,10 @@ namespace Healthcare.Android
         void CreateViewModel()
         {
             var factory = new DependencyFactory(Global.IsIntegrated);
-            var memberId = factory.GetMemberId();
+            var PatientId = factory.GetPatientId();
             var repository = factory.CreateBenefitsRepository();
 
-            _viewModel = new BenefitsPlanViewModel(memberId, _dispatcher, repository);
+            _viewModel = new BenefitsPlanViewModel(PatientId, _dispatcher, repository);
         }
     }
 }

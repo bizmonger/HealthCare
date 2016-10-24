@@ -39,8 +39,8 @@ namespace Healthcare.Android.Adapters
             var nameLabel = view.FindViewById<TextView>(Resource.Id.NameValue);
             nameLabel.Text = $"{profile.IdCard.Name.First} {profile.IdCard.Name.Last}";
 
-            var memberLabel = view.FindViewById<TextView>(Resource.Id.MemberIdValue);
-            memberLabel.Text = profile.IdCard.MemberId.Item;
+            var memberLabel = view.FindViewById<TextView>(Resource.Id.PatientIdValue);
+            memberLabel.Text = profile.IdCard.PatientId.Item;
 
             var dobLabel = view.FindViewById<TextView>(Resource.Id.DOBValue);
             dobLabel.Text = profile.IdCard.DateOfBirth.Item;

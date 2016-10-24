@@ -38,7 +38,7 @@ type RegisterViewModel(dispatcher:Dispatcher) =
 
         let name = getName this.FirstName this.MiddleName this.LastName
         let credentials = credentials this.UserName this.Password
-        let memberId = this.Email
+        let PatientId = this.Email
         let password = Password this.Password
         let dob = DateOfBirth this.DateOfBirth
         let zip = this.Zipcode
@@ -52,7 +52,7 @@ type RegisterViewModel(dispatcher:Dispatcher) =
 
         DelegateCommand( (fun _ -> this.Form <- 
                                     tryRegister { Name=        name
-                                                  Email=       Email memberId
+                                                  Email=       Email PatientId
                                                   Password=    password
                                                   DateOfBirth= dob
                                                   ZipCode=     ZipCode zip }

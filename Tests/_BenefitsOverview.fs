@@ -15,7 +15,7 @@ open TestAPI
 let ``load benefits summary`` () =
 
     // Setup
-    let viewModel = BenefitsOverviewViewModel(SomeMemberId, MockBenefitsRepository(), Dispatcher())
+    let viewModel = BenefitsOverviewViewModel(SomePatientId, MockBenefitsRepository(), Dispatcher())
 
     // Test
     viewModel.Load()
@@ -31,7 +31,7 @@ let ``view benefits plan benefits`` () =
     let dispatcher = Dispatcher()
     dispatcher.PlanRequested.Add (fun _ -> planRequested <- true)
 
-    let viewModel =  BenefitsOverviewViewModel(SomeMemberId, MockBenefitsRepository(), dispatcher)
+    let viewModel =  BenefitsOverviewViewModel(SomePatientId, MockBenefitsRepository(), dispatcher)
     viewModel.Load()
 
     // Test
@@ -48,7 +48,7 @@ let ``view benefits coverage`` () =
     let dispatcher = Dispatcher()
     dispatcher.CoverageRequested.Add (fun _ -> coverageRequested <- true)
 
-    let viewModel =  BenefitsOverviewViewModel(SomeMemberId, MockBenefitsRepository(), dispatcher)
+    let viewModel =  BenefitsOverviewViewModel(SomePatientId, MockBenefitsRepository(), dispatcher)
     viewModel.Load()
 
     // Test
@@ -65,7 +65,7 @@ let ``view benefits usage`` () =
     let dispatcher = Dispatcher()
     dispatcher.UsageRequested.Add (fun _ -> usageRequested <- true)
 
-    let viewModel =  BenefitsOverviewViewModel(SomeMemberId, MockBenefitsRepository(), dispatcher)
+    let viewModel =  BenefitsOverviewViewModel(SomePatientId, MockBenefitsRepository(), dispatcher)
     viewModel.Load()
 
     // Test

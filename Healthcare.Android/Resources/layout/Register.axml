@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:hint="Last Name" />
         <EditText
-            android:id="@+id/memberId"
+            android:id="@+id/PatientId"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="Member Id" />

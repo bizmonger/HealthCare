@@ -21,7 +21,7 @@ namespace Healthcare.Android
 
             SetContentView(Resource.Layout.Usage);
 
-            _viewModel = new BenefitsUsageViewModel(SomeMemberId, new MockBenefitsRepository());
+            _viewModel = new BenefitsUsageViewModel(SomePatientId, new MockBenefitsRepository());
             _viewModel.Load();
 
             var listview = FindViewById<ListView>(Resource.Id.MemberUsageListView);

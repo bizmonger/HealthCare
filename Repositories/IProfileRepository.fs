@@ -5,8 +5,8 @@ open System
 
 type IProfileRepository =
 
-    abstract member GetProfile      : MemberId -> Profile option
-    abstract member GetDependents   : MemberId -> Profile list
-    abstract member GetLastCleaning : MemberId -> DateTime option
-    abstract member GetLastVisit    : MemberId -> DateTime option
+    abstract member GetProfile      : PatientId -> Profile option
+    abstract member GetDependents   : PatientId -> Profile list
+    abstract member GetLastCleaning : PatientId -> DateTime option
+    abstract member GetLastVisit    : PatientId -> DateTime option
     abstract member Save            : Profile  -> unit

@@ -10,7 +10,7 @@ open Claims
 open FindProviders
 open Validation
 
-type ProvidersBySpecialtyViewModel(memberId:MemberId , repository:IProvidersRepository) =
+type ProvidersBySpecialtyViewModel(PatientId:PatientId , repository:IProvidersRepository) =
 
     member val Specialty = "" with get,set
     member val Distance =  0  with get,set

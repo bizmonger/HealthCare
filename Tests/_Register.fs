@@ -109,7 +109,7 @@ let ``registration failed: missing last name`` () =
     | _ -> failwith ""
 
 [<Test>]
-let ``registration failed: missing memberId`` () =
+let ``registration failed: missing PatientId`` () =
 
     // Setup
     let viewModel = RegisterViewModel(Dispatcher())

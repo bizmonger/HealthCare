@@ -12,7 +12,7 @@ open Home
 let ``load last appointment info`` () =
     
     // Setup
-    let viewModel = PortalViewModel(SomeMemberId , Dispatcher() , MockBenefitsRepository())
+    let viewModel = PortalViewModel(SomePatientId , Dispatcher() , MockBenefitsRepository())
 
     // Test
     viewModel.Load()
@@ -27,7 +27,7 @@ let ``navigate to id card`` () =
     let mutable idCardRequested = false
     let dispatcher = Dispatcher()
     dispatcher.IdRequested.Add (fun _ -> idCardRequested <- true)
-    let viewModel = PortalViewModel(SomeMemberId , dispatcher , MockBenefitsRepository())
+    let viewModel = PortalViewModel(SomePatientId , dispatcher , MockBenefitsRepository())
 
     // Test
     viewModel.ViewIdCard.Execute()
@@ -42,7 +42,7 @@ let ``navigate to benefits`` () =
     let mutable benefitsRequested = false
     let dispatcher = Dispatcher()
     dispatcher.CoverageRequested.Add (fun _ -> benefitsRequested <- true)
-    let viewModel = PortalViewModel(SomeMemberId , dispatcher , MockBenefitsRepository())
+    let viewModel = PortalViewModel(SomePatientId , dispatcher , MockBenefitsRepository())
 
     // Test
     viewModel.ViewBenefits.Execute()
@@ -57,7 +57,7 @@ let ``navigate to providers`` () =
     let mutable providersRequested = false
     let dispatcher = Dispatcher()
     dispatcher.FindProvidersRequested.Add (fun _ -> providersRequested <- true)
-    let viewModel = PortalViewModel(SomeMemberId , dispatcher , MockBenefitsRepository())
+    let viewModel = PortalViewModel(SomePatientId , dispatcher , MockBenefitsRepository())
 
     // Test
     viewModel.ViewProviders.Execute()
@@ -72,7 +72,7 @@ let ``navigate to family claims`` () =
     let mutable claimsRequested = false
     let dispatcher = Dispatcher()
     dispatcher.FamilyClaimsRequested.Add (fun _ -> claimsRequested <- true)
-    let viewModel = PortalViewModel(SomeMemberId , dispatcher , MockBenefitsRepository())
+    let viewModel = PortalViewModel(SomePatientId , dispatcher , MockBenefitsRepository())
 
     // Test
     viewModel.ViewFamilyClaims.Execute()

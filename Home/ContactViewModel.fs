@@ -8,7 +8,7 @@ open Repositories
 open Claims
 open System
 
-type ContactViewModel(memberId , companyId , dispatcher:Dispatcher , companyRepository:ICompanyRepository, claimsRepository:IClaimsRepository) =
+type ContactViewModel(PatientId , companyId , dispatcher:Dispatcher , companyRepository:ICompanyRepository, claimsRepository:IClaimsRepository) =
 
     let isPastDue (date:DateTime) months =
         let span = DateTime.Now.Subtract date
@@ -35,7 +35,7 @@ type ContactViewModel(memberId , companyId , dispatcher:Dispatcher , companyRepo
             this.Email <- match c.Email with Email v -> v
         | None   -> ()
 
-        this.LastService <- claimsRepository.GetLastService memberId
+        this.LastService <- claimsRepository.GetLastService PatientId
         this.IsPastDue   <-  match this.LastService with
                              | Some v -> match v.Date with ServiceDate date -> isPastDue date 6.0
                              | None   -> false

@@ -5,19 +5,19 @@ open InteractionLogic
 open Repositories
 open Account
 
-type PortalViewModel(memberId:MemberId , dispatcher:Dispatcher , repository:IBenefitsRepository) =
+type PortalViewModel(PatientId:PatientId , dispatcher:Dispatcher , repository:IBenefitsRepository) =
 
     member val LastAppointment = None with get,set
 
     member this.Load() =
-        this.LastAppointment <- repository.GetLastAppointment memberId
+        this.LastAppointment <- repository.GetLastAppointment PatientId
 
     member this.ViewIdCard =
-        DelegateCommand( (fun _ -> dispatcher.TryViewIdCard memberId) , 
+        DelegateCommand( (fun _ -> dispatcher.TryViewIdCard PatientId) , 
                           fun _ -> true ) :> ICommand
 
     member this.ViewBenefits =
-        DelegateCommand( (fun _ -> dispatcher.ViewCoverage memberId) , 
+        DelegateCommand( (fun _ -> dispatcher.ViewCoverage PatientId) , 
                           fun _ -> true ) :> ICommand
 
     member this.ViewProviders =
@@ -25,7 +25,7 @@ type PortalViewModel(memberId:MemberId , dispatcher:Dispatcher , repository:IBen
                           fun _ -> true ) :> ICommand
 
     member this.ViewFamilyClaims =
-        DelegateCommand( (fun _ -> dispatcher.ViewFamilyClaims memberId) , 
+        DelegateCommand( (fun _ -> dispatcher.ViewFamilyClaims PatientId) , 
                           fun _ -> true ) :> ICommand
 
     member this.ViewContactInfo =

@@ -7,5 +7,5 @@ type MockOnlineSession() =
 
     interface IMemberSession with
         
-        member this.SignIn  memberId = SignedIn
-        member this.SignOut memberId = SignedOut
+        member this.SignIn  PatientId = SignedIn
+        member this.SignOut PatientId = SignedOut
