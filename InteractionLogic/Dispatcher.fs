@@ -94,7 +94,7 @@ type Dispatcher() =
     member this.UsageRequested =        usageRequested.Publish
 
     [<CLIEvent>]
-    member this.InNetworkRequested = inNetworkRequested.Publish
+    member this.InNetworkRequested =    inNetworkRequested.Publish
     [<CLIEvent>]
     member this.OutOfNetworkRequested = outOfNetworkRequested.Publish
     [<CLIEvent>]
@@ -172,15 +172,15 @@ type Dispatcher() =
     member this.ViewOralSurgery patientId =             oralSurgeryRequested.Trigger (this , patientId)
     member this.ViewPeriodontics patientId =            periodonticsRequested.Trigger (this , patientId)
 
-    member this.ViewServiceDetails claimId =           serviceDetailsRequested.Trigger (this , claimId)
-    member this.ViewPaymentDetails claimId =           paymentDetailsRequested.Trigger (this , claimId)
+    member this.ViewServiceDetails claimId =            serviceDetailsRequested.Trigger (this , claimId)
+    member this.ViewPaymentDetails claimId =            paymentDetailsRequested.Trigger (this , claimId)
 
     member this.ViewProfile patientId =                 profileRequested.Trigger (this , patientId)
     member this.ViewDependentProfiles patientId =       dependentProfilesRequested.Trigger(this , patientId)
     member this.ViewLoginSettings patientId =           loginSettingsRequested.Trigger(this , patientId)
     member this.ViewFamilyClaims patientId =            familyClaimsRequested.Trigger (this , patientId)
     member this.ViewMemberClaims patientId =            memberClaimsRequested.Trigger (this , patientId)
-    member this.ViewClaim claimId =                    claimRequested.Trigger (this , claimId)
+    member this.ViewClaim claimId =                     claimRequested.Trigger (this , claimId)
 
     member this.PrintId idCard = printIdCardRequested.Trigger (this , idCard)
     member this.EmailId idCard = emailIdRequested.Trigger (this , idCard)
