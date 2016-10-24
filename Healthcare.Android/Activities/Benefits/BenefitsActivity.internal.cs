@@ -89,9 +89,6 @@ namespace Healthcare.Android
             var coverage = FindViewById<Button>(Resource.Id.Coverage);
             coverage.Click += (s, e) => _viewModel.ViewCoverage.Execute(null);
 
-            var plan = FindViewById<Button>(Resource.Id.PlanBennefits);
-            plan.Click += (s, e) => _viewModel.ViewPlan.Execute(null);
-
             var usage = FindViewById<Button>(Resource.Id.Usage);
             usage.Click += (s, e) => _viewModel.ViewUsage.Execute(null);
         }
@@ -99,14 +96,12 @@ namespace Healthcare.Android
         void MapNavigations()
         {
             _dispatcher.CoverageRequested += OnCoverageRequested;
-            _dispatcher.PlanRequested += OnPlanRequested;
             _dispatcher.UsageRequested += OnUsageRequested;
         }
 
         void UnMapNavigations()
         {
             _dispatcher.CoverageRequested -= OnCoverageRequested;
-            _dispatcher.PlanRequested -= OnPlanRequested;
             _dispatcher.UsageRequested -= OnUsageRequested;
         }
     }

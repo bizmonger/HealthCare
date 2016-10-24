@@ -89,14 +89,6 @@
       <SubType>Code</SubType>
       <DependentUpon>CoverageActivity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\Benefits\PlanActivity.internal.cs">
-      <SubType>Code</SubType>
-      <DependentUpon>PlanActivity.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Activities\Benefits\PlanActivity.members.cs">
-      <SubType>Code</SubType>
-      <DependentUpon>PlanActivity.cs</DependentUpon>
-    </Compile>
     <Compile Include="Activities\Claims\ClaimActivity.internal.cs">
       <SubType>Code</SubType>
       <DependentUpon>ClaimDetailActivity.cs</DependentUpon>
@@ -171,7 +163,6 @@
       <SubType>Code</SubType>
       <DependentUpon>IdCardActivity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Activities\Benefits\PlanActivity.cs" />
     <Compile Include="Activities\Account\LoginSettingsActivity.cs" />
     <Compile Include="Activities\Home\PortalDashboard.handlers.cs">
       <DependentUpon>PortalDashboardActivity.cs</DependentUpon>
