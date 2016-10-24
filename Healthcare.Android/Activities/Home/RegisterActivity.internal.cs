@@ -10,8 +10,8 @@ namespace Healthcare.Android
         {
             _viewModel = new RegisterViewModel(Global.Dispatcher)
             {
-                PatientId = SomeEmail.Item,  // FindViewById<EditText>(Resource.Id.PatientId).Text,
-                Password = SomePassword      // FindViewById<EditText>(Resource.Id.password).Text,
+                PatientId = SomeEmail.Item, // FindViewById<EditText>(Resource.Id.PatientId).Text,
+                Password = SomePassword     // FindViewById<EditText>(Resource.Id.password).Text,
             };
 
             _viewModel.Register.Execute(null);
