@@ -12,6 +12,7 @@
         android:layout_height="fill_parent"
         android:paddingLeft="20dp"
         android:paddingRight="20dp">
+      
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -19,36 +20,18 @@
             android:gravity="center"
             android:layout_marginTop="15sp"
             android:text="Confirm Your Information" />
-        <EditText
-            android:id="@+id/firstName"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:hint="First Name" />
-        <EditText
-            android:id="@+id/lastName"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:hint="Last Name" />
+
         <EditText
             android:id="@+id/PatientId"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="Member Id" />
+      
         <EditText
             android:id="@+id/password"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="Password" />
-        <EditText
-            android:id="@+id/dateOfBirth"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:hint="Date of Birth" />
-        <EditText
-            android:id="@+id/zipCode"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:hint="Zip Code" />
     </LinearLayout>
     <Button
         android:id="@+id/next"

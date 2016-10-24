@@ -8,14 +8,15 @@ open InteractionLogic
 open ValidationTrack
 open ManageAccount
 open SignIn
+open Account
 
 [<Test>]
 let ``sign into account`` () =
 
     // Setup
     let viewModel = SignInViewModel(Dispatcher())
-    viewModel.UserName <- SomeUser    
-    viewModel.Password <- SomePassword
+    viewModel.PatientId <- match SomePatientId with  PatientId v -> v  
+    viewModel.Password  <- SomePassword
 
     // Test
     viewModel.SignIn.Execute()
@@ -26,19 +27,19 @@ let ``sign into account`` () =
     | Success _ -> ()
 
 [<Test>]
-let ``signin failed: username required`` () =
+let ``signin failed: PatientId required`` () =
 
     // Setup
     let viewModel = SignInViewModel(Dispatcher())
-    viewModel.UserName <- ""
-    viewModel.Password <- SomePassword
+    viewModel.PatientId <- ""
+    viewModel.Password  <- SomePassword
 
     // Test
     viewModel.SignIn.Execute()
 
     // Verify
     match viewModel.Form with
-    | Failure reason -> reason |> should equal UserNameRequired
+    | Failure reason -> reason |> should equal PatientIdRequired
     | _              -> failwith ""
 
 [<Test>]
@@ -46,7 +47,7 @@ let ``signin failed: password required`` () =
     
     // Setup
     let viewModel = SignInViewModel(Dispatcher())
-    viewModel.UserName <- SomeUser
+    viewModel.PatientId <- match SomePatientId with  PatientId v -> v 
     viewModel.Password <- ""
 
     // Test
@@ -72,14 +73,14 @@ let ``display try again interface`` () =
     interfaceRequested |> should equal true
 
 [<Test>]
-let ``user tries again`` () =
+let ``PatientId tries again`` () =
 
     // Setup
     let viewModel = SignInViewModel(Dispatcher())
 
     viewModel.TryAgainConfirmation.Show.Add(fun _ ->
-        viewModel.UserName <- SomeUser   
-        viewModel.Password <- SomePassword  
+        viewModel.PatientId <- match SomePatientId with  PatientId v -> v   
+        viewModel.Password  <- SomePassword  
         viewModel.SignIn.Execute())
 
     // Test
@@ -91,7 +92,7 @@ let ``user tries again`` () =
     | Failure r -> failwith ""
 
 [<Test>]
-let ``user cancels attempt`` () =
+let ``PatientId cancels attempt`` () =
 
     // Setup
     let viewModel = SignInViewModel(Dispatcher())

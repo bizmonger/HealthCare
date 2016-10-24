@@ -21,7 +21,7 @@ let ``navigate to viewIdCard after signing in`` () =
 
     let homeViewModel = HomeViewModel(dispatcher)
 
-    signIn { User= User SomeUser
+    signIn { PatientId= SomePatientId
              Password= Password SomePassword } 
              dispatcher
 

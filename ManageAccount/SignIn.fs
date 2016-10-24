@@ -6,13 +6,12 @@ open InteractionLogic
 open Confirmation
 
 (* Types *)
-type User =        User     of string
 type Password =    Password of string
-type Credentials = { User:User; Password:Password }
+type Credentials = { PatientId:PatientId; Password:Password }
 
 type SignInResponse =
     | SignInNA
-    | UserNameRequired
+    | PatientIdRequired
     | PasswordRequired
     | SignedIn
 
@@ -21,18 +20,18 @@ type SignOutResponse =
     | SignedOut
 
 (* Functions *)
-let credentials user password = { 
-    User=      User     user
-    Password = Password password }
+let credentials patientId password = { 
+    PatientId= PatientId patientId
+    Password = Password  password 
+}
 
-let signout memberSession =
-    SignedOut
+let signout memberSession = SignedOut
 
 let trySignIn (credentials:Credentials) =
 
     let validateUserName credentials = 
-        match credentials.User with
-        | User v ->     v |> failOnEmpty credentials UserNameRequired
+        match credentials.PatientId with
+        | PatientId v -> v |> failOnEmpty credentials PatientIdRequired
 
     let validatePassword credentials =
         match credentials.Password with

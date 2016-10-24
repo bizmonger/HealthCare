@@ -17,14 +17,8 @@ type RegisterViewModel(dispatcher:Dispatcher) =
     [<CLIEvent>]
     member this.RegisterSucceeded = registrationSucceeded.Publish
 
-    member val FirstName =   "" with get,set
-    member val MiddleName =  "" with get,set
-    member val LastName =    "" with get,set
-    member val Email =       "" with get,set
-    member val UserName =    "" with get,set
-    member val Password =    "" with get,set
-    member val Zipcode =     0 with get,set
-    member val DateOfBirth = "" with get,set
+    member val PatientId = "" with get,set
+    member val Password =  "" with get,set
 
     member val Form = Failure RegistrationNA with get,set
     member val TryAgainConfirmation = TryAgainConfirmation() :> IConfirmation with get,set
@@ -36,12 +30,9 @@ type RegisterViewModel(dispatcher:Dispatcher) =
             then { First=first; Middle=None; Last=last }
             else { First=first; Middle=Some middle; Last=last }
 
-        let name = getName this.FirstName this.MiddleName this.LastName
-        let credentials = credentials this.UserName this.Password
-        let PatientId = this.Email
+        let credentials = credentials this.PatientId this.Password
+        let patientId = this.PatientId
         let password = Password this.Password
-        let dob = DateOfBirth this.DateOfBirth
-        let zip = this.Zipcode
 
         let onFormUpdated = function
             | Success form   -> if not (box (dispatcher.RegistrationIsValid) |> isNull)
@@ -51,11 +42,8 @@ type RegisterViewModel(dispatcher:Dispatcher) =
             | Failure reason -> this.TryAgainConfirmation.Display()
 
         DelegateCommand( (fun _ -> this.Form <- 
-                                    tryRegister { Name=        name
-                                                  Email=       Email PatientId
-                                                  Password=    password
-                                                  DateOfBirth= dob
-                                                  ZipCode=     ZipCode zip }
+                                    tryRegister { PatientId= PatientId patientId
+                                                  Password=  password }
 
                                    onFormUpdated this.Form),
 

@@ -17,34 +17,9 @@ open Contact
 let ``register account`` () =
 
     // Setup
-    let viewModel = RegisterViewModel(Dispatcher())
-    viewModel.FirstName   <- SomeFirstName
-    viewModel.LastName    <- SomeLastName
-    viewModel.DateOfBirth <- SomeDateOfBirth 
-    viewModel.Email       <- match SomeEmail with Email address -> address 
-    viewModel.Password    <- SomePassword  
-    viewModel.Zipcode     <- match SomeZipCode with ZipCode zip -> zip
-
-    // Test
-    viewModel.Register.Execute()
-
-    // Verify
-    match viewModel.Form with
-    | Success _ -> ()
-    | _ -> failwith ""
-
-[<Test>]
-let ``registering account without middle name`` () =
-
-    // Setup
-    let viewModel = RegisterViewModel(Dispatcher())
-    viewModel.FirstName   <- SomeFirstName
-    viewModel.MiddleName  <- ""
-    viewModel.LastName    <- SomeLastName
-    viewModel.DateOfBirth <- SomeDateOfBirth 
-    viewModel.Email       <- match SomeEmail with Email address -> address 
-    viewModel.Password    <- SomePassword  
-    viewModel.Zipcode     <- match SomeZipCode with ZipCode zip -> zip
+    let viewModel = RegisterViewModel(Dispatcher()) 
+    viewModel.PatientId <- match SomeEmail with Email address -> address 
+    viewModel.Password  <- SomePassword  
 
     // Test
     viewModel.Register.Execute()
@@ -64,12 +39,8 @@ let ``successful registration dispatches result`` () =
     dispatcher.RegistrationSuccessful.Add(fun _ -> receivedSuccessNotification <- true)
     let viewModel = RegisterViewModel(dispatcher)
     
-    viewModel.FirstName   <- SomeFirstName
-    viewModel.LastName    <- SomeLastName
-    viewModel.DateOfBirth <- SomeDateOfBirth 
-    viewModel.Email       <- match SomeEmail with Email address -> address 
-    viewModel.Password    <- SomePassword  
-    viewModel.Zipcode     <- match SomeZipCode with ZipCode zip -> zip
+    viewModel.PatientId <- match SomeEmail with Email address -> address 
+    viewModel.Password  <- SomePassword  
 
     // Test
     viewModel.Register.Execute()
@@ -78,51 +49,18 @@ let ``successful registration dispatches result`` () =
     receivedSuccessNotification |> should equal true
 
 [<Test>]
-let ``registration failed: missing first name`` () =
-
-    // Setup
-    let viewModel = RegisterViewModel(Dispatcher())
-    viewModel.FirstName <- ""
-
-    // Test
-    viewModel.Register.Execute()
-
-    // Verify
-    match viewModel.Form with
-    | Failure reason -> reason |> should equal FirstNameRequired
-    | _ -> failwith ""
-
-[<Test>]
-let ``registration failed: missing last name`` () =
-
-    // Setup
-    let viewModel = RegisterViewModel(Dispatcher())
-    viewModel.FirstName <- SomeFirstName
-    viewModel.LastName  <- ""
-
-    // Test
-    viewModel.Register.Execute()
-
-    // Verify
-    match viewModel.Form with
-    | Failure reason -> reason |> should equal LastNameRequired
-    | _ -> failwith ""
-
-[<Test>]
 let ``registration failed: missing PatientId`` () =
 
     // Setup
     let viewModel = RegisterViewModel(Dispatcher())
-    viewModel.FirstName <- SomeFirstName
-    viewModel.LastName  <- SomeLastName
-    viewModel.Email     <- ""
+    viewModel.PatientId     <- ""
 
     // Test
     viewModel.Register.Execute()
 
     // Verify
     match viewModel.Form with
-    | Failure reason -> reason |> should equal EmailRequired
+    | Failure reason -> reason |> should equal PatientIdRequired
     | _ -> failwith ""
 
 [<Test>]
@@ -130,9 +68,7 @@ let ``registration failed: missing password`` () =
 
     // Setup
     let viewModel = RegisterViewModel(Dispatcher())
-    viewModel.FirstName <- SomeFirstName
-    viewModel.LastName  <- SomeLastName
-    viewModel.Email     <- match SomeEmail with Email address -> address 
+    viewModel.PatientId     <- match SomeEmail with Email address -> address 
     viewModel.Password  <- ""
 
     // Test
@@ -142,45 +78,6 @@ let ``registration failed: missing password`` () =
     match viewModel.Form with
     | Failure reason -> reason |> should equal PasswordRequired
     | _ -> failwith ""
-
-[<Test>]
-let ``registration failed: missing date of birth`` () =
-
-    // Setup
-    let viewModel = RegisterViewModel(Dispatcher())
-    viewModel.FirstName   <- SomeFirstName
-    viewModel.LastName    <- SomeLastName
-    viewModel.Email       <- match SomeEmail with Email address -> address 
-    viewModel.Password    <- SomePassword
-    viewModel.DateOfBirth <- ""
-
-    // Test
-    viewModel.Register.Execute()
-
-    // Verify
-    match viewModel.Form with
-    | Failure reason -> reason |> should equal DateOfBirthRequired
-    | _ -> failwith ""
-
-[<Test>]
-let ``registration failed: missing zip code`` () =
-
-    // Setup
-    let viewModel = RegisterViewModel(Dispatcher())
-    viewModel.FirstName   <- SomeFirstName
-    viewModel.LastName    <- SomeLastName
-    viewModel.Email       <- match SomeEmail with Email address -> address 
-    viewModel.Password    <- SomePassword
-    viewModel.DateOfBirth <- SomeDateOfBirth
-    viewModel.Zipcode     <- 0
-
-    // Test
-    viewModel.Register.Execute()
-
-    // Verify
-    match viewModel.Form with
-    | Failure reason -> reason |> should equal ZipcodeRequired
-    | Success _      -> failwith ""
 
 [<Test>]
 let ``display try again interface`` () =
@@ -197,18 +94,14 @@ let ``display try again interface`` () =
     interfaceRequested |> should equal true
 
 [<Test>]
-let ``user tries again`` () =
+let ``PatientId tries again`` () =
 
     // Setup
     let viewModel = RegisterViewModel(Dispatcher())
 
     viewModel.TryAgainConfirmation.Show.Add(fun _ ->
-        viewModel.FirstName   <- SomeFirstName
-        viewModel.LastName    <- SomeLastName
-        viewModel.DateOfBirth <- SomeDateOfBirth 
-        viewModel.Email       <- match SomeEmail with Email address -> address   
-        viewModel.Password    <- SomePassword  
-        viewModel.Zipcode     <- match SomeZipCode with ZipCode zip -> zip
+        viewModel.PatientId <- match SomeEmail with Email address -> address   
+        viewModel.Password  <- SomePassword  
         viewModel.Register.Execute())
 
     // Test
@@ -220,7 +113,7 @@ let ``user tries again`` () =
     | Failure r -> failwith ""
 
 [<Test>]
-let ``user cancels attempt`` () = 
+let ``PatientId cancels attempt`` () = 
 
     // Setup
     let viewModel = RegisterViewModel(Dispatcher())
