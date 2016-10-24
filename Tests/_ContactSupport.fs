@@ -8,6 +8,8 @@ open TestAPI
 
 open InteractionLogic
 open Home
+open System
+open Claims
     
 [<Test>]
 let ``load last service summary`` () =

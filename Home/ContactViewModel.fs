@@ -5,12 +5,19 @@ open InteractionLogic
 open Account
 open Contact
 open Repositories
+open Claims
+open System
 
 type ContactViewModel(memberId , companyId , dispatcher:Dispatcher , companyRepository:ICompanyRepository, claimsRepository:IClaimsRepository) =
 
-    member val LastService = None with get,set
-    member val Phone       = "" with get,set
-    member val Email       = "" with get,set
+    let isPastDue (date:DateTime) months =
+        let span = DateTime.Now.Subtract date
+        span.TotalDays > (months * 30.0)
+
+    member val LastService = None        with get,set
+    member val IsPastDue   = false       with get,set
+    member val Phone       = "not found" with get,set
+    member val Email       = "not found" with get,set
 
     member this.CallSupport =
         DelegateCommand( (fun _ -> dispatcher.CallSupport()) , 
@@ -19,7 +26,6 @@ type ContactViewModel(memberId , companyId , dispatcher:Dispatcher , companyRepo
     member this.EmailSupport =
         DelegateCommand( (fun _ -> dispatcher.EmailSupport()) , 
                           fun _ -> true ) :> ICommand
-
     member this.Load() =
         let contact = companyRepository.GetContactInfo companyId
 
@@ -30,3 +36,6 @@ type ContactViewModel(memberId , companyId , dispatcher:Dispatcher , companyRepo
         | None   -> ()
 
         this.LastService <- claimsRepository.GetLastService memberId
+        this.IsPastDue   <-  match this.LastService with
+                             | Some v -> match v.Date with ServiceDate date -> isPastDue date 6.0
+                             | None   -> false
