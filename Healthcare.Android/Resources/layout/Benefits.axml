@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:paddingLeft="5dp"
     android:paddingRight="5dp">
-    <LinearLayout
+  
+  <!--<LinearLayout
         android:id="@+id/Header"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -123,33 +124,197 @@
                 android:layout_centerHorizontal="true"
                 android:text="need value" />
         </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/Footer"
+    </LinearLayout>-->
+
+
+
+
+
+
+
+  <TextView
+      android:id="@+id/PlanName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5sp"
+      android:layout_centerHorizontal="true"
+      android:text="Plan Name" />
+  <TextView
+      android:id="@+id/PlanHighlights"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5sp"
+      android:layout_centerHorizontal="true"
+      android:text="Plan Highlights" />
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5sp"
         android:layout_centerHorizontal="true"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/PlanBennefits"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15sp"
-            android:text="Plan" />
-        <Button
-            android:id="@+id/Coverage"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15sp"
-            android:text="Coverage" />
-        <Button
-            android:id="@+id/Usage"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15sp"
-            android:text="Usage" />
-    </LinearLayout>
+        android:text="Deductable:" />
+    <TextView
+        android:id="@+id/DeductableValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="need value" />
+  </LinearLayout>
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="Out of Pocket:" />
+    <TextView
+        android:id="@+id/OutOfPockerValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="need value" />
+  </LinearLayout>
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="Anual Maximum:" />
+    <TextView
+        android:id="@+id/AnualMaximumValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="need value" />
+  </LinearLayout>
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="Network Benefits:" />
+  </LinearLayout>
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="Preventive and Diagnostic:" />
+    <TextView
+        android:id="@+id/PreventiveAndDiagnosticValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="need value" />
+  </LinearLayout>
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="Restoration:" />
+    <TextView
+        android:id="@+id/RestorationValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="need value" />
+  </LinearLayout>
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/OralSurgery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="Oral Surgery:" />
+    <TextView
+        android:id="@+id/OralSurgeryValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="need value" />
+  </LinearLayout>
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/Periodontics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="Periodontics:" />
+    <TextView
+        android:id="@+id/PeriodonticsValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_centerHorizontal="true"
+        android:text="need value" />
+  </LinearLayout>
+
+
+
+
+  <LinearLayout
+      android:id="@+id/Footer"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingLeft="5dp"
+      android:paddingRight="5dp"
+      android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
+      android:orientation="horizontal">
+    <Button
+        android:id="@+id/PlanBennefits"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:text="Plan" />
+    <Button
+        android:id="@+id/Coverage"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:text="Coverage" />
+    <Button
+        android:id="@+id/Usage"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:text="Usage" />
+  </LinearLayout>
 </RelativeLayout>
