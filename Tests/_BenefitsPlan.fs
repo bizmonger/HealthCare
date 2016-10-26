@@ -14,7 +14,7 @@ let ``view in network`` () =
     let mutable inNetworkRequested = false
     let dispatcher = Dispatcher()
     dispatcher.InNetworkRequested.Add(fun _ -> inNetworkRequested <- true)
-    let viewModel = new BenefitsPlanViewModel(SomePatientId , dispatcher, MockBenefitsRepository())
+    let viewModel = new BenefitsOverviewViewModel(SomePatientId , MockBenefitsRepository() , dispatcher)
 
     // Test
     viewModel.ViewInNetwork.Execute()
@@ -29,7 +29,7 @@ let ``view out of network`` () =
     let mutable outOfNetworkRequested = false
     let dispatcher = Dispatcher()
     dispatcher.OutOfNetworkRequested.Add(fun _ -> outOfNetworkRequested <- true)
-    let viewModel = new BenefitsPlanViewModel(SomePatientId , dispatcher, MockBenefitsRepository())
+    let viewModel = new BenefitsOverviewViewModel(SomePatientId , MockBenefitsRepository() , dispatcher)
 
     // Test
     viewModel.ViewOutOfNetwork.Execute()
@@ -44,7 +44,7 @@ let ``view preventive and diagnostic`` () =
     let mutable preventiveAndDiagnosticRequested = false
     let dispatcher = Dispatcher()
     dispatcher.PreventiveAndDiagnosticsRequested.Add(fun _ -> preventiveAndDiagnosticRequested <- true)
-    let viewModel = new BenefitsPlanViewModel(SomePatientId , dispatcher, MockBenefitsRepository())
+    let viewModel = new BenefitsOverviewViewModel(SomePatientId , MockBenefitsRepository() , dispatcher)
 
     // Test
     viewModel.ViewPreventiveAndDiagnostic.Execute()
@@ -59,7 +59,7 @@ let ``view restoration`` () =
     let mutable restorationRequested = false
     let dispatcher = Dispatcher()
     dispatcher.RestorationRequested.Add(fun _ -> restorationRequested <- true)
-    let viewModel = new BenefitsPlanViewModel(SomePatientId , dispatcher, MockBenefitsRepository())
+    let viewModel = new BenefitsOverviewViewModel(SomePatientId , MockBenefitsRepository() , dispatcher)
 
     // Test
     viewModel.ViewRestoration.Execute()
@@ -74,7 +74,7 @@ let ``view oral surgery`` () =
     let mutable oralSurgeryRequested = false
     let dispatcher = Dispatcher()
     dispatcher.OralSurgeryRequested.Add(fun _ -> oralSurgeryRequested <- true)
-    let viewModel = new BenefitsPlanViewModel(SomePatientId , dispatcher, MockBenefitsRepository())
+    let viewModel = new BenefitsOverviewViewModel(SomePatientId , MockBenefitsRepository() , dispatcher)
 
     // Test
     viewModel.ViewOralSurgery.Execute()
@@ -89,7 +89,7 @@ let ``view periodontics`` () =
     let mutable periodonticsRequested = false
     let dispatcher = Dispatcher()
     dispatcher.PeriodonticsRequested.Add(fun _ -> periodonticsRequested <- true)
-    let viewModel = new BenefitsPlanViewModel(SomePatientId , dispatcher, MockBenefitsRepository())
+    let viewModel = new BenefitsOverviewViewModel(SomePatientId , MockBenefitsRepository() , dispatcher)
 
     // Test
     viewModel.ViewPeriodontics.Execute()
@@ -101,7 +101,7 @@ let ``view periodontics`` () =
 let ``load viewmodel`` () =
 
     // Setup
-    let viewModel = new BenefitsPlanViewModel(SomePatientId , Dispatcher(), MockBenefitsRepository())
+    let viewModel = new BenefitsOverviewViewModel(SomePatientId , MockBenefitsRepository() , Dispatcher())
 
     // Test
     viewModel.Load()

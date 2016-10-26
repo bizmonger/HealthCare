@@ -89,6 +89,15 @@
       <SubType>Code</SubType>
       <DependentUpon>CoverageActivity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Activities\Benefits\PlanActivity.cs" />
+    <Compile Include="Activities\Benefits\PlanActivity.internal.cs">
+      <DependentUpon>PlanActivity.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Activities\Benefits\PlanActivity.members.cs">
+      <DependentUpon>PlanActivity.cs</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Activities\Claims\ClaimActivity.internal.cs">
       <SubType>Code</SubType>
       <DependentUpon>ClaimDetailActivity.cs</DependentUpon>

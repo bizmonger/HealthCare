@@ -6,9 +6,9 @@ open Benefits
 open Repositories
 open Account
 
-type CoverageViewModel(PatientId , repository:IBenefitsRepository) =
+type CoverageViewModel(patientId , repository:IBenefitsRepository) =
 
     member val MemberCoverages = seq [] with get,set
 
     member this.Load() =
-        this.MemberCoverages <- repository.GetMemberCoverages PatientId
+        this.MemberCoverages <- repository.GetMemberCoverages patientId

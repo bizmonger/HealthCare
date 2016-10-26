@@ -5,130 +5,6 @@
     android:paddingLeft="5dp"
     android:paddingRight="5dp">
 
-  <!--<LinearLayout
-        android:id="@+id/Header"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:layout_alignParentTop="true"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5sp"
-            android:layout_centerHorizontal="true"
-            android:text="Your Insurance Plan" />
-        <ImageView
-            android:id="@+id/ThinLogo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="15sp"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/ThinLogo" />
-        <TextView
-            android:id="@+id/PlanName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5sp"
-            android:gravity="center"
-            android:text="Some Plan Name" />
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5sp"
-                android:layout_centerHorizontal="true"
-                android:text="Effective From:" />
-            <TextView
-                android:id="@+id/EffectiveFromValue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5sp"
-                android:layout_centerHorizontal="true"
-                android:text="need value" />
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5sp"
-                android:layout_centerHorizontal="true"
-                android:text="Effective Until:" />
-            <TextView
-                android:id="@+id/EffectiveUntilValue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5sp"
-                android:layout_centerHorizontal="true"
-                android:text="need value" />
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5sp"
-                android:layout_centerHorizontal="true"
-                android:text="Plan Coverage:" />
-            <TextView
-                android:id="@+id/PlanCoverageValue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5sp"
-                android:layout_centerHorizontal="true"
-                android:text="need value" />
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5sp"
-                android:layout_centerHorizontal="true"
-                android:text="Network:" />
-            <TextView
-                android:id="@+id/NetworkValue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5sp"
-                android:layout_centerHorizontal="true"
-                android:text="need value" />
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5sp"
-                android:layout_centerHorizontal="true"
-                android:text="Group #:" />
-            <TextView
-                android:id="@+id/GroupNumberValue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5sp"
-                android:layout_centerHorizontal="true"
-                android:text="need value" />
-        </LinearLayout>
-    </LinearLayout>-->
-
-
-
-
   <LinearLayout
         android:id="@+id/Header"
         android:layout_width="match_parent"
@@ -305,6 +181,12 @@
       android:layout_centerHorizontal="true"
       android:orientation="horizontal">
 
+    <Button
+        android:id="@+id/PlanBennefits"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:text="Plan" />
     <Button
         android:id="@+id/Coverage"
         android:layout_width="100dp"
