@@ -203,6 +203,7 @@
     <Compile Include="Adapters\MemberProfileAdapter.cs" />
     <Compile Include="Adapters\MemberClaimAdapter.cs" />
     <Compile Include="Adapters\MemberCoverageAdapter.cs" />
+    <Compile Include="Adapters\ServicesAdapter.cs" />
     <Compile Include="Fragments\WelcomeFragment.cs" />
     <Compile Include="Fragments\WelcomeFragment.internal.cs">
       <SubType>Code</SubType>
@@ -323,6 +324,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\Privacy.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ServicesListItem.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

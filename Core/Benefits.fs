@@ -50,6 +50,7 @@ module Benefits
         GroupNumber:GroupNumber
     }
 
+    type Service =       { Name:string ; Price:decimal }
     type MemberPlan =    { Member:IdCard ; Summary:Summary }
     type BenefitsUsage = { Deductable:Deductable ; OutOfPocket:OutOfPocket }
     type MemberUsage =   { Member:IdCard ; Usage:BenefitsUsage }

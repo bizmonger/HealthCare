@@ -2,7 +2,6 @@ using Android.Widget;
 using Healthcare.Android.Adapters;
 using ManageBenefits;
 using System.Collections.Generic;
-using static Benefits;
 
 namespace Healthcare.Android
 {
@@ -14,16 +13,17 @@ namespace Healthcare.Android
 
             var listview = FindViewById<ListView>(Resource.Id.MemberCoverageListView);
             listview.ChoiceMode = ChoiceMode.Single;
-            listview.Adapter = new MemberCoverageAdapter(this, new List<MemberPlan>(_viewModel.Members));
+            listview.Adapter = new ServicesAdapter(this, new List<Benefits.Service>(_viewModel.Services));
         }
 
         void CreateViewModel()
         {
             var factory = new DependencyFactory(Global.IsIntegrated);
-            var PatientId = factory.GetPatientId();
+            var companyId = factory.GetCompanyId();
+            var patientId = factory.GetPatientId();
             var repository = factory.CreateBenefitsRepository();
 
-            _viewModel = new BenefitsPlanViewModel(PatientId, _dispatcher, repository);
+            _viewModel = new BenefitsPlanViewModel(companyId, patientId, _dispatcher, repository);
         }
     }
 }

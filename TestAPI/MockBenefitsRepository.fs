@@ -11,4 +11,5 @@ type MockBenefitsRepository() =
         member this.GetCoverage        PatientId = Some anonymousCoverage
         member this.GetMemberCoverages PatientId = SomeMemberCoverages
         member this.GetMembers         PatientId = SomeMembers
+        member this.GetServices        companyId = SomeServices
         member this.GetLastAppointment PatientId = Some SomeAppointment

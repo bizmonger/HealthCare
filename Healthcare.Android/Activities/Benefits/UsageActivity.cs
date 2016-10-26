@@ -6,7 +6,6 @@ using ManageBenefits;
 using System.Collections.Generic;
 using TestAPI;
 using static Benefits;
-using static MockMember;
 
 namespace Healthcare.Android
 {
@@ -21,7 +20,10 @@ namespace Healthcare.Android
 
             SetContentView(Resource.Layout.Usage);
 
-            _viewModel = new BenefitsUsageViewModel(SomePatientId, new MockBenefitsRepository());
+            var factory = new DependencyFactory(Global.IsIntegrated);
+            var patientId = factory.GetPatientId();
+
+            _viewModel = new BenefitsUsageViewModel(patientId, new MockBenefitsRepository());
             _viewModel.Load();
 
             var listview = FindViewById<ListView>(Resource.Id.MemberUsageListView);

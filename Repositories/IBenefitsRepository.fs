@@ -11,3 +11,4 @@ type IBenefitsRepository =
     abstract member GetMemberCoverages : PatientId -> MemberPlan       seq
     abstract member GetMembers         : PatientId -> IdCard           seq
     abstract member GetLastAppointment : PatientId -> Appointment      option
+    abstract member GetServices        : CompanyId -> Service          seq

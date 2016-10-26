@@ -14,7 +14,10 @@ namespace Healthcare.Android
             _isIntegration = isIntegration;
         }
 
+        public CompanyId GetCompanyId() => _isIntegration ? GetActualCompanyId() : SomeCompanyId;
         public PatientId GetPatientId() => _isIntegration ? GetActualPatientId() : SomePatientId;
+
+        static CompanyId GetActualCompanyId() => SomeCompanyId; // TODO: Update with actual id retrieval
         static PatientId GetActualPatientId() => SomePatientId; // TODO: Update with actual id retrieval
 
         public IBenefitsRepository CreateBenefitsRepository() =>

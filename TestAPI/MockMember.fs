@@ -64,10 +64,15 @@ let anonymousSummary:Summary = {
                        ActiveUntil= ActiveUntil (DateTime.Now.AddYears 1) }
     }
 
+let SomeService1 = {Name="some_service1" ; Price=decimal 100}
+let SomeService2 = {Name="some_service2" ; Price=decimal 200}
+let SomeService3 = {Name="some_service3" ; Price=decimal 300}
+
 let anonymousCoverage =   { Member=SomeIdCard ; Summary=anonymousSummary }
 let anonymousOverview =   { Coverage= anonymousCoverage ; Usage=anonymousUsage }
 let SomeMembers =         seq [SomeIdCard ; SomeIdCard ; SomeIdCard]
 let SomeMemberCoverages = seq [anonymousCoverage ; anonymousCoverage ; anonymousCoverage]
+let SomeServices =        seq [SomeService1 ; SomeService2 ; SomeService3]
 
 let SomeSSN = SSN 123456789
 

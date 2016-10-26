@@ -3,7 +3,7 @@ using Android.OS;
 
 namespace Healthcare.Android
 {
-    [Activity(Label = "Coverage", Icon = "@drawable/icon")]
+    [Activity(Label = "Services", Icon = "@drawable/icon")]
     partial class CoverageActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

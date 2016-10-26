@@ -183,19 +183,19 @@
 
     <Button
         android:id="@+id/PlanBennefits"
-        android:layout_width="100dp"
+        android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15sp"
-        android:text="Plan" />
+        android:text="Members" />
     <Button
         android:id="@+id/Coverage"
-        android:layout_width="100dp"
+        android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15sp"
-        android:text="Coverage" />
+        android:text="Services" />
     <Button
         android:id="@+id/Usage"
-        android:layout_width="100dp"
+        android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15sp"
         android:text="Usage" />

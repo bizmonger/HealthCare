@@ -11,19 +11,20 @@ namespace Healthcare.Android
         void CreateViewModel()
         {
             var factory = new DependencyFactory(Global.IsIntegrated);
-            var PatientId = factory.GetPatientId();
+            var companyId = factory.GetCompanyId();
+            var patientId = factory.GetPatientId();
             var repository = factory.CreateBenefitsRepository();
 
-            _viewModel = new CoverageViewModel(PatientId, repository);
+            _viewModel = new CoverageViewModel(companyId, patientId, repository);
         }
 
         void LoadListView()
         {
             _viewModel.Load();
 
-            var listview = FindViewById<ListView>(Resource.Id.MemberCoverageListView);
+            var listview = FindViewById<ListView>(Resource.Id.ServicesListView);
             listview.ChoiceMode = ChoiceMode.Single;
-            listview.Adapter = new MemberCoverageAdapter(this, new List<MemberPlan>(_viewModel.MemberCoverages));
+            listview.Adapter = new ServicesAdapter(this, new List<Service>(_viewModel.Services));
         }
     }
 }

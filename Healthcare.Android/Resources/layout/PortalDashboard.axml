@@ -40,7 +40,7 @@
           android:id="@+id/Claims"
           android:layout_width="110dp"
           android:layout_height="80dp"
-          android:text="Your Claims" />
+          android:text="Your Visits" />
     </LinearLayout>
   </LinearLayout>
   <LinearLayout
