@@ -9,7 +9,7 @@ open ManageBenefits
 open Account
 
 [<Test>]
-let ``view your coverage`` () =
+let ``view your services`` () =
     
     // Setup
     let viewModel = CoverageViewModel(SomeCompanyId , SomePatientId , MockBenefitsRepository())
@@ -18,4 +18,4 @@ let ``view your coverage`` () =
     viewModel.Load()
 
     // Verify
-    viewModel.MemberCoverages |> should equal SomeMemberCoverages
+    viewModel.Services |> should equal SomeServices
