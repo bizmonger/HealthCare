@@ -78,6 +78,7 @@
     <Compile Include="_PaymentDetails.fs" />
     <Compile Include="_SignIn.fs" />
     <Compile Include="_UpcommingAppointments.fs" />
+    <Compile Include="_Files.fs" />
     <Content Include="packages.config" />
     <Content Include="App.config" />
   </ItemGroup>
