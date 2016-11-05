@@ -15,7 +15,7 @@ let ``sign into account`` () =
 
     // Setup
     let viewModel = SignInViewModel(Dispatcher())
-    viewModel.PatientId <- match SomePatientId with  PatientId v -> v  
+    viewModel.PatientId <- match SomePatientId with PatientId v -> v  
     viewModel.Password  <- SomePassword
 
     // Test
@@ -47,7 +47,7 @@ let ``signin failed: password required`` () =
     
     // Setup
     let viewModel = SignInViewModel(Dispatcher())
-    viewModel.PatientId <- match SomePatientId with  PatientId v -> v 
+    viewModel.PatientId <- match SomePatientId with PatientId v -> v 
     viewModel.Password <- ""
 
     // Test
@@ -79,7 +79,7 @@ let ``PatientId tries again`` () =
     let viewModel = SignInViewModel(Dispatcher())
 
     viewModel.TryAgainConfirmation.Show.Add(fun _ ->
-        viewModel.PatientId <- match SomePatientId with  PatientId v -> v   
+        viewModel.PatientId <- match SomePatientId with PatientId v -> v   
         viewModel.Password  <- SomePassword  
         viewModel.SignIn.Execute())
 

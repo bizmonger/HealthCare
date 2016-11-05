@@ -76,9 +76,10 @@
     <Compile Include="_Providers.fs" />
     <Compile Include="_ServiceDetails.fs" />
     <Compile Include="_PaymentDetails.fs" />
+    <Compile Include="_SignIn.fs" />
+    <Compile Include="_UpcommingAppointments.fs" />
     <Content Include="packages.config" />
     <Content Include="App.config" />
-    <Compile Include="_SignIn.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FsCheck">

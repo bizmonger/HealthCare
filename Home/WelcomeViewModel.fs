@@ -4,7 +4,7 @@ open Repositories
 open Account
 open System
 
-type WelcomeViewModel(PatientId:PatientId , repository:IProfileRepository) =
+type WelcomeViewModel(patientId:PatientId , repository:IProfileRepository) =
 
     member val Profile =      None with get,set
     member val LastCleaning = None with get,set
@@ -12,6 +12,6 @@ type WelcomeViewModel(PatientId:PatientId , repository:IProfileRepository) =
 
     member this.Load() =
 
-        this.Profile      <- repository.GetProfile      PatientId
-        this.LastCleaning <- repository.GetLastCleaning PatientId
-        this.LastVisit    <- repository.GetLastVisit    PatientId
+        this.Profile      <- repository.GetProfile      patientId
+        this.LastCleaning <- repository.GetLastCleaning patientId
+        this.LastVisit    <- repository.GetLastVisit    patientId

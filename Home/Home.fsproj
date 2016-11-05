@@ -48,6 +48,7 @@
     <Compile Include="ContactViewModel.fs" />
     <Compile Include="MenuViewModel.fs" />
     <Compile Include="WelcomeViewModel.fs" />
+    <Compile Include="UpcomingAppointments.fs" />
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
