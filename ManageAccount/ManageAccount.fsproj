@@ -53,6 +53,7 @@
     <Compile Include="ProfileViewModel.fs" />
     <Compile Include="EditProfileViewModel.fs" />
     <Compile Include="DependentProfilesViewModel.fs" />
+    <Compile Include="ChangePasswordViewModel.fs" />
     <Compile Include="IOnlineSession.fs" />
     <Content Include="packages.config" />
   </ItemGroup>
