@@ -6,16 +6,22 @@ open Xunit
 open MockMember
 open Home
 
+open InteractionLogic
+
 [<Test>]
-let ``add file`` () =
+let ``get file`` () =
 
     // Setup
-    let mutable fileSaved = false
-    let viewModel = FilesViewModel(SomePatientId)
-    viewModel.GetFile()
+    let mutable fileRetrieved = false
+    let dispatcher = Dispatcher()
+    dispatcher.FileSelected.Add (fun _ -> fileRetrieved <- true)
+
+    let viewModel = FilesViewModel(SomePatientId , dispatcher)
 
     // Test
-    viewModel.Save()
+    viewModel.GetFile()
 
     // Verify
-    fileSaved |> should equal true
+    match viewModel.File with
+    | None   -> failwith ""
+    | Some _ -> ()

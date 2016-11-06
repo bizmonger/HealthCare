@@ -57,6 +57,8 @@ type Dispatcher() =
     let emailProvidersRequested = new Event<EventHandler<_>,_>()
     let textMessageProvidersRequested = new Event<EventHandler<_>,_>()
 
+    let fileSelected = new Event<EventHandler<_>, _>()
+
     [<CLIEvent>]
     member this.SettingsChanged =       settingsChanged.Publish
 
@@ -132,20 +134,23 @@ type Dispatcher() =
     [<CLIEvent>]
     member this.TextMessageProvidersRequested = textMessageProvidersRequested.Publish
     [<CLIEvent>]
-    member this.SignInRequested =         signInRequested.Publish
+    member this.SignInRequested  =        signInRequested.Publish
     [<CLIEvent>]
     member this.SignInSuccessful =        signInSuccessful.Publish
 
     [<CLIEvent>]
-    member this.RegistrationRequested =   registrationRequested.Publish
+    member this.RegistrationRequested  =  registrationRequested.Publish
 
     [<CLIEvent>]
     member this.RegistrationSuccessful =  receivedValidForm.Publish
 
+    [<CLIEvent>]
+    member this.FileSelected = fileSelected.Publish
+
     (* Triggers *)
-    member this.ViewPortalDashboard() =    signInSuccessful.Trigger(this , EventArgs.Empty)
+    member this.ViewPortalDashboard()    = signInSuccessful.Trigger(this , EventArgs.Empty)
     member this.RegistrationIsValid form = receivedValidForm.Trigger(this, form)
-    member this.ChangeSettings settings =  settingsChanged.Trigger settings
+    member this.ChangeSettings settings  = settingsChanged.Trigger settings
 
     member this.TryViewIdCard patientId =         idRequested.Trigger(this , EventArgs.Empty)
     member this.ViewAccount patientId =           accountRequested.Trigger(this, EventArgs.Empty) 
@@ -190,3 +195,5 @@ type Dispatcher() =
     member this.AddContact     provider =        addContactRequested.Trigger(this , provider)
     member this.EmailProviders providers =       emailProvidersRequested.Trigger(this , providers)
     member this.TextMessageProviders providers = textMessageProvidersRequested.Trigger (this, providers)
+
+    member this.SelectFile file =                fileSelected.Trigger (this, file)

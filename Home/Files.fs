@@ -1,11 +1,15 @@
 ﻿namespace Home
 
+open InteractionLogic
 open Account
 
-type FilesViewModel(patientId:PatientId) =
+type FilesViewModel(patientId:PatientId , dispatcher:Dispatcher) as this =
 
-    member val Files = [] with get,set
+    do dispatcher.FileSelected.Add (fun file -> this.File <- Some file)
+
+    member val Files = []   with get,set
     member val File  = None with get,set
 
-    member this.GetFile() = ()
+    member this.GetFile() = dispatcher.SelectFile()
+
     member this.Save()    = ()
