@@ -6,7 +6,6 @@ open InteractionLogic
 open Confirmation
 
 (* Types *)
-type Password =    Password of string
 type Credentials = { PatientId:PatientId; Password:Password }
 
 type SignInResponse =

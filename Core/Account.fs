@@ -8,6 +8,7 @@ module Account
     type PatientId =     PatientId     of string
     type AccountNumber = AccountNumber of string
     type CompanyId =     CompanyId     of string
+    type Password =      Password      of string
 
     type Name = { 
         First:string
@@ -51,4 +52,9 @@ module Account
         Address:Address
         Email:Email
         Phones:Phones
+    }
+
+    type PasswordChange = {
+        Old:Password
+        New:Password
     }
