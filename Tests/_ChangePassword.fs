@@ -12,10 +12,22 @@ open MockMember
 let ``cannot change password if old and new are different`` () =
     
     // Setup
-    let viewModel = ChangePasswordViewModel(MockProfileRepository())
+    let viewModel = ChangePasswordViewModel(SomePatientId , MockProfileRepository())
 
     viewModel.Password        <- SomePassword
     viewModel.ConfirmPassword <- SomePassword + "edited"
 
     // Verify
     viewModel.Save.CanExecute() |> should equal false
+
+[<Test>]
+let ``change password if old and new are same`` () =
+    
+    // Setup
+    let viewModel = ChangePasswordViewModel(SomePatientId , MockProfileRepository())
+
+    viewModel.Password        <- SomePassword
+    viewModel.ConfirmPassword <- SomePassword
+
+    // Verify
+    viewModel.Save.CanExecute() |> should equal true

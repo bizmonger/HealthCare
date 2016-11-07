@@ -55,6 +55,7 @@ module Account
     }
 
     type PasswordChange = {
+        PatientId:PatientId
         Old:Password
         New:Password
     }
