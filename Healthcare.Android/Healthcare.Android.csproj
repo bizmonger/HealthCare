@@ -64,6 +64,14 @@
       <SubType>Code</SubType>
       <DependentUpon>DependentProfilesActivity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Activities\Account\LoginSettingsActivity.internal.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>LoginSettingsActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activities\Account\LoginSettingsActivity.members.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>LoginSettingsActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Activities\Account\ProfileActivity.internal.cs">
       <SubType>Code</SubType>
       <DependentUpon>ProfileActivity.cs</DependentUpon>
@@ -98,6 +106,7 @@
       <DependentUpon>PlanActivity.cs</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Activities\Account\ChangePasswordActivity.cs" />
     <Compile Include="Activities\Claims\ClaimActivity.internal.cs">
       <SubType>Code</SubType>
       <DependentUpon>ClaimDetailActivity.cs</DependentUpon>
@@ -327,6 +336,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\ServicesListItem.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ChangePassword.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

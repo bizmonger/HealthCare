@@ -53,11 +53,12 @@ type Dispatcher() =
     let serviceDetailsRequested = new Event<EventHandler<_>,_>()
     let paymentDetailsRequested = new Event<EventHandler<_>,_>()
 
-    let addContactRequested = new Event<EventHandler<_>,_>()
+    let addContactRequested =     new Event<EventHandler<_>,_>()
     let emailProvidersRequested = new Event<EventHandler<_>,_>()
     let textMessageProvidersRequested = new Event<EventHandler<_>,_>()
 
-    let fileSelected = new Event<EventHandler<_>, _>()
+    let fileSelected =            new Event<EventHandler<_>, _>()
+    let changePasswordRequested = new Event<EventHandler<_>, _>()
 
     [<CLIEvent>]
     member this.SettingsChanged =       settingsChanged.Publish
@@ -147,6 +148,9 @@ type Dispatcher() =
     [<CLIEvent>]
     member this.FileSelected = fileSelected.Publish
 
+    [<CLIEvent>]
+    member this.ChangePasswordRequested = changePasswordRequested.Publish
+
     (* Triggers *)
     member this.ViewPortalDashboard()    = signInSuccessful.Trigger(this , EventArgs.Empty)
     member this.RegistrationIsValid form = receivedValidForm.Trigger(this, form)
@@ -156,15 +160,15 @@ type Dispatcher() =
     member this.ViewAccount patientId =           accountRequested.Trigger(this, EventArgs.Empty) 
     member this.ViewDependentProfiles patientId = dependentProfilesRequested.Trigger(this, EventArgs.Empty) 
     member this.ViewLoginSettings patientId =     loginSettingsRequested.Trigger(this, EventArgs.Empty) 
-    member this.ViewContact() =                  contactRequested.Trigger(this , EventArgs.Empty)
-    member this.FindProviders() =                findProvidersRequested.Trigger(this , EventArgs.Empty)
-    member this.ViewProviders providers =        viewProvidersRequested.Trigger(this , providers)
-    member this.ViewTips() =                     tipsRequested.Trigger(this , EventArgs.Empty)
-    member this.ViewInfo() =                     infoRequested.Trigger(this , EventArgs.Empty)
-    member this.ViewPrivacy() =                  privacyRequested.Trigger(this , EventArgs.Empty)
-    member this.ViewFAQ() =                      faqRequested.Trigger(this , EventArgs.Empty)
-    member this.ViewSignIn() =                   signInRequested.Trigger(this , EventArgs.Empty)
-    member this.ViewRegistration() =             registrationRequested.Trigger(this , EventArgs.Empty)
+    member this.ViewContact() =                   contactRequested.Trigger(this , EventArgs.Empty)
+    member this.FindProviders() =                 findProvidersRequested.Trigger(this , EventArgs.Empty)
+    member this.ViewProviders providers =         viewProvidersRequested.Trigger(this , providers)
+    member this.ViewTips() =                      tipsRequested.Trigger(this , EventArgs.Empty)
+    member this.ViewInfo() =                      infoRequested.Trigger(this , EventArgs.Empty)
+    member this.ViewPrivacy() =                   privacyRequested.Trigger(this , EventArgs.Empty)
+    member this.ViewFAQ() =                       faqRequested.Trigger(this , EventArgs.Empty)
+    member this.ViewSignIn() =                    signInRequested.Trigger(this , EventArgs.Empty)
+    member this.ViewRegistration() =              registrationRequested.Trigger(this , EventArgs.Empty)
 
     member this.ViewPlan patientId =      planRequested.Trigger (this , patientId)
     member this.ViewCoverage patientId =  coverageRequested.Trigger (this , patientId)
@@ -196,4 +200,5 @@ type Dispatcher() =
     member this.EmailProviders providers =       emailProvidersRequested.Trigger(this , providers)
     member this.TextMessageProviders providers = textMessageProvidersRequested.Trigger (this, providers)
 
-    member this.SelectFile file =                fileSelected.Trigger (this, file)
+    member this.SelectFile file =                fileSelected.Trigger (this , file)
+    member this.ViewChangePassword patientId =   changePasswordRequested.Trigger (this, patientId)

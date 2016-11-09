@@ -17,7 +17,7 @@
             android:id="@+id/PatientId"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:hint="Member Id" />
+            android:hint="Patient Id" />
       
         <EditText
             android:id="@+id/password"
