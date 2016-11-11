@@ -6,6 +6,6 @@ namespace Healthcare.Android
     partial class ProfileActivity
     {
         ProfileViewModel _viewModel;
-        readonly Dispatcher _diapatcher = Global.Dispatcher;
+        readonly Dispatcher _dispatcher = Global.Dispatcher;
     }
 }

@@ -5,19 +5,23 @@ open InteractionLogic
 open Account
 open Repositories
 
-type ProfileViewModel(PatientId:PatientId , dispatcher:Dispatcher , repository:IProfileRepository) =
+type ProfileViewModel(patientId:PatientId , dispatcher:Dispatcher , repository:IProfileRepository) =
 
-    member val Profile:Profile option = None with get,set
-    member val Dependents:Profile list = [] with get,set
-    member val Dependent:Profile option = None with get,set
+    member val Profile:Profile    option = None with get,set
+    member val Dependent:Profile  option = None with get,set
+    member val Dependents:Profile list =   [] with get,set
 
     member this.Load() =
-        this.Profile    <- repository.GetProfile    PatientId
-        this.Dependents <- repository.GetDependents PatientId
+        this.Profile    <- repository.GetProfile    patientId
+        this.Dependents <- repository.GetDependents patientId
 
     member this.ViewDependent =
 
         DelegateCommand ( (fun _ -> match this.Dependent with
                                     | Some v -> dispatcher.ViewProfile v.IdCard.PatientId
-                                    | None   -> ()) , 
+                                    | None   -> () ) , 
                            fun _ -> this.Dependent.IsSome) :> ICommand
+
+    member this.ViewFiles =
+        DelegateCommand ( (fun _ -> dispatcher.ViewFiles patientId) , 
+                           fun _ -> true ) :> ICommand

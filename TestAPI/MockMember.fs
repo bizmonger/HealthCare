@@ -17,6 +17,7 @@ let SomeLastName =    "some_last_name"
 let SomeUser =        "some_user_name"
 let SomePassword =    "some_password"
 let SomeDateOfBirth = "some_dob"
+let SomeFile =        File "some_url"
 
 let SomeName = { First=SomeFirstName; Middle=None; Last =SomeLastName }
 

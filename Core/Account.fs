@@ -59,3 +59,5 @@ module Account
         Old:Password
         New:Password
     }
+
+    type File = File of string

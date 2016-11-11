@@ -16,5 +16,6 @@ type MockProfileRepository() =
         member this.GetLastCleaning   patientId     = Some DateTime.Now
         member this.GetLastVisit      patientId     = Some DateTime.Now
         member this.GetAppointments   patientId     = [DateTime.Now]
+        member this.GetFiles          patientId     = [SomeFile]
         member this.TryChangePassword change        = ()
         member this.Save              editedProfile = profile <- editedProfile

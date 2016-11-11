@@ -59,6 +59,7 @@ type Dispatcher() =
 
     let fileSelected =            new Event<EventHandler<_>, _>()
     let changePasswordRequested = new Event<EventHandler<_>, _>()
+    let filesRequested =          new Event<EventHandler<_>, _>()
 
     [<CLIEvent>]
     member this.SettingsChanged =       settingsChanged.Publish
@@ -151,6 +152,9 @@ type Dispatcher() =
     [<CLIEvent>]
     member this.ChangePasswordRequested = changePasswordRequested.Publish
 
+    [<CLIEvent>]
+    member this.FilesRequested = filesRequested.Publish
+
     (* Triggers *)
     member this.ViewPortalDashboard()    = signInSuccessful.Trigger(this , EventArgs.Empty)
     member this.RegistrationIsValid form = receivedValidForm.Trigger(this, form)
@@ -200,5 +204,6 @@ type Dispatcher() =
     member this.EmailProviders providers =       emailProvidersRequested.Trigger(this , providers)
     member this.TextMessageProviders providers = textMessageProvidersRequested.Trigger (this, providers)
 
-    member this.SelectFile file =                fileSelected.Trigger (this , file)
-    member this.ViewChangePassword patientId =   changePasswordRequested.Trigger (this, patientId)
+    member this.SelectFile file =              fileSelected.Trigger (this , file)
+    member this.ViewChangePassword patientId = changePasswordRequested.Trigger (this, patientId)
+    member this.ViewFiles patientId =          filesRequested.Trigger (this, patientId)

@@ -158,6 +158,7 @@
       <SubType>Code</SubType>
       <DependentUpon>ServiceDetailsActivity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Activities\Account\FilesActivity.cs" />
     <Compile Include="Activities\Home\ContactActivity.cs" />
     <Compile Include="Activities\Benefits\CoverageActivity.cs" />
     <Compile Include="Activities\Benefits\CoverageActivity.internal.cs">
@@ -339,6 +340,10 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\ChangePassword.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Files.axml" />
+    <AndroidResource Include="Resources\layout\FileListItem.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
