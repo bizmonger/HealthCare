@@ -1,8 +1,8 @@
 using Android.App;
+using Android.Views;
 using Android.Widget;
 using System.Collections.Generic;
 using static Account;
-using Android.Views;
 using static Claims;
 
 namespace Healthcare.Android.Adapters

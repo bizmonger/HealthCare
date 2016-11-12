@@ -64,6 +64,14 @@
       <SubType>Code</SubType>
       <DependentUpon>DependentProfilesActivity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Activities\Account\FilesActivity.internal.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>FilesActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activities\Account\FilesActivity.Members.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>FilesActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Activities\Account\LoginSettingsActivity.internal.cs">
       <SubType>Code</SubType>
       <DependentUpon>LoginSettingsActivity.cs</DependentUpon>
@@ -210,6 +218,7 @@
     <Compile Include="Activities\Claims\PaymentDetailsActivity.cs" />
     <Compile Include="Activities\Claims\ServiceDetailsActivity.cs" />
     <Compile Include="Adapters\ClaimSummaryAdapter.cs" />
+    <Compile Include="Adapters\FilesAdapter.cs" />
     <Compile Include="Adapters\MemberProfileAdapter.cs" />
     <Compile Include="Adapters\MemberClaimAdapter.cs" />
     <Compile Include="Adapters\MemberCoverageAdapter.cs" />

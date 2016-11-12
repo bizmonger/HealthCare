@@ -21,10 +21,11 @@ namespace Healthcare.Android
         {
             var factory = new DependencyFactory(Global.IsIntegrated);
             var repository = factory.CreateProfileRepository();
+            var patientId = factory.GetPatientId();
 
-            if (repository.GetProfile(_patientId).IsSome())
+            if (repository.GetProfile(patientId).IsSome())
             {
-                var profile = repository.GetProfile(_patientId).Value;
+                var profile = repository.GetProfile(patientId).Value;
                 _viewModel = new IdCardViewModel(profile.IdCard, _dispatcher);
             }
         }

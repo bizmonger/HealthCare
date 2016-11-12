@@ -1,7 +1,5 @@
 using InteractionLogic;
 using ManageAccount;
-using static Account;
-using static MockMember;
 
 namespace Healthcare.Android
 {
@@ -9,6 +7,5 @@ namespace Healthcare.Android
     {
         IdCardViewModel _viewModel;
         Dispatcher _dispatcher = Global.Dispatcher;
-        PatientId _patientId = SomePatientId;
     }
 }

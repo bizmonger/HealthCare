@@ -33,7 +33,7 @@ let ``load files`` () =
     let viewModel = FilesViewModel(SomePatientId , Dispatcher(), MockProfileRepository())
 
     // Test
-    viewModel.Load.Execute()
+    viewModel.Load()
 
     // Verify
     viewModel.Files |> should equal [SomeFile]
