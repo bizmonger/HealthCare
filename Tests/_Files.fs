@@ -25,3 +25,15 @@ let ``get file`` () =
     match viewModel.File with
     | None   -> failwith ""
     | Some _ -> ()
+
+[<Test>]
+let ``load files`` () =
+    
+    // Setup
+    let viewModel = FilesViewModel(SomePatientId , Dispatcher(), MockProfileRepository())
+
+    // Test
+    viewModel.Load.Execute()
+
+    // Verify
+    viewModel.Files |> should equal [SomeFile]
