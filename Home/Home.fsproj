@@ -50,7 +50,6 @@
     <Compile Include="WelcomeViewModel.fs" />
     <Compile Include="UpcomingAppointments.fs" />
     <Content Include="packages.config" />
-    <Compile Include="Files.fs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.fsproj">

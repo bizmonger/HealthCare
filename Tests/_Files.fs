@@ -3,20 +3,20 @@
 open FsUnit
 open NUnit.Framework
 open Xunit
+open TestAPI
 open MockMember
-open Home
-
+open ManageAccount
 open InteractionLogic
 
 [<Test>]
 let ``get file`` () =
 
     // Setup
-    let mutable fileRetrieved = false
+    let mutable file = None
     let dispatcher = Dispatcher()
-    dispatcher.FileSelected.Add (fun _ -> fileRetrieved <- true)
+    let viewModel = FilesViewModel(SomePatientId , dispatcher, MockProfileRepository())
 
-    let viewModel = FilesViewModel(SomePatientId , dispatcher)
+    dispatcher.FileSelected.Add (fun _ -> viewModel.File <- Some SomeFile)
 
     // Test
     viewModel.GetFile()
