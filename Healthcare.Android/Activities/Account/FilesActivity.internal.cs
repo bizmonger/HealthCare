@@ -25,7 +25,7 @@ namespace Healthcare.Android
         {
             _viewModel.Load();
 
-            var listview = FindViewById<ListView>(Resource.Id.Dependents);
+            var listview = FindViewById<ListView>(Resource.Id.FilesListView);
             listview.ChoiceMode = ChoiceMode.Single;
             listview.Adapter = new FilesAdapter(this, new List<File>(_viewModel.Files));
             listview.ItemClick += (s, e) => _viewModel.OnFileSelected(listview.GetItemAtPosition(e.Position).Cast<File>());
