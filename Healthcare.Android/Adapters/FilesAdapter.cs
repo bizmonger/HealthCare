@@ -1,5 +1,5 @@
 using Android.App;
-using Android.Graphics;
+using Android.Net;
 using Android.Views;
 using Android.Widget;
 using System.Collections.Generic;
@@ -27,7 +27,6 @@ namespace Healthcare.Android.Adapters
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
             var view = convertView ?? _context.LayoutInflater.Inflate(Resource.Layout.FileListItem, null);
-
             var file = this[position];
 
             UpdateUI(view, file);
@@ -35,10 +34,13 @@ namespace Healthcare.Android.Adapters
             return view;
         }
 
-        static void UpdateUI(View view, File file)
+        static void UpdateUI(View view, File domainFile)
         {
             var image = view.FindViewById<ImageView>(Resource.Id.fileImage);
-            image.SetImageBitmap(BitmapFactory.DecodeFile(file.Item));
+            using (var javaFile = new Java.IO.File(domainFile.Item))
+            {
+                image.SetImageURI(Uri.FromFile(javaFile));
+            }
         }
     }
 }

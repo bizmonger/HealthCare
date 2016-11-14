@@ -48,6 +48,7 @@
     <Compile Include="ServiceDetailsViewModel.fs" />
     <Compile Include="PaymentDetailsViewModel.fs" />
     <Compile Include="ClaimsSummaryViewModel.fs" />
+    <Compile Include="UpcomingAppointments.fs" />
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

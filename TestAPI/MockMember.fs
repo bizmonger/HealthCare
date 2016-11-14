@@ -17,7 +17,7 @@ let SomeLastName =    "some_last_name"
 let SomeUser =        "some_user_name"
 let SomePassword =    "some_password"
 let SomeDateOfBirth = "some_dob"
-let SomeFile =        File "C:\Users\Bizmonger\Documents\Visual Studio 2015\Projects\Dental\Healthcare.Android\Resources\drawable\Icon.png"
+let SomeFile =        File "drawable\Icon.png"
 
 let SomeName = { First=SomeFirstName; Middle=None; Last =SomeLastName }
 
