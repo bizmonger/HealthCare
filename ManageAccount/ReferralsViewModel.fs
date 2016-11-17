@@ -6,7 +6,7 @@ open Repositories
 open Contact
 open System.Windows.Input
 
-type ReferalsViewModel(patientId:PatientId , repository:IReferalsRepository) =
+type ReferalsViewModel(patientId:PatientId , repository:IReferralsRepository) =
     
     member val ReferralAddress = "" with get,set
 

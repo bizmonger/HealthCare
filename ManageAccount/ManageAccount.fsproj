@@ -57,7 +57,7 @@
     <Compile Include="FilesViewModel.fs" />
     <Compile Include="IOnlineSession.fs" />
     <Compile Include="LoginSettingsViewModel.fs" />
-    <Compile Include="ReferalsViewModel.fs" />
+    <Compile Include="ReferralsViewModel.fs" />
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

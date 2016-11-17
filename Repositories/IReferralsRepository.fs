@@ -3,6 +3,6 @@
 open Account
 open Contact
 
-type IReferalsRepository =
+type IReferralsRepository =
 
     abstract member SubmitReferral : PatientId -> Email -> unit
