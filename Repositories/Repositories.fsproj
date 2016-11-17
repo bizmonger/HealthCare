@@ -49,6 +49,7 @@
     <Compile Include="IProfileRepository.fs" />
     <Compile Include="IProvidersRepository.fs" />
     <Compile Include="ICompanyRepository.fs" />
+    <Compile Include="IReferalsRepository.fs" />
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

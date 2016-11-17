@@ -56,8 +56,9 @@
     <Compile Include="ChangePasswordViewModel.fs" />
     <Compile Include="FilesViewModel.fs" />
     <Compile Include="IOnlineSession.fs" />
-    <Content Include="packages.config" />
     <Compile Include="LoginSettingsViewModel.fs" />
+    <Compile Include="ReferalsViewModel.fs" />
+    <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.fsproj">

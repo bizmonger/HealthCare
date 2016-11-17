@@ -25,7 +25,7 @@ let tryRegister form =
         match form.PatientId with PatientId patientId -> patientId |> failOnEmpty form PatientIdRequired
 
     let validatePassword form =
-        match form.Password with Password pwd        -> pwd       |> failOnEmpty form PasswordRequired
+        match form.Password with Password pwd         -> pwd       |> failOnEmpty form PasswordRequired
 
     let validate = validatePatientId >> bind validatePassword 
     validate form
