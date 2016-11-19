@@ -1,5 +1,6 @@
 using Android.App;
 using Android.OS;
+using Android.Views;
 
 namespace Healthcare.Android
 {
@@ -12,7 +13,6 @@ namespace Healthcare.Android
 
             SetContentView(Resource.Layout.Account);
             CreateViewModel();
-            MapCommands();
         }
 
         protected override void OnStart()
@@ -25,6 +25,38 @@ namespace Healthcare.Android
         {
             base.OnStop();
             UnMapNavigations();
+        }
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.AccountMenu, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Resource.Id.Profile:
+                    {
+                        _viewModel.ViewProfile.Execute(null);
+                        return true;
+                    }
+                    
+                case Resource.Id.Dependents:
+                    {
+                        _viewModel.ViewDependentProfiles.Execute(null);
+                        return true;
+                    }
+
+                case Resource.Id.Settings:
+                    {
+                        _viewModel.ViewLoginSettings.Execute(null);
+                        return true;
+                    }
+            }
+
+            return base.OnOptionsItemSelected(item);
         }
     }
 }

@@ -93,22 +93,4 @@
             android:layout_centerHorizontal="true"
             android:text="need value" />
     </LinearLayout>
-    <Button
-        android:id="@+id/MyProfile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15sp"
-        android:text="My Profile" />
-    <Button
-        android:id="@+id/DependentsProfile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15sp"
-        android:text="Dependents' Profiles" />
-    <Button
-        android:id="@+id/LoginSettings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15sp"
-        android:text="Login Settings" />
 </LinearLayout>

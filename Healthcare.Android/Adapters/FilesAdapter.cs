@@ -1,8 +1,10 @@
 using Android.App;
+using Android.Graphics;
 using Android.Net;
 using Android.Views;
 using Android.Widget;
 using System.Collections.Generic;
+using System.Net;
 using static Account;
 
 namespace Healthcare.Android.Adapters
@@ -34,13 +36,31 @@ namespace Healthcare.Android.Adapters
             return view;
         }
 
+        static Bitmap GetImageBitmapFromUrl(string url)
+        {
+            Bitmap imageBitmap = null;
+
+            using (var webClient = new WebClient())
+            {
+                var imageBytes = webClient.DownloadData(url);
+                if (imageBytes != null && imageBytes.Length > 0)
+                {
+                    imageBitmap = BitmapFactory.DecodeByteArray(imageBytes, 0, imageBytes.Length);
+                }
+            }
+
+            return imageBitmap;
+        }
+
         static void UpdateUI(View view, File domainFile)
         {
             var image = view.FindViewById<ImageView>(Resource.Id.fileImage);
+
             using (var javaFile = new Java.IO.File(domainFile.Item))
-            {
                 image.SetImageURI(Uri.FromFile(javaFile));
-            }
+
+            var imageBitmap = GetImageBitmapFromUrl(@"http://www.freakingnews.com/pictures/57500/Mr-Bean-Drivers-License-57708.jpg");
+            image.SetImageBitmap(imageBitmap);
         }
     }
 }

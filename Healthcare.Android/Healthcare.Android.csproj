@@ -417,7 +417,9 @@
   <ItemGroup>
     <AndroidResource Include="Resources\Menu\HomeMenu.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\Menu\AccountMenu.xml" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Libs\FSharp.Core.dll" />
   </ItemGroup>
