@@ -13,6 +13,7 @@ namespace Healthcare.Android
             SetContentView(Resource.Layout.IdCard);
             CreateViewModel();
             MapCommands();
+            Load();
         }
     }
 }

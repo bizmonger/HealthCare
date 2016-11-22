@@ -219,6 +219,7 @@
     <Compile Include="Activities\Claims\ServiceDetailsActivity.cs" />
     <Compile Include="Adapters\ClaimSummaryAdapter.cs" />
     <Compile Include="Adapters\FilesAdapter.cs" />
+    <Compile Include="Adapters\FilesAdapter.internal.cs" />
     <Compile Include="Adapters\MemberProfileAdapter.cs" />
     <Compile Include="Adapters\MemberClaimAdapter.cs" />
     <Compile Include="Adapters\MemberCoverageAdapter.cs" />

@@ -29,5 +29,10 @@ namespace Healthcare.Android
                 _viewModel = new IdCardViewModel(profile.IdCard, _dispatcher);
             }
         }
+
+        void Load()
+        {
+            
+        }
     }
 }
