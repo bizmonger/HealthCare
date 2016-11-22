@@ -18,6 +18,7 @@ namespace Healthcare.Android
             _dispatcher.ProfileRequested += OnProfileRequested;
             _dispatcher.DependentProfilesRequested += OnDependentsProfileRequested;
             _dispatcher.LoginSettingsRequested += OnLoginSettingsRequested;
+            _dispatcher.FilesRequested += OnFilesRequested;
         }
 
         void UnMapNavigations()
@@ -25,10 +26,12 @@ namespace Healthcare.Android
             _dispatcher.ProfileRequested -= OnProfileRequested;
             _dispatcher.DependentProfilesRequested -= OnDependentsProfileRequested;
             _dispatcher.LoginSettingsRequested -= OnLoginSettingsRequested;
+            _dispatcher.FilesRequested -= OnFilesRequested;
         }
 
         void OnProfileRequested(object sender, object e) => StartActivity(typeof(ProfileActivity));
         void OnDependentsProfileRequested(object sender, EventArgs e) => StartActivity(typeof(DependentProfilesActivity));
         void OnLoginSettingsRequested(object sender, EventArgs e) => StartActivity(typeof(LoginSettingsActivity));
+        void OnFilesRequested(object sender, object e) => StartActivity(typeof(FilesActivity));
     }
 }

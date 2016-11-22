@@ -21,17 +21,6 @@ namespace Healthcare.Android
             name.Text = _viewModel.Profile.IsSome()
                         ? $"{_viewModel.Profile.Value.IdCard.Name.First} {_viewModel.Profile.Value.IdCard.Name.Last}"
                         : "need value";
-        }
-
-        void MapCommands()
-        {
-            var myProfile = FindViewById<Button>(Resource.Id.Files);
-            myProfile.Click += (s, e) => _viewModel.ViewFiles.Execute(null);
-        }
-
-        void MapNavigations() => _dispatcher.FilesRequested += OnFilesRequested;
-        void UnMapNavigations() => _dispatcher.FilesRequested -= OnFilesRequested;
-
-        void OnFilesRequested(object sender, object e) => StartActivity(typeof(FilesActivity));
+        }        
     }
 }

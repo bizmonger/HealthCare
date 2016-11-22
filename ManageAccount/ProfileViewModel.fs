@@ -21,7 +21,3 @@ type ProfileViewModel(patientId:PatientId , dispatcher:Dispatcher , repository:I
                                     | Some v -> dispatcher.ViewProfile v.IdCard.PatientId
                                     | None   -> () ) , 
                            fun _ -> this.Dependent.IsSome) :> ICommand
-
-    member this.ViewFiles =
-        DelegateCommand ( (fun _ -> dispatcher.ViewFiles patientId) , 
-                           fun _ -> true ) :> ICommand

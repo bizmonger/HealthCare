@@ -54,6 +54,12 @@ namespace Healthcare.Android
                         _viewModel.ViewLoginSettings.Execute(null);
                         return true;
                     }
+
+                case Resource.Id.Files:
+                    {
+                        _viewModel.ViewFiles.Execute(null);
+                        return true;
+                    }
             }
 
             return base.OnOptionsItemSelected(item);

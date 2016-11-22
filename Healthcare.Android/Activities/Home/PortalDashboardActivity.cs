@@ -32,6 +32,9 @@ namespace Healthcare.Android
                         _dispatcher.ViewAccount(SomePatientId);
                         return true;
                     }
+
+                default:
+                    break;
             }
 
             return base.OnOptionsItemSelected(item);

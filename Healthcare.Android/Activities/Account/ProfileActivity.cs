@@ -12,20 +12,7 @@ namespace Healthcare.Android
 
             SetContentView(Resource.Layout.Profile);
             CreateViewModel();
-            MapCommands();
             UpdateUI();
-        }
-
-        protected override void OnStart()
-        {
-            base.OnStart();
-            MapNavigations();
-        }
-
-        protected override void OnStop()
-        {
-            base.OnStop();
-            UnMapNavigations();
         }
     }
 }
