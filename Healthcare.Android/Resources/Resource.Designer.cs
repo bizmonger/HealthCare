@@ -66,8 +66,8 @@ namespace Healthcare.Android
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060075
-			public const int Account = 2131099765;
+			// aapt resource value: 0x7f060076
+			public const int Account = 2131099766;
 			
 			// aapt resource value: 0x7f060000
 			public const int AccountNumberValue = 2131099648;
@@ -108,8 +108,8 @@ namespace Healthcare.Android
 			// aapt resource value: 0x7f06005c
 			public const int DateOfBirthValue = 2131099740;
 			
-			// aapt resource value: 0x7f06006a
-			public const int DeductableRemainingValue = 2131099754;
+			// aapt resource value: 0x7f06006b
+			public const int DeductableRemainingValue = 2131099755;
 			
 			// aapt resource value: 0x7f060008
 			public const int DeductableValue = 2131099656;
@@ -186,11 +186,11 @@ namespace Healthcare.Android
 			// aapt resource value: 0x7f060025
 			public const int InsuranceSavedYouValue = 2131099685;
 			
-			// aapt resource value: 0x7f060071
-			public const int LastCleaningValue = 2131099761;
-			
 			// aapt resource value: 0x7f060072
-			public const int LastDentalVisitValue = 2131099762;
+			public const int LastCleaningValue = 2131099762;
+			
+			// aapt resource value: 0x7f060073
+			public const int LastDentalVisitValue = 2131099763;
 			
 			// aapt resource value: 0x7f060039
 			public const int Logo = 2131099705;
@@ -213,8 +213,8 @@ namespace Healthcare.Android
 			// aapt resource value: 0x7f06004c
 			public const int MemberSummaryValue = 2131099724;
 			
-			// aapt resource value: 0x7f06006f
-			public const int MemberUsageListView = 2131099759;
+			// aapt resource value: 0x7f060070
+			public const int MemberUsageListView = 2131099760;
 			
 			// aapt resource value: 0x7f060060
 			public const int MobileValue = 2131099744;
@@ -243,14 +243,14 @@ namespace Healthcare.Android
 			// aapt resource value: 0x7f060009
 			public const int OutOfPockerValue = 2131099657;
 			
-			// aapt resource value: 0x7f06006e
-			public const int OutOfPocketRemainingValue = 2131099758;
+			// aapt resource value: 0x7f06006f
+			public const int OutOfPocketRemainingValue = 2131099759;
 			
 			// aapt resource value: 0x7f06003f
 			public const int PasswordValue = 2131099711;
 			
-			// aapt resource value: 0x7f060063
-			public const int PatientId = 2131099747;
+			// aapt resource value: 0x7f060064
+			public const int PatientId = 2131099748;
 			
 			// aapt resource value: 0x7f060052
 			public const int PatientIdValue = 2131099730;
@@ -288,8 +288,8 @@ namespace Healthcare.Android
 			// aapt resource value: 0x7f06005b
 			public const int PrivacyValue = 2131099739;
 			
-			// aapt resource value: 0x7f060073
-			public const int Profile = 2131099763;
+			// aapt resource value: 0x7f060074
+			public const int Profile = 2131099764;
 			
 			// aapt resource value: 0x7f06001c
 			public const int ProviderChargedValue = 2131099676;
@@ -300,8 +300,8 @@ namespace Healthcare.Android
 			// aapt resource value: 0x7f060054
 			public const int ProviderNetwork = 2131099732;
 			
-			// aapt resource value: 0x7f060068
-			public const int ProviderSpecialty = 2131099752;
+			// aapt resource value: 0x7f060069
+			public const int ProviderSpecialty = 2131099753;
 			
 			// aapt resource value: 0x7f060019
 			public const int ProviderValue = 2131099673;
@@ -309,11 +309,14 @@ namespace Healthcare.Android
 			// aapt resource value: 0x7f060024
 			public const int ProvidersChargedValue = 2131099684;
 			
+			// aapt resource value: 0x7f060062
+			public const int Refer = 2131099746;
+			
 			// aapt resource value: 0x7f060047
 			public const int Register = 2131099719;
 			
-			// aapt resource value: 0x7f06006c
-			public const int RemainingValue = 2131099756;
+			// aapt resource value: 0x7f06006d
+			public const int RemainingValue = 2131099757;
 			
 			// aapt resource value: 0x7f06000c
 			public const int RestorationValue = 2131099660;
@@ -342,11 +345,11 @@ namespace Healthcare.Android
 			// aapt resource value: 0x7f060021
 			public const int ServiceDetails = 2131099681;
 			
-			// aapt resource value: 0x7f060066
-			public const int ServiceNameValue = 2131099750;
-			
 			// aapt resource value: 0x7f060067
-			public const int ServicePriceValue = 2131099751;
+			public const int ServiceNameValue = 2131099751;
+			
+			// aapt resource value: 0x7f060068
+			public const int ServicePriceValue = 2131099752;
 			
 			// aapt resource value: 0x7f060018
 			public const int ServiceValue = 2131099672;
@@ -354,8 +357,8 @@ namespace Healthcare.Android
 			// aapt resource value: 0x7f06002b
 			public const int ServicesListView = 2131099691;
 			
-			// aapt resource value: 0x7f060074
-			public const int Settings = 2131099764;
+			// aapt resource value: 0x7f060075
+			public const int Settings = 2131099765;
 			
 			// aapt resource value: 0x7f060046
 			public const int SignIn = 2131099718;
@@ -363,8 +366,8 @@ namespace Healthcare.Android
 			// aapt resource value: 0x7f060031
 			public const int SpecialtyListView = 2131099697;
 			
-			// aapt resource value: 0x7f06006b
-			public const int SpentValue = 2131099755;
+			// aapt resource value: 0x7f06006c
+			public const int SpentValue = 2131099756;
 			
 			// aapt resource value: 0x7f060003
 			public const int SubscriptionTypeValue = 2131099651;
@@ -372,11 +375,11 @@ namespace Healthcare.Android
 			// aapt resource value: 0x7f060043
 			public const int Tips = 2131099715;
 			
-			// aapt resource value: 0x7f060069
-			public const int TipsValue = 2131099753;
+			// aapt resource value: 0x7f06006a
+			public const int TipsValue = 2131099754;
 			
-			// aapt resource value: 0x7f06006d
-			public const int TotalValue = 2131099757;
+			// aapt resource value: 0x7f06006e
+			public const int TotalValue = 2131099758;
 			
 			// aapt resource value: 0x7f060014
 			public const int Usage = 2131099668;
@@ -384,8 +387,8 @@ namespace Healthcare.Android
 			// aapt resource value: 0x7f06003e
 			public const int UserIdValue = 2131099710;
 			
-			// aapt resource value: 0x7f060070
-			public const int Welcome = 2131099760;
+			// aapt resource value: 0x7f060071
+			public const int Welcome = 2131099761;
 			
 			// aapt resource value: 0x7f060028
 			public const int WelcomeFragment = 2131099688;
@@ -402,20 +405,20 @@ namespace Healthcare.Android
 			// aapt resource value: 0x7f06002f
 			public const int fileImage = 2131099695;
 			
-			// aapt resource value: 0x7f060062
-			public const int linearLayout = 2131099746;
+			// aapt resource value: 0x7f060063
+			public const int linearLayout = 2131099747;
 			
 			// aapt resource value: 0x7f060016
 			public const int newPassword = 2131099670;
 			
-			// aapt resource value: 0x7f060065
-			public const int next = 2131099749;
+			// aapt resource value: 0x7f060066
+			public const int next = 2131099750;
 			
 			// aapt resource value: 0x7f060015
 			public const int oldPassword = 2131099669;
 			
-			// aapt resource value: 0x7f060064
-			public const int password = 2131099748;
+			// aapt resource value: 0x7f060065
+			public const int password = 2131099749;
 			
 			// aapt resource value: 0x7f060035
 			public const int radiogroup = 2131099701;
@@ -515,25 +518,28 @@ namespace Healthcare.Android
 			public const int Providers = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int Register = 2130903067;
+			public const int Referrals = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int ServiceDetails = 2130903068;
+			public const int Register = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int ServicesListItem = 2130903069;
+			public const int ServiceDetails = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int SpecialtiesListItem = 2130903070;
+			public const int ServicesListItem = 2130903070;
 			
 			// aapt resource value: 0x7f03001f
-			public const int Tips = 2130903071;
+			public const int SpecialtiesListItem = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int Usage = 2130903072;
+			public const int Tips = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int WelcomeFragment = 2130903073;
+			public const int Usage = 2130903073;
+			
+			// aapt resource value: 0x7f030022
+			public const int WelcomeFragment = 2130903074;
 			
 			static Layout()
 			{

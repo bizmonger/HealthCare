@@ -62,11 +62,6 @@
       <Project>{33826d30-2a22-4c31-b87d-8f158953c3c0}</Project>
       <Private>True</Private>
     </ProjectReference>
-    <ProjectReference Include="..\ManageAccount\ManageAccount.fsproj">
-      <Name>ManageAccount</Name>
-      <Project>{723ff451-7032-47c8-9fff-64fda1c7b280}</Project>
-      <Private>True</Private>
-    </ProjectReference>
     <ProjectReference Include="..\Repositories\Repositories.fsproj">
       <Name>Repositories</Name>
       <Project>{5f3337c1-c224-4a2d-aac0-06c72f86ee93}</Project>
